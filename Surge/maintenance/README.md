@@ -92,3 +92,24 @@ verify.py 调用 test_config_syntax.py，对总模块和所有补充模块先做
 双引号内的引号/反斜线转义按官方 iOS 5.21.0+ / Mac 6.8.0+ 文档处理；
 原生 JQ 本身的历史最低版本不等于这些新引号转义的版本要求。
 服务器测试需要系统 ICU（Ubuntu 的 libicu）。
+
+## 全段语法复查
+
+2026-10-11 按用户要求复查全部 106 个 Loon 补充及总模块；
+106 个独立转换模块未发现新的语法错误，原版、依赖和生产字节全部保持。
+总模块另有继承自 fmz 原版的 3 条 JSON Mock 引号和参数头漏声明问题，已手动
+补齐，见 Kelee-review/module-syntax-review-20261011.json。
+参数默认值来自固定 fmz 拆分模块；网易云 partQ 的 DT:true 与 partW 的 DT:false
+分别绑定 fmz_netease_q_DT / fmz_netease_w_DT，避免同名参数吞掉不同默认值。
+其他旧版脚本的单层花括号字符串保持原样；语法复查不等于脚本运行兼容性验证。
+
+verify.py 加入 audit_module_syntax.py，按实际配置字段检查 Rule/嵌套逻辑、
+URL/Header/Body Rewrite、Map Local 类型/状态码/头部/JSON/Base64、
+Script 类型/布尔/数字/资源路径、已声明的参数，以及 General/MITM 域名与端口；
+用 ICU 编译解码后的正则，用 jq 编译解码后的表达式。
+检查器识别 IPv6 字面地址及带端口的方括号形式，不把 IPv6 尾段误当端口。
+保留 3 个原版 Mock 引号缺陷复现、原样 JSON 样例及全部参数来源/默认值核对。
+
+每日同步保留这 3 个 fmz 拆分模块的个人引号修正及总模块的参数补齐/命名隔离，
+同时保留此前 Crunchyroll 引号修正；不改写固定 upstream 原版。
+新上游有变化仍逐项阅读实际内容，不从报告自动批准。

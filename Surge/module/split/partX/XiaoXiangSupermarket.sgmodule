@@ -14,7 +14,7 @@
 ^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 首页领券悬浮红包
-^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info data-type=text data="{"code": 0}" header="Content-Type:application/json"
+^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info data-type=text data="{\"code\": 0}" header="Content-Type:application/json"
 
 [MITM]
 hostname = %APPEND% portal-portm.meituan.com, mall.meituan.com

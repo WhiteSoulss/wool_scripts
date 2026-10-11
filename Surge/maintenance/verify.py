@@ -9,6 +9,7 @@ import re
 import subprocess
 from pathlib import Path
 from test_config_syntax import verify as verify_config_syntax
+from audit_module_syntax import verify as audit_module_syntax
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT
@@ -148,6 +149,9 @@ def main():
     assert native_json_rows.issubset(set(sections['Body Rewrite'])), 'Missing original JSON action in total module'
     assert not any('LZMH/remove-config.js' in l for l in sections['Script'])
     stats.update(verify_config_syntax(OUT))
+    syntax_audit = audit_module_syntax(OUT)
+    assert syntax_audit['status'] == 'passed', syntax_audit['errors']
+    stats.update({'full_syntax_' + key: value for key, value in syntax_audit['checks'].items()})
     script_names = [l.split('=', 1)[0].strip() for l in sections['Script']]
     assert len(script_names) == len(set(script_names))
     assert not any('EasyBike/mobileconfig-gateway.js' in l for l in sections['Script'])

@@ -5,7 +5,7 @@
 #!homepage=https://github.com/WhiteSoulss/wool_scripts/blob/main/Surge/KELEE-SUPPLEMENT.md
 #!raw-url=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/module/blockAds.module
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AdblockPlus.png
-#!arguments=12306_enable:true
+#!arguments=12306_enable:true,per_filter_video_thread:"0",logLevel:"error",sponsorBlock:true,MY:true,FX:true,tab:true,useractivity:true,fmz_netease_q_DT:true,fmz_netease_w_DT:false
 #!date=2026-10-11
 
 # fmz200 pinned commit: 5d5f63fcf98bc69d5f8f1b1bae6f86a01ee4bb97
@@ -7774,7 +7774,7 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON data-typ
 # hostname = capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img0*.luckincoffeecdn.com
 ^https?:\/\/img0[1-9]{1}\.luckincoffeecdn\.com\/group\d/M00/[A-Z0-9]{2}/[A-Z0-9]{2}/[a-zA-Z0-9]{29}\.(jpg|jpeg)_\.webp data-type=text data=" " status-code=200
 
-^https?:\/\/(ec|c)api\.lkcoffee\.com\/resource\/m\/eorder\/product\/popAppTagProductList data-type=text data="{"status":"SUCCESS"}" header="Content-Type:application/json"
+^https?:\/\/(ec|c)api\.lkcoffee\.com\/resource\/m\/eorder\/product\/popAppTagProductList data-type=text data="{\"status\":\"SUCCESS\"}" header="Content-Type:application/json"
 
 # > RARBG
 # hostname = dyncdn.me
@@ -8336,7 +8336,7 @@ https://api.rr.tv/storage/business/rootName/app/homePage\?dataType=JSON data-typ
 
 ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-user\/v\d\/purchased\/recommend\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-^https:\/\/(m|mwsa)\.ximalaya\.com\/community\/square\/v\d\/stream\? data-type=text data="{"data":{"cards":[{"content":{},"type":"RECOMMENDS"}]},"ret":0}" status-code=200 header="Content-Type:application/json"
+^https:\/\/(m|mwsa)\.ximalaya\.com\/community\/square\/v\d\/stream\? data-type=text data="{\"data\":{\"cards\":[{\"content\":{},\"type\":\"RECOMMENDS\"}]},\"ret\":0}" status-code=200 header="Content-Type:application/json"
 
 # > 下厨房
 # hostname = *.pglstatp-toutiao.com, res1.hubcloud.com.cnhostname
@@ -8464,7 +8464,7 @@ https://mgesq.api.mgtv.com/v2/user/center/icon data-type=text data="{}" status-c
 ^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 # 首页领券悬浮红包
-^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info data-type=text data="{"code": 0}" header="Content-Type:application/json"
+^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info data-type=text data="{\"code\": 0}" header="Content-Type:application/json"
 
 # > 小熊拦截
 # hostname = spamblocker-api.zeekstudio.com
@@ -10295,7 +10295,7 @@ fmz_0116_去哒 = type=http-response, pattern=^https?:\/\/iqushangwang\.8quan\.c
 fmz_0117_NetEaseCloudMusic_mian = type=http-response, pattern=^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get), script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, binary-body-mode=true, timeout=20
 
 # tab
-fmz_0118_NetEaseCloudMusic_tab = type=http-response, pattern=^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, binary-body-mode=true, timeout=20, argument="[{{{MY}}},{{{DT}}},{{{FX}}}]"
+fmz_0118_NetEaseCloudMusic_tab = type=http-response, pattern=^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, binary-body-mode=true, timeout=20, argument="[{{{MY}}},{{{fmz_netease_q_DT}}},{{{FX}}}]"
 
 # 推荐 | home | 主页
 fmz_0119_NetEaseCloudMusic_home = type=http-response, pattern=^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)), script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, binary-body-mode=true, timeout=20, argument="[{PRGG},{PRRK},{PRDRD},{PRSCVPT},{PRST},{PRRR},{HMPR},{PRMST},{PRCN}]"
@@ -10543,7 +10543,7 @@ fmz_0199_网易有道词典 = type=http-response, pattern=^https?:\/\/dict\.youd
 fmz_0200_NetEaseCloudMusic_mian = type=http-response, pattern=^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get), script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, binary-body-mode=true, timeout=20
 
 # tab
-fmz_0201_NetEaseCloudMusic_tab = type=http-response, pattern=^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, binary-body-mode=true, timeout=20, argument="[{{{MY}}},{{{DT}}},{{{FX}}}]"
+fmz_0201_NetEaseCloudMusic_tab = type=http-response, pattern=^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, binary-body-mode=true, timeout=20, argument="[{{{MY}}},{{{fmz_netease_w_DT}}},{{{FX}}}]"
 
 # 推荐 | home | 主页
 fmz_0202_NetEaseCloudMusic_home = type=http-response, pattern=^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)), script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, binary-body-mode=true, timeout=20, argument="[{PRGG},{PRRK},{PRDRD},{PRSCVPT},{PRST},{PRRR},{HMPR},{PRMST},{PRCN}]"

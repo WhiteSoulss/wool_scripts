@@ -1,0 +1,1282 @@
+{
+  "status": "passed",
+  "independent_modules": 106,
+  "combined_modules": 1,
+  "regex_engine": "libicui18n.so.74",
+  "checks": {
+    "module_argument_references_checked": 13,
+    "host_items_checked": 1451,
+    "General_rows_checked": 4,
+    "Rule_rows_checked": 3087,
+    "Header Rewrite_rows_checked": 1,
+    "URL Rewrite_rows_checked": 527,
+    "Body Rewrite_rows_checked": 365,
+    "json_mock_payloads_parsed": 1278,
+    "Map Local_rows_checked": 1720,
+    "Script_rows_checked": 331,
+    "MITM_rows_checked": 104,
+    "decoded_jq_expressions_compiled": 190,
+    "original_invalid_mock_serializations_reproduced": 3,
+    "source_mock_payload_equivalence_cases": 3,
+    "original_argument_default_equivalence_cases": 11,
+    "namespaced_argument_wiring_cases": 2
+  },
+  "errors": [],
+  "files": [
+    {
+      "path": "Surge/module/blockAds.module",
+      "sha256": "05b4d4d61669ae07c0ddc3335d50ee6344c70c39761f0f5fbbf7070ed32a27f8",
+      "checks": {
+        "module_argument_references_checked": 13,
+        "host_items_checked": 1176,
+        "General_rows_checked": 2,
+        "Rule_rows_checked": 3029,
+        "Header Rewrite_rows_checked": 1,
+        "URL Rewrite_rows_checked": 527,
+        "Body Rewrite_rows_checked": 231,
+        "json_mock_payloads_parsed": 875,
+        "Map Local_rows_checked": 1267,
+        "Script_rows_checked": 301,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/5EPlay_remove_ads.sgmodule",
+      "sha256": "aaeae12ec312a9afbf574a51f4b988fa7be8893dd49e93471cebe08c33fc6afa",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 3,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/36Kr_remove_ads.sgmodule",
+      "sha256": "f8cf68edb3ff95f6d778412cefaf5f5ccada0b2c01c6c2210ce7d831c8b70230",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 2,
+        "Body Rewrite_rows_checked": 5,
+        "json_mock_payloads_parsed": 7,
+        "Map Local_rows_checked": 7,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/123NetWorkDisk_remove_ads.sgmodule",
+      "sha256": "f55dd6675d1d07cf97bd3f1dc5ee25de1648474936d7ade1f3dfe4a90acdb62e",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/360SmartCamera_remove_ads.sgmodule",
+      "sha256": "43a67e612b73956342287193256a9df20e863886ad3d598cbc800478e575f742",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 2,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/SafetyHome_remove_ads.sgmodule",
+      "sha256": "0f665b719dfae9a24dcaa53f102a4ccff5263b9b3c67aa7cda6b0135570efac6",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 1,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/SnowCamera_remove_ads.sgmodule",
+      "sha256": "2a8c1c7518ae4972e4bf996cc48649c0fa42f8cd6a2ce3f93ccbb1f9332ba824",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 3
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/CCLive_remove_ads.sgmodule",
+      "sha256": "cbc940fde263ad80a4ebda5435ca716d683ba7810bf4a537022d5cc9bc274887",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 3,
+        "Map Local_rows_checked": 4,
+        "json_mock_payloads_parsed": 3,
+        "host_items_checked": 4,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/DjDuoDuo_remove_ads.sgmodule",
+      "sha256": "7cb89d491b2b8602b7939891cffee0855f837ea4c2ed0ea5aa17a665cd923b89",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Script_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/DREAME_remove_ads.sgmodule",
+      "sha256": "8954e7f9ecdd14d54461bec46cdeee480f94e60d12ea45754dfd5c34f808bcba",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 4,
+        "Map Local_rows_checked": 4,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 4,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/EcovacsHome_remove_ads.sgmodule",
+      "sha256": "fcf6cf678c9a081ee4345b6898385d8d9ff8f156efbc3300c3e6f8f6136221be",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 1,
+        "json_mock_payloads_parsed": 2,
+        "Map Local_rows_checked": 2,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Foodie_remove_ads.sgmodule",
+      "sha256": "5a257f5381a267d3c5d3dc0b2ec511142729020987ad2772fbfbcbc4ade67d3c",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 3
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/HongKongToolbar_remove_ads.sgmodule",
+      "sha256": "da16992444649ccc3bfc19b737fdb17ad6117e10dd9738b346f0d62018e9bbcb",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 2,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Jump_remove_ads.sgmodule",
+      "sha256": "7822b6b1ec32b4b670432d04657b13fb9b7cfc51d26e90761caf499d331c445c",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 7,
+        "Body Rewrite_rows_checked": 2,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/KOOK_remove_ads.sgmodule",
+      "sha256": "ce1988ee8153e530fbcbe9978b53e1512a4eaf091f89753fbd9fefee1f1fc806",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 2,
+        "Map Local_rows_checked": 2,
+        "Body Rewrite_rows_checked": 3,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/OKOK_remove_ads.sgmodule",
+      "sha256": "3e463b41aea27ad62beb6f5307f91bd7c71dd32e8ed61ba4c3168c5381f2946e",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 4,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/PICOOC_remove_ads.sgmodule",
+      "sha256": "518bd41881bebd3808140c852012e03f54a392619e4dfddffe88f7f50f74eb2c",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 5,
+        "Map Local_rows_checked": 5,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Pinterest_remove_ads.sgmodule",
+      "sha256": "ea3aa9ce3efdf047128870cba51bea610cbf33c0b33fa5684718b5e22e6f38da",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 2,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/ReelShort_remove_ads.sgmodule",
+      "sha256": "c958b195acc67641a465d1cd349642158e8954af0ca26ab127485bfefdc923c7",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 3,
+        "Body Rewrite_rows_checked": 2,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Roborock_remove_ads.sgmodule",
+      "sha256": "605250fe6f9ab2344b2d2595de3913757d3d4d5a018923f16f6ea550c6c38ed7",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 2,
+        "Map Local_rows_checked": 3,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/RQrun_remove_ads.sgmodule",
+      "sha256": "f45b723c99fb376badad5038405993e5c41a388db3a7767a914ccb57f8d73c04",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Sofascore_remove_ads.sgmodule",
+      "sha256": "345b947d259ac359fbfb238e03111fd285f464d5d28ba36a2c7d74b0407846bb",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 2,
+        "Map Local_rows_checked": 2,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/TeraBox_remove_ads.sgmodule",
+      "sha256": "73889246302ec4020557a7f8745dc0e881fb30dc5f6318e1cdf7abfbcef75591",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 1,
+        "json_mock_payloads_parsed": 4,
+        "Map Local_rows_checked": 4,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Uki_remove_ads.sgmodule",
+      "sha256": "c15dd6620b1cf440a3490a1ddba47d5ace2b5bdb5e00e2dd963b8e45800d528a",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 6,
+        "Map Local_rows_checked": 6,
+        "Script_rows_checked": 4,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WakeupSchedule_remove_ads.sgmodule",
+      "sha256": "637862b34e6a71623e6fcaa994acdbe895faebea0c38c32ead120a14181eda78",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/YYVoiceTool_remove_ads.sgmodule",
+      "sha256": "ca5fd9f390b2e01a1bb2a3236dd5061f0c24a0042db3a9b01bbd5fb468112f15",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 4,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/BaiduSearchWebpage_remove_ads.sgmodule",
+      "sha256": "a726262d04706eb72da957a4518f71cdd63f7b8d93dbc4066cad91ac01e0d4c6",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Script_rows_checked": 1,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Bixin_remove_ads.sgmodule",
+      "sha256": "a2bf6e6e3ec4d5e077bacc80da189ff919315d6b20eb2cb612cbd20485428221",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Map Local_rows_checked": 14,
+        "json_mock_payloads_parsed": 12,
+        "Body Rewrite_rows_checked": 2,
+        "Script_rows_checked": 2,
+        "host_items_checked": 7,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Cece_remove_ads.sgmodule",
+      "sha256": "7f08675d9b053717c2647e70c15d9c21ff54e14b7f4d65afc5be432f1e8b1631",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 6,
+        "json_mock_payloads_parsed": 13,
+        "Map Local_rows_checked": 13,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/ChengFenMiao_remove_ads.sgmodule",
+      "sha256": "111d420f93ce460c5983c0d096b66ca5131df5bedb4d3eea061f3e7a82bff9ec",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 4,
+        "Map Local_rows_checked": 4,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/SkyworthDigitalPicamera_remove_ads.sgmodule",
+      "sha256": "30d51e4c1e6037c6988079f5551f686d6775234047921e3bb0eb657b19c12534",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Chuzhan_remove_ads.sgmodule",
+      "sha256": "9d14127c04b47c96668c3c9e419ad2dd081fe83d50cb616e14a9729e351aa9ea",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 4,
+        "Map Local_rows_checked": 4,
+        "Body Rewrite_rows_checked": 4,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/XFuse_remove_ads.sgmodule",
+      "sha256": "938dc638e1db5c96ab520cb6e4a9e1f223b2074de58f9f307b912543b8b894b5",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Map Local_rows_checked": 1,
+        "host_items_checked": 3,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Dayima_remove_ads.sgmodule",
+      "sha256": "a860d1736badf773964279b1c5242a73adea78e38fc792c870af74c83d173bd7",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 3,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 2,
+        "host_items_checked": 3,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/iReaderDejian_remove_ads.sgmodule",
+      "sha256": "54ab6a998d79df2a8d67f274a28e8ca278783fc57cfc37439baea4636e6d209a",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 2,
+        "Body Rewrite_rows_checked": 2,
+        "json_mock_payloads_parsed": 4,
+        "Map Local_rows_checked": 4,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/DoubanRead_remove_ads.sgmodule",
+      "sha256": "7408de58009fc751896c9c805a617307de48da91f6dadaade9e8095d12d04c3f",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 5,
+        "Map Local_rows_checked": 5,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/DuiTang_remove_ads.sgmodule",
+      "sha256": "6c387e0eca71904377e1157cb93269051b5cc091bc206da35d1fb75970d489c0",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 3,
+        "Body Rewrite_rows_checked": 3,
+        "host_items_checked": 3,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/TCLnScreen_remove_ads.sgmodule",
+      "sha256": "5e78037d9428f5ea3b007024de292dbe1cd331209fba4821b2fd7ca823307039",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 5,
+        "Map Local_rows_checked": 5,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/RiskBird_remove_ads.sgmodule",
+      "sha256": "c4807e432e7b908b103ba7b1c5a97286b8a56ac0b047bb3d64231d92f9d6af1d",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 2,
+        "Map Local_rows_checked": 2,
+        "Script_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/LiveLab_remove_ads.sgmodule",
+      "sha256": "896eb1b9421e3498e237d675bbd1f97a3eec2f8470e6874ef0a5ce49340ad1ab",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 4,
+        "Map Local_rows_checked": 4,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/AlcidaeVideo_remove_ads.sgmodule",
+      "sha256": "a77fb535885f5394a7078d255628f894fc29d6dad0f1738adc275729a5d4a41d",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 5,
+        "host_items_checked": 3,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/EasyBike_remove_ads.sgmodule",
+      "sha256": "2228ff86ad26e7a582d1c4345ad1d25ad62906c2142b2b9a31dacac19381c038",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Script_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/SmartLife_remove_ads.sgmodule",
+      "sha256": "375cb63e55e759964cd9952317a0949bd29cfd9131e47f19f5a6e852c0c9c389",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 1,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 3,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/91160_remove_ads.sgmodule",
+      "sha256": "faffa2d9537a45a0fee41d52d006ef7c3113f2b954acf8b13f09b1185bb3fa55",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 7,
+        "Map Local_rows_checked": 8,
+        "Body Rewrite_rows_checked": 3,
+        "host_items_checked": 5,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/SeasunJX3_remove_ads.sgmodule",
+      "sha256": "da4da3cf84d713f89c8d12b4139deae8502ea0f136c19f59082b434e53404173",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "host_items_checked": 3,
+        "General_rows_checked": 1,
+        "Map Local_rows_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/JDWaimai_remove_ads.sgmodule",
+      "sha256": "6aca98107d17e05093f5e5540c33b32b91f350bad6e6f1582f52296dce0edc26",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 4,
+        "json_mock_payloads_parsed": 2,
+        "Map Local_rows_checked": 2,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WPS_Documents_remove_ads.sgmodule",
+      "sha256": "bfb9dd9ff2ab18166858ed27b977c40539d9a1ac7a7735bda57ce62cfaf22470",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 3,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/ChatCam_remove_ads.sgmodule",
+      "sha256": "0981141ba6549b58dc66e18ed6d1d132900f261ce1de65dff3df5c40ca619047",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 2,
+        "host_items_checked": 3,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/ShoujiDesk_remove_ads.sgmodule",
+      "sha256": "5f7b849849f24c5477711078512f8a5b43f6006c65a0f860bac55bcf963c156d",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 2,
+        "Map Local_rows_checked": 2,
+        "Script_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/KuaiDuiZuoYe_remove_ads.sgmodule",
+      "sha256": "ff528aecebc8cdd11f0381c43f54cc98d6f60f4b5872947b866fde6e6938641b",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 1,
+        "json_mock_payloads_parsed": 5,
+        "Map Local_rows_checked": 5,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/KwaiVideoeditor_remove_ads.sgmodule",
+      "sha256": "0157c5353669d9e8f48b5d0edc748b035c617d3b6e74736517943fa63152c0a2",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 4,
+        "Map Local_rows_checked": 4,
+        "Body Rewrite_rows_checked": 2,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/QuarkScanking_remove_ads.sgmodule",
+      "sha256": "2b90c51bf2fb07bed0d9ad8a7be7e02d5a978faf4b721fd9a1d10124aceb4cde",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 4,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/KuGouYouth_remove_ads.sgmodule",
+      "sha256": "f761ba9473b3a1a18bb9e087ad6c727d8722d33e2596eaa0518cd0032f78d9da",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 9,
+        "Map Local_rows_checked": 9,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/KGRing_remove_ads.sgmodule",
+      "sha256": "be218d24ed490d2f34c922825ccef84308017250851f91ee70c58ec90353f202",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/KuroBBS_remove_ads.sgmodule",
+      "sha256": "08c8da39b5bf5d461b78554b5db72b2825fdf7bb858caf94deaa90d12d74d128",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 4,
+        "Map Local_rows_checked": 4,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/LZMH_remove_ads.sgmodule",
+      "sha256": "96772d065e8e394113147c8258361dfb86efcf70b7e890b8c9bd159a02ad02bb",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "host_items_checked": 5,
+        "General_rows_checked": 1,
+        "json_mock_payloads_parsed": 9,
+        "Map Local_rows_checked": 10,
+        "Body Rewrite_rows_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/RoboTaxi_remove_ads.sgmodule",
+      "sha256": "9dd52f9f6681302d648f8d572a30c94a4c2f044a190c82a7202c66e08b6837e4",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 3,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/marki_remove_ads.sgmodule",
+      "sha256": "e36fd3b429c77f45d1ef4a9397317829325ec8b4f108a6bc4b717d52bd580a9a",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 4,
+        "Map Local_rows_checked": 4,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/MKZ_remove_ads.sgmodule",
+      "sha256": "f52082f537f4697eff429905fe666f5072f8d83eb202f08edbacd772e1a7d7d7",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 5,
+        "Map Local_rows_checked": 5,
+        "Script_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/MeiRiSaiChe_remove_ads.sgmodule",
+      "sha256": "459529b3d4db0eb89fa201e92843beb3ea5916faef1da5043e00bb84bfeedc3c",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 2,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/MeiShiJie_remove_ads.sgmodule",
+      "sha256": "505cc516d1198f51d8c93fb9a67dfb49ad4e9e834d330b9531bbab0a496c21af",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/MoeGirlWiki_remove_ads.sgmodule",
+      "sha256": "b4388262cadb63bef627092c9b348ebfa5e68e268ea6727dd0828c147639ad80",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Map Local_rows_checked": 3,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/FerrisWheel_remove_ads.sgmodule",
+      "sha256": "673c4f977eb1d3068878a0e3d1e9c514fa9fb27c4f9359f45b42dbf4cfd4c42c",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 5,
+        "Map Local_rows_checked": 5,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/MotorFans_remove_ads.sgmodule",
+      "sha256": "a84e1f676dadfd89b7838e91f40974a8993db5961bb45a7b8dffa5c641b2a1f5",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 7,
+        "Map Local_rows_checked": 7,
+        "Body Rewrite_rows_checked": 1,
+        "Script_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/CSG_remove_ads.sgmodule",
+      "sha256": "8718f1c8e0800c2dc35bd227361260e2f509cfd07d1ce3ace88bfeb14ee81f38",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 1,
+        "json_mock_payloads_parsed": 2,
+        "Map Local_rows_checked": 2,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/AxWorkSchedule_remove_ads.sgmodule",
+      "sha256": "2b62c7d2d2a5e44853874a61f1880f15fa3450a77437c55f6fa91379db69116b",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 3,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/PangguaiLife_remove_ads.sgmodule",
+      "sha256": "85d8e5b62ba59a434673a6478fd1357e5e724d82d86971ab2eaaeb7927464cd4",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 6,
+        "Map Local_rows_checked": 6,
+        "Body Rewrite_rows_checked": 2,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/DubbingShow_remove_ads.sgmodule",
+      "sha256": "bc6fa014bbd1d7d498c1ac9c53df69b186f09cef8ca7e9c5b6bdf6ad5bc2949c",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 4,
+        "Script_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/QiXinBao_remove_ads.sgmodule",
+      "sha256": "73e94b2097ecbd309b871159beb0f622de6a285231638b5f93297e7c89f768e3",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 9,
+        "Map Local_rows_checked": 10,
+        "host_items_checked": 3,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/YueDanBa_remove_ads.sgmodule",
+      "sha256": "6f97e81775b9d2d7097f73acb8320f70ef72505ed1aa2a98be4e9923f7bc7c5b",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 4,
+        "Map Local_rows_checked": 4,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/ShouYinTongMerchant_remove_ads.sgmodule",
+      "sha256": "3a006c83f9198e602d96baacb06605ae70285ea26bef435e2561f591e1c01366",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 5,
+        "Map Local_rows_checked": 5,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/DigitalHeartbeat_remove_ads.sgmodule",
+      "sha256": "b888458eb163a96ab74e94f71a40a8350021a977c267a474b749f58eca095b28",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 4,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 3,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/KingdeeMyMoney_remove_ads.sgmodule",
+      "sha256": "929b947167f3076cc7e6d9d272c4282aa52eca7e4d2ce83022d302be83ef4985",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 5,
+        "Map Local_rows_checked": 6,
+        "host_items_checked": 5,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Taqu_remove_ads.sgmodule",
+      "sha256": "3672dd8b57c56b20364eb61bc7391ccfc22b0b3f42c1b0383de9b5c5749fa23a",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 3,
+        "json_mock_payloads_parsed": 9,
+        "Map Local_rows_checked": 9,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/TXDocs_remove_ads.sgmodule",
+      "sha256": "96c53b22cddc9e8ad67a61e35d26972f1052a7db0bbad08e3b294eb8bf7d08a2",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 2,
+        "Map Local_rows_checked": 2,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/TmallCampus_remove_ads.sgmodule",
+      "sha256": "547dcf36fa303d8265b0d1705085de8131d8dfd52cdfef065efae2e427d49281",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 4,
+        "Map Local_rows_checked": 4,
+        "Body Rewrite_rows_checked": 2,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/TianQiTong_remove_ads.sgmodule",
+      "sha256": "9048e5c45a16fc416cac2a611af12c753da7efc6940c08367ff0f8085aa2464f",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 5,
+        "Map Local_rows_checked": 5,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/iReaderCityWeather_remove_ads.sgmodule",
+      "sha256": "3151733241eba8c2d1c976d0c8954e619700cd62bb3d00379ab542685024dabe",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 2,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/CrazyRope_remove_ads.sgmodule",
+      "sha256": "5a4e89d8ee1964bb39c565e67387a45795e89eb8039d5233c9bae44099354c08",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 10,
+        "Map Local_rows_checked": 10,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/TuGuaiShou_remove_ads.sgmodule",
+      "sha256": "272822e7f58e3a2ebc1f45eb92c94cc904b487c864a6b7f9993db7b6c71287c2",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 3,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WaCaiJiZhang_remove_ads.sgmodule",
+      "sha256": "f1cbe226a3c7119d31706b6b9f1f6f1f20e795581ddb91b55542f8f7dbead3ba",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 3,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Wacai_remove_ads.sgmodule",
+      "sha256": "b465c69d75f7a78c54f7d7cdf150363d5917fd6d07b46f3b820919dbb568eb75",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 4,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Weibo_intl_remove_ads.sgmodule",
+      "sha256": "6de4e28e259506251295e8d955f0cc061b599fd3b27a0d887fa45c0298cde2b0",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 4,
+        "Map Local_rows_checked": 4,
+        "Body Rewrite_rows_checked": 10,
+        "host_items_checked": 3,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Weimai_remove_ads.sgmodule",
+      "sha256": "3e39c9171a80b4b4c347e215af61be77a9f91f04436b04977b8a4a435cf192e5",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 2,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "sha256": "01959ad633fa9040580a09f97ffbf454049a3cc21d78b3f3d8ea1437a9652535",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 6,
+        "json_mock_payloads_parsed": 89,
+        "Map Local_rows_checked": 112,
+        "Body Rewrite_rows_checked": 6,
+        "Script_rows_checked": 12,
+        "host_items_checked": 93,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Walmart_remove_ads.sgmodule",
+      "sha256": "a27a19459722468d0d69ce74c54089c8cf45986b2af27003b43134d329a1d5ea",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 3,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/HKDouYin_remove_ads.sgmodule",
+      "sha256": "fca48da0c25ccd719238298f7b68b1e75e2f62f4319f8e4578e1130eb75e2ed9",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 6,
+        "Map Local_rows_checked": 3,
+        "Body Rewrite_rows_checked": 4,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/XiaobaiPrint_remove_ads.sgmodule",
+      "sha256": "b64465bf8f401b1ccbef0ed3ea173bb96f535a4a8b34993739ab127de28a2406",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 2,
+        "Body Rewrite_rows_checked": 3,
+        "json_mock_payloads_parsed": 2,
+        "Map Local_rows_checked": 2,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/ShopKeeperAdmin_remove_ads.sgmodule",
+      "sha256": "88d2f14e8fddc8ba15c87c0a83eca3ba8317fb3a88fe91d3a01fd5383af72888",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/XiaoHeiHe_remove_ads.sgmodule",
+      "sha256": "8b86ff47887955366efb2fed290fd51e647e3c9ff33757393e03ba4536f5e405",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/XiaojukejiCharge_remove_ads.sgmodule",
+      "sha256": "5c200ea5654e5fe54d8eb36a6ea22d41848409ba2b8fc68d2107bc43b12c0550",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 4,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/MiaoRead_remove_ads.sgmodule",
+      "sha256": "60c3ef9fcbb74c1a97ab4907e4c9e80d9bd50a75f209a4a62f6abe552373dc99",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Map Local_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/OnTheWay_remove_ads.sgmodule",
+      "sha256": "5e72d66da280b7a45e9a7cdf7efd574e1ea7d90c86df2db6fbae41b331230044",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "Body Rewrite_rows_checked": 3,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/SinaStock_remove_ads.sgmodule",
+      "sha256": "9e92b83a00703d1bfd55f31ba0105239096493e017d9d3110c79307705f9e29a",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 6,
+        "json_mock_payloads_parsed": 5,
+        "Map Local_rows_checked": 5,
+        "host_items_checked": 6,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Yitian_remove_ads.sgmodule",
+      "sha256": "92f98567fd78b432bc00cf26cc873d7a47b2e9812d2aa2a95b82d8763ba8af88",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 2,
+        "Map Local_rows_checked": 2,
+        "Body Rewrite_rows_checked": 1,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/YoudaoTrans_remove_ads.sgmodule",
+      "sha256": "6429314515cda4f9a0839f107d6ba0c4d3179cd13c66e5794eaedfdae68ee70c",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 7,
+        "Map Local_rows_checked": 7,
+        "host_items_checked": 4,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/YoudaoNote_remove_ads.sgmodule",
+      "sha256": "551037b37e49f495298faf0dbd3cd7a3550b2a3c786148b8e80f2f44c7e994e5",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Yueyou_remove_ads.sgmodule",
+      "sha256": "e355bb6c74b7be80de0fe0687e230dba3844c0755a760552a60a2abd0e373891",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 1,
+        "Body Rewrite_rows_checked": 2,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/NarwelRobots_remove_ads.sgmodule",
+      "sha256": "0d5ebc65986590b96937f0f6ce7fb8bf38959b35b93446e0a1541223225797c1",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 3,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/ValorantBible_remove_ads.sgmodule",
+      "sha256": "9822aafbec34de6174220c1338a1e9f99f5da838baf085fc048d56d59acc7c40",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 3,
+        "Map Local_rows_checked": 3,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Zhibo8_remove_ads.sgmodule",
+      "sha256": "50fd673642194a32796385f85fb21952f8d6eeb4cc7aef24efaf9196ed634ffb",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Body Rewrite_rows_checked": 8,
+        "json_mock_payloads_parsed": 6,
+        "Map Local_rows_checked": 6,
+        "host_items_checked": 7,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/SuZhouCitizenCard_remove_ads.sgmodule",
+      "sha256": "0eaf0f1eae5b11de69d701d8894c698527badd45d670c7d245469624f451ea0b",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 2,
+        "Map Local_rows_checked": 2,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/ZhiLianZhaoPin_remove_ads.sgmodule",
+      "sha256": "045bb6b1db97fac0a2a704ef4c78e3240be845b4f219e0e2bf0682dfaef5dfb3",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 1,
+        "Body Rewrite_rows_checked": 1,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 2,
+        "host_items_checked": 2,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WeatherChina_remove_ads.sgmodule",
+      "sha256": "579ee78d856ab913b6f23df60845d522eb04d6b95ee3e0cfa5f2131abb0dc1a0",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/ZongHeng_remove_ads.sgmodule",
+      "sha256": "089b038dc2d074431518ac58ed5d16c2b110d6543c18aaed560de04e78813c1a",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Map Local_rows_checked": 2,
+        "json_mock_payloads_parsed": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/iWallBiZhi_remove_ads.sgmodule",
+      "sha256": "88fdb6823430f147bcf4392bf578464942fdb847520782d65353e5f6b2f018f7",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "json_mock_payloads_parsed": 2,
+        "Map Local_rows_checked": 2,
+        "Script_rows_checked": 3,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Tencent_Video_remove_ads.sgmodule",
+      "sha256": "3be7f85b3fedd4d0899d71d3d2c74f45f7f533d3ba5e4fbdf6271f519d599565",
+      "checks": {
+        "module_argument_references_checked": 0,
+        "Rule_rows_checked": 16,
+        "json_mock_payloads_parsed": 1,
+        "Map Local_rows_checked": 1,
+        "Script_rows_checked": 1,
+        "host_items_checked": 1,
+        "MITM_rows_checked": 1
+      }
+    }
+  ],
+  "checker_modifies_runtime_modules": false,
+  "surge_client_parser_used": false,
+  "surge_client_runtime_tested": false,
+  "scope": "Static grammar checks against current documented forms and Linux ICU, not the proprietary Surge parser or client functionality.",
+  "known_resource_limitations": [
+    {
+      "module": "EasyBike_remove_ads.sgmodule",
+      "missing_dependencies": {
+        "https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js": "按原版 Loon 转换并保留脚本引用；源脚本目前缺失，对应去广告功能暂无法运行。"
+      }
+    }
+  ],
+  "references": [
+    "https://manual.nssurge.com/profile/format.html",
+    "https://manual.nssurge.com/profile/module.html",
+    "https://manual.nssurge.com/scripting/overview.html",
+    "https://manual.nssurge.com/http/body-rewrite.html",
+    "https://manual.nssurge.com/http/map-local.html",
+    "https://manual.nssurge.com/http/url-rewrite.html",
+    "https://manual.nssurge.com/rules/overview.html",
+    "https://manual.nssurge.com/rules/logical.html",
+    "https://manual.nssurge.com/profile/host-list.html"
+  ],
+  "base_user_commit": "297421566c114fc55aa90f1d5e76d3893c33dbce"
+}

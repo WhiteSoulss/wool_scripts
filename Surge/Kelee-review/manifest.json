@@ -8,7 +8,7 @@
   "script_hub_used": false,
   "automatic_conversion_used": false,
   "client_runtime_tested": false,
-  "bundle_sha256": "ecf4072bc7e049449a48eb988daac7f1f5fbc362751e8673173714936df0fcd9",
+  "bundle_sha256": "05b4d4d61669ae07c0ddc3335d50ee6344c70c39761f0f5fbbf7070ed32a27f8",
   "merge_decisions": [
     {
       "section": "URL Rewrite",
@@ -60,6 +60,13 @@
       "source_changed": false,
       "client_runtime_tested": false,
       "review_record": "Surge/Kelee-review/config-syntax-review-20261011.json"
+    },
+    {
+      "date": "2026-10-11",
+      "section": "Module arguments / Map Local",
+      "reason": "Full syntax audit found no additional Kelee supplement defect. Protect literal JSON in three fmz mocks and restore missing source argument declarations in the total. Keep NetEase Q/W DT defaults independently; preserve all original actions and pinned fmz baseline.",
+      "review_record": "Surge/Kelee-review/module-syntax-review-20261011.json",
+      "client_runtime_tested": false
     }
   ],
   "modules": [

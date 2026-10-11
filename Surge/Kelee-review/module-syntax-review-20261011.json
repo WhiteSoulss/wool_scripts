@@ -1,0 +1,224 @@
+{
+  "date": "2026-10-11",
+  "base_user_commit": "297421566c114fc55aa90f1d5e76d3893c33dbce",
+  "status": "manually-reviewed-syntax-and-binding-fixes",
+  "script_hub_used": false,
+  "automatic_conversion_used": false,
+  "surge_client_runtime_tested": false,
+  "scope": "Reaudit 106 actual Loon-derived independent modules and the current combined module. No new syntax error in the 106 supplements; additional inherited fmz configuration serialization and missing-argument defects corrected in total/split native modules.",
+  "changes": [
+    {
+      "path": "Surge/module/split/partR/LuckinCoffee.sgmodule",
+      "action": "Map Local JSON quoting",
+      "payload": "{\"status\":\"SUCCESS\"}",
+      "before": "data=\"{\"status\":\"SUCCESS\"}\"",
+      "after": "data=\"{\\\"status\\\":\\\"SUCCESS\\\"}\"",
+      "source_payload_preserved": true
+    },
+    {
+      "path": "Surge/module/split/partX/Ximalaya.sgmodule",
+      "action": "Map Local JSON quoting",
+      "payload": "{\"data\":{\"cards\":[{\"content\":{},\"type\":\"RECOMMENDS\"}]},\"ret\":0}",
+      "before": "data=\"{\"data\":{\"cards\":[{\"content\":{},\"type\":\"RECOMMENDS\"}]},\"ret\":0}\"",
+      "after": "data=\"{\\\"data\\\":{\\\"cards\\\":[{\\\"content\\\":{},\\\"type\\\":\\\"RECOMMENDS\\\"}]},\\\"ret\\\":0}\"",
+      "source_payload_preserved": true
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoXiangSupermarket.sgmodule",
+      "action": "Map Local JSON quoting",
+      "payload": "{\"code\": 0}",
+      "before": "data=\"{\"code\": 0}\"",
+      "after": "data=\"{\\\"code\\\": 0}\"",
+      "source_payload_preserved": true
+    },
+    {
+      "script": "fmz_0118_NetEaseCloudMusic_tab",
+      "action": "Preserve source-specific DT default using separate argument",
+      "before": "fmz_0118_NetEaseCloudMusic_tab = type=http-response, pattern=^https?:\\/\\/(ipv4|interface\\d?)\\.music\\.163\\.com\\/e?api\\/link\\/home\\/framework\\/tab, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, binary-body-mode=true, timeout=20, argument=\"[{{{MY}}},{{{DT}}},{{{FX}}}]\"",
+      "after": "fmz_0118_NetEaseCloudMusic_tab = type=http-response, pattern=^https?:\\/\\/(ipv4|interface\\d?)\\.music\\.163\\.com\\/e?api\\/link\\/home\\/framework\\/tab, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, binary-body-mode=true, timeout=20, argument=\"[{{{MY}}},{{{fmz_netease_q_DT}}},{{{FX}}}]\""
+    },
+    {
+      "script": "fmz_0201_NetEaseCloudMusic_tab",
+      "action": "Preserve source-specific DT default using separate argument",
+      "before": "fmz_0201_NetEaseCloudMusic_tab = type=http-response, pattern=^https?:\\/\\/(ipv4|interface\\d?)\\.music\\.163\\.com\\/e?api\\/link\\/home\\/framework\\/tab, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, binary-body-mode=true, timeout=20, argument=\"[{{{MY}}},{{{DT}}},{{{FX}}}]\"",
+      "after": "fmz_0201_NetEaseCloudMusic_tab = type=http-response, pattern=^https?:\\/\\/(ipv4|interface\\d?)\\.music\\.163\\.com\\/e?api\\/link\\/home\\/framework\\/tab, script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body=true, binary-body-mode=true, timeout=20, argument=\"[{{{MY}}},{{{fmz_netease_w_DT}}},{{{FX}}}]\""
+    }
+  ],
+  "inherited_argument_defaults": {
+    "per_filter_video_thread": {
+      "raw_default": "\"0\"",
+      "source": "Surge/module/split/partB/BaiduTieba.sgmodule"
+    },
+    "logLevel": {
+      "raw_default": "\"error\"",
+      "source": "Surge/module/split/partB/bilibili.sgmodule"
+    },
+    "sponsorBlock": {
+      "raw_default": "true",
+      "source": "Surge/module/split/partB/bilibili.sgmodule"
+    },
+    "MY": {
+      "raw_default": "true",
+      "sources": [
+        "Surge/module/split/partQ/NetEaseCloudMusic.sgmodule",
+        "Surge/module/split/partW/NetEaseCloudMusic.sgmodule"
+      ]
+    },
+    "FX": {
+      "raw_default": "true",
+      "sources": [
+        "Surge/module/split/partQ/NetEaseCloudMusic.sgmodule",
+        "Surge/module/split/partW/NetEaseCloudMusic.sgmodule"
+      ]
+    },
+    "tab": {
+      "raw_default": "true",
+      "source": "Surge/module/split/partS/Spotify.sgmodule"
+    },
+    "useractivity": {
+      "raw_default": "true",
+      "source": "Surge/module/split/partS/Spotify.sgmodule"
+    },
+    "fmz_netease_q_DT": {
+      "raw_default": "true",
+      "original_argument": "DT",
+      "source": "Surge/module/split/partQ/NetEaseCloudMusic.sgmodule"
+    },
+    "fmz_netease_w_DT": {
+      "raw_default": "false",
+      "original_argument": "DT",
+      "source": "Surge/module/split/partW/NetEaseCloudMusic.sgmodule"
+    }
+  },
+  "behavior_preserved": [
+    "All 106 Kelee independent module bytes, actual archived LPX and original dependencies unchanged.",
+    "Existing 12306_enable argument retained.",
+    "Three mock JSON payloads preserved character-for-character after documented quote unescaping; omitted status-code remains default 200.",
+    "Only two NetEaseCloudMusic tab argument references renamed to preserve their original conflicting true/false DT defaults separately; script order and URL scope unchanged.",
+    "All other script rows, JQ expressions, rules, MITM entries and General settings unchanged.",
+    "Historical legacy single-brace strings in fmz arbitrary script arguments are retained verbatim; no script runtime behavior is asserted.",
+    "Pinned fmz upstream bundle/baseline unchanged; these are explicit personal upstream overrides."
+  ],
+  "validation_limits": [
+    "The checker uses the documented configuration forms and Linux ICU, not Surge proprietary parser.",
+    "Syntax/declared argument checks do not prove script runtime compatibility, transport compatibility or device ad removal.",
+    "Haro original script missing limitation remains known and combined trigger remains commented; no replacement fabricated."
+  ],
+  "exact_pinned_sources": [
+    {
+      "path": "Surge/module/split/partR/LuckinCoffee.sgmodule",
+      "sha256": "b33067971e029d073e81d12b75b22dde5087fb2d377522300fbd4c9d8bf8099a",
+      "matches_pinned_original": true
+    },
+    {
+      "path": "Surge/module/split/partX/Ximalaya.sgmodule",
+      "sha256": "4de6685b5229519792aa245cec4fc89444e75af848c62249f3f82d977efe0e3d",
+      "matches_pinned_original": true
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoXiangSupermarket.sgmodule",
+      "sha256": "8a8e35e276adb7c017e31c18484d7db3d9f52d2174d9b949d79cbd4c6990c7f6",
+      "matches_pinned_original": true
+    },
+    {
+      "path": "Surge/module/split/partB/BaiduTieba.sgmodule",
+      "sha256": "1eea85e8565df7be750e20ecc3a59f5d96cb5d4abc0a2213e5522eb34155179b",
+      "matches_pinned_original": true
+    },
+    {
+      "path": "Surge/module/split/partB/bilibili.sgmodule",
+      "sha256": "c65cfb2b5b0fdf9342488d6bdda918120903fcb7ac6399ce61cbc20af5caf860",
+      "matches_pinned_original": true
+    },
+    {
+      "path": "Surge/module/split/partQ/NetEaseCloudMusic.sgmodule",
+      "sha256": "44aae7cf9c995d1ee85debb79f9f3e56b16d6f9efe5e09654bc80951544f3f08",
+      "matches_pinned_original": true
+    },
+    {
+      "path": "Surge/module/split/partW/NetEaseCloudMusic.sgmodule",
+      "sha256": "e6eb44b1db27d67877b6de247f6227cb02240c83117ac9108a4029203405906d",
+      "matches_pinned_original": true
+    },
+    {
+      "path": "Surge/module/split/partS/Spotify.sgmodule",
+      "sha256": "17e56a05d76f93b5417a098aba901716656aca981a3126729996ed3e674aa17d",
+      "matches_pinned_original": true
+    }
+  ],
+  "baseline_regressions": {
+    "mock_json_quoting_defects_detected": 3,
+    "undeclared_argument_rows_detected": 7,
+    "supplement_module_errors": 0,
+    "IPv6_literals_validated_as_addresses": true
+  },
+  "validation_summary": {
+    "status": "passed",
+    "checks": {
+      "source_json_native_jq_gate": 134,
+      "native_patterns_compiled": 577,
+      "native_jq_actions_retained": 134,
+      "json_semantic_fixtures": 68,
+      "inline_mock_checks": 446,
+      "modules_verified": 106,
+      "merged_active_rows": 5359,
+      "config_script_patterns_compiled_icu": 331,
+      "config_script_rows_tokenized": 331,
+      "config_body_url_patterns_compiled_icu": 365,
+      "config_body_rows_tokenized": 365,
+      "config_body_patterns_compiled_icu": 24,
+      "baidu_original_script_wiring_cases": 2,
+      "baidu_source_url_equivalence_cases": 12,
+      "crunchyroll_original_text_rewrite_cases": 5,
+      "reported_invalid_script_reproduced": 1,
+      "reported_invalid_body_reproduced": 1,
+      "full_syntax_module_argument_references_checked": 13,
+      "full_syntax_host_items_checked": 1451,
+      "full_syntax_General_rows_checked": 4,
+      "full_syntax_Rule_rows_checked": 3087,
+      "full_syntax_Header Rewrite_rows_checked": 1,
+      "full_syntax_URL Rewrite_rows_checked": 527,
+      "full_syntax_Body Rewrite_rows_checked": 365,
+      "full_syntax_json_mock_payloads_parsed": 1278,
+      "full_syntax_Map Local_rows_checked": 1720,
+      "full_syntax_Script_rows_checked": 331,
+      "full_syntax_MITM_rows_checked": 104,
+      "full_syntax_decoded_jq_expressions_compiled": 190,
+      "full_syntax_original_invalid_mock_serializations_reproduced": 3,
+      "full_syntax_source_mock_payload_equivalence_cases": 3,
+      "full_syntax_original_argument_default_equivalence_cases": 11,
+      "full_syntax_namespaced_argument_wiring_cases": 2,
+      "merged_unique_jq_expressions_compiled": 190,
+      "own_runtime_urls_resolved": 29,
+      "scripts_compiled_without_execution": 27,
+      "native_adapter_cases": 1,
+      "lzmh_native_json_cases": 8,
+      "lzmh_url_scope_cases": 9,
+      "pinterest_semantic_cases": 32,
+      "pinterest_original_semantics_cases": 16,
+      "pinterest_module_url_cases": 42,
+      "pinterest_jq_error_equivalence_cases": 24,
+      "pinterest_native_modules_checked": 2
+    },
+    "standalone_supplement_bytes_unchanged": 106,
+    "server_only": true
+  },
+  "personal_upstream_overrides": [
+    {
+      "path": "Surge/module/split/partR/LuckinCoffee.sgmodule",
+      "before_data": "data=\"{\"status\":\"SUCCESS\"}\"",
+      "after_data": "data=\"{\\\"status\\\":\\\"SUCCESS\\\"}\""
+    },
+    {
+      "path": "Surge/module/split/partX/Ximalaya.sgmodule",
+      "before_data": "data=\"{\"data\":{\"cards\":[{\"content\":{},\"type\":\"RECOMMENDS\"}]},\"ret\":0}\"",
+      "after_data": "data=\"{\\\"data\\\":{\\\"cards\\\":[{\\\"content\\\":{},\\\"type\\\":\\\"RECOMMENDS\\\"}]},\\\"ret\\\":0}\""
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoXiangSupermarket.sgmodule",
+      "before_data": "data=\"{\"code\": 0}\"",
+      "after_data": "data=\"{\\\"code\\\": 0}\""
+    }
+  ],
+  "personal_bundle_metadata_override": "Retain restored exact source defaults, 12306_enable, and separately named NetEase Q/W DT defaults."
+}
