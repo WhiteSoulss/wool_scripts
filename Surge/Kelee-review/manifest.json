@@ -8,7 +8,7 @@
   "script_hub_used": false,
   "automatic_conversion_used": false,
   "client_runtime_tested": false,
-  "bundle_sha256": "8415b3141504c3ff4ca3058b85c4df59c82f6432aa0f7c38237972fea761c857",
+  "bundle_sha256": "1db508dae4590aa44ef7825a7f6878ecec4d5310a7875f4075eba6981f5f6796",
   "merge_decisions": [
     {
       "section": "URL Rewrite",
@@ -37,6 +37,15 @@
       "section": "Body Rewrite / MITM",
       "reason": "User explicitly supplied and requested the original Loon actions. Manually restore the exact false/\"false\" jq selection in two native Surge rows, remove the semantically different JavaScript adapter, append only the original API MITM hostname.",
       "deployment_enabled": true,
+      "client_runtime_tested": false,
+      "automatic_conversion_used": false
+    },
+    {
+      "date": "2026-10-11",
+      "module": "LZMH_remove_ads.sgmodule",
+      "section": "Body Rewrite / Script",
+      "reason": "User requested native Surge JQ for the remaining Loon JSON adaptations. Replace the manually authored LZMH response adapter with del(.value.config), preserving the exact original URL condition, other mock rules, custom ports and MITM. Leave original script-based actions as scripts.",
+      "source_changed": false,
       "client_runtime_tested": false,
       "automatic_conversion_used": false
     }
@@ -1076,17 +1085,18 @@
       "path": "Surge/module/Kelee/LZMH_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/LZMH_remove_ads.lpx",
       "source_sha256": "649136a7938ed8b1c261b3e7682e09b3d44d15b33d001818567569ac70b1d149",
-      "sha256": "50ff4e8456f79c7ab5e7203a0f4b13e7e359b10be7d2285112e2da5173a4c3e4",
+      "sha256": "96772d065e8e394113147c8258361dfb86efcf70b7e890b8c9bd159a02ad02bb",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
         "Map Local": 10,
-        "native response script": 1
+        "Body Rewrite": 1
       },
-      "bundle_script_enabled": true,
+      "bundle_script_enabled": false,
       "missing_dependencies": {},
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
-        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。"
+        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
+        "2026-10-11：逐条核对未变的实际 LPX；将 response.json.delete(\"value.config\") 手写为原生 http-response-jq del(.value.config)，删除旧 JS 适配，保留十条 Map Local、自定义端口和 HTTP 引擎。"
       ]
     },
     {
@@ -2199,12 +2209,6 @@
       "sha256": "e799e430ef3f751c686a4cf3df5d8dc2ab7c7b81170f3feb08e6ee45452762e9",
       "source_url": "https://kelee.one/Resource/JavaScript/iWallBiZhi/landing_initialize.js",
       "provenance": "upstream"
-    },
-    {
-      "path": "Surge/Script/Kelee/LZMH/remove-config.js",
-      "sha256": "df7e71aec8d9f42d028bcd3ba043402f7414ca7d473d22684fec73a01da514d7",
-      "source_url": null,
-      "provenance": "authored-native"
     },
     {
       "path": "Surge/Script/Kelee/CommonScript/replace-body.js",

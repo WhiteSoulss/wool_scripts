@@ -3527,24 +3527,39 @@
         },
         {
           "source": "response if ${url} ~= /^https:\\/\\/lzmh\\.lz-qs\\.com:6025\\/lzmh_app_api\\/api\\/v2\\/user\\/getUserBaseInfoAndConfig\\?/i then response.json.delete(\"value.config\")",
-          "native": "native response script"
+          "native": "Body Rewrite.jq",
+          "action": "response.json.delete",
+          "pattern": "(?i)^https:\\/\\/lzmh\\.lz-qs\\.com:6025\\/lzmh_app_api\\/api\\/v2\\/user\\/getUserBaseInfoAndConfig\\?",
+          "arguments": [
+            "value.config"
+          ],
+          "jq": "del(.value.config)",
+          "semantic_fixture": "Surge/maintenance/verify.py",
+          "reviewed_behavior": "Delete only value.config. Preserve sibling/top-level fields and missing or null paths; exact original response-phase, case-insensitive HTTPS URL and port 6025 scope."
         }
       ],
       "upstream_dependencies": [],
       "parameters": {},
-      "generated_scripts": 1,
-      "converter_kind": "manual-lzmh",
+      "generated_scripts": 0,
+      "converter_kind": "authored-native",
       "source_filename": "LZMH_remove_ads.lpx",
       "filename": "LZMH_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/LZMH_remove_ads.lpx",
       "source_sha256": "649136a7938ed8b1c261b3e7682e09b3d44d15b33d001818567569ac70b1d149",
-      "template_sha256": "e2802119d94ebf1c69079d72ef326819c63a6eb06c67ad74d29059481f2592b2",
+      "template_sha256": "96772d065e8e394113147c8258361dfb86efcf70b7e890b8c9bd159a02ad02bb",
       "resource_dependencies": {},
-      "generated_resources": {
-        "https://ad.quietvales.com/__manual_source__/lzmh/remove-config.js": {
-          "filename": "58dd32ef031cf4aa47916985eeda1ff23b373fc8016d4238cd19ac582bd94bc0.js",
-          "sha256": "df7e71aec8d9f42d028bcd3ba043402f7414ca7d473d22684fec73a01da514d7"
-        }
+      "generated_resources": {},
+      "native_sha256": "96772d065e8e394113147c8258361dfb86efcf70b7e890b8c9bd159a02ad02bb",
+      "manual_revision": {
+        "date": "2026-10-11",
+        "source_changed": false,
+        "review_kind": "Manual original-LPX-to-native-Surge-JQ mapping after reading actual source and previous JS adaptation.",
+        "source_behavior_preserved": true,
+        "deleted_adapter": "Surge/Script/Kelee/LZMH/remove-config.js",
+        "client_runtime_tested": false,
+        "automatic_conversion_used": false,
+        "preserved": "10 Map Local rules; HTTPS ports 6025/9220; HTTP engine port 5090; names, descriptions, authors and MITM.",
+        "platform_limits": "Native Body Rewrite requires Surge iOS 5.14+ / Mac 5.9+ and processes at most 1 MB on iOS / 10 MB on Mac; larger responses pass unchanged. The previous JS row had max-size=-1."
       }
     },
     {

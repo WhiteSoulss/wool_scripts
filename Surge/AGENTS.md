@@ -5,11 +5,11 @@ routine validated publications. The combined module is
 `Surge/module/blockAds.module`; retain independent additions in
 `Surge/module/Kelee/`. Preserve unrelated files and concurrent user changes.
 
-The user authorized migration to Codex Cloud on 2026-10-10. For this migrated
-workflow, downloads, builds and validation may run in the configured cloud
-environment. This supersedes the former VPS-only execution requirement. Do not
-depend on the user's computer, its SSH keys, or files under /root on a VPS.
-Do not restore ad.quietvales.com or operate the user's proxy clients or servers.
+The user subsequently deferred Codex Cloud migration. The active daily workflow
+runs downloads, builds and validation on VPS 107.174.244.24 only, through the
+existing authorized SSH connection. The local computer is for editing and SSH,
+not operating or testing Surge, Loon, Stash or browsers. Do not restore
+ad.quietvales.com or modify unrelated server configuration.
 
 Kelee additions MUST be ad-removal plugins: inspect the live catalog's 去广告 tag
 AND actual LPX purpose. Do not add sign-ins, scheduled utilities, node tests,
@@ -44,15 +44,23 @@ checks. `maintenance/verify.py` checks the committed baseline; a pass does not
 approve changed upstream content. Record review behavior and exact source,
 dependency and native hashes. On download/review/validation failure, retain the
 last reviewed affected module and persist pending-review evidence. Do not claim
-cloud static checks prove device ad removal.
+server static checks prove device ad removal.
 
 Publish through existing authorized GitHub tools or git permissions, using a
 fresh main head and a non-force lease/fast-forward. Verify public raw bytes
-after publication. No empty commits. Commit durable review material; cloud VM
+after publication. No empty commits. Commit durable review material; VPS workspace
 state is not a substitute for source control.
 
-Run daily at 08:00 Asia/Shanghai. Use an actual hosted/cloud scheduled task bound
-to the published environment. Saving an environment draft, creating a local
-heartbeat, starting a VM cron/loop, or installing dependencies does not establish
-that this cloud schedule exists. Do not stop the old local task until a real
-cloud task ID/enabled state and successful first run are confirmed.
+Run daily at 08:00 Asia/Shanghai through the existing local heartbeat. Cloud
+migration remains deferred; do not create a duplicate schedule or restart the
+retired website automation.
+
+For original Loon inline JSON/JQ actions, manually use native Surge Body Rewrite
+http-response-jq or http-request-jq, preserving phase, expression, URL flags and
+scope. Do not wrap JSON delete/replace/JQ primitives in generated or authored JS.
+Read the actual source before accepting a mapping. Original JS actions and
+non-JSON operations still require their appropriate native adaptation; do not
+replace their behavior with guessed JQ. The verifier enforces native JQ against
+the actual archived source actions, not only action labels in the ledger.
+Record native version/body-size limits. Preserve the user-confirmed working
+Pinterest production rules; server checks do not establish its failure cause.

@@ -10,7 +10,8 @@
 # Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/LZMH_remove_ads.lpx
 # Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
 
-# Handwritten Surge conversion: Map Local mocks and a native response script.
+# Handwritten Surge adaptation: Map Local mocks and source-faithful native JQ.
+# Native JQ requires Surge iOS 5.14+ / Mac 5.9+; see the reviewed platform limits.
 
 [General]
 force-http-engine-hosts = %APPEND% lzmh.lz-qs.com:5090
@@ -27,8 +28,8 @@ force-http-engine-hosts = %APPEND% lzmh.lz-qs.com:5090
 (?i)^https:\/\/yuudnn\.lz-qs\.com:9220\/mssp-api\/api\/v1\/mrtb\/getSdkAdSlotList$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 (?i)^http:\/\/lzmh\.lz-qs\.com:5090\/resource\/download\/ data-type=text data="" status-code=404 header="Content-Type:text/plain"
 
-[Script]
-LZMH_Remove_Config = type=http-response, pattern=(?i)^https:\/\/lzmh\.lz-qs\.com:6025\/lzmh_app_api\/api\/v2\/user\/getUserBaseInfoAndConfig\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/LZMH/remove-config.js, requires-body=true, max-size=-1, timeout=10
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/lzmh\.lz-qs\.com:6025\/lzmh_app_api\/api\/v2\/user\/getUserBaseInfoAndConfig\? 'del(.value.config)'
 
 [MITM]
 hostname = %APPEND% lzmh.lz-qs.com, yuudnn.lz-qs.com, lzmh.lz-qs.com:6025, yuudnn.lz-qs.com:9220

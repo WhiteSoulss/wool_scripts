@@ -32,6 +32,19 @@ http-response-jq，独立模块与总合集采用相同规则，MITM 只补 api.
 [客户端待确认记录](Kelee-review/pinterest-pending-review.json) 与
 [实际原版对照样例](maintenance/test_pinterest.js)。
 
+## 原生 JQ 复核（2026-10-11）
+
+已核对全部 106 项可莉补充模块的实际归档原版。原有 133 条内联 JSON 动作已用
+原生 JQ；联掌门户剩余一条 response.json.delete("value.config") 现手写为
+http-response-jq 的 del(.value.config)，同时更新独立模块和总模块，删除旧 JS 适配。
+全部 134 条内联 JSON 动作都有原生 JQ 对应。原版调用 JS 的功能继续保留脚本。
+
+联掌门户保留全部十条 Map Local、6025/9220 端口、5090 HTTP 引擎和 MITM。
+原生 Body Rewrite 有平台响应大小上限：iOS 1 MB、Mac 10 MB，超限保持原响应。
+每日维护已加入此语法要求和检查。Pinterest 用户最后报告「可以了」，
+本次保留其生产配置；服务器验证仍不等于客户端去广告验证。
+详见 [复核记录](Kelee-review/native-jq-audit-20261011.json)。
+
 ## 补充配置
 
 | 名称 | 独立模块 | 原作者 |

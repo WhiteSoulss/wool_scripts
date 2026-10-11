@@ -81,6 +81,7 @@ def main():
     assert {x['filename'] for x in selection} == {x['filename'] for x in manifest['modules']}
     assert {x['filename'] for x in reviewed['plugins']} == {x['filename'] for x in manifest['modules']}
     stats = collections.Counter()
+    native_json_rows = set()
     for entry in manifest['modules']:
         text = (OUT / entry['path']).read_text()
         assert hashlib.sha256(text.encode()).hexdigest() == entry['sha256']
@@ -94,6 +95,15 @@ def main():
         assert source_actions == [e['source'] for e in record['ledger']], entry['filename']
         native = sec(text)
         for action in record['ledger']:
+            source_json = re.search(r'\b((?:request|response)\.json\.\w+)\(', action['source'])
+            if source_json:
+                assert action.get('native') == 'Body Rewrite.jq', (entry['filename'], action['source'])
+                assert action.get('action') == source_json.group(1), entry['filename']
+                phase = source_json.group(1).split('.', 1)[0]
+                row = "http-" + phase + "-jq " + action['pattern'] + " '" + action['jq'] + "'"
+                assert row in native.get('Body Rewrite', []), (entry['filename'], row)
+                native_json_rows.add(row)
+                stats['source_json_native_jq_gate'] += 1
             if 'pattern' in action:
                 re.compile(action['pattern'])
                 stats['native_patterns_compiled'] += 1
@@ -134,6 +144,8 @@ def main():
     assert hashlib.sha256(bundle.encode()).hexdigest() == manifest['bundle_sha256']
     assert not any(re.search(r'(?:script-path|url)=[^, ]*(?:scripthub|script-hub)', row, re.I) for rows in sections.values() for row in rows)
     assert len(re.findall(r'^\[MITM\]$', bundle, re.M)) == 1
+    assert native_json_rows.issubset(set(sections['Body Rewrite'])), 'Missing original JSON action in total module'
+    assert not any('LZMH/remove-config.js' in l for l in sections['Script'])
     script_names = [l.split('=', 1)[0].strip() for l in sections['Script']]
     assert len(script_names) == len(set(script_names))
     assert not any('EasyBike/mobileconfig-gateway.js' in l for l in sections['Script'])
@@ -170,18 +182,46 @@ def main():
 const vm=require('node:vm'),fs=require('node:fs'),path=require('node:path');
 const root=process.argv[1];
 function run(file,ctx){let result;vm.runInNewContext(fs.readFileSync(path.join(root,file),'utf8'),{...ctx,$done:v=>result=v,console},{timeout:1000});return result;}
-for(const input of [{value:{config:{ad:true},keep:7},keep:true},{value:{keep:8},keep:true}]){
- const body=JSON.stringify(input);const r=run('LZMH/remove-config.js',{$response:{body}});const out=JSON.parse(r.body===undefined?body:r.body);if(out.value.config!==undefined||out.keep!==true||out.value.keep!==input.value.keep)throw Error('LZMH behavior');
-}
-const invalid=run('LZMH/remove-config.js',{$response:{body:'invalid'}});if(invalid.body!==undefined&&invalid.body!=='invalid')throw Error('LZMH invalid JSON');
 const body='a=1&sppreviewtype=9&b=x&spsrt=3';
 const r=run('CommonScript/replace-body.js',{$request:{body},$argument:'&sppreviewtype=\\d(.*)&spsrt=\\d->&sppreviewtype=0$1&spsrt=0'});
 if(r.body!=='a=1&sppreviewtype=0&b=x&spsrt=0')throw Error('Tencent replace');
-console.log(JSON.stringify({native_adapter_cases:4}));
+console.log(JSON.stringify({native_adapter_cases:1}));
 '''
     p = subprocess.run([NODE, '-e', behavior, str(OUT / 'Surge/Script/Kelee')], text=True, capture_output=True, timeout=10)
     assert p.returncode == 0, p.stderr
     stats.update(json.loads(p.stdout))
+    lzmh = sec((OUT / 'Surge/module/Kelee/LZMH_remove_ads.sgmodule').read_text())
+    assert len(lzmh['Body Rewrite']) == 1 and not lzmh.get('Script')
+    lzmh_row = lzmh['Body Rewrite'][0]
+    kind, pattern, quoted = lzmh_row.split(' ', 2)
+    assert kind == 'http-response-jq' and quoted == "'del(.value.config)'"
+    cases = [
+        ({'value': {'config': {'ad': True}, 'keep': 7}, 'keep': True},
+         {'value': {'keep': 7}, 'keep': True}),
+        ({'value': {'config': None, 'keep': 7}}, {'value': {'keep': 7}}),
+        ({'value': {'config': [], 'other': {'config': 'preserve'}}},
+         {'value': {'other': {'config': 'preserve'}}}),
+        ({'value': {'keep': 8}, 'keep': True}, {'value': {'keep': 8}, 'keep': True}),
+        ({'keep': 9}, {'keep': 9}),
+        ({'value': None, 'keep': 9}, {'value': None, 'keep': 9}),
+        ({'value': {}, 'keep': 9}, {'value': {}, 'keep': 9}),
+        (None, None),
+    ]
+    for payload, expected in cases:
+        assert jq('del(.value.config)', payload) == expected
+        stats['lzmh_native_json_cases'] += 1
+    endpoint = 'https://lzmh.lz-qs.com:6025/lzmh_app_api/api/v2/user/getUserBaseInfoAndConfig?'
+    for url, expected in [
+        (endpoint, True), (endpoint + 'token=test', True), (endpoint.upper(), True),
+        (endpoint.replace('https:', 'http:'), False),
+        (endpoint.replace(':6025', ''), False),
+        (endpoint.replace(':6025', ':9220'), False),
+        (endpoint.replace('api/v2', 'api/v1'), False),
+        (endpoint[:-1], False),
+        (endpoint.replace('lzmh.lz-qs.com', 'lzmh.lz-qs.com.evil.invalid'), False),
+    ]:
+        assert bool(re.search(pattern, url)) == expected, url
+        stats['lzmh_url_scope_cases'] += 1
     pinterest_test = OUT / 'Surge/maintenance/test_pinterest.js'
     p = subprocess.run([NODE, str(pinterest_test), str(OUT)], text=True, capture_output=True, timeout=10)
     assert p.returncode == 0, p.stderr

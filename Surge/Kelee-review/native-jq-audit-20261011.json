@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-11",
+  "status": "manually-reviewed-and-verified",
+  "request": "其他 loon 轉插件 也用原生surge jq 語法",
+  "baseline_commit": "c858b8e94b70d99432b93e11cb143d30d4af26a2",
+  "review_scope": "All 106 approved supplemental LPX JSON actions and native module wiring; only the remaining LZMH JS-wrapped JSON primitive needed a code change.",
+  "already_native_json_actions": 133,
+  "native_json_actions_after_revision": 134,
+  "changed_module": "Surge/module/Kelee/LZMH_remove_ads.sgmodule",
+  "source_url": "https://kelee.one/Tool/Loon/Lpx/LZMH_remove_ads.lpx",
+  "source_sha256": "649136a7938ed8b1c261b3e7682e09b3d44d15b33d001818567569ac70b1d149",
+  "source_changed": false,
+  "native_sha256": "96772d065e8e394113147c8258361dfb86efcf70b7e890b8c9bd159a02ad02bb",
+  "bundle_sha256": "1db508dae4590aa44ef7825a7f6878ecec4d5310a7875f4075eba6981f5f6796",
+  "manual_mapping": {
+    "source_action": "response.json.delete(\"value.config\")",
+    "phase": "response",
+    "pattern": "(?i)^https:\\/\\/lzmh\\.lz-qs\\.com:6025\\/lzmh_app_api\\/api\\/v2\\/user\\/getUserBaseInfoAndConfig\\?",
+    "jq": "del(.value.config)"
+  },
+  "removed_adapter": "Surge/Script/Kelee/LZMH/remove-config.js",
+  "original_script_actions": "Retained original JS and non-JSON behavior; no guessed conversion of opaque upstream scripts.",
+  "semantic_review": "Delete only value.config; preserve all other data. Unchanged source LPX downloaded on VPS and fully read against previous adapter and native configuration.",
+  "preserved": "All 10 Map Local rows; MITM and custom ports 6025/9220; HTTP engine 5090; authors/name/desc. Other 105 independent modules and their ledger records are unchanged.",
+  "pinterest": "User subsequently reported it working and requested no further change. Preserve both existing native JQ rows and MITM. No diagnosed client transport cause.",
+  "platform_limits": {
+    "minimum_versions": {
+      "ios": "5.14",
+      "mac": "5.9"
+    },
+    "response_bytes": {
+      "ios_mb": 1,
+      "mac_mb": 10
+    },
+    "oversize": "Pass unchanged; former JS max-size=-1 removed."
+  },
+  "primary_docs": [
+    "https://manual.nssurge.com/http/body-rewrite.html",
+    "https://nsloon.app/docs/Rewrite/rewrite_v2/"
+  ],
+  "execution_host": "VPS 107.174.244.24",
+  "script_hub_used": false,
+  "automatic_conversion_used": false,
+  "surge_client_runtime_tested": false,
+  "approves_future_source_changes": false,
+  "verification": {
+    "status": "passed",
+    "checks": {
+      "source_json_native_jq_gate": 134,
+      "native_patterns_compiled": 577,
+      "native_jq_actions_retained": 134,
+      "json_semantic_fixtures": 68,
+      "inline_mock_checks": 446,
+      "modules_verified": 106,
+      "merged_active_rows": 5359,
+      "merged_unique_jq_expressions_compiled": 190,
+      "own_runtime_urls_resolved": 29,
+      "scripts_compiled_without_execution": 27,
+      "native_adapter_cases": 1,
+      "lzmh_native_json_cases": 8,
+      "lzmh_url_scope_cases": 9,
+      "pinterest_semantic_cases": 32,
+      "pinterest_original_semantics_cases": 16,
+      "pinterest_module_url_cases": 42,
+      "pinterest_jq_error_equivalence_cases": 24,
+      "pinterest_native_modules_checked": 2
+    },
+    "script_hub_used": false,
+    "surge_client_runtime_tested": false,
+    "scope": "可携带静态/语义基线检查；不转换、不自动批准原版更新，不代表客户端去广告验证。",
+    "approves_source_changes": false
+  },
+  "unchanged_independent_modules": 105,
+  "bundle_endpoint_overlap_review": [
+    {
+      "section": "Body Rewrite",
+      "row": "http-response-jq (?i)^https:\\/\\/lzmh\\.lz-qs\\.com:6025\\/lzmh_app_api\\/api\\/v2\\/user\\/getUserBaseInfoAndConfig\\? 'del(.value.config)'"
+    }
+  ],
+  "unrelated_bundle_sections_unchanged": true,
+  "router_sha256": "db11659ace4e487b4fd1c10ec7aa3e218fb42ffe2e84bcb84e99e0c3b4eab2ab"
+}

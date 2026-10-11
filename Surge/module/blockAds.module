@@ -5590,6 +5590,10 @@ hostname - reject
 
 [Body Rewrite]
 
+# > 可莉补充 · 联掌门户去广告
+# Authors: 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+http-response-jq (?i)^https:\/\/lzmh\.lz-qs\.com:6025\/lzmh_app_api\/api\/v2\/user\/getUserBaseInfoAndConfig\? 'del(.value.config)'
+
 # > fmz200 原总模块
 # Authors: 奶思[https://github.com/fmz200]
 # >>>>>>>>>>>>>>> ✅ !! ✅ <<<<<<<<<<<<<<
@@ -10784,9 +10788,6 @@ kelee_0281_RiskBird_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/m\
 kelee_0283_ShoujiDesk_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/api\.tdz5\.com\/base\/init\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/ShoujiDesk/base_init.js, requires-body=true, max-size=-1, engine=webview
 
 
-# > 可莉补充 · 联掌门户去广告
-# Authors: 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-kelee_0284_LZMH_Remove_Config = type=http-response, pattern=(?i)^https:\/\/lzmh\.lz-qs\.com:6025\/lzmh_app_api\/api\/v2\/user\/getUserBaseInfoAndConfig\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/LZMH/remove-config.js, requires-body=true, max-size=-1, timeout=10
 
 
 # > 可莉补充 · 漫客栈去广告
