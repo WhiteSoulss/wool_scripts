@@ -93,6 +93,11 @@ def main():
 
     jobs = [('source', x['source_url'], x) for x in manifest['modules']]
     jobs += [('dependency', x['source_url'], x) for x in deps]
+    extra_path = repo / 'Surge/Extra-review/manifest.json'
+    if extra_path.exists():
+        extra = json.loads(extra_path.read_text())
+        jobs += [('source', x['source_url'], dict(x, external_supplement=True)) for x in extra['modules']]
+        jobs += [('dependency', x['source_url'], x) for x in extra['resources']]
 
     def inspect(job):
         kind, url, baseline = job
@@ -108,7 +113,7 @@ def main():
                 if not text.strip().startswith(('#', '[')) or '<html' in text.lower():
                     raise ValueError('Invalid LPX response: ' + url)
                 target = work / 'loon-original' / (Path(baseline['filename']).stem + '.lpx')
-                if url not in current_ad:
+                if not baseline.get('external_supplement') and url not in current_ad:
                     entry['scope_review_required'] = True
             else:
                 target = work / 'dependencies' / hashlib.sha256(url.encode()).hexdigest()

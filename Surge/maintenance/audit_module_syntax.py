@@ -138,6 +138,9 @@ def verify(repo):
     compile_pattern, library = icu_compiler()
     manifest = json.loads((repo / 'Surge/Kelee-review/manifest.json').read_text())
     entries = [{'path': 'Surge/module/blockAds.module', 'name': 'Combined module', 'sha256': manifest['bundle_sha256']}] + manifest['modules']
+    extra_path = repo / 'Surge/Extra-review/manifest.json'
+    extra_modules = json.loads(extra_path.read_text())['modules'] if extra_path.exists() else []
+    entries += extra_modules
     allowed_sections = {'General', 'Rule', 'URL Rewrite', 'Header Rewrite', 'Body Rewrite', 'Map Local', 'Script', 'MITM'}
     errors, per_file, total, jq_expressions = [], [], collections.Counter(), set()
     for entry in entries:
@@ -326,7 +329,7 @@ def verify(repo):
         total['namespaced_argument_wiring_cases'] += 1
     return {
         'status': 'failed' if errors else 'passed',
-        'independent_modules': len(manifest['modules']),
+        'independent_modules': len(manifest['modules']) + len(extra_modules),
         'combined_modules': 1,
         'regex_engine': library,
         'checks': dict(total),

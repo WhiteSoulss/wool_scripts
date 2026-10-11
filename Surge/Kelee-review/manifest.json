@@ -8,7 +8,7 @@
   "script_hub_used": false,
   "automatic_conversion_used": false,
   "client_runtime_tested": false,
-  "bundle_sha256": "05b4d4d61669ae07c0ddc3335d50ee6344c70c39761f0f5fbbf7070ed32a27f8",
+  "bundle_sha256": "e99d171114ee729eba4ae9560689ca738e6b574f182f1803e6456ff035e24789",
   "merge_decisions": [
     {
       "section": "URL Rewrite",
@@ -66,6 +66,14 @@
       "section": "Module arguments / Map Local",
       "reason": "Full syntax audit found no additional Kelee supplement defect. Protect literal JSON in three fmz mocks and restore missing source argument declarations in the total. Keep NetEase Q/W DT defaults independently; preserve all original actions and pinned fmz baseline.",
       "review_record": "Surge/Kelee-review/module-syntax-review-20261011.json",
+      "client_runtime_tested": false
+    },
+    {
+      "date": "2026-10-11",
+      "module": "Tinder_remove_ads.sgmodule",
+      "section": "Body Rewrite / MITM",
+      "reason": "User explicitly requested devchristian1337 Tinder ad removal. Handwrite native JQ from the full reviewed LPX/JS; preserve type guards and URL-dependent meta dispatch. Add the sole original MITM host, retain separate provenance from Kelee.",
+      "review_record": "Surge/Extra-review/tinder-review-20261011.json",
       "client_runtime_tested": false
     }
   ],
@@ -2244,5 +2252,7 @@
     }
   ],
   "historical_drafts_include_helper_generated_configuration": true,
-  "provenance_statement": "复用此前已复核的原生适配稿，历史基础稿含辅助工具生成配置，不是全部从零手写；新变化必须逐项读实际原版/依赖并手动改写复核。"
+  "provenance_statement": "复用此前已复核的原生适配稿，历史基础稿含辅助工具生成配置，不是全部从零手写；新变化必须逐项读实际原版/依赖并手动改写复核。",
+  "extra_supplement_manifest": "Surge/Extra-review/manifest.json",
+  "extra_supplement_modules": 1
 }

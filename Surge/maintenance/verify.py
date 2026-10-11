@@ -10,6 +10,7 @@ import subprocess
 from pathlib import Path
 from test_config_syntax import verify as verify_config_syntax
 from audit_module_syntax import verify as audit_module_syntax
+from test_tinder import verify as verify_tinder
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT
@@ -232,6 +233,7 @@ console.log(JSON.stringify({native_adapter_cases:1}));
     p = subprocess.run([NODE, str(pinterest_test), str(OUT)], text=True, capture_output=True, timeout=10)
     assert p.returncode == 0, p.stderr
     stats.update(json.loads(p.stdout))
+    stats.update(verify_tinder(OUT))
     report = {'status': 'passed', 'checks': dict(stats), 'script_hub_used': False,
               'surge_client_runtime_tested': False, 'scope': 'VPS 静态编译、实际原版/依赖哈希、原生 JSON 行为样例与合并冲突门禁。'}
     report['scope'] = '可携带静态/语义基线检查；不转换、不自动批准原版更新，不代表客户端去广告验证。'

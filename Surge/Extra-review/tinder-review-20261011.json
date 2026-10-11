@@ -1,0 +1,88 @@
+{
+  "status": "manually-reviewed-and-approved",
+  "reviewed_at": "2026-10-11",
+  "user_request": "根据 loon-plugins.vercel.app 加入 Tinder 去广告，手动转 Surge 并加入同一总合集",
+  "source_site": "https://loon-plugins.vercel.app/plugins/tinder",
+  "upstream_repository": "devchristian1337/loon-plugins",
+  "upstream_commit": "76ff78111aa9adb4914d327629d433913a68f299",
+  "source_url": "https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Plugins/Tinder.lpx",
+  "pinned_source_url": "https://raw.githubusercontent.com/devchristian1337/loon-plugins/76ff78111aa9adb4914d327629d433913a68f299/Plugins/Tinder.lpx",
+  "source_path": "Surge/Extra-review/loon-original/Tinder.lpx",
+  "source_sha256": "c44cbc199a26a3fdd3bddbc119f0a820e031837da453d2735655f6b335d19cbe",
+  "dependencies": [
+    {
+      "source_url": "https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Tinder/tinder-adblock.js",
+      "pinned_source_url": "https://raw.githubusercontent.com/devchristian1337/loon-plugins/76ff78111aa9adb4914d327629d433913a68f299/Scripts/Tinder/tinder-adblock.js",
+      "path": "Surge/Extra-review/dependencies/Tinder/tinder-adblock.js",
+      "sha256": "e93f2d227d80a43fa021d43d25772fcdbf5cfcd2c39ab4f546a00dc5564ba114",
+      "status": 200,
+      "runtime_required": false,
+      "purpose": "Exact reviewed semantic reference for handwritten native JQ, not a runtime resource"
+    }
+  ],
+  "license": {
+    "upstream_readme_claim": "MIT",
+    "readme_url": "https://github.com/devchristian1337/loon-plugins/blob/76ff78111aa9adb4914d327629d433913a68f299/README.md",
+    "dedicated_license_file": "LICENSE / LICENSE.md / LICENSE.txt returned HTTP 404; attribution and original source comments retained."
+  },
+  "native_path": "Surge/module/Extra/Tinder_remove_ads.sgmodule",
+  "native_sha256": "137d75ad3e87ff148dedcf5d8c90c3d2eedd6ec7ec78328536d30f34df7b345b",
+  "bundle_path": "Surge/module/blockAds.module",
+  "actions": [
+    {
+      "source": "http-response ^https:\\/\\/api\\.gotinder\\.com\\/v2\\/meta(\\?.*)?$ script-path=https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Tinder/tinder-adblock.js, requires-body=true, timeout=10, tag=Tinder meta",
+      "native": "http-response-jq ^https:\\/\\/api\\.gotinder\\.com\\/v2\\/meta(\\?.*)?$ 'def lever($names;$value): reduce $names[] as $name (.; if (.[$name] | type) == \"object\" then if (.[$name].value | type) == \"boolean\" then .[$name].value = $value else . end else . end); def cadence($name): if (.[$name] | type) == \"object\" then if (.[$name].value | type) == \"number\" then .[$name].value = 1000000 else . end else . end; if type == \"object\" then if (.data | type) == \"object\" then .data |= ((if (.ads | type) == \"object\" then if (.ads.card_stack | type) == \"object\" then .ads.card_stack.cadence = 1000000 else . end else . end) | (if (.levers | type) == \"object\" then .levers |= (lever([\"ads.nimbus_recs_ads_enabled\",\"ads.ad_recs_injector_v3_enabled\",\"ads.ads_support_in_modes_enabled\",\"ads.explore_ads_enabled\",\"ads.matchlist_ads_enabled\",\"ads.plus_ads_enabled\",\"ads.promo_enabled\",\"ads.deep_link_ads_enabled\",\"ads.sponsored_message_enabled\",\"ads.sponsored_interest_native_modal_enabled\",\"boost.upsell_modal_enabled\",\"boost.likes_you_merchandising_enabled\",\"boost.get_likes_upsell_enabled\",\"boost.out_of_recs_upsell_enabled\",\"gold_home_v2.new_likes_upsell_enabled\",\"matches.platinum_upsell_enabled\",\"matches.platinum_upsell_v2_enabled\",\"platinum.match_list_upsell_enabled\",\"platinum.my_likes_entrypoint_upsell_enabled\",\"recs_client.likes_you_upsell_modal_enabled\",\"superlike.profile_merchandising_tooltip_enabled\",\"superlike.gamepad_merchandising_tooltip_enabled\",\"superlike.merchandising_tooltip_enabled\",\"superlike.upsell_high_rsrr_enabled\",\"engagement.merchandising_card_app_open_enabled\",\"engagement.merch_card_v2_mirror_enabled\",\"dynamic_content.is_merchandising_card_v2_enabled\",\"controlla_m2.mini_merch_card\",\"rebrand_o2.engagement_merch_card\",\"postmatch.read_receipt_upsell_in_empty_chat_enabled\",\"paywall.primetime_boost_upsell_enabled\",\"paywall.alc_discount_offer_paywall_enabled\",\"bundle_offers_paywall.is_enabled\",\"upsell_boost.relationship_intent_enabled\"];false) | lever([\"ads.hide_ads\",\"secret_admirer.hide_upsell\"];true) | cadence(\"ads.cadence\") | cadence(\"ads.secondary_cadence\")) else . end)) else . end else . end'",
+      "behavior": "Only existing ads/card_stack objects receive cadence 1000000; 34 named booleans off, 2 named booleans on; numeric lever cadence/secondary_cadence updated. Other fields untouched."
+    },
+    {
+      "source": "http-response ^https:\\/\\/api\\.gotinder\\.com\\/v2\\/profile\\?include=.*(feature_access|paywalls|purchase) script-path=https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Tinder/tinder-adblock.js, requires-body=true, timeout=10, tag=Tinder profile",
+      "native": [
+        "http-response-jq ^(?=.*\\/v2\\/meta)https:\\/\\/api\\.gotinder\\.com\\/v2\\/profile\\?include=.*(feature_access|paywalls|purchase) 'def lever($names;$value): reduce $names[] as $name (.; if (.[$name] | type) == \"object\" then if (.[$name].value | type) == \"boolean\" then .[$name].value = $value else . end else . end); def cadence($name): if (.[$name] | type) == \"object\" then if (.[$name].value | type) == \"number\" then .[$name].value = 1000000 else . end else . end; if type == \"object\" then if (.data | type) == \"object\" then .data |= ((if (.ads | type) == \"object\" then if (.ads.card_stack | type) == \"object\" then .ads.card_stack.cadence = 1000000 else . end else . end) | (if (.levers | type) == \"object\" then .levers |= (lever([\"ads.nimbus_recs_ads_enabled\",\"ads.ad_recs_injector_v3_enabled\",\"ads.ads_support_in_modes_enabled\",\"ads.explore_ads_enabled\",\"ads.matchlist_ads_enabled\",\"ads.plus_ads_enabled\",\"ads.promo_enabled\",\"ads.deep_link_ads_enabled\",\"ads.sponsored_message_enabled\",\"ads.sponsored_interest_native_modal_enabled\",\"boost.upsell_modal_enabled\",\"boost.likes_you_merchandising_enabled\",\"boost.get_likes_upsell_enabled\",\"boost.out_of_recs_upsell_enabled\",\"gold_home_v2.new_likes_upsell_enabled\",\"matches.platinum_upsell_enabled\",\"matches.platinum_upsell_v2_enabled\",\"platinum.match_list_upsell_enabled\",\"platinum.my_likes_entrypoint_upsell_enabled\",\"recs_client.likes_you_upsell_modal_enabled\",\"superlike.profile_merchandising_tooltip_enabled\",\"superlike.gamepad_merchandising_tooltip_enabled\",\"superlike.merchandising_tooltip_enabled\",\"superlike.upsell_high_rsrr_enabled\",\"engagement.merchandising_card_app_open_enabled\",\"engagement.merch_card_v2_mirror_enabled\",\"dynamic_content.is_merchandising_card_v2_enabled\",\"controlla_m2.mini_merch_card\",\"rebrand_o2.engagement_merch_card\",\"postmatch.read_receipt_upsell_in_empty_chat_enabled\",\"paywall.primetime_boost_upsell_enabled\",\"paywall.alc_discount_offer_paywall_enabled\",\"bundle_offers_paywall.is_enabled\",\"upsell_boost.relationship_intent_enabled\"];false) | lever([\"ads.hide_ads\",\"secret_admirer.hide_upsell\"];true) | cadence(\"ads.cadence\") | cadence(\"ads.secondary_cadence\")) else . end)) else . end else . end'",
+        "http-response-jq ^(?!.*\\/v2\\/meta)https:\\/\\/api\\.gotinder\\.com\\/v2\\/profile\\?include=.*(feature_access|paywalls|purchase) 'if type == \"object\" then if (.data | type) == \"object\" then .data |= ((if (.feature_access | type) == \"object\" then if (.feature_access.ad_features | type) == \"object\" then .feature_access.ad_features.hide_ads = true else . end else . end) | (if (.plus_control | type) == \"object\" then .plus_control.hide_ads = true else . end) | (if (.entrypoints | type) == \"array\" then .entrypoints = [] else . end) | (if (.campaigns | type) == \"object\" then if (.campaigns.campaigns | type) == \"array\" then .campaigns.campaigns = [] else . end else . end)) else . end else . end'"
+      ],
+      "behavior": "Preserve original URL substring meta dispatch. Otherwise set hide_ads only in existing objects; clear entrypoints and nested campaigns only when arrays. Keep other fields."
+    }
+  ],
+  "parameters": [],
+  "mitm": [
+    "api.gotinder.com"
+  ],
+  "added_runtime_js": false,
+  "script_hub_used": false,
+  "automatic_conversion_used": false,
+  "preserved_behavior": [
+    "Object/type guards, missing-field passthrough",
+    "Original case-sensitive HTTPS/host/path/query scope",
+    "Only ad/UI upsell flags changed; server-enforced entitlement fields unchanged",
+    "Rewarded-video SDK flags left untouched",
+    "No requests rejected and no broad SDK domain blocking"
+  ],
+  "platform_limits": {
+    "jq_minimum": "Surge iOS 5.14+ / Mac 5.9+",
+    "response_body_limit": "iOS 1 MB; Mac 10 MB; oversize passthrough",
+    "invalid_json": "Surge skips native JQ for invalid JSON",
+    "script_timeout": "Original JS timeout 10 seconds does not apply to native JQ"
+  },
+  "verification": "Surge/Extra-review/verification.json",
+  "client_runtime_tested": false,
+  "instructions": "This is a separately attributed user-requested addition, not a Kelee catalog item. Preserve during fmz sync, check both latest LPX and JS hashes daily; changed content requires manual reading and semantic review.",
+  "references": [
+    "https://manual.nssurge.com/http/body-rewrite.html"
+  ],
+  "server_verification": {
+    "status": "passed",
+    "checks": {
+      "tinder_hash_checks": 3,
+      "tinder_combined_wiring_cases": 3,
+      "tinder_original_url_dispatch_cases": 25,
+      "tinder_original_js_jq_equivalence_cases": 84,
+      "tinder_sdk_and_entitlement_preservation_cases": 5,
+      "tinder_combined_endpoint_overlap_cases": 3
+    },
+    "full_syntax_independent_modules": 107,
+    "script_hub_used": false,
+    "automatic_conversion_used": false,
+    "client_runtime_tested": false,
+    "scope": "Reviewed original LPX/JS hashes, native JQ vs inspected JS semantic fixtures, ICU URL dispatch/endpoint overlap checks and full-module grammar audit; no Surge client operation."
+  }
+}

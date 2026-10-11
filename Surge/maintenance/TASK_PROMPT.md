@@ -52,3 +52,22 @@ raw 链接及字节。无变化不生成空提交。无变化或无可操作事�
 保留 Kelee-review/config-syntax-review-20261011.json 的百度参数引号与 Crunchyroll 原生正文引号修正，后者为个人 fmz 上游覆盖。同步拆分模块及重建合集时先阅读新上游再保留修正；不改写固定 upstream 原版。verify.py 包含实际配置字段分割后的 ICU 正则检查，不只编译账本里的完整正则。双引号转义需遵守已记录的 Surge 版本要求。
 
 保留 module-syntax-review-20261011.json 记录的三个 fmz JSON Mock 引号修正与总模块的原版参数默认值；网易云 Q/W 的 DT 默认值分别命名，不能合并成一个开关。verify.py 调用全段语法检查器，覆盖本地响应、嵌套规则、参数声明和主机端口；通过报告不能替代原版变化的人工语义复核。
+
+
+## Tinder 独立补充（2026-10-11）
+
+用户指定从 https://loon-plugins.vercel.app 加入 Tinder 去广告。
+这是 devchristian1337 的单独来源，不是可莉目录项，不得放入可莉选择基线冒充可莉插件。
+读取 Surge/Extra-review/manifest.json、tinder-review-20261011.json、实际归档 LPX 和
+原版 JS；保留 Surge/module/Extra/Tinder_remove_ads.sgmodule 与同一总合集中的三条
+原生 JQ、唯一 MITM api.gotinder.com。原版根据 URL 是否包含 /v2/meta 决定处理方式，
+特殊 profile 查询也必须保留相同行为。SDK 和服务端会员权限字段不修改。
+
+check_updates.py 每日同时归档 Tinder 最新 LPX 和 JS，对照其精确哈希；这段 JS 是语义
+依赖，即使客户端使用原生 JQ，也不能漏查。checker 只报差异、不转换、不批准。
+变化时先逐行阅读原版再手动复核，不能只更新 hash。fmz 同步、重建合集须保留这个来源、
+作者、独立模块和行为，不能覆盖增强总模块。其他来源的插件未经用户授权不批量加入。
+verify.py 调用 test_tinder.py，核对实际配置、URL 分派、类型边界、广告开关与原版的
+JSON 语义、奖励视频/权限字段保留及合集端点重叠；完整语法门禁也包含独立 Tinder。
+语义参照 JS 已全文审阅，无 I/O，仅在隔离 Node vm 里使用模拟数据比较，不暴露网络、
+文件、进程或定时器。服务器验证仍不代表客户端实测。

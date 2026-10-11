@@ -157,3 +157,16 @@ http-response-jq 的 del(.value.config)，同时更新独立模块和总模块�
 | 腾讯视频去广告 | [Tencent_Video_remove_ads.sgmodule](module/Kelee/Tencent_Video_remove_ads.sgmodule) | RuCu6[https://github.com/RuCu6] |
 
 历史适配稿含辅助工具生成的基础，不是全部从零手写；新变化必须读实际原版及依赖，再手动改写和复核。云端每日维护见 [maintenance/README.md](maintenance/README.md)。
+
+
+## Tinder 额外补充
+
+按用户指定站点 [loon-plugins.vercel.app](https://loon-plugins.vercel.app/plugins/tinder)，
+单独加入 devchristian1337 的 Tinder 去广告；可莉补充仍为 106 项。
+已阅读全文 LPX 与实际 JS，手写为原生 Surge JQ并加入同一总模块；保留
+[独立 Tinder 模块](module/Extra/Tinder_remove_ads.sgmodule)。
+原版广告/会员推广开关、对象类型判断和 URL 分派保持，奖励视频与付费功能状态保持。
+原版和 JS 已归档，且都纳入现有每日差异检查，见
+[复核记录](Extra-review/tinder-review-20261011.json)。
+需要对 api.gotinder.com 开启 MITM，原生 JQ 的版本和响应大小限制同上；
+服务器语义样例通过不代表客户端去广告已验证。

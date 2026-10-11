@@ -1,0 +1,32 @@
+{
+  "status": "manually-reviewed-baseline",
+  "modules": [
+    {
+      "name": "Tinder去广告",
+      "filename": "Tinder_remove_ads.sgmodule",
+      "path": "Surge/module/Extra/Tinder_remove_ads.sgmodule",
+      "sha256": "137d75ad3e87ff148dedcf5d8c90c3d2eedd6ec7ec78328536d30f34df7b345b",
+      "source_url": "https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Plugins/Tinder.lpx",
+      "source_sha256": "c44cbc199a26a3fdd3bddbc119f0a820e031837da453d2735655f6b335d19cbe",
+      "source_path": "Surge/Extra-review/loon-original/Tinder.lpx",
+      "source_catalog": "https://loon-plugins.vercel.app",
+      "scope": "explicit-user-requested-ad-removal",
+      "author": "devchristian1337",
+      "review_record": "Surge/Extra-review/tinder-review-20261011.json"
+    }
+  ],
+  "resources": [
+    {
+      "source_url": "https://raw.githubusercontent.com/devchristian1337/loon-plugins/refs/heads/main/Scripts/Tinder/tinder-adblock.js",
+      "pinned_source_url": "https://raw.githubusercontent.com/devchristian1337/loon-plugins/76ff78111aa9adb4914d327629d433913a68f299/Scripts/Tinder/tinder-adblock.js",
+      "path": "Surge/Extra-review/dependencies/Tinder/tinder-adblock.js",
+      "sha256": "e93f2d227d80a43fa021d43d25772fcdbf5cfcd2c39ab4f546a00dc5564ba114",
+      "status": 200,
+      "runtime_required": false,
+      "purpose": "Exact reviewed semantic reference for handwritten native JQ, not a runtime resource"
+    }
+  ],
+  "script_hub_used": false,
+  "automatic_conversion_used": false,
+  "client_runtime_tested": false
+}

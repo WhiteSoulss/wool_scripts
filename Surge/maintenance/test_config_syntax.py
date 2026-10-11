@@ -91,7 +91,9 @@ def verify(repo):
     stats = collections.Counter()
     bundle = sections((repo / 'Surge/module/blockAds.module').read_text())
     manifest = json.loads((repo / 'Surge/Kelee-review/manifest.json').read_text())
-    modules = [bundle] + [sections((repo / entry['path']).read_text()) for entry in manifest['modules']]
+    extra_path = repo / 'Surge/Extra-review/manifest.json'
+    extra_modules = json.loads(extra_path.read_text())['modules'] if extra_path.exists() else []
+    modules = [bundle] + [sections((repo / entry['path']).read_text()) for entry in manifest['modules'] + extra_modules]
     for section in modules:
         for row in section.get('Script', []):
             fields = script_fields(row)
