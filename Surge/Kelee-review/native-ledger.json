@@ -879,7 +879,7 @@
       "filename": "Pinterest_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx",
       "source_sha256": "905ce81e2a26cb5421219b8f9009502d7c014291b3b3a5532e13dd6ad3a01d95",
-      "template_sha256": "5a4d79c1b3a493fb9763ea0b9bc86df15e4e0a96f989f1fffea6cf85370b8d97",
+      "template_sha256": "508cf9a26209d5657c10bc976d2cb479a7c7363a9332126885edca32eea00923",
       "resource_dependencies": {},
       "generated_resources": {
         "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Pinterest/remove-ads.js": {
@@ -888,7 +888,7 @@
           "sha256": "a8fecbbfd91e00356c5ea209d1b666554920ce03450700ac8a2c1196d2122243"
         }
       },
-      "native_sha256": "5a4d79c1b3a493fb9763ea0b9bc86df15e4e0a96f989f1fffea6cf85370b8d97",
+      "native_sha256": "508cf9a26209d5657c10bc976d2cb479a7c7363a9332126885edca32eea00923",
       "manual_revision": {
         "date": "2026-10-11",
         "reason": "User reports Pinterest inaccessible with Surge adaptation; Loon original works.",
@@ -905,7 +905,19 @@
         "additional_guards": [
           "Preserve string non-success application status",
           "Preserve numeric identifiers outside safe JSON integer range"
-        ]
+        ],
+        "user_retest_failed": true,
+        "module_causality_confirmed_by_user": true,
+        "specific_failing_layer_confirmed": false,
+        "deployment_enabled": false
+      },
+      "deployment": {
+        "enabled": false,
+        "status": "pending-client-compatibility-review",
+        "reason": "User reports failure persisted after the native response rewrite; removing our installed rules restores access.",
+        "date": "2026-10-11",
+        "script_enabled": false,
+        "mitm_enabled": false
       }
     },
     {

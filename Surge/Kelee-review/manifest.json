@@ -8,7 +8,7 @@
   "script_hub_used": false,
   "automatic_conversion_used": false,
   "client_runtime_tested": false,
-  "bundle_sha256": "83ef905d64c25e390f1ed7a0f3991a9df8a05fe5148b0e75129d44000e9ce581",
+  "bundle_sha256": "e29e14d5c2d390d4673ecf636615d27cd1816ab69ed0f16e218d086b6a636eaf",
   "merge_decisions": [
     {
       "section": "URL Rewrite",
@@ -21,6 +21,13 @@
       "reason": "Replace both direct Pinterest jq rules with one manually reviewed, guarded response script in standalone and total modules. Preserve unknown records and response shapes; no other Pinterest trigger matched the original endpoints.",
       "date": "2026-10-11",
       "client_runtime_tested": false
+    },
+    {
+      "date": "2026-10-11",
+      "module": "Pinterest_remove_ads.sgmodule",
+      "section": "Script / MITM",
+      "reason": "Temporarily disable Pinterest rewrite and its API MITM entry after failed user retest. Preserve other approved module behavior; no alternative compatibility fix is asserted.",
+      "deployment_enabled": false
     }
   ],
   "modules": [
@@ -328,12 +335,12 @@
       "path": "Surge/module/Kelee/Pinterest_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx",
       "source_sha256": "905ce81e2a26cb5421219b8f9009502d7c014291b3b3a5532e13dd6ad3a01d95",
-      "sha256": "5a4d79c1b3a493fb9763ea0b9bc86df15e4e0a96f989f1fffea6cf85370b8d97",
+      "sha256": "508cf9a26209d5657c10bc976d2cb479a7c7363a9332126885edca32eea00923",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
         "Script": 2
       },
-      "bundle_script_enabled": true,
+      "bundle_script_enabled": false,
       "missing_dependencies": {},
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
@@ -342,8 +349,17 @@
         "防御性修正：没有标记、标记类型未知、非数组 data、异常/非 JSON/错误状态响应均透传，正常项目顺序及分页字段保留；无删除时保持原始字节。",
         "原有原生 JQ 两行从独立模块与总模块移除，避免先于脚本误改响应；脚本 requires-body=true，1 MiB 上限、5 秒超时，超限由 Surge 透传。",
         "106 模块基线及新增语义/匹配/合集接线样例在 VPS 检查；没有访问用户客户端，用户设备故障根因未确证。",
-        "额外保护：应用错误状态及包含超出 JS 安全整数范围的数值 ID 的响应保持原始字节，避免 JSON 重序列化损伤内容。"
-      ]
+        "额外保护：应用错误状态及包含超出 JS 安全整数范围的数值 ID 的响应保持原始字节，避免 JSON 重序列化损伤内容。",
+        "用户复测仍无法访问，删除整份适配后恢复；客户端兼容性未解决。独立模块和合集均停止部署 Pinterest 响应脚本及 api.pinterest.com MITM，待取得实际错误后再适配。服务器样例通过不作为客户端成功证据。"
+      ],
+      "deployment": {
+        "enabled": false,
+        "status": "pending-client-compatibility-review",
+        "reason": "User reports failure persisted after the native response rewrite; removing our installed rules restores access.",
+        "date": "2026-10-11",
+        "script_enabled": false,
+        "mitm_enabled": false
+      }
     },
     {
       "name": "ReelShort去广告",

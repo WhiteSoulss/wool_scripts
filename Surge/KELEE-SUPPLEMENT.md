@@ -16,6 +16,8 @@
 
 ## Pinterest 兼容修正（2026-10-11）
 
+**复测失败，已暂时停用。** 用户删除这份适配后恢复访问。独立模块和总合集均停止执行 Pinterest 脚本，并移除所添加的 API 解密主机；Pinterest 去广告当前不可用。下面的适配代码保留用于复核，不会执行。实际故障层次仍待客户端错误记录确认，不能仅凭服务器样例重新启用。详情见 [待复核记录](Kelee-review/pinterest-pending-review.json)。
+
 Pinterest 独立模块与总模块现使用手写的原生 Surge 响应脚本，两个原 JQ 行已移除。
 仅清除顶层 data 数组中明确 is_promoted=true 或字符串 true 的项目；没有标记、未知标记、
 非数组及非 JSON／HTTP 错误响应保留原样，保留分页与正常项目顺序。触发范围及 MITM 与原 LPX 相同。

@@ -2,7 +2,7 @@
   "date": "2026-10-11",
   "checked_at_utc": "2026-10-11T07:30:04.900645+00:00",
   "baseline_commit": "14058011a40c5baa945c72cc2141875b8404d77e",
-  "status": "manually-reviewed",
+  "status": "adapter-semantics-reviewed-deployment-disabled-pending-client-evidence",
   "reported_problem": "Pinterest cannot be accessed with the Surge adaptation; original Loon rules work.",
   "original_url": "https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx",
   "original_sha256": "905ce81e2a26cb5421219b8f9009502d7c014291b3b3a5532e13dd6ad3a01d95",
@@ -21,20 +21,30 @@
   "script_hub_used": false,
   "automatic_conversion_used": false,
   "files": {
-    "Surge/module/Kelee/Pinterest_remove_ads.sgmodule": "5a4d79c1b3a493fb9763ea0b9bc86df15e4e0a96f989f1fffea6cf85370b8d97",
+    "Surge/module/Kelee/Pinterest_remove_ads.sgmodule": "508cf9a26209d5657c10bc976d2cb479a7c7363a9332126885edca32eea00923",
     "Surge/Script/Kelee/Pinterest/remove-ads.js": "a8fecbbfd91e00356c5ea209d1b666554920ce03450700ac8a2c1196d2122243",
-    "Surge/module/blockAds.module": "83ef905d64c25e390f1ed7a0f3991a9df8a05fe5148b0e75129d44000e9ce581",
-    "Surge/maintenance/test_pinterest.js": "c7d5b72d570097f41098ab1f7198f1607ebe86257d6b6b4e313d42a21c8c6924"
+    "Surge/module/blockAds.module": "e29e14d5c2d390d4673ecf636615d27cd1816ab69ed0f16e218d086b6a636eaf",
+    "Surge/maintenance/test_pinterest.js": "0290cd314706d980f4f63c567dc2eca59fef4b0dd936903277fde48f822c34c2"
   },
   "checks": {
     "pinterest_semantic_cases": 42,
     "pinterest_original_semantics_cases": 3,
-    "pinterest_module_url_cases": 14,
+    "pinterest_module_url_cases": 0,
+    "pinterest_deployment_disabled_checks": 2,
     "modules_verified": 106
   },
   "overlap_review": "Across total URL Rewrite, Map Local, Body Rewrite, Header Rewrite and Script rows, only the replaced two jq rules matched sample original Pinterest endpoints. New sole guarded script matches those endpoints; no Pinterest website/image/search/auth endpoint change.",
   "official_surge_documentation": [
     "https://manual.nssurge.com/http/body-rewrite.html",
     "https://manual.nssurge.com/scripting/http-response.html"
-  ]
+  ],
+  "user_retest_failed": true,
+  "module_causality_confirmed_by_user": true,
+  "deployment_enabled": false,
+  "previous_active_adapter_checks": {
+    "pinterest_semantic_cases": 42,
+    "pinterest_original_semantics_cases": 3,
+    "pinterest_module_url_cases": 14,
+    "modules_verified": 106
+  }
 }

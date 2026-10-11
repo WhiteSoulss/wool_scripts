@@ -6,14 +6,15 @@
     "json_semantic_fixtures": 67,
     "inline_mock_checks": 446,
     "modules_verified": 106,
-    "merged_active_rows": 5358,
+    "merged_active_rows": 5357,
     "merged_unique_jq_expressions_compiled": 188,
-    "own_runtime_urls_resolved": 31,
+    "own_runtime_urls_resolved": 30,
     "scripts_compiled_without_execution": 29,
     "native_adapter_cases": 4,
     "pinterest_semantic_cases": 42,
     "pinterest_original_semantics_cases": 3,
-    "pinterest_module_url_cases": 14
+    "pinterest_module_url_cases": 0,
+    "pinterest_deployment_disabled_checks": 2
   },
   "script_hub_used": false,
   "surge_client_runtime_tested": false,

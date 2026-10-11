@@ -1,5 +1,5 @@
 #!name=Pinterest去广告
-#!desc=移除瀑布流、更多探索内容中的广告
+#!desc=暂时停用：转换版影响 Pinterest 访问，等待客户端故障定位。原功能：移除瀑布流、更多探索内容中的广告。
 #!openUrl=https://apps.apple.com/app/id429047995
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!category=去广告
@@ -8,7 +8,8 @@
 #!date=2026-10-11
 
 # Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx
-# Configuration: manually rewritten native Surge response adapter, 2026-10-11; no ScriptHub.
+# Configuration: temporarily disabled after the user's failed retest, 2026-10-11; no ScriptHub.
+# Re-enabling requires reviewing actual client failure evidence; server fixtures alone are insufficient.
 
 # Current Loon SHA256: 905ce81e2a26cb5421219b8f9009502d7c014291b3b3a5532e13dd6ad3a01d95
 
@@ -17,7 +18,7 @@
 # Limit the script to the original two endpoints and 1 MiB bodies; other responses pass through.
 
 [Script]
-Pinterest_remove_ads = type=http-response, pattern=(?i)^https:\/\/api\.pinterest\.com\/v\d\/(?:feeds\/home|pins\/\d+\/related\/modules)\/\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Pinterest/remove-ads.js, requires-body=true, max-size=1048576, timeout=5
+# Disabled pending compatibility review: Pinterest_remove_ads = type=http-response, pattern=(?i)^https:\/\/api\.pinterest\.com\/v\d\/(?:feeds\/home|pins\/\d+\/related\/modules)\/\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Pinterest/remove-ads.js, requires-body=true, max-size=1048576, timeout=5
 
 [MITM]
-hostname = %APPEND% api.pinterest.com
+# Disabled pending compatibility review: hostname = %APPEND% api.pinterest.com

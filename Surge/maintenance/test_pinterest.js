@@ -131,9 +131,28 @@ const parse = text => {
   }
   return out;
 };
+const manifest = JSON.parse(fs.readFileSync(path.join(root,"Surge/Kelee-review/manifest.json"),"utf8"));
+const pinterestEntry = manifest.modules.find(entry => entry.filename === "Pinterest_remove_ads.sgmodule");
+assert.ok(pinterestEntry);
+const deploymentEnabled = !pinterestEntry.deployment || pinterestEntry.deployment.enabled !== false;
+const pendingPath = path.join(root,"Surge/Kelee-review/pinterest-pending-review.json");
+assert.ok(fs.existsSync(pendingPath),"the compatibility review state must be preserved");
+const pending = JSON.parse(fs.readFileSync(pendingPath,"utf8"));
+if (pending.do_not_auto_reenable && pending.status === "pending-client-compatibility-review") {
+  assert.equal(deploymentEnabled,false,"unresolved user failure must not be silently re-enabled");
+}
 let urlCases = 0;
+let disabledChecks = 0;
 for (const text of [moduleText,bundleText]) {
   const sections = parse(text);
+  if (!deploymentEnabled) {
+    assert.equal((sections.Script || []).filter(row => row.includes(scriptUrl)).length,0,"disabled adapter must have no active script");
+    assert.equal((sections["Body Rewrite"] || []).filter(row => row.includes("pinterest")).length,0,"disabled adapter must have no active jq");
+    const hosts = (sections.MITM || []).join(",").replace(/^hostname\s*=\s*%APPEND%\s*/,"").split(",").map(host => host.trim());
+    assert.ok(!hosts.includes("api.pinterest.com"),"disabled adapter must not add API MITM");
+    disabledChecks++;
+    continue;
+  }
   assert.ok((sections.MITM || []).some(row => row.includes("api.pinterest.com")));
   assert.equal((sections["Body Rewrite"] || []).filter(row => row.includes("pinterest")).length,0);
   const row = (sections.Script || []).filter(row => row.includes(scriptUrl));
@@ -150,4 +169,4 @@ for (const text of [moduleText,bundleText]) {
     urlCases++;
   }
 }
-console.log(JSON.stringify({pinterest_semantic_cases:semanticCases,pinterest_original_semantics_cases:originalCases,pinterest_module_url_cases:urlCases}));
+console.log(JSON.stringify({pinterest_semantic_cases:semanticCases,pinterest_original_semantics_cases:originalCases,pinterest_module_url_cases:urlCases,pinterest_deployment_disabled_checks:disabledChecks}));
