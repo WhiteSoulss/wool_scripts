@@ -1,0 +1,13 @@
+#!name=Pinterest 解密测试 A
+#!desc=仅解密 api.pinterest.com，不修改请求或响应；沿用主配置的解密协议。测试前关闭 Pinterest 去广告和包含其规则的合集，测试结束后关闭本模块。
+#!author=WhiteSoulss；主机来源：可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=诊断
+#!date=2026-10-11
+
+# Diagnostic only. No ad-removal action, ScriptHub, script or remote dependency.
+# Keep the existing trusted CA and main-profile settings.
+# First disable the Pinterest standalone/bundled rewrite, then enable only this test.
+# Reconnect Surge and fully restart Pinterest to avoid reusing the existing connection.
+
+[MITM]
+hostname = %APPEND% api.pinterest.com

@@ -1,0 +1,14 @@
+#!name=Pinterest 解密测试 B HTTP2
+#!desc=仅解密 api.pinterest.com，并临时开启 HTTP/2；不含去广告改写。h2 会影响当前配置所有 MITM 主机，关闭本测试后撤销覆盖。仅在测试 A 仍失败时使用，勿同时开启 A、Pinterest 去广告或其合集。
+#!author=WhiteSoulss；主机来源：可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=诊断
+#!date=2026-10-11
+
+# Diagnostic only. No ad-removal action, ScriptHub, script or remote dependency.
+# The only difference from test A is the h2 override; it is profile-wide.
+# A successful B alone does not prove that the original jq filtering works.
+# Reconnect Surge and fully restart Pinterest before each comparison.
+
+[MITM]
+hostname = %APPEND% api.pinterest.com
+h2 = true

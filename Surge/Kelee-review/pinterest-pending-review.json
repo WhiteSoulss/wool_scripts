@@ -18,9 +18,35 @@
   "do_not_automatically_restore_superseded_adapter": true,
   "new_implementation": "Two native http-response-jq rows with the exact original expression; api.pinterest.com appended to MITM. No Pinterest JavaScript adapter.",
   "remaining_review": [
-    "Whether this source-faithful native version preserves Pinterest access and removes ads on the user device.",
-    "If access fails again, actual request error and standalone-versus-bundle evidence are still needed."
+    "Client A test with only api.pinterest.com MITM and no Pinterest rewrite, retaining existing main-profile transport settings.",
+    "If A still fails, B comparison adds only h2=true; it affects all MITM hosts and must be disabled after testing.",
+    "Actual URL/HTTP response and rewrite processing records are required before selecting the next production compatibility change."
   ],
   "server_checks_do_not_prove_client_success": true,
-  "review_record": "Surge/Kelee-review/pinterest-reconversion-20261011.json"
+  "review_record": "Surge/Kelee-review/pinterest-reconversion-20261011.json",
+  "latest_client_retest": {
+    "date": "2026-10-11",
+    "result": "failed-content-load",
+    "tested_commit_unconfirmed": "72f1684ca429fe08ba4c9c7992ccd40c5c98d007",
+    "user_error_report": "No Surge error reported; app screenshot shows Something’s a little off / Refresh page.",
+    "provided_request_log": "01:05:39.394515 [Connection] Handled by VIF\n01:05:39.419931 [TLS] TLS Client Hello SNI: api.pinterest.com\n01:05:39.421347 [MITM] Enable MITM due to MITM hostname settings entry: api.pinterest.com (Pinterest去广告)\n01:05:39.460703 [MITM] MITM via HTTP/1.1 mode\n01:05:41.249603 [Rule] Sub-rule matched: .pinterest.com(in ProxyLite.list)\n01:05:41.249660 [Rule] Rule matched: RULE-SET ProxyLite.list\n01:05:41.249809 [Rule] Policy decision path: Proxies -> myNode\n01:05:41.249994 [HTTP] Reuse previous HTTP/1.1 connection: #3566",
+    "observed_facts": [
+      "api.pinterest.com matched the Pinterest module MITM hostname",
+      "HTTP/1.1 MITM selected",
+      "Request routed through ProxyLite -> Proxies -> myNode",
+      "Existing HTTP/1.1 connection reused"
+    ],
+    "not_established": [
+      "HTTP response status",
+      "Whether either original jq URL matched this particular request",
+      "Actual response body",
+      "Successful client TLS exchange",
+      "Root cause"
+    ],
+    "client_success_confirmed": false
+  },
+  "diagnostic_modules": [
+    "Surge/diagnostics/Pinterest/mitm-only.sgmodule",
+    "Surge/diagnostics/Pinterest/mitm-h2-only.sgmodule"
+  ]
 }
