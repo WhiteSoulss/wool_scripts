@@ -1,0 +1,956 @@
+[
+  {
+    "name": "5EPlay去广告",
+    "desc": "移除开屏广告、弹窗广告、活动角标、商城。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "5EPlay_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/5EPlay_remove_ads.lpx"
+  },
+  {
+    "name": "36氪去广告",
+    "desc": "移除开屏广告、首页右上角运营位、信息流广告、文末广告，移除相关文章推荐、大家都在看及皮肤配置，精简搜索页面、我的页面及底栏。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "36Kr_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/36Kr_remove_ads.lpx"
+  },
+  {
+    "name": "123云盘去广告",
+    "desc": "移除开屏广告、应用内横幅广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "123NetWorkDisk_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/123NetWorkDisk_remove_ads.lpx"
+  },
+  {
+    "name": "360摄像机去广告",
+    "desc": "移除开屏广告、首页推广、底栏商城入口及我的页面推广。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "360SmartCamera_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/360SmartCamera_remove_ads.lpx"
+  },
+  {
+    "name": "360智慧生活去广告",
+    "desc": "移除开屏广告、首页推广横幅、商城入口及我的页面推广。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "SafetyHome_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/SafetyHome_remove_ads.lpx"
+  },
+  {
+    "name": "B612咔叽去广告",
+    "desc": "移除开屏广告、弹窗及拍摄页面底部横幅广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "SnowCamera_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/SnowCamera_remove_ads.lpx"
+  },
+  {
+    "name": "CC直播去广告",
+    "desc": "移除信息流推广和横幅，精简顶部标签。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "CCLive_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/CCLive_remove_ads.lpx"
+  },
+  {
+    "name": "DJ多多去广告",
+    "desc": "移除开屏广告及歌单广告",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "DjDuoDuo_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/DjDuoDuo_remove_ads.lpx"
+  },
+  {
+    "name": "DREAME去广告",
+    "desc": "移除开屏广告、首页大图推广、横幅推广，精简底栏，阻止桌面图标替换。仅支持2.5.1版。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "DREAME_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/DREAME_remove_ads.lpx"
+  },
+  {
+    "name": "ECOVACS HOME去广告",
+    "desc": "移除横幅推广，精简底栏。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "EcovacsHome_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/EcovacsHome_remove_ads.lpx"
+  },
+  {
+    "name": "Foodie去广告",
+    "desc": "移除开屏广告和弹窗广告",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Foodie_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Foodie_remove_ads.lpx"
+  },
+  {
+    "name": "Hong Kong Toolbar去广告",
+    "desc": "移除开屏互动广告、直播前贴片广告及视频广告",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "HongKongToolbar_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/HongKongToolbar_remove_ads.lpx"
+  },
+  {
+    "name": "Jump去广告",
+    "desc": "移除Jump开屏广告",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Jump_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Jump_remove_ads.lpx"
+  },
+  {
+    "name": "KOOK去广告",
+    "desc": "移除开屏广告、房间横幅推广、促销活动、精简发现页面频道及我的页面，移除底栏商城入口。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "KOOK_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/KOOK_remove_ads.lpx"
+  },
+  {
+    "name": "OKOK去广告",
+    "desc": "移除开屏广告、横幅广告，精简首页，拦截优惠购页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "OKOK_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/OKOK_remove_ads.lpx"
+  },
+  {
+    "name": "PICOOC去广告",
+    "desc": "移除开屏广告、悬浮广告，拦截发现页，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "PICOOC_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/PICOOC_remove_ads.lpx"
+  },
+  {
+    "name": "Pinterest去广告",
+    "desc": "移除瀑布流、更多探索内容中的广告",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Pinterest_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx"
+  },
+  {
+    "name": "ReelShort去广告",
+    "desc": "移除开屏广告、为你推荐及各类弹窗，移除搜索栏填充词。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "ReelShort_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/ReelShort_remove_ads.lpx"
+  },
+  {
+    "name": "Roborock去广告",
+    "desc": "移除横幅、活动推广、机器人图标，精简服务中心。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Roborock_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Roborock_remove_ads.lpx"
+  },
+  {
+    "name": "RQrun去广告",
+    "desc": "移除开屏广告",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "RQrun_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/RQrun_remove_ads.lpx"
+  },
+  {
+    "name": "Sofascore去广告",
+    "desc": "移除横幅及信息流广告",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Sofascore_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Sofascore_remove_ads.lpx"
+  },
+  {
+    "name": "TeraBox去广告",
+    "desc": "移除开屏广告、应用内悬浮窗、弹窗广告及横幅广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "TeraBox_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/TeraBox_remove_ads.lpx"
+  },
+  {
+    "name": "Uki去广告",
+    "desc": "移除开屏广告、应用内悬浮窗，各类横幅、信息流广告、搜索填充词、我的页面广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Uki_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Uki_remove_ads.lpx"
+  },
+  {
+    "name": "WakeUp课程表去广告",
+    "desc": "移除横幅广告、弹窗广告，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "WakeupSchedule_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/WakeupSchedule_remove_ads.lpx"
+  },
+  {
+    "name": "YY语音去广告",
+    "desc": "移除开屏广告、应用内弹窗、任务推广、频道横幅推广，精简广场顶部标签。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "YYVoiceTool_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/YYVoiceTool_remove_ads.lpx"
+  },
+  {
+    "name": "百度网页去广告",
+    "desc": "移除百度搜索移动端网页的首页广告信息流",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "BaiduSearchWebpage_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx"
+  },
+  {
+    "name": "比心去广告",
+    "desc": "移除弹窗广告、悬浮广告、横幅广告、轮播图广告，精简搜索页及我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Bixin_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Bixin_remove_ads.lpx"
+  },
+  {
+    "name": "测测去广告",
+    "desc": "移除开屏广告、活动皮肤、各类弹窗及横幅、金刚位红点文字，精简首页标签及搜索页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Cece_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Cece_remove_ads.lpx"
+  },
+  {
+    "name": "成分喵去广告",
+    "desc": "移除首页推广活动、广告组件请求、移除被查商品购买链接、搜索发现。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "ChengFenMiao_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/ChengFenMiao_remove_ads.lpx"
+  },
+  {
+    "name": "创维智慧云去广告",
+    "desc": "移除开屏广告、横幅广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "SkyworthDigitalPicamera_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/SkyworthDigitalPicamera_remove_ads.lpx"
+  },
+  {
+    "name": "触站去广告",
+    "desc": "移除开屏广告、弹窗广告、各页面横幅推广，移除首页悬浮挂件。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Chuzhan_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Chuzhan_remove_ads.lpx"
+  },
+  {
+    "name": "磁力宅播放器去广告",
+    "desc": "移除开屏广告、弹窗和文件列表广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "XFuse_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/XFuse_remove_ads.lpx"
+  },
+  {
+    "name": "大姨妈月经期助手去广告",
+    "desc": "移除信息流广告，精简首页金刚位及我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Dayima_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Dayima_remove_ads.lpx"
+  },
+  {
+    "name": "得间小说去广告",
+    "desc": "移除开屏广告、章末广告，移除扉页广告提示、听书界面广告提示、搜索栏填充词。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "iReaderDejian_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/iReaderDejian_remove_ads.lpx"
+  },
+  {
+    "name": "豆瓣阅读去广告",
+    "desc": "移除开屏广告、弹窗广告、热门搜索、热搜榜。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "DoubanRead_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/DoubanRead_remove_ads.lpx"
+  },
+  {
+    "name": "堆糖去广告",
+    "desc": "移除开屏广告、信息流广告、热搜排行榜广告、我的页面横幅广告，移除关注推荐，精简底部导航栏。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "DuiTang_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/DuiTang_remove_ads.lpx"
+  },
+  {
+    "name": "多屏互动去广告",
+    "desc": "移除开屏广告、横幅推广、搜索填充词，移除广告下发。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "TCLnScreen_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/TCLnScreen_remove_ads.lpx"
+  },
+  {
+    "name": "风鸟去广告",
+    "desc": "移除首页信息流和轮播图",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "RiskBird_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/RiskBird_remove_ads.lpx"
+  },
+  {
+    "name": "纷玩岛去广告",
+    "desc": "移除开屏广告、弹窗广告、信息横幅推广、票夹页面横幅广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "LiveLab_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/LiveLab_remove_ads.lpx"
+  },
+  {
+    "name": "海雀去广告",
+    "desc": "移除开屏广告、横幅广告、弹窗广告，拦截商城和资讯页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "AlcidaeVideo_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/AlcidaeVideo_remove_ads.lpx"
+  },
+  {
+    "name": "哈罗去广告",
+    "desc": "移除开屏广告及歌单广告",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "EasyBike_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/EasyBike_remove_ads.lpx"
+  },
+  {
+    "name": "慧生活798去广告",
+    "desc": "移除开屏广告、横幅广告，精简底栏。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "SmartLife_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/SmartLife_remove_ads.lpx"
+  },
+  {
+    "name": "健康160去广告",
+    "desc": "移除开屏广告、应用内悬浮窗、弹窗广告、横幅广告，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "91160_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/91160_remove_ads.lpx"
+  },
+  {
+    "name": "剑网三无界去广告",
+    "desc": "移除热门推送活动，并解决无法在Loon运行时更新和登录的问题。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "SeasunJX3_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/SeasunJX3_remove_ads.lpx"
+  },
+  {
+    "name": "京东外卖去广告",
+    "desc": "移除首页推广、点评页面非美食内容、购物车及我的页面推荐、搜索发现、搜索榜单，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "JDWaimai_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/JDWaimai_remove_ads.lpx"
+  },
+  {
+    "name": "金山文档去广告",
+    "desc": "移除首页横幅推广、表单收集页面推广和我的页面推广。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "WPS_Documents_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/WPS_Documents_remove_ads.lpx"
+  },
+  {
+    "name": "看家王去广告",
+    "desc": "移除开屏广告、横幅广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "ChatCam_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/ChatCam_remove_ads.lpx"
+  },
+  {
+    "name": "口袋壁纸去广告",
+    "desc": "移除悬浮广告，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "ShoujiDesk_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/ShoujiDesk_remove_ads.lpx"
+  },
+  {
+    "name": "快对去广告",
+    "desc": "移除开屏广告、横幅推广，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "KuaiDuiZuoYe_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/KuaiDuiZuoYe_remove_ads.lpx"
+  },
+  {
+    "name": "快影去广告",
+    "desc": "移除开屏广告、信息流推广、横幅推广，移除悬浮部件。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "KwaiVideoeditor_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/KwaiVideoeditor_remove_ads.lpx"
+  },
+  {
+    "name": "夸克扫描王去广告",
+    "desc": "移除弹窗广告、横幅广告，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "QuarkScanking_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/QuarkScanking_remove_ads.lpx"
+  },
+  {
+    "name": "酷狗概念版去广告",
+    "desc": "移除广告服务模块、播放器广告，精简乐库及搜索页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "KuGouYouth_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/KuGouYouth_remove_ads.lpx"
+  },
+  {
+    "name": "酷狗铃声去广告",
+    "desc": "移除开屏广告，移除歌曲列表、播放器、搜索界面广告，移除悬浮广告和弹窗广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "KGRing_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/KGRing_remove_ads.lpx"
+  },
+  {
+    "name": "库街区去广告",
+    "desc": "移除开屏广告、弹窗广告、搜索页面的热搜及话题热榜。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "KuroBBS_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/KuroBBS_remove_ads.lpx"
+  },
+  {
+    "name": "联掌门户去广告",
+    "desc": "移除开屏广告、弹窗，移除首页、服务和发现页面无用内容。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "LZMH_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/LZMH_remove_ads.lpx"
+  },
+  {
+    "name": "萝卜快跑去广告",
+    "desc": "移除开屏广告、弹窗广告、横幅广告、新用户活动皮肤，保留优惠活动。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "RoboTaxi_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/RoboTaxi_remove_ads.lpx"
+  },
+  {
+    "name": "马克水印相机去广告",
+    "desc": "移除开屏广告，拍摄首页悬浮挂件，侧边栏横幅广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "marki_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/marki_remove_ads.lpx"
+  },
+  {
+    "name": "漫客栈去广告",
+    "desc": "移除开屏广告、漫画广告、小说章末广告，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "MKZ_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/MKZ_remove_ads.lpx"
+  },
+  {
+    "name": "每日赛车去广告",
+    "desc": "移除开屏广告、信息流广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "MeiRiSaiChe_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/MeiRiSaiChe_remove_ads.lpx"
+  },
+  {
+    "name": "美食杰去广告",
+    "desc": "移除开屏广告和信息流广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "MeiShiJie_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/MeiShiJie_remove_ads.lpx"
+  },
+  {
+    "name": "萌娘百科去广告",
+    "desc": "移除开屏广告、弹窗、首页横幅。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "MoeGirlWiki_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/MoeGirlWiki_remove_ads.lpx"
+  },
+  {
+    "name": "摩天轮去广告",
+    "desc": "移除开屏广告、弹窗，精简底栏。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "FerrisWheel_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/FerrisWheel_remove_ads.lpx"
+  },
+  {
+    "name": "摩托范去广告",
+    "desc": "移除开屏广告、弹窗广告、横幅广告、文末广告及相关文章推荐、广告下发，移除我的页面商品推荐，精简搜索页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "MotorFans_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/MotorFans_remove_ads.lpx"
+  },
+  {
+    "name": "南网在线去广告",
+    "desc": "移除首页推广，精简搜索页和我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "CSG_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/CSG_remove_ads.lpx"
+  },
+  {
+    "name": "排班日历去广告",
+    "desc": "移除开屏广告、横幅广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "AxWorkSchedule_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/AxWorkSchedule_remove_ads.lpx"
+  },
+  {
+    "name": "胖乖生活去广告",
+    "desc": "移除开屏广告、横幅轮播图、网格广告、信息流广告、浮窗广告，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "PangguaiLife_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/PangguaiLife_remove_ads.lpx"
+  },
+  {
+    "name": "配音秀去广告",
+    "desc": "移除开屏广告、弹窗、横幅、各类关注推荐。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "DubbingShow_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/DubbingShow_remove_ads.lpx"
+  },
+  {
+    "name": "启信宝去广告",
+    "desc": "移除开屏广告、应用内弹窗、首页轮播图、悬浮部件和个性化推荐信息流。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "QiXinBao_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/QiXinBao_remove_ads.lpx"
+  },
+  {
+    "name": "省钱快报去广告",
+    "desc": "移除开屏广告、横幅广告、商品推荐，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "YueDanBa_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/YueDanBa_remove_ads.lpx"
+  },
+  {
+    "name": "收银通商户端去广告",
+    "desc": "移除开屏广告和首页推广",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "ShouYinTongMerchant_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/ShouYinTongMerchant_remove_ads.lpx"
+  },
+  {
+    "name": "数字心动去广告",
+    "desc": "移除开屏广告、首页顶部标签、轮播图、悬浮挂件、热门搜索、信息流广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "DigitalHeartbeat_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/DigitalHeartbeat_remove_ads.lpx"
+  },
+  {
+    "name": "随手记去广告",
+    "desc": "移除开屏广告、神象云账本内部广告、我的页面广告，移除社区入口。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "KingdeeMyMoney_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/KingdeeMyMoney_remove_ads.lpx"
+  },
+  {
+    "name": "他趣去广告",
+    "desc": "移除各类弹窗、横幅，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Taqu_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Taqu_remove_ads.lpx"
+  },
+  {
+    "name": "腾讯文档去广告",
+    "desc": "移除开屏广告、首页横幅推广。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "TXDocs_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/TXDocs_remove_ads.lpx"
+  },
+  {
+    "name": "天猫校园去广告",
+    "desc": "移除广告配置、开屏广告、弹窗广告、AI助手、促销模块，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "TmallCampus_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/TmallCampus_remove_ads.lpx"
+  },
+  {
+    "name": "天气通去广告",
+    "desc": "移除开屏广告、横幅广告、弹窗广告，精简底栏及我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "TianQiTong_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/TianQiTong_remove_ads.lpx"
+  },
+  {
+    "name": "天气预报去广告",
+    "desc": "移除开屏广告、弹窗广告、横幅广告、悬浮挂件，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "iReaderCityWeather_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/iReaderCityWeather_remove_ads.lpx"
+  },
+  {
+    "name": "天天跳绳去广告",
+    "desc": "移除开屏广告、横幅广告、弹窗广告、活动推广，精简首页标签和搜索页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "CrazyRope_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/CrazyRope_remove_ads.lpx"
+  },
+  {
+    "name": "图怪兽去广告",
+    "desc": "移除开屏广告、弹窗广告、各页面横幅推广。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "TuGuaiShou_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/TuGuaiShou_remove_ads.lpx"
+  },
+  {
+    "name": "挖财记账去广告",
+    "desc": "移除弹窗广告、推广语横幅和右下角悬浮广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "WaCaiJiZhang_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/WaCaiJiZhang_remove_ads.lpx"
+  },
+  {
+    "name": "挖财记账去广告",
+    "desc": "移除开屏广告、横幅广告，顶部推广、活动配置。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Wacai_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Wacai_remove_ads.lpx"
+  },
+  {
+    "name": "微博轻享版去广告",
+    "desc": "移除开屏广告、时间线广告及评论区广告，移除发现页面横幅推广、最常访问、主页访客及热门视频，移除搜索填充词。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Weibo_intl_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Weibo_intl_remove_ads.lpx"
+  },
+  {
+    "name": "微脉圈去广告",
+    "desc": "移除开屏广告、聊天页横幅提示及发现页面的横幅广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Weimai_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Weimai_remove_ads.lpx"
+  },
+  {
+    "name": "微信小程序去广告",
+    "desc": "收录常用小程序的去广告，作者署名在插件内。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "WexinMiniPrograms_Remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx"
+  },
+  {
+    "name": "沃尔玛去广告",
+    "desc": "移除操作引导、商品详情页用户调研、搜索填充词和搜索发现，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Walmart_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Walmart_remove_ads.lpx"
+  },
+  {
+    "name": "香港抖音去广告",
+    "desc": "精简左右侧边栏、移除底栏切换，其余内容后续再完善。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "HKDouYin_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/HKDouYin_remove_ads.lpx"
+  },
+  {
+    "name": "小白智慧打印去广告",
+    "desc": "移除开屏广告、首页推广金刚位、热门内容推荐、横幅广告、搜索填充词、搜索发现，精简我的页面。账户页面错误是已知问题，无需反馈。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "XiaobaiPrint_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/XiaobaiPrint_remove_ads.lpx"
+  },
+  {
+    "name": "小店掌柜去广告",
+    "desc": "移除开屏广告、活动推广和页面跳转。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "ShopKeeperAdmin_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/ShopKeeperAdmin_remove_ads.lpx"
+  },
+  {
+    "name": "小黑盒去广告",
+    "desc": "移除开屏广告和热点板块信息流广告",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "XiaoHeiHe_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/XiaoHeiHe_remove_ads.lpx"
+  },
+  {
+    "name": "小桔充电去广告",
+    "desc": "移除横幅广告、弹窗广告，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "XiaojukejiCharge_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/XiaojukejiCharge_remove_ads.lpx"
+  },
+  {
+    "name": "小喵看书去广告",
+    "desc": "移除小喵看书章末广告",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "MiaoRead_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/MiaoRead_remove_ads.lpx"
+  },
+  {
+    "name": "行者户外去广告",
+    "desc": "移除弹窗广告、发现页面横幅推广的推广金刚位，移除我的页面横幅推广。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "OnTheWay_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/OnTheWay_remove_ads.lpx"
+  },
+  {
+    "name": "新浪财经去广告",
+    "desc": "移除开屏广告、弹窗广告、横幅广告、信息流广告，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "SinaStock_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/SinaStock_remove_ads.lpx"
+  },
+  {
+    "name": "一甜相机去广告",
+    "desc": "移除开屏广告、悬浮广告及图片选择器横幅广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Yitian_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Yitian_remove_ads.lpx"
+  },
+  {
+    "name": "有道翻译官去广告",
+    "desc": "移除开屏广告、横幅推广，精简首页。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "YoudaoTrans_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/YoudaoTrans_remove_ads.lpx"
+  },
+  {
+    "name": "有道云笔记去广告",
+    "desc": "移除开屏广告、弹窗广告及横幅广告。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "YoudaoNote_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/YoudaoNote_remove_ads.lpx"
+  },
+  {
+    "name": "阅友去广告",
+    "desc": "移除开屏广告、弹窗广告和阅读页面广告，移除底栏福利按钮。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Yueyou_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Yueyou_remove_ads.lpx"
+  },
+  {
+    "name": "云鲸智能去广告",
+    "desc": "移除开屏广告、横幅推广，禁用商城。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "NarwelRobots_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/NarwelRobots_remove_ads.lpx"
+  },
+  {
+    "name": "掌上无畏契约去广告",
+    "desc": "移除开屏广告、弹窗推广、搜索热搜、搜索热榜。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "ValorantBible_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/ValorantBible_remove_ads.lpx"
+  },
+  {
+    "name": "直播吧去广告",
+    "desc": "移除信息流广告、横幅广告、弹窗广告、皮肤配置、悬浮挂件、热门搜索，移除青少年模式，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Zhibo8_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Zhibo8_remove_ads.lpx"
+  },
+  {
+    "name": "智慧苏州去广告",
+    "desc": "移除开屏广告、横幅，移除信息流推广。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "SuZhouCitizenCard_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/SuZhouCitizenCard_remove_ads.lpx"
+  },
+  {
+    "name": "智联招聘去广告",
+    "desc": "移除开屏广告、弹窗、职位页面推广和各类横幅推广。此插件需要IPA签名方可使用，App Store用户请勿使用此插件，务必点击下方主页链接查看详细教程。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "ZhiLianZhaoPin_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/ZhiLianZhaoPin_remove_ads.lpx"
+  },
+  {
+    "name": "中国天气去广告",
+    "desc": "移除开屏广告、弹窗广告、横幅广告，移除焦点视频、精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "WeatherChina_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/WeatherChina_remove_ads.lpx"
+  },
+  {
+    "name": "纵横小说去广告",
+    "desc": "移除纵横小说开屏广告和弹窗",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "ZongHeng_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/ZongHeng_remove_ads.lpx"
+  },
+  {
+    "name": "最美壁纸去广告",
+    "desc": "移除悬浮广告、横幅广告、轮播图广告，精简我的页面。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "iWallBiZhi_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/iWallBiZhi_remove_ads.lpx"
+  },
+  {
+    "name": "腾讯视频去广告",
+    "desc": "过滤腾讯视频客户端广告，如遇失效，则需要重新安装腾讯视频客户端。由于此插件不再维护，客户端版本高于8.9.40可能会导致此插件失效，请勿升级客户端。",
+    "tag": [
+      "去广告"
+    ],
+    "filename": "Tencent_Video_remove_ads.sgmodule",
+    "url": "loon://import?plugin=https://kelee.one/Tool/Loon/Lpx/Tencent_Video_remove_ads.lpx"
+  }
+]

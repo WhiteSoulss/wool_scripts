@@ -6,7 +6,7 @@
 
 本次以 fmz200 提交 `5d5f63fcf98bc69d5f8f1b1bae6f86a01ee4bb97` 和 README-RULE 的 733 行支持列表核对。新增 106 个独立配置（105 个标题，挖财原版有两份不同端点配置）。这是配置数，不等于新增软件数或客户端实测成功数。
 
-补充配置复用此前逐项手写复核的原生 Surge 实现，重新下载当前实际 Loon 原版和依赖核对精确哈希。没有使用 ScriptHub。保留原作者、非空名称和描述；所需脚本及 DREAME 资源保存至本仓库。
+补充配置复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置），重新下载当前实际 Loon 原版和依赖核对精确哈希。没有使用 ScriptHub。保留原作者、非空名称和描述；所需脚本及 DREAME 资源保存至本仓库。
 
 同应用别名、App 与小程序、普通版与轻享版按实际对象区分。36氪和哈啰的 fmz 项是空文件；腾讯视频虽列在表中，其独立 Surge 文件没有实际动作，因此补入原版规则。微博和 HTTPDNS 已有 fmz 原生模块，直接合入它们，不重复转换。签到、节点检测、订阅工具、搜索和链接跳转功能未混入去广告合集。
 
@@ -124,3 +124,5 @@
 | 纵横小说去广告 | [ZongHeng_remove_ads.sgmodule](module/Kelee/ZongHeng_remove_ads.sgmodule) | 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md] |
 | 最美壁纸去广告 | [iWallBiZhi_remove_ads.sgmodule](module/Kelee/iWallBiZhi_remove_ads.sgmodule) | 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md] |
 | 腾讯视频去广告 | [Tencent_Video_remove_ads.sgmodule](module/Kelee/Tencent_Video_remove_ads.sgmodule) | RuCu6[https://github.com/RuCu6] |
+
+历史适配稿含辅助工具生成的基础，不是全部从零手写；新变化必须读实际原版及依赖，再手动改写和复核。云端每日维护见 [maintenance/README.md](maintenance/README.md)。

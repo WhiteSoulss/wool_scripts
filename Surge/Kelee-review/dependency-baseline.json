@@ -1,0 +1,271 @@
+{
+  "resources": [
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/DjDuoDuo/DjDuoDuo_remove_ads.js",
+      "sha256": "6357b9dd30b48b64e24d206763e8276ac28b4e2a88c0435116eda42fdecda9e6",
+      "status": 200,
+      "used_by": [
+        "DjDuoDuo_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/DjDuoDuo/DjDuoDuo_remove_ads.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/Uki/Uki_remove_ads.js",
+      "sha256": "af15371ec2946805b9f3f2af8a13f807434a05166e4f76178a8e28fdf645b720",
+      "status": 200,
+      "used_by": [
+        "Uki_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/Uki/Uki_remove_ads.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/BaiduSearch/BaiduSearchHomePage_remove_ads.js",
+      "sha256": "a135cb358571270371159b1c1539e555f51c7e53d6531afc6b3687796df0b0d4",
+      "status": 200,
+      "used_by": [
+        "BaiduSearchWebpage_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/Bixin/my_page.js",
+      "sha256": "06eb371ea79bae01f6f0bcced91af0cd534312e5266586f17aa94bd69958f7ee",
+      "status": 200,
+      "used_by": [
+        "Bixin_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/Bixin/my_page.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/Bixin/common_tab.js",
+      "sha256": "779cce9e7ca26323f8965b07412056e3f6d825b7a0e99e5d5707ebf24d6b898c",
+      "status": 200,
+      "used_by": [
+        "Bixin_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/Bixin/common_tab.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/RiskBird/RiskBird_remove_ads.js",
+      "sha256": "56a1c10a6422423845a8486fbc5deff60f37e6aa9e40fc439317e7e2c57fc9e2",
+      "status": 200,
+      "used_by": [
+        "RiskBird_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/RiskBird/RiskBird_remove_ads.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js",
+      "sha256": null,
+      "status": 404,
+      "used_by": [
+        "EasyBike_remove_ads.sgmodule"
+      ]
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/ShoujiDesk/base_init.js",
+      "sha256": "d588c5dae21ce09cb39617aa7abbd01cf976ec148083b45fc261fccccd67d68d",
+      "status": 200,
+      "used_by": [
+        "ShoujiDesk_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/ShoujiDesk/base_init.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/MKZ/MKZ_remove_ads.js",
+      "sha256": "b3d570b03982fd706501218fdd9e6371f5bf0dd4d9e764e26a5accc4a7b6820b",
+      "status": 200,
+      "used_by": [
+        "MKZ_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/MKZ/MKZ_remove_ads.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/MotorFans/MotorFans_remove_ads.js",
+      "sha256": "f464b6e3853433ae5fb5667c9b17b0333cffdc0c24014b7607fde6d39823f16d",
+      "status": 200,
+      "used_by": [
+        "MotorFans_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/DubbingShow/DubbingShow_remove_ads.js",
+      "sha256": "00b312e3ed559cfcda15cb43e637c94d6293ad3cb34b2c5d23d9bd330668fe52",
+      "status": 200,
+      "used_by": [
+        "DubbingShow_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/DubbingShow/DubbingShow_remove_ads.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/xiaotucc/xiaotucc.js",
+      "sha256": "a10131a49267ce2cdd17c7c4d783eb64c8aa943b83ee4dcadb846ccd2c4bbb1b",
+      "status": 200,
+      "used_by": [
+        "WexinMiniPrograms_Remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/xiaotucc/xiaotucc.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/qingju/qingju.js",
+      "sha256": "8664e7a22b21aaa8546ec167e3a43fee7ebd2c00552a126212720b09a4819bf8",
+      "status": 200,
+      "used_by": [
+        "WexinMiniPrograms_Remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/qingju/qingju.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ming/ming.js",
+      "sha256": "bd0f4e67ae73fdd083b10c1e802912d8c9ade1b2b14a0dead865d7af0b90d991",
+      "status": 200,
+      "used_by": [
+        "WexinMiniPrograms_Remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/ming/ming.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/lawson/lawson.js",
+      "sha256": "3d57d6ae9070934eef3513e2a4b640fad9dd5076fbbc6c471994bd3d790068f1",
+      "status": 200,
+      "used_by": [
+        "WexinMiniPrograms_Remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/lawson/lawson.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/kff/kff.js",
+      "sha256": "8453c73e9412fd99396afbfea14e7d26c46936da1650603b6f2433cda18cbf2c",
+      "status": 200,
+      "used_by": [
+        "WexinMiniPrograms_Remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/kff/kff.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ems/ems.js",
+      "sha256": "2208e4945d8781e5bc9d20a436fc141629a7e4dc9fd516f9fe917196010cf5bc",
+      "status": 200,
+      "used_by": [
+        "WexinMiniPrograms_Remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/ems/ems.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js",
+      "sha256": "dc9a1915eed8f6f760a8f3a03f5e2f5a0f346373693ae4ac2e0c5dbd90fd46b3",
+      "status": 200,
+      "used_by": [
+        "WexinMiniPrograms_Remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/coco/coco.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js",
+      "sha256": "4b7f857caa810648f7be584e916ceffb9c12dd3b2ce7766ed5bd605646e2a4d1",
+      "status": 200,
+      "used_by": [
+        "WexinMiniPrograms_Remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/Script/WexinMiniPrograms/chayanyuese/cyys1.jpg",
+      "sha256": null,
+      "status": 404,
+      "used_by": [
+        "WexinMiniPrograms_Remove_ads.sgmodule"
+      ]
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/alittle-tea/alittle-tea.js",
+      "sha256": "c765215071712fa0c0c0ef3719263fff81d4a1ce0189f8bc0861aa721657a44c",
+      "status": 200,
+      "used_by": [
+        "WexinMiniPrograms_Remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/alittle-tea/alittle-tea.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/T3/T3.js",
+      "sha256": "ab1ca9af4dd9b294f585335856de51d6df2b61c31d9a3d1982a5b091355da25a",
+      "status": 200,
+      "used_by": [
+        "WexinMiniPrograms_Remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/T3/T3.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/M_Stand/M_Stand.js",
+      "sha256": "5d6f163842ce53eb034fa01c244f6482fedd2f5d56b7c206c25d6f11c21e805f",
+      "status": 200,
+      "used_by": [
+        "WexinMiniPrograms_Remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/M_Stand/M_Stand.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/FamilyMart/FamilyMart.js",
+      "sha256": "e25457f43eacfbf27ca8229445e69f60f7562ece723b5ebaf07969c0ebf75e1c",
+      "status": 200,
+      "used_by": [
+        "WexinMiniPrograms_Remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/FamilyMart/FamilyMart.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/XiaojukejiCharge/XiaojukejiCharge_remove_ads.js",
+      "sha256": "807a08b4daff3797c09f17d1a844cdc75bf3f46aaea58e3f0b6e41ad57161f7a",
+      "status": 200,
+      "used_by": [
+        "XiaojukejiCharge_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/XiaojukejiCharge/XiaojukejiCharge_remove_ads.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/iWallBiZhi/landing_initialize.js",
+      "sha256": "e799e430ef3f751c686a4cf3df5d8dc2ab7c7b81170f3feb08e6ee45452762e9",
+      "status": 200,
+      "used_by": [
+        "iWallBiZhi_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/iWallBiZhi/landing_initialize.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/iWallBiZhi/landing.js",
+      "sha256": "66aec750fd71c6de8100e26789080efc736c3592f982cfb6703cdb13e96af1db",
+      "status": 200,
+      "used_by": [
+        "iWallBiZhi_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/iWallBiZhi/landing.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/iWallBiZhi/core_initialize.js",
+      "sha256": "85bb24cccb37499fe8c4e334a61b3c8b5a6485bb167a33141879e46ee0a3f531",
+      "status": 200,
+      "used_by": [
+        "iWallBiZhi_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Script/Kelee/iWallBiZhi/core_initialize.js"
+    },
+    {
+      "source_url": "https://kelee.one/Resource/JavaScript/CommonScript/replace-body.js",
+      "sha256": null,
+      "status": 404,
+      "used_by": [
+        "Tencent_Video_remove_ads.sgmodule"
+      ]
+    },
+    {
+      "source_url": "https://kelee.one/Resource/Zip/DREAME/d6996fee95380affdf740ee44a85fbe9___UNI__EDB922E.zip",
+      "sha256": "3562b1cc7cdb67f225e1d73e032741a41ace4559b3dc5738a205af5b5d4bf5c2",
+      "status": 200,
+      "used_by": [
+        "DREAME_remove_ads.sgmodule"
+      ],
+      "path": "Surge/Resource/Kelee/DREAME/d6996fee95380affdf740ee44a85fbe9___UNI__EDB922E.zip"
+    }
+  ]
+}

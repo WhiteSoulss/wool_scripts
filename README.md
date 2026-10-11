@@ -2,7 +2,7 @@
 
 [安装总模块](https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/module/blockAds.module) · [可莉补充与独立模块说明](Surge/KELEE-SUPPLEMENT.md)
 
-总模块合入 fmz200 原生规则和逐项手写复核的可莉补充。原版作者署名、独立模块、资源与复核记录均保留。
+总模块合入 fmz200 原生规则和此前已复核的可莉原生 Surge 适配稿。原版作者署名、独立模块、资源与复核记录均保留。
 
 ---
 
@@ -204,3 +204,5 @@ https://github.com/fmz200/wool_scripts/raw/main/Loon/rule/Douyin.list
 ### USDT (ERC20)： 0x978cadf514d27fc715bdc3656a58438a548bafbc
 
 ---
+
+历史适配稿含辅助工具生成的基础，不是全部从零手写；新变化必须读实际原版及依赖，再手动改写和复核。每日云端维护说明见 [Surge/maintenance/README.md](Surge/maintenance/README.md)。

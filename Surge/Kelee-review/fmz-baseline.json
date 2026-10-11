@@ -1,0 +1,4439 @@
+{
+  "commit": "5d5f63fcf98bc69d5f8f1b1bae6f86a01ee4bb97",
+  "files": [
+    {
+      "path": "README-RULE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "940927271dba75c4fa9b6dc4e57cbb25334e5dd5"
+    },
+    {
+      "path": "Surge/module/RedditTranslation.module",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6aec1b969e45cc1603c5ef79a4834a0d9ee7834"
+    },
+    {
+      "path": "Surge/module/XWebAds.module",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6774de60d8cd2a5d9839a67131d3c6fb4603e918"
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2961f9e7c3d9cf1598ac757c659c411a49c2ae00"
+    },
+    {
+      "path": "Surge/module/blockHTTPDNS.module",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3b11f86fca5db7ddd89423a0afd1117207e4ce3"
+    },
+    {
+      "path": "Surge/module/cookies.module",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8073d2a85a6ab0d02cd291deac6487998223ad99"
+    },
+    {
+      "path": "Surge/module/split/part!!/AffiliateMarketing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1118b4b5ee070f0ce71cba1f63ba2f340d567404"
+    },
+    {
+      "path": "Surge/module/split/part1/12123.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "774cbcd3f2c8c15ff57b694c6703675c76ef5766"
+    },
+    {
+      "path": "Surge/module/split/part1/12306.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b55d005f57d3930294d9e3da9df4376b6c5298e"
+    },
+    {
+      "path": "Surge/module/split/part1/17173Game.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a85737c4afde0cdb91257b42cdc24f80e012c8e0"
+    },
+    {
+      "path": "Surge/module/split/part1/178Game.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3af0b01ba92ca8bf7ab8a726d7812da4201a8d55"
+    },
+    {
+      "path": "Surge/module/split/part1/18183Game.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6354fc6bc74421ee0f9ee729afc179af1f4c94e7"
+    },
+    {
+      "path": "Surge/module/split/part1/1905MovieNetwork.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f780d8ab88cbc7497f1fe976ab9fb8d6acd2b5c1"
+    },
+    {
+      "path": "Surge/module/split/part2/21EconomicNet.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf7bb1e8800b8fbbb7edfde3b6b7f52bef85033b"
+    },
+    {
+      "path": "Surge/module/split/part2/2345WeatherKing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d86ae04cc99333876c9722112a60a23b437ca06d"
+    },
+    {
+      "path": "Surge/module/split/part2/2345WebNavigation.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b3e23141e8ad928c5068e0294bf75b2472d1130"
+    },
+    {
+      "path": "Surge/module/split/part3/360.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c94bafef68df0b69298925129d315fd7b3a3c55b"
+    },
+    {
+      "path": "Surge/module/split/part3/360ChildGuard.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9c5569ddc1d1d26af4d87dfb016b51e78ced504"
+    },
+    {
+      "path": "Surge/module/split/part3/365Calendar.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce255af8ced2b2426065af6524c87a87216f5e7c"
+    },
+    {
+      "path": "Surge/module/split/part3/36kr.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd67de8ec877d7cbcb40476b06c7e83183f3b59d"
+    },
+    {
+      "path": "Surge/module/split/part3/39Health.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad30349962dcea81c30d6807a1442e9a9ce4134b"
+    },
+    {
+      "path": "Surge/module/split/part5/500.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4391ee90758369c34429896b3fc167b3699a18ce"
+    },
+    {
+      "path": "Surge/module/split/part5/51CTO.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1868acca7b7c1a3c683fed0a14a079edba345a54"
+    },
+    {
+      "path": "Surge/module/split/part5/51CreditCardManager.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7abf614b1f53868a049b9260e13fd8116ae6af87"
+    },
+    {
+      "path": "Surge/module/split/part5/555YingShi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1391c02cf5da7552d7f5007fb858301a68e80d2d"
+    },
+    {
+      "path": "Surge/module/split/part5/58Auto.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b9aa393ac52d1017b952005bdd6690ee7b2fb09"
+    },
+    {
+      "path": "Surge/module/split/part5/58TongCheng.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6947ef2cc88785cf8586d5dd94d4131b4a92576"
+    },
+    {
+      "path": "Surge/module/split/partA/AOL.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de02a0acdf378adb126122c159e8ee5063cebb94"
+    },
+    {
+      "path": "Surge/module/split/partA/AcFun.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f21ecda3aae3190c6c4fec3692d5d647d8fe92dc"
+    },
+    {
+      "path": "Surge/module/split/partA/Adobe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4be7f12d94eddb8ffb07933d04b5aa21c622a389"
+    },
+    {
+      "path": "Surge/module/split/partA/AdobeFlash.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dda716b5bab2f5dab7136c6bcd9751c05ac5be5"
+    },
+    {
+      "path": "Surge/module/split/partA/AiHuiShou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59a2b3d8321823ee6229332095b6fb2cee70a72c"
+    },
+    {
+      "path": "Surge/module/split/partA/AiMeiJu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cfedcb3b1f5aa42b8e4c476f5cd3e5e8db78cb6"
+    },
+    {
+      "path": "Surge/module/split/partA/AiPai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b7dbd30c2d02ef3a5fc84a89e3f11d9d9932ccc"
+    },
+    {
+      "path": "Surge/module/split/partA/AiQiCha.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "810cf9c19fcbed7f98714ffcd6bafac0890cbc45"
+    },
+    {
+      "path": "Surge/module/split/partA/AiQianGua.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46602b462baf3b61773dafc5e72c8b6fe7f49340"
+    },
+    {
+      "path": "Surge/module/split/partA/AiSiAssistant.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee3de22afb7a9b897e6bce4cfa1c6495e11ad249"
+    },
+    {
+      "path": "Surge/module/split/partA/AiTongXiang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd2bad9046a2cf5c3f2471b8c29410386a90be5c"
+    },
+    {
+      "path": "Surge/module/split/partA/AiYueShuXiang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2086b5a463e22f72b04a6da49f47ed12abafcc7d"
+    },
+    {
+      "path": "Surge/module/split/partA/Akamai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "271447691a8457da6e80fde57de065d271e5fd6e"
+    },
+    {
+      "path": "Surge/module/split/partA/Alibaba.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9f484c171dbdf9116520ea13c11f6df670fed39"
+    },
+    {
+      "path": "Surge/module/split/partA/AlibabaCloud.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12907c99229a244e5902d1caa86d35c95f641210"
+    },
+    {
+      "path": "Surge/module/split/partA/AlibabaCloudDrive.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f08ab85c394a2c7a85c238c2dfd9334ab2594587"
+    },
+    {
+      "path": "Surge/module/split/partA/AlibabaGroup.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91ea97e9d282e8261e13ad85714b1ec4c7bad7cc"
+    },
+    {
+      "path": "Surge/module/split/partA/Amazon.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e1ec4509dc51b4c9e84aa77141e6c0b48061df7"
+    },
+    {
+      "path": "Surge/module/split/partA/AnhuiZhangShang10000.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86360c179fdc4951165398513e21474a3c56ac0a"
+    },
+    {
+      "path": "Surge/module/split/partA/AoMi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a66508f9ef568ac66dd21248b81d7abfd95678f9"
+    },
+    {
+      "path": "Surge/module/split/partA/AppSo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c631c1baded80ed897561930d0512b48b2a525d3"
+    },
+    {
+      "path": "Surge/module/split/partA/Apple.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dca122686bb61fa43f7e18b76c781ed42f83afd2"
+    },
+    {
+      "path": "Surge/module/split/partA/OnStar.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc1ec39689f79ba82bad0ec39081cac9135a7256"
+    },
+    {
+      "path": "Surge/module/split/partA/XcarAuto.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5d2138e9ecb01595382b2413a1958bdaa18ea21"
+    },
+    {
+      "path": "Surge/module/split/partA/iQIYI.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d43f9ab0958c3caf4fc2673666ccba014dbca83b"
+    },
+    {
+      "path": "Surge/module/split/partB/BBC.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "274528223499736b8b21db6f69040960f72e7d9e"
+    },
+    {
+      "path": "Surge/module/split/partB/BYDDynasty.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12aae827a454d0f6d149b09fbcb4635bd7955d46"
+    },
+    {
+      "path": "Surge/module/split/partB/BabyTree.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec8375695b3c63c7ef1401d727bb0330f456668a"
+    },
+    {
+      "path": "Surge/module/split/partB/BabyTreeParenting.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a81de77a8126cc0e6e5082227e45336b9df58e15"
+    },
+    {
+      "path": "Surge/module/split/partB/BaiYi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26b0f9480e2a3b6f32f345cafc59b1c002ea807c"
+    },
+    {
+      "path": "Surge/module/split/partB/Baidu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7de19fcc012298a08fd7d709f27bec5427b395a4"
+    },
+    {
+      "path": "Surge/module/split/partB/BaiduInputMethod.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "733ae94b0cff441574a665bb74b85f71e2895339"
+    },
+    {
+      "path": "Surge/module/split/partB/BaiduMaps.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b219102cf0f4b3c6ef326d98f0d709b99f676b2a"
+    },
+    {
+      "path": "Surge/module/split/partB/BaiduNetdisk.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cffb1aa15b87ddbb22a792826ecbb6cf66a0be75"
+    },
+    {
+      "path": "Surge/module/split/partB/BaiduTieba.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5c7f45c31b1d8542dccce48f266f5f4023f829f"
+    },
+    {
+      "path": "Surge/module/split/partB/BaiduTranslation.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19a1b068c1b4bc6e73d6c57bbe4cbd40c21a976f"
+    },
+    {
+      "path": "Surge/module/split/partB/BaiduWenku.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b5602fec2c92a65e1c475ac20e1ccb8ee5b01ad"
+    },
+    {
+      "path": "Surge/module/split/partB/BaixinBank.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d342f7f294e70036cb9e9ea79427639f1c6dcf16"
+    },
+    {
+      "path": "Surge/module/split/partB/Baixing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96c1c408a1c91e79e00dff30e89e809fc6d35b0b"
+    },
+    {
+      "path": "Surge/module/split/partB/BanYueTan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e607f1869e3c3f3271a94e3fb3485b0ce350b711"
+    },
+    {
+      "path": "Surge/module/split/partB/BankOfBeijing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b610e2994c16b9c3c3434bc05e71c45c7835130"
+    },
+    {
+      "path": "Surge/module/split/partB/BaoMiHua.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5ddbc106ff0d68ec65eaf187b187f662af1e312"
+    },
+    {
+      "path": "Surge/module/split/partB/BaofengPlayer.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97f2844b150197fbff50ef5753e1d4f7cd7c3819"
+    },
+    {
+      "path": "Surge/module/split/partB/BeiKeZhaoFang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b04a8b00102d371415d639c964260a749356ca8"
+    },
+    {
+      "path": "Surge/module/split/partB/BeijingShouQi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55bebeb3e043f9059e930842d941b7dcad348a20"
+    },
+    {
+      "path": "Surge/module/split/partB/BettyKitchen.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1af9046eeaf75e74a41975a5c37b6107d2bd3426"
+    },
+    {
+      "path": "Surge/module/split/partB/BiQuGe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f59edd81b19903165e4a3cb2a4442f8fac9d04fc"
+    },
+    {
+      "path": "Surge/module/split/partB/BiShiJie.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de4a5e0376e9285a386559e06b30e7fa2f66d0b0"
+    },
+    {
+      "path": "Surge/module/split/partB/BiTeQiuCloudDrive.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80fccffbaaef83678055ae4b825b50139c101a9b"
+    },
+    {
+      "path": "Surge/module/split/partB/BilibiliComics.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4b833c7a885208d3323d6d384b87147fe6ddf60"
+    },
+    {
+      "path": "Surge/module/split/partB/Binance.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "796dbf8ca9d941368a66ad86085a6deeb9036291"
+    },
+    {
+      "path": "Surge/module/split/partB/Bing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8150eb14bc8ae28cec08ac91cf175fbe8ac0e55"
+    },
+    {
+      "path": "Surge/module/split/partB/Blued.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0289e40a928959edc90568964a2a86381990925"
+    },
+    {
+      "path": "Surge/module/split/partB/BoDianMusic.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3876a678e42819ced75d22b709510539de2daa80"
+    },
+    {
+      "path": "Surge/module/split/partB/BoHeHealth.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25f8e3c8e355ed4c843adffb3b3cfa62e67d699a"
+    },
+    {
+      "path": "Surge/module/split/partB/BoLuoBaoLightNovel.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "203b8f2d207aa38dd9ff1edd7784ffd117bf924b"
+    },
+    {
+      "path": "Surge/module/split/partB/Braze.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffe694574b7a08d555c4a8e47ad14f2b5cf21bdf"
+    },
+    {
+      "path": "Surge/module/split/partB/HonkaiImpact3.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d047837fd70edd570abd97064bcb0a7825537868"
+    },
+    {
+      "path": "Surge/module/split/partB/LeKe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77b2d88ea2b47d298ee8638a1a0d8c85b94a0556"
+    },
+    {
+      "path": "Surge/module/split/partB/Pantum.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48d1453f3669a53fe2c9d89b543e612a922f9a38"
+    },
+    {
+      "path": "Surge/module/split/partB/PizzaHut.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "addf7ab5c142c9456fc9514d4a9840ca29dcf9d1"
+    },
+    {
+      "path": "Surge/module/split/partB/ZhangShangJingCai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "456a829792571187224fa9ec3481e3060b8c6404"
+    },
+    {
+      "path": "Surge/module/split/partB/baicizhan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "283b66614ab2fb52965a256f6db906b94ad21291"
+    },
+    {
+      "path": "Surge/module/split/partB/bilibili.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "220eaa2e4b1c73115ec68ee4afc122a67c82114d"
+    },
+    {
+      "path": "Surge/module/split/partB/bshare.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69948dadc4fde5527c4880af0676a61115ab367b"
+    },
+    {
+      "path": "Surge/module/split/partC/CJMarketing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "429b3f8e3ddad87d75c3eeb43410398bcbab2014"
+    },
+    {
+      "path": "Surge/module/split/partC/CNN.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72d3f010f61075c9e22a6d1c724db5c274584143"
+    },
+    {
+      "path": "Surge/module/split/partC/CaiJingZaZhi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a406b031a334213db349abbb6bd5101453f014e"
+    },
+    {
+      "path": "Surge/module/split/partC/CaiLianShe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ae7d59c1af7446c0d1e6fba4e437f39d8cc798f"
+    },
+    {
+      "path": "Surge/module/split/partC/CaiNiaoGuoGuo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55c6e40e5974053968a26da55562bee92df31d4d"
+    },
+    {
+      "path": "Surge/module/split/partC/CaiXin.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed4486bd49c6ad523286704fb6b0238a541ddc29"
+    },
+    {
+      "path": "Surge/module/split/partC/CaiYunWeather.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4454ec1918a17c07cb030012c3dfa6361846417b"
+    },
+    {
+      "path": "Surge/module/split/partC/Camera360.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e40c02395216cf315f3d4c158e9b2ab6c6ad909"
+    },
+    {
+      "path": "Surge/module/split/partC/CaoCaoZhuanChe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0fb462b9700feeae4caff0749858415dc1edc99"
+    },
+    {
+      "path": "Surge/module/split/partC/ChangChengLianJinShu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e65d2b77fe3b2250730de66dee2765e32ab859e"
+    },
+    {
+      "path": "Surge/module/split/partC/ChaoJiKeChengBiao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8da03563c7b1372cdec069e4fa4ada5a986e698"
+    },
+    {
+      "path": "Surge/module/split/partC/ChaoWanYuZhou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58cea1a1c6b359fada4908de62f489f909988344"
+    },
+    {
+      "path": "Surge/module/split/partC/ChaoXingXueXiTong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aca2353246cee4b3c8d4f1bdaae1e55089670574"
+    },
+    {
+      "path": "Surge/module/split/partC/CheLaiLe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85ba799efafbed93b2fac733e69a61f43beccd99"
+    },
+    {
+      "path": "Surge/module/split/partC/ChuangKeTieDesign.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb2a161942f3a23ab5bfbf189bd1c7be48083358"
+    },
+    {
+      "path": "Surge/module/split/partC/CiWeiMaoYueDu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4833d5c9749932495f6d3be1f7097c5995cdb35e"
+    },
+    {
+      "path": "Surge/module/split/partC/Crunchyroll.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9cc7125ecbacfc2e779c925040b7a425ce13391"
+    },
+    {
+      "path": "Surge/module/split/partC/Skyworth.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd7ac7cce6042b50f0d165ccfcc1eaebb1a722fe"
+    },
+    {
+      "path": "Surge/module/split/partC/clicli.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5401f9118a3f377a21f74c95d3dcaf26a491762c"
+    },
+    {
+      "path": "Surge/module/split/partC/csdn.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0318ebbf55d820f3cb315d9e1b8594fe16e0a920"
+    },
+    {
+      "path": "Surge/module/split/partD/AllFootball.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ccb8e3bd05a43cb68899c1a48d97bb1ad4c543f"
+    },
+    {
+      "path": "Surge/module/split/partD/DJIStore.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdadd68bf91fab1a4787268d30728734cda20ca5"
+    },
+    {
+      "path": "Surge/module/split/partD/DLabelCloudTag.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6310661ef5d08457e466f214709123bdeef81f2d"
+    },
+    {
+      "path": "Surge/module/split/partD/DaDaRiderVersion.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdfa413a61398aeaaef6f408d90e66def4966f28"
+    },
+    {
+      "path": "Surge/module/split/partD/DaShiXiong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "898e6add838663c4bac8d9e8ca81a9a401081e40"
+    },
+    {
+      "path": "Surge/module/split/partD/DaZhiHui.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d6f99ccb8e24fdfa0eb72ef7f507c7f89e94d96"
+    },
+    {
+      "path": "Surge/module/split/partD/Damai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f5297c3376e72677e8c799cf63e63bc9d3186f8"
+    },
+    {
+      "path": "Surge/module/split/partD/DangDang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f60801e1405355826c735104f4b77c2d1080090"
+    },
+    {
+      "path": "Surge/module/split/partD/DangDangReading.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cee9cbb39c156caaf57385dc74b1adeb5921902"
+    },
+    {
+      "path": "Surge/module/split/partD/DaoMengKongJian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c79b5e2f218fc5d8ab56e9121b8725e9de68444f"
+    },
+    {
+      "path": "Surge/module/split/partD/Dcar.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6666bfbb1c41713348bd560f150b068b08e38e31"
+    },
+    {
+      "path": "Surge/module/split/partD/DeWu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6931e17180ab63aeb651a1dd12fe5112024ee053"
+    },
+    {
+      "path": "Surge/module/split/partD/DiDaChuxing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7793704652aecbba0af562c66624437a03af77a4"
+    },
+    {
+      "path": "Surge/module/split/partD/DiDiBike.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa5ee5bb828524019fe3dac385090efe5a22d770"
+    },
+    {
+      "path": "Surge/module/split/partD/DiDiChuxing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e92efc3b0d7e491b116b6e246092c2f0de9481d"
+    },
+    {
+      "path": "Surge/module/split/partD/DiDiDaiJia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5632d0869722d07dad7426a3bb5bb761385a6af"
+    },
+    {
+      "path": "Surge/module/split/partD/DiDuanYingShi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71eba64ac48f7bdf1b282e27a5e7898d121ab4a2"
+    },
+    {
+      "path": "Surge/module/split/partD/DianEBao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e949c245c1c7b439d1199d6f2327ea095921ffab"
+    },
+    {
+      "path": "Surge/module/split/partD/DianPing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f33256c419c43951dccd4da1db1b6a7af6818371"
+    },
+    {
+      "path": "Surge/module/split/partD/DianShiJia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fc51bba81624a0d80a8c032cf5319fb3778c753"
+    },
+    {
+      "path": "Surge/module/split/partD/DianYingLieShou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "944dac6731412c21327078141d90670cbe87a1dc"
+    },
+    {
+      "path": "Surge/module/split/partD/Dida.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "654c247b11719ee70ecf8f656c1e09b316fd0284"
+    },
+    {
+      "path": "Surge/module/split/partD/DingDingPai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb6f0e73bf82311cf92136c73f95819df918d435"
+    },
+    {
+      "path": "Surge/module/split/partD/DingDongMaiCai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c8e4feefa0158b49c2a74666a64a0e6103f462a"
+    },
+    {
+      "path": "Surge/module/split/partD/DingTalk.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a0863b472a83dc46ace8451e4a6ee5341aa14db"
+    },
+    {
+      "path": "Surge/module/split/partD/DingXiangDoctor.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "009fc1ec5b9e51e3f6db521d0426cb5d4faa0588"
+    },
+    {
+      "path": "Surge/module/split/partD/DingXiangYuan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fb72db538c74588b76c7c2130efa4c3464f764b"
+    },
+    {
+      "path": "Surge/module/split/partD/DongFangCaiFu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a575a654ea503791f725cc3ad9674caa86271e9f"
+    },
+    {
+      "path": "Surge/module/split/partD/DongHuaFeng.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b37eebbe571316146f658d511c070187d9b6f19e"
+    },
+    {
+      "path": "Surge/module/split/partD/DongKaKongJian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7771a02169444b8a0a948040c8f369ec71ba48a"
+    },
+    {
+      "path": "Surge/module/split/partD/Douban.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3700ac596566d339ce733db0da87e7a7a5bf21b"
+    },
+    {
+      "path": "Surge/module/split/partD/DouyuLive.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6a54d64ee61593ed58ca1238e41afd2c4f18670"
+    },
+    {
+      "path": "Surge/module/split/partD/DrPeng.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c3bed65d0e7b2b8a720be683bf10d8d4e0d878b"
+    },
+    {
+      "path": "Surge/module/split/partD/DuoDuoVideo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7d479125c21a1052e3de5c1da94328821a37cba"
+    },
+    {
+      "path": "Surge/module/split/partD/DuoDuoXiuYuanQuan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b6a783876fbdf02bf069e04c8f816a670cfd47f"
+    },
+    {
+      "path": "Surge/module/split/partD/Eastday.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f4f375bdeaf3e3a0c8dc7a8476bdaf52fc4c362"
+    },
+    {
+      "path": "Surge/module/split/partD/PChome.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5cbca80fdee5f210926605c5ac611a244c1ffb6"
+    },
+    {
+      "path": "Surge/module/split/partD/TikTok.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14ef377816b3a414654f7791415c4c2821b3546e"
+    },
+    {
+      "path": "Surge/module/split/partE/Eleme.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1a64a02897f89b4e47d1db1e0bd4982efedcfa4"
+    },
+    {
+      "path": "Surge/module/split/partE/eChongDian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22b9ced6a47d5bcab945b29e41ab871ddc4eee6d"
+    },
+    {
+      "path": "Surge/module/split/partE/eDaiJia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87431df71d69964472809674475602768f76d81c"
+    },
+    {
+      "path": "Surge/module/split/partF/FaXianJingCai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1fcdc9bdb545a20744779da95cc6fc4329ae9ee"
+    },
+    {
+      "path": "Surge/module/split/partF/Facebook.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "821de253e2daf6a4973718a7e7f04990d50c333f"
+    },
+    {
+      "path": "Surge/module/split/partF/FanDengReading.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfc6be2e01debd68c4d3214f93e90bf1c5992863"
+    },
+    {
+      "path": "Surge/module/split/partF/FanLiWang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee0c806cc9d4a68af5761082672dcd4f856d20c4"
+    },
+    {
+      "path": "Surge/module/split/partF/FanQieNovel.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96680e83c3bb78facb252485f3342c84bc8eb998"
+    },
+    {
+      "path": "Surge/module/split/partF/FeiKeChaGuan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "510423f2b4c45bff2e508f6bdce230644ad5de98"
+    },
+    {
+      "path": "Surge/module/split/partF/FeiMaoGuanJia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de66f5638553042cc664d88307e5704d5ffe1d56"
+    },
+    {
+      "path": "Surge/module/split/partF/FenBi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd01c62786e762d815b1d27997b85bd45ecd209f"
+    },
+    {
+      "path": "Surge/module/split/partF/FenQiLe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55d595c7364d886a8337ea41c85533b6508b2478"
+    },
+    {
+      "path": "Surge/module/split/partF/FengChao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb88ad4305db495e63c5125d7dc04552bbdeb7bd"
+    },
+    {
+      "path": "Surge/module/split/partF/FengHuangXiu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edb2e7f873e70bb54f965ff90c0858ff96710d17"
+    },
+    {
+      "path": "Surge/module/split/partF/Fliggy.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b5e1c9940d29e5dccde7c6c8d7a9c619c6b69f7"
+    },
+    {
+      "path": "Surge/module/split/partF/Flightradar24.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "313e5709cfab5fb24ff35e7cde679df639b31b4c"
+    },
+    {
+      "path": "Surge/module/split/partF/FuXiangTaiPing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adefa17ab5347c7656178348c16a40f68a5a8c92"
+    },
+    {
+      "path": "Surge/module/split/partF/FuYouHui.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f88824d0c1f241a41a5acb20ff7a2bde759ccb3"
+    },
+    {
+      "path": "Surge/module/split/partF/Funshion.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c2627c5152d03a7f265708d7f2e48d0d7972725"
+    },
+    {
+      "path": "Surge/module/split/partF/FutuNiuNiu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58f0eb0a809a234fd5d796544859b391428065f7"
+    },
+    {
+      "path": "Surge/module/split/partF/PhoenixNewMedia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a664bef101f23b32174cc481164d21908018f762"
+    },
+    {
+      "path": "Surge/module/split/partF/Soufun.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "232fde64283d091bbc71c322b2c0230377053261"
+    },
+    {
+      "path": "Surge/module/split/partF/VariFlight.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4b157ac7427008692f64a50e78d9fc01e960e55"
+    },
+    {
+      "path": "Surge/module/split/partG/AutoNavi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da5a05cc43d0805fb66297ab64cd316cf891b0b3"
+    },
+    {
+      "path": "Surge/module/split/partG/CEB.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3afe535733386d73228f0134eaf974b41a46124e"
+    },
+    {
+      "path": "Surge/module/split/partG/CEB_SunshineHuiLife.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c3a1370ba515e8c6aae9b6efc5bdd3cf25d1937"
+    },
+    {
+      "path": "Surge/module/split/partG/ChinaGuangfaBank.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7185b7a12ec1c2281b3aea7ee9bfea83c6842a05"
+    },
+    {
+      "path": "Surge/module/split/partG/GACHonda.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c298f574d1d54c063aa9b0c5875c038664687d89"
+    },
+    {
+      "path": "Surge/module/split/partG/GACTrumpchi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4553e7a36e4927410a46086c7e973e0fb61d79ed"
+    },
+    {
+      "path": "Surge/module/split/partG/GaiDePaiHang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26a2d67eecd89204c271a6cc5fa39996f41728d3"
+    },
+    {
+      "path": "Surge/module/split/partG/Ganji.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aaaa75df59fe2dfaaedd334e473353df61ccb8ee"
+    },
+    {
+      "path": "Surge/module/split/partG/GaoTieGuanJia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49acb10a7a51a3aa922f27f588405da3a339a6ab"
+    },
+    {
+      "path": "Surge/module/split/partG/Go.com.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fc2e8f8003ddca484a47787c8ea6d36553bf4cc"
+    },
+    {
+      "path": "Surge/module/split/partG/GomeAppliances.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "216a3ed300f1b4a64d551ce7d7c4675f04f3005e"
+    },
+    {
+      "path": "Surge/module/split/partG/GongKaoLeiDa.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9049a2aa437fba99d0fa8fd0f318fcba00434c91"
+    },
+    {
+      "path": "Surge/module/split/partG/GongShiJiLu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7db35c46e4d1aeddf7c0e5f0ce805678e429abcb"
+    },
+    {
+      "path": "Surge/module/split/partG/Google.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "451b191d70589c94cfb7fb41ecc04f322249b81c"
+    },
+    {
+      "path": "Surge/module/split/partG/GouWuDang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cc7c48c8f182b5023ff23358cb2ba6d0b537853"
+    },
+    {
+      "path": "Surge/module/split/partG/GozenData.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85bfad932858a49c77c10ae0341d95e392b05091"
+    },
+    {
+      "path": "Surge/module/split/partG/Gridsum.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f62f27d78b76fe7273511a07c6defc602893ce07"
+    },
+    {
+      "path": "Surge/module/split/partG/GuahaoWangWeiyi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acd52571ebe3584cedf97781e395e98c599a0a95"
+    },
+    {
+      "path": "Surge/module/split/partG/GuaiShouChongDian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbd7e715f7a1d4acc286010b2a88115192257593"
+    },
+    {
+      "path": "Surge/module/split/partG/GuanYu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc70a9b58314f6bd7a5a6890ad5e9359500be74b"
+    },
+    {
+      "path": "Surge/module/split/partG/GuangzhouMetroQRCode.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7e81741dc075f7b98b27f8d1e0f59a8aa413fdc"
+    },
+    {
+      "path": "Surge/module/split/partG/GuangzhouRuralCommercialBank.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0cce9e3344670f185e299d33d80596c216b1c7c"
+    },
+    {
+      "path": "Surge/module/split/partG/GuotaiJunan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55ee07ca9639919675b046e1b94fb038b645ff9c"
+    },
+    {
+      "path": "Surge/module/split/partG/ICBC.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3090acecfc2918384479a89cf8834a9943f09d9c"
+    },
+    {
+      "path": "Surge/module/split/partG/ICBCELife.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84bd22aafcca1f8fadf1d8a5c954b165f6e73a40"
+    },
+    {
+      "path": "Surge/module/split/partG/ICBCELifeMiniProgram.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "986139fe6a97ef9fac8bb2418897604a237fdc38"
+    },
+    {
+      "path": "Surge/module/split/partG/NMIServicePlatform.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23dde980836c640bcb786f7df91bb885a5f784e6"
+    },
+    {
+      "path": "Surge/module/split/partG/ThePalaceMuseum.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6bdddb409ed5a4e11f6e526e47e49a618e34a51"
+    },
+    {
+      "path": "Surge/module/split/partH/CorelVideoStudio.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8f2e40a22ea6cf73b7c8d287e5e41d66e7ce2ba"
+    },
+    {
+      "path": "Surge/module/split/partH/GlobalTimes.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "586209b7061a12587b183f54670e5ed010ce6907"
+    },
+    {
+      "path": "Surge/module/split/partH/HDO.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b9c6acff5a3f3e03c2a6324335e526178ef79cd"
+    },
+    {
+      "path": "Surge/module/split/partH/HSBCSelect.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25890efffdc904bbe75dd1172f46231dab7d3c57"
+    },
+    {
+      "path": "Surge/module/split/partH/HaFuSecurities.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2aef63644401aaeb40a1752ed8132f12a1d0deb0"
+    },
+    {
+      "path": "Surge/module/split/partH/HaiMaBaBi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d92379529f09e33e7cf7dc02b7b926f5962703e1"
+    },
+    {
+      "path": "Surge/module/split/partH/HaiTunYouHui.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "082160c99a9644d4a43f727b94d6bef0b8d29ac6"
+    },
+    {
+      "path": "Surge/module/split/partH/HaiXue.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "002501092ced3a751e8efb58868cc1f1e68c0c97"
+    },
+    {
+      "path": "Surge/module/split/partH/HaierService.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b30e9284e0370ac44a411faca21754d017e421b8"
+    },
+    {
+      "path": "Surge/module/split/partH/HanJuTV.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69a3cb42a00311061de417ba8e92186303810b6c"
+    },
+    {
+      "path": "Surge/module/split/partH/HangLvZongHeng.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39a3f5580f4764672781328cfee06dd2b8e8cd33"
+    },
+    {
+      "path": "Surge/module/split/partH/HangZhouBus.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e153154ff31ed4d311cfad098d432c79fbfd50b6"
+    },
+    {
+      "path": "Surge/module/split/partH/HangZhouCitizen.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a55f49c672ee282179c431eb5eca75681c65ae30"
+    },
+    {
+      "path": "Surge/module/split/partH/Hao123.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20b04df4b8dc943391b2343fd7fd72414b2979d9"
+    },
+    {
+      "path": "Surge/module/split/partH/HaoHaoZhu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e044072c4c209e767ae1d34472fbd7e389247c8"
+    },
+    {
+      "path": "Surge/module/split/partH/HaoQiXinDaily.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccab607fc05780b08e51d857fd5371304a692d5a"
+    },
+    {
+      "path": "Surge/module/split/partH/HaoXingTiZhongCheng.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86e5dc487a133f683d3a4e4d510875f1933b614a"
+    },
+    {
+      "path": "Surge/module/split/partH/HaoYouKuaiBao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5682a50c93ce5f31ac1666c7b3f1c5e0fe00582"
+    },
+    {
+      "path": "Surge/module/split/partH/HeFengWeather.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84b591f4cf29bedf679fc02a6db948211c490080"
+    },
+    {
+      "path": "Surge/module/split/partH/HeLiBaoZhanYeTong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d9e2d7b7e812897371cd727e3a743fa6fd3bfae"
+    },
+    {
+      "path": "Surge/module/split/partH/Hello.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab0a7f2fd2ca28db0b7b78674731e6d9009ed1e7"
+    },
+    {
+      "path": "Surge/module/split/partH/Hema.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9cc45b9f81e6e330fe5efb4e82f06f4b0e8ff29"
+    },
+    {
+      "path": "Surge/module/split/partH/HengDianCinema.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80668107af3e0e2493a3bec31758310cfab194ec"
+    },
+    {
+      "path": "Surge/module/split/partH/Hexun.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b8d9e4ba503cd075b4fb965dc4c912d6ce511b2"
+    },
+    {
+      "path": "Surge/module/split/partH/HongBanBao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0c458846e0f021a319327184d0a4b44ba030000"
+    },
+    {
+      "path": "Surge/module/split/partH/HuChuan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44e2c0ad423f30508c5c56d4c6af84d1d204b5bc"
+    },
+    {
+      "path": "Surge/module/split/partH/HuaBaoZhiTou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "841d8ae1831f71d09a664c1bd1507063cb42c232"
+    },
+    {
+      "path": "Surge/module/split/partH/HuaCaiShengHuo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2abb72b218a64abe61c28575fa3187f5aa88a51"
+    },
+    {
+      "path": "Surge/module/split/partH/HuaShengDiTie.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10874515e521abf014e18d1156eeb5de8b359448"
+    },
+    {
+      "path": "Surge/module/split/partH/HuaShengTong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "561a67e903872d218ff861a4d6226b5c5163799d"
+    },
+    {
+      "path": "Surge/module/split/partH/HuaXiaoZhu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37676de2262cb0ca19069fa4b61e5d49c43ccbc4"
+    },
+    {
+      "path": "Surge/module/split/partH/HuangYouXiangJi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a9856d6f44572ace71f85bab5054a8806db9eb7"
+    },
+    {
+      "path": "Surge/module/split/partH/HuaweiAspiegelBot.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f6209d8bb16f466c3c82b3ee80c272416f5d1ab"
+    },
+    {
+      "path": "Surge/module/split/partH/HuaweiStore.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ae104f0abedc7a1d2575e1a1495f59dcb1059c9"
+    },
+    {
+      "path": "Surge/module/split/partH/HuazhuClub.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05170b25ca2a91fb2f5e8711327f5467ccb856b1"
+    },
+    {
+      "path": "Surge/module/split/partH/HuifuWorld.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4533480dacc61f4c05d3b75a57cc1b1457b8e601"
+    },
+    {
+      "path": "Surge/module/split/partH/HujiangOnlineSchool.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b509a40097fb54dadeee8c2d75a93134e522059"
+    },
+    {
+      "path": "Surge/module/split/partH/HunanTV.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dc0417e19e994144ebc74df5241c788c61b81df"
+    },
+    {
+      "path": "Surge/module/split/partH/HuoMao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d86561a047a2a5e951a4e957a5fcef293b4b2dc"
+    },
+    {
+      "path": "Surge/module/split/partH/Hupu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04a2a733917fcb1f7b1e7a65c81bdb3e9533be4a"
+    },
+    {
+      "path": "Surge/module/split/partH/Huxiu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "230ce129c47f2c2cc85dd93012eab018978639ed"
+    },
+    {
+      "path": "Surge/module/split/partH/HuyaLive.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "756d664912350a8342557aeb175e843960bb5725"
+    },
+    {
+      "path": "Surge/module/split/partH/WallStreetCN.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5de77789996a63badcb57898f5e179711d6d121f"
+    },
+    {
+      "path": "Surge/module/split/partH/WasuTV.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc0afc947c6ff525a39cb493240b552b4f519332"
+    },
+    {
+      "path": "Surge/module/split/partI/ITHome.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e9b8a4d0396f017fdb1848d0e78c98396451a2c"
+    },
+    {
+      "path": "Surge/module/split/partI/i3.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d786747b9e007c3cda0767be41397b7f073e11a"
+    },
+    {
+      "path": "Surge/module/split/partJ/9Game.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1e44e70debdff0914551a85df85098e56096109"
+    },
+    {
+      "path": "Surge/module/split/partJ/BankOfJiangsu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1371d3796000f9a662b7925a82fb88c88bec7d47"
+    },
+    {
+      "path": "Surge/module/split/partJ/BankOfJilin.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efe28ee04aaffc34243ef457aa31a284edffc340"
+    },
+    {
+      "path": "Surge/module/split/partJ/CCBLife.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2902e443e833950958e7194110afbf6b55f2d3d"
+    },
+    {
+      "path": "Surge/module/split/partJ/CNINFO.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "628d1f2a0f252a900e4af628f7672a3c544c5209"
+    },
+    {
+      "path": "Surge/module/split/partJ/Gionee.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d72efa023e3b6078086c2f75b27cb0492b24a7ae"
+    },
+    {
+      "path": "Surge/module/split/partJ/JD.com.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "165086245d08e5e4a4a58dcd9ae03bc4b987bbd5"
+    },
+    {
+      "path": "Surge/module/split/partJ/JDCloudWiFiDevice.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "479173254d6c0d3ec4478c5eae554ba3b7b8effc"
+    },
+    {
+      "path": "Surge/module/split/partJ/JDFinance.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d020c6f32154503dc93012d3a7ab60d6ff76a39c"
+    },
+    {
+      "path": "Surge/module/split/partJ/JDHealth.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d48295703d5a2b1f23020c368481d9f694764292"
+    },
+    {
+      "path": "Surge/module/split/partJ/JDReading.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f4bdf36bf8a47190cc251c341d00d97ebd18040"
+    },
+    {
+      "path": "Surge/module/split/partJ/JRJ.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1711eaf58d53f2935dde57945577515de5eb9ce2"
+    },
+    {
+      "path": "Surge/module/split/partJ/JiHeWang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "698eac1499fd5edf6c46083b0fcbf03bf0c7680e"
+    },
+    {
+      "path": "Surge/module/split/partJ/JiJianHuiLv.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "717c6e6287e0d62c00406b554137d3054a11193c"
+    },
+    {
+      "path": "Surge/module/split/partJ/JiaKaoBaoDian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d049e9263bf4c83dd523fbbf8be51f4c683ed482"
+    },
+    {
+      "path": "Surge/module/split/partJ/JiaXiaoYiDianTong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "441409287086a223fc552a0759bea10aa953d983"
+    },
+    {
+      "path": "Surge/module/split/partJ/JiaYouGuangDong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a590564dd827e2165c892472baeb1ac9d2a7478c"
+    },
+    {
+      "path": "Surge/module/split/partJ/JianXun.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1ae8de4efec007dc97d15782151846847aa34c3"
+    },
+    {
+      "path": "Surge/module/split/partJ/JieDian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfe834d5352b04cf7e699878f03d9fb71e00a7d4"
+    },
+    {
+      "path": "Surge/module/split/partJ/JieMianNews.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f52bbac5777fcf1ce82d509de80d0a253d488904"
+    },
+    {
+      "path": "Surge/module/split/partJ/JinRiShuiYinCamera.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "206d9684de523adcab21b4867716c53673813d34"
+    },
+    {
+      "path": "Surge/module/split/partJ/JinRongToutiao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a690837fc88d22ff55c6a7f1afec37ead9dce79"
+    },
+    {
+      "path": "Surge/module/split/partJ/JinShiData.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b427421277a49abda9e8fb79b562ff47aa5bf308"
+    },
+    {
+      "path": "Surge/module/split/partJ/JingXi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd6c4892116b8c004e6b75a8563d2966da6c0f60"
+    },
+    {
+      "path": "Surge/module/split/partJ/JiuCaiGongShe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2d2ca82d0e1d2a2e0cfa61ec158b7416cc90060"
+    },
+    {
+      "path": "Surge/module/split/partJ/KingsoftPowerWord.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54f6e88f7b801334c5019fea42e06d885ea70254"
+    },
+    {
+      "path": "Surge/module/split/partJ/KingsoftSeries.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05db15747dceaf7583e5f9facdf52f82c2de210d"
+    },
+    {
+      "path": "Surge/module/split/partK/AdAlliance.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49d1e27baeb6031d1d794b38dfce19593fb0d544"
+    },
+    {
+      "path": "Surge/module/split/partK/Coolapk.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29fd13cb5b3301b3372238edc30d606a9771cc17"
+    },
+    {
+      "path": "Surge/module/split/partK/KFC.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "160a0685adc2d9f0a043651cff0ef7919aa6469d"
+    },
+    {
+      "path": "Surge/module/split/partK/KanDongFang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53729460029ca885d02deba6c5631cc789782ee0"
+    },
+    {
+      "path": "Surge/module/split/partK/KanLiXiang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8be16653fcc7cc2ae2af89d91c8cf34f43a2b3c8"
+    },
+    {
+      "path": "Surge/module/split/partK/KanTianXia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39d051ac16b5fd2fac0b73470ab5916ae52b08c9"
+    },
+    {
+      "path": "Surge/module/split/partK/Keep.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35904685f168e1df0c60a0858941551ec55e975b"
+    },
+    {
+      "path": "Surge/module/split/partK/KouDaiXiaoYuan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ae7cedaa767aa60b1db92858535cc3408d3260d"
+    },
+    {
+      "path": "Surge/module/split/partK/Ku6.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb6841a67dad560591b563fa0ac07ffc8c917a85"
+    },
+    {
+      "path": "Surge/module/split/partK/KuGouMusic.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a63978a3cec5952b7feaa4d4f2c09da5c01446d"
+    },
+    {
+      "path": "Surge/module/split/partK/KuaYaZip.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60d2d41fe20da042baac9b6516032c338d25cca7"
+    },
+    {
+      "path": "Surge/module/split/partK/KuaiDi100.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61fa5f5a975da0a58b89111da0d0dcbe651646ed"
+    },
+    {
+      "path": "Surge/module/split/partK/KuaiDongBaike.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b35f3dae2130528ac38beda04ef0532b16cb2a9"
+    },
+    {
+      "path": "Surge/module/split/partK/KuaiKan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73d6e2db4fb80fa88c04ee9a3fcc2977b348ef73"
+    },
+    {
+      "path": "Surge/module/split/partK/KuaiLeGuangBo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c27f9a78f7fc97aff738acb4b1fbe4f81e81f18"
+    },
+    {
+      "path": "Surge/module/split/partK/KuaiSuWenYiSheng.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41245636072f62985847f484b0df2f5cfdd1c0f8"
+    },
+    {
+      "path": "Surge/module/split/partK/Kuaishou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a121a1f94b9c13c1039d98516962d1f342e69a1"
+    },
+    {
+      "path": "Surge/module/split/partK/KuwoMusic.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4a981eb99ced712ad4de3c77c1df7ccdda0406f"
+    },
+    {
+      "path": "Surge/module/split/partK/OSChina.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69d3e8456ad18beb85ecd016cff3eb14332c2d5a"
+    },
+    {
+      "path": "Surge/module/split/partK/Quark.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6b985aba646cde27c053331a99570e0d7f98679"
+    },
+    {
+      "path": "Surge/module/split/partL/LINGClub.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bd7e00d8e44dc2920591f6e39ebc78ccb36913e"
+    },
+    {
+      "path": "Surge/module/split/partL/LaiChong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d2211464ec7ba344856c67775862333c25a3593"
+    },
+    {
+      "path": "Surge/module/split/partL/LaiDian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10a8a049dac055b3d7ff102896e4b4073ddfc006"
+    },
+    {
+      "path": "Surge/module/split/partL/LaiFeng.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90d633b08d7280b38232fac4449b995e3c829573"
+    },
+    {
+      "path": "Surge/module/split/partL/Lakala.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47370df1b9eed1d87a3a0a34777271c71f2e4167"
+    },
+    {
+      "path": "Surge/module/split/partL/LanJiYin.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "773d74dfeb06c654b00f6d67ec94f92faee84233"
+    },
+    {
+      "path": "Surge/module/split/partL/LanJie100.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ce6d3d1cc1c343079b9244d8c9b01309cdaafcc"
+    },
+    {
+      "path": "Surge/module/split/partL/LanRenTingShu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09b0b9a31134b08a3a8e9f1360c5259c478d7954"
+    },
+    {
+      "path": "Surge/module/split/partL/LanTouZi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45ed7f90536faf4e6776a13d6b2e55044404b300"
+    },
+    {
+      "path": "Surge/module/split/partL/LeBaoChaoWanGuan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48ae133ef6383c4770a1b61a6bcabe5769ac090d"
+    },
+    {
+      "path": "Surge/module/split/partL/LeBoScreenCast.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4656e42875dfe425a6703815a8b09d0844589b24"
+    },
+    {
+      "path": "Surge/module/split/partL/LeCheng.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a33f743aeb89726f18c7136fa9059b98c726f8ab"
+    },
+    {
+      "path": "Surge/module/split/partL/LeEco.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81a6c17d94d320e3ab4ce125487a03a59e823d3b"
+    },
+    {
+      "path": "Surge/module/split/partL/Leju.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76211a3b4d2872ac61f7262006b3cdd699d6aedc"
+    },
+    {
+      "path": "Surge/module/split/partL/Lenovo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc45c54826f3e11848b855b8445a5b7dc21c4b18"
+    },
+    {
+      "path": "Surge/module/split/partL/LenovoPrint.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ce7f52104aae8b4590800c3644578493bd98843"
+    },
+    {
+      "path": "Surge/module/split/partL/LiangBuLu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c460ee48b4269402ec0c55ddaf4c57b2626bb2f4"
+    },
+    {
+      "path": "Surge/module/split/partL/LiePin.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81a215c74a681e060e8bd44e83f206c4ebbb72c1"
+    },
+    {
+      "path": "Surge/module/split/partL/Line.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bed0253e4117c16b92e5d722e5824ce42d7fd4bc"
+    },
+    {
+      "path": "Surge/module/split/partL/LinkWiFi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b91973cc6574d66652a5e5fd247c6ba95a31798"
+    },
+    {
+      "path": "Surge/module/split/partL/LinkedIn.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd9fd50ed31a8f3bf24826b6685e71f7fa768bdc"
+    },
+    {
+      "path": "Surge/module/split/partL/LocSim.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d5b28ae0ee5b01e8a9c00eeb02df814f12cf39e"
+    },
+    {
+      "path": "Surge/module/split/partL/Lofter.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3891128b298fa8bc24cfbcde847bfe907f741997"
+    },
+    {
+      "path": "Surge/module/split/partL/LuBanDaoJia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b4388a8b44735000b800c0188c6c1f6d4465777"
+    },
+    {
+      "path": "Surge/module/split/partL/LuoSenDianDian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "358d6d399ed7873b409c43759798eccc1c2baac5"
+    },
+    {
+      "path": "Surge/module/split/partL/LvFaShiYingDi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c8d4df88ec20bd0c2146df302e1141f3b61f491"
+    },
+    {
+      "path": "Surge/module/split/partL/LvTuSuiShenTing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "917167ea884f35893e00e2f748c6cc0c773e8943"
+    },
+    {
+      "path": "Surge/module/split/partL/Lycos.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0778d8d51bb6748d3ad73d0538e2b831153f4b2d"
+    },
+    {
+      "path": "Surge/module/split/partL/linxi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bd38c127e7bd07e5a10361a1fb66fb0a1949a53"
+    },
+    {
+      "path": "Surge/module/split/partM/ChinaMinshengBank.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "019d4f24fa5b2d5345da693adf2515727c1b9ce2"
+    },
+    {
+      "path": "Surge/module/split/partM/MIX.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fab2becf4266f154b4f730c84eaa278e56ed13f"
+    },
+    {
+      "path": "Surge/module/split/partM/MaDaChuXing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52fc75e9a4becf5026f939438030bbb3794ef2fa"
+    },
+    {
+      "path": "Surge/module/split/partM/MaKaLongWanTu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8b7dc42d62cfed9d150718f922e0baca57cb0c0"
+    },
+    {
+      "path": "Surge/module/split/partM/MaMaWangYunYu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de597853f9cc85e5f1b8f6575f942abf59f46869"
+    },
+    {
+      "path": "Surge/module/split/partM/MacKeeper.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b794cc23680a765f6c0095cbb382293cdc726a7"
+    },
+    {
+      "path": "Surge/module/split/partM/Mafengwo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bffe66837b80ef63596a2f37ff18e34ba237822c"
+    },
+    {
+      "path": "Surge/module/split/partM/MaiDanBa.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30c4591ecd296c853401c5a26c3fd6d1d34f334b"
+    },
+    {
+      "path": "Surge/module/split/partM/MaiDuiDui.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5345bba3256be41ec83e3262ba302bb352b19cdb"
+    },
+    {
+      "path": "Surge/module/split/partM/Maimai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fed08d4802da87208775f5c5c7e3cf724180a59"
+    },
+    {
+      "path": "Surge/module/split/partM/Makeding.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a00eb28b0342429d069a67d816c0b6d27f0ce2a"
+    },
+    {
+      "path": "Surge/module/split/partM/Mama.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "285eae230a35c842a2333bc3dd2ec294e55a6ca8"
+    },
+    {
+      "path": "Surge/module/split/partM/ManHuaRen.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1f2bbe223985bbfda5fad599e1f03af1a5c0261"
+    },
+    {
+      "path": "Surge/module/split/partM/MangoTV.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72fccf5bb303bbca145428f1d7c9e1d84edddf72"
+    },
+    {
+      "path": "Surge/module/split/partM/MaoErFM.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8457dfe0efbfd67f6964ff0196c50e63825a27a"
+    },
+    {
+      "path": "Surge/module/split/partM/MaoYan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "205a8c6eaa89e0ffa996ec71541993e721ff3e05"
+    },
+    {
+      "path": "Surge/module/split/partM/McDonalds.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a0e806e93ba288370b35b428622de3857c52183"
+    },
+    {
+      "path": "Surge/module/split/partM/MeiLiXiuXing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "364236412cb654aa699917654a7d3e35c063b92f"
+    },
+    {
+      "path": "Surge/module/split/partM/MeiRiJingXuan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a548cbc32ef35b594515bd24bc53e4549b39fe58"
+    },
+    {
+      "path": "Surge/module/split/partM/MeiRiYouXian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0fa7b26b00453c31a96a057c6a33b28afc6074d"
+    },
+    {
+      "path": "Surge/module/split/partM/MeiWeiBuYongDeng.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb35e94ca88117d1519fa389976fe70a0f10c917"
+    },
+    {
+      "path": "Surge/module/split/partM/MeiYanXiangJi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "020f12b92b86b509752a1d644b83951d4448198c"
+    },
+    {
+      "path": "Surge/module/split/partM/MeituXiuxiu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f6554db34f56690bb6912f57bf1e849c815f785"
+    },
+    {
+      "path": "Surge/module/split/partM/Meituan-MeituanWaimai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c5423f5e189f976c1840a30b7bebed15137768d"
+    },
+    {
+      "path": "Surge/module/split/partM/Meituan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "592391615c270143651c262e0985adb1521dc615"
+    },
+    {
+      "path": "Surge/module/split/partM/MeituanPowerBank.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b693c3fb3dc771e9fd6b7114e0845cef1b5f24e"
+    },
+    {
+      "path": "Surge/module/split/partM/MeituanZhongBao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a95fe8d82bee00a230e65189ef2b0ae54ebd5838"
+    },
+    {
+      "path": "Surge/module/split/partM/Meiyou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b802af1621fad3bb0919e63cd58b6a7ab2c3999b"
+    },
+    {
+      "path": "Surge/module/split/partM/Meizu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fa52b5284a8f7bef7a54c00476ddbb9d56dcc0c"
+    },
+    {
+      "path": "Surge/module/split/partM/MiaoPai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b46aaeaba2040d72f5c4c40c1d2c828672000a9f"
+    },
+    {
+      "path": "Surge/module/split/partM/Microsoft.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "987981242615a983071c20076dc7c30ac9cb7c65"
+    },
+    {
+      "path": "Surge/module/split/partM/MiguVideo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92b3f61e48389f7b8f7eebc3abc262e26f5a8ec9"
+    },
+    {
+      "path": "Surge/module/split/partM/Mijia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7aa38e83623bab8f2f2d002537383723265f319a"
+    },
+    {
+      "path": "Surge/module/split/partM/MoGuZuFang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f04ce288a5d3af5dd1ba68fa9214bb7c8154d398"
+    },
+    {
+      "path": "Surge/module/split/partM/MoguStreet.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb6563f25025d7d4e0173580f480d4e4b42283c9"
+    },
+    {
+      "path": "Surge/module/split/partM/MojiWeather.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "348396e243a6e576e5ada5710bd632c01625901a"
+    },
+    {
+      "path": "Surge/module/split/partM/Mop.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0ba3fdae13f68f887452358f378852e0e6cd2a8"
+    },
+    {
+      "path": "Surge/module/split/partM/QuanMinShengHuo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8a87e408524a025bb6fb3e57a11227b4b070ef2"
+    },
+    {
+      "path": "Surge/module/split/partN/ABC.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "021d344aab4ff51d3931f3ce658657283d19ea5b"
+    },
+    {
+      "path": "Surge/module/split/partN/ChinaSouthernAirlines.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a394aee86677961b2dac3a2e29d62db4746fa5a9"
+    },
+    {
+      "path": "Surge/module/split/partN/NTPlay.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61129a80927f2804f7f258457b11e924ace07b2b"
+    },
+    {
+      "path": "Surge/module/split/partN/NaiFeiYingShi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "150546ae5c405adad6fd394a29114abe7c0179cd"
+    },
+    {
+      "path": "Surge/module/split/partN/Naver.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3912aec387bdbf86a4a6f850debdeb2c782138f"
+    },
+    {
+      "path": "Surge/module/split/partN/NewRelic.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5355a5da5e1d714686f73e9278589acc38d8d980"
+    },
+    {
+      "path": "Surge/module/split/partN/NingJu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2c0779cee98dd06f0199380a38562738eb851c2"
+    },
+    {
+      "path": "Surge/module/split/partN/NiuTingTing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a52864ad2d9c83ae64b868a081bb411b33f8798"
+    },
+    {
+      "path": "Surge/module/split/partN/OxfordALD10th.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9776d8102c08e53f249c80fc832bc8b9cb4b553e"
+    },
+    {
+      "path": "Surge/module/split/partO/ONE.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6739f7623e6b2c396053479d574207cf34b75d10"
+    },
+    {
+      "path": "Surge/module/split/partO/OPPO.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec374f35259507bf0c3612feef716ff033870c50"
+    },
+    {
+      "path": "Surge/module/split/partO/Openmultimedia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32794b8d3cf6d67b20e38e08e9a6e36e048f987f"
+    },
+    {
+      "path": "Surge/module/split/partO/Optimix.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01f35ce11fb53efb299e620c6b31c32797d0c3a6"
+    },
+    {
+      "path": "Surge/module/split/partO/Oray.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42aa36714471655f931f3ba3702830d6ef01677b"
+    },
+    {
+      "path": "Surge/module/split/partO/Oupeng.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64acb6f9f4e2e11723fbad9cd13315c7478fb46b"
+    },
+    {
+      "path": "Surge/module/split/partO/Outfit7.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06896b82e54bc8f5712a95dfb86ecdee901439c8"
+    },
+    {
+      "path": "Surge/module/split/partO/Outlook.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9249df708045cdee97776f98122da09f76a26e78"
+    },
+    {
+      "path": "Surge/module/split/partO/ofoBicycle.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b11883444530d8bf5cd5e2c01c78dc865118f4e"
+    },
+    {
+      "path": "Surge/module/split/partO/omofun.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "221ce7ea9f825516c5a934c869f45a5ee7473c54"
+    },
+    {
+      "path": "Surge/module/split/partP/PPTV.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f90afb1b2dc45b27759b40ae727f87258135efd7"
+    },
+    {
+      "path": "Surge/module/split/partP/PeanutWiFi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3605110718f5c51b31e7d435d02cfe3eb6fcabb9"
+    },
+    {
+      "path": "Surge/module/split/partP/Photoable.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7277633a6f9c6fdad0e908c85a505e2f74bac19"
+    },
+    {
+      "path": "Surge/module/split/partP/PiPiGaoXiao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "996c034839a046044db7b036d503c8dd4d695993"
+    },
+    {
+      "path": "Surge/module/split/partP/PiPiXia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97eb55f2a857b25e6d4797e1a11869563d181f66"
+    },
+    {
+      "path": "Surge/module/split/partP/PiaoGen.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4d8353884585fed0ca63ecd3f824c860a34cb64"
+    },
+    {
+      "path": "Surge/module/split/partP/PiaoXingQiu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "174e3c9d87282912a1c57dcbabf6dc5a921bde43"
+    },
+    {
+      "path": "Surge/module/split/partP/Pinduoduo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d64db92aee66a2d698abd66a32c32fe13d58547a"
+    },
+    {
+      "path": "Surge/module/split/partP/PingAnHaoCheZhu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e522dbd7e2d23da9f81f05800fac590a5b3b6b3"
+    },
+    {
+      "path": "Surge/module/split/partP/PingAnPocketBank.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06581525fcb737ba941606c415fc7b401c6ea573"
+    },
+    {
+      "path": "Surge/module/split/partP/PingAnSecurities.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "811966e1a3a52730411bcf6b0c335394d510d2de"
+    },
+    {
+      "path": "Surge/module/split/partP/PingAnYiQianBao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75ad27720884007f21588c7669d0276d7b13ffe9"
+    },
+    {
+      "path": "Surge/module/split/partP/PuDaXiBen.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f7b7810b2f6a067234dcf0d164a3cadc4cc98f7"
+    },
+    {
+      "path": "Surge/module/split/partP/PuPuSupermarket.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5e85ded444212169d396a539efc31b292f08c40"
+    },
+    {
+      "path": "Surge/module/split/partP/PushPlusWeChatPushAd.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84ea973a2deb22c86f005af6f970de729d19e301"
+    },
+    {
+      "path": "Surge/module/split/partP/SPDBank.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25af0191c8ef1bcbac1947cc68868b9abb037c39"
+    },
+    {
+      "path": "Surge/module/split/partP/ThePaperNews.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b1c77eeac7c18b320a76bc0ab87778416520855"
+    },
+    {
+      "path": "Surge/module/split/partP/pikpak.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d87a7454818f14d807f0901f1a7f30b79e7712c"
+    },
+    {
+      "path": "Surge/module/split/partQ/51Job.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ff821de15c42ee5a980557c9a754716e22c1f57"
+    },
+    {
+      "path": "Surge/module/split/partQ/Autohome.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "855c149cef6a9a3a0d2277386a5dec748a927c49"
+    },
+    {
+      "path": "Surge/module/split/partQ/CheryAuto.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e412504ce9cf2457f460214cd9c3af70052b5044"
+    },
+    {
+      "path": "Surge/module/split/partQ/FamilyMart.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb412ab576253b2ab41ce84d70b7b80f594fb6ef"
+    },
+    {
+      "path": "Surge/module/split/partQ/GlobalShoppingKnightCard.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30b9793d833479da9e11b988bbb67593e77b9b52"
+    },
+    {
+      "path": "Surge/module/split/partQ/NetEaseCloudMusic.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb8bb7ae191456968c6d45fcc01f1417a38b99f8"
+    },
+    {
+      "path": "Surge/module/split/partQ/QQBrowser.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a538ff619c61dd6a089acef1f2b5c4543ac5f7b0"
+    },
+    {
+      "path": "Surge/module/split/partQ/QQMusic.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccf5fa52f7edbdce131511869c86b956caa6a067"
+    },
+    {
+      "path": "Surge/module/split/partQ/QQWallet.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b0135c6ac587a29dca4f1df1044b6ad3f9dfe17"
+    },
+    {
+      "path": "Surge/module/split/partQ/QiDianReading.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261c466838b0e4e23dd1d8838d5e6eda12d45c31"
+    },
+    {
+      "path": "Surge/module/split/partQ/QiMai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fde17907b679402493f94a89715bbc31e9e947e8"
+    },
+    {
+      "path": "Surge/module/split/partQ/QiMaoNovel.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53e9f8854732c30e33306e3343b990eefa384207"
+    },
+    {
+      "path": "Surge/module/split/partQ/QiShuiMusic.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7dd2af746899c4e676caefe95914b14e142a10c"
+    },
+    {
+      "path": "Surge/module/split/partQ/Qilu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e96e35829d10276131200dec8a712e13799e3201"
+    },
+    {
+      "path": "Surge/module/split/partQ/QinBaoBao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9809dd11cddeb259caec21109db86fd5826166f"
+    },
+    {
+      "path": "Surge/module/split/partQ/QingTingFM.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "170d325de201600fda8b3a7ed97bba6972b5f438"
+    },
+    {
+      "path": "Surge/module/split/partQ/Qiongyou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a2011232c536c729690738d4830a7d7d259aec4"
+    },
+    {
+      "path": "Surge/module/split/partQ/QiuMiBao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f198eee703f95b8850a4c9fac736a6dd8b9f319"
+    },
+    {
+      "path": "Surge/module/split/partQ/QuDa.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "144ea6661f2ab42a10e828951b7d89a1619a5798"
+    },
+    {
+      "path": "Surge/module/split/partQ/QuanMinGeGe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "509950c9370b3f2ab3dab957f9c0b21b068026d5"
+    },
+    {
+      "path": "Surge/module/split/partQ/QuanNengBrowser.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b905968573d71936c54c325ae5a0526cf07eca84"
+    },
+    {
+      "path": "Surge/module/split/partQ/Qunar.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d723c85ac5d0a9eacd010f206729e63b07d6c92"
+    },
+    {
+      "path": "Surge/module/split/partQ/XianYu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "973d39a46b1c9004cd0ad4b8a94bb41fa9ea0875"
+    },
+    {
+      "path": "Surge/module/split/partQ/Xiaohongshu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8f6f2d66f7efc989a55d9d1e220f0b355bbdee3"
+    },
+    {
+      "path": "Surge/module/split/partQ/YunKuaiChong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0bd3ca98fb001834d32d804361b3cc7430d725d"
+    },
+    {
+      "path": "Surge/module/split/partQ/Zhihu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c68050cf0bc261107c49e6f4eb77219955012b40"
+    },
+    {
+      "path": "Surge/module/split/partR/LuckinCoffee.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ead8b6ca19c86552b1a6f043e01c802304287fa4"
+    },
+    {
+      "path": "Surge/module/split/partR/NissanIntelligentConnect.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62bcc9d0d221242783bf40c4aede9c796d942dc5"
+    },
+    {
+      "path": "Surge/module/split/partR/PeopleDaily.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9cbf02da7edcd1a83b6c249c4fa5dc1d7b35292"
+    },
+    {
+      "path": "Surge/module/split/partR/PeoplesDaily.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f441e4f04bc52883aedde167c66a6a4bed86586d"
+    },
+    {
+      "path": "Surge/module/split/partR/RARBG.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af5e6e113200d07a015e3974de3691df726cb66a"
+    },
+    {
+      "path": "Surge/module/split/partR/Reddit.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47cabfd814d3a0ae4a772a069c0b2eb38756bb06"
+    },
+    {
+      "path": "Surge/module/split/partR/RenRenVideo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19a8d0393531c9700bf664275ae11e772640db6c"
+    },
+    {
+      "path": "Surge/module/split/partR/RiRiZhu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9efc8d79f86e57caf5227655d7ca230fa97b8d9"
+    },
+    {
+      "path": "Surge/module/split/partR/RiTaoRenYiMen.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1deb76f69772d5d32f9df5a62cbfee10ae1332c9"
+    },
+    {
+      "path": "Surge/module/split/partS/BTGHomeinns.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c82b7bf8a0288cd8766057dd5cedb28db054915a"
+    },
+    {
+      "path": "Surge/module/split/partS/JiayuanDating.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3e6aed591a885f6b7434dad660c4117cdc53975"
+    },
+    {
+      "path": "Surge/module/split/partS/PhoneChina.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10c01f165ef77411423ae2ed4b6d90b2949579ed"
+    },
+    {
+      "path": "Surge/module/split/partS/SAICVolkswagen.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "363b7748247c6c34af785d2a838245cebd90ebaf"
+    },
+    {
+      "path": "Surge/module/split/partS/SFBest.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "517c72a4c27e40df82168dc18e12a97cf1ccfa39"
+    },
+    {
+      "path": "Surge/module/split/partS/SFExpress.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcb44848bd171369237a3a2a9b5d703c7f759db8"
+    },
+    {
+      "path": "Surge/module/split/partS/SFExpressMiniProgram.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfef1ff1bfb6e8bf3d45d4ee08eb7889b2a81466"
+    },
+    {
+      "path": "Surge/module/split/partS/SMZDM.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ae729fa91cdadb0680938d18acec215a04fbeae"
+    },
+    {
+      "path": "Surge/module/split/partS/SamClub.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36931f561efab2182fa17299565121ff9dd3c88a"
+    },
+    {
+      "path": "Surge/module/split/partS/SanLianZhongDu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e0e63aa23315a87605ce75398627c62670e8783"
+    },
+    {
+      "path": "Surge/module/split/partS/Sape.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0d69bcd51053b594097c41a8c69ba163dce1063"
+    },
+    {
+      "path": "Surge/module/split/partS/ShanDongXiaoYuan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec3f6f3ac45c3bfb9d064b190b5c5b236f190aa8"
+    },
+    {
+      "path": "Surge/module/split/partS/ShanMeng.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43a477b07e08df101555175a563d9f34995f1f13"
+    },
+    {
+      "path": "Surge/module/split/partS/ShanXianYiXia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fb196b85e445867891231623ca342cc61130bed"
+    },
+    {
+      "path": "Surge/module/split/partS/ShaoShuPai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ffcbce523a1d3ed125a0d503b96d69155db1eaf"
+    },
+    {
+      "path": "Surge/module/split/partS/ShenMa.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1947ca7781ef94ef1b3249b5220730eb34b278cf"
+    },
+    {
+      "path": "Surge/module/split/partS/ShenZhouAuto.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03cf811589d56f435cd41f9a8103caf28b432060"
+    },
+    {
+      "path": "Surge/module/split/partS/ShengQuGames.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed1931a9f5fd357e1f446e3ad1444a7098f718a9"
+    },
+    {
+      "path": "Surge/module/split/partS/ShengShengHuiTouChe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a2f00499c44922e42ffb7779458f6c7e7a907d3"
+    },
+    {
+      "path": "Surge/module/split/partS/ShenzhenTong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b542240e8c9d2602ee55aba79be1c5e85499e73"
+    },
+    {
+      "path": "Surge/module/split/partS/ShiHuo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56f23d92aef9038316ce31a2e078f4916e6ae5e1"
+    },
+    {
+      "path": "Surge/module/split/partS/ShouQiYueChe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b7bf60b401bf9f34b8b4c0434ed17581752cbbf"
+    },
+    {
+      "path": "Surge/module/split/partS/ShouQianBa.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "512f9fc898a899751805601d2d8e182e9e071827"
+    },
+    {
+      "path": "Surge/module/split/partS/ShuQiNovel.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71d4dfda1ea4deb098815e978de6355476ed8915"
+    },
+    {
+      "path": "Surge/module/split/partS/Shuzilm.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "550acdad6a4539855fd73c7669d3b46029a07f47"
+    },
+    {
+      "path": "Surge/module/split/partS/SiJiXianShangYingShi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e068afb10c3279e3d164cdb94ab076b10a764ca7"
+    },
+    {
+      "path": "Surge/module/split/partS/SichuanAirlines.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a7dfd66968802c828e7924054752ddba95f6cde"
+    },
+    {
+      "path": "Surge/module/split/partS/Snapchat.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f1317fcb7d520f0be8385083c5ce26d2e23b346"
+    },
+    {
+      "path": "Surge/module/split/partS/Sogou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6485240b8cdbaf23c58457035fab967919c8839"
+    },
+    {
+      "path": "Surge/module/split/partS/SogouInput.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0eeac10797bc11e4050c361acc7b608b8b74f687"
+    },
+    {
+      "path": "Surge/module/split/partS/Sohu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0c220f48b35788327b96a0fe3b8ffec1b0f4bd5"
+    },
+    {
+      "path": "Surge/module/split/partS/SouDianChongDian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34e6e81e6e325b50de3fb2c9ed1b3defcb8a3b1a"
+    },
+    {
+      "path": "Surge/module/split/partS/Soul.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1901c87c7face3bc948b415d2fbe14203093e9a6"
+    },
+    {
+      "path": "Surge/module/split/partS/Spotify.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2378df2c1842f33b19d3587ead60512fe66a53b"
+    },
+    {
+      "path": "Surge/module/split/partS/SuDaXiaoYuanAPP.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dc6f1453891ed7da43d8c8de51ae07770c18f02"
+    },
+    {
+      "path": "Surge/module/split/partS/SuEHang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9832d36bec1cc1bbfdc8c5b93b27774681f72fc9"
+    },
+    {
+      "path": "Surge/module/split/partS/SuZhouDao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "060bc75fd782f1ff099a55bbcb4ad016312cc7cd"
+    },
+    {
+      "path": "Surge/module/split/partS/Suning.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9721303c9a647e184021debf20a282d72139330"
+    },
+    {
+      "path": "Surge/module/split/partT/PConline.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15ce990bf46e1862a19214f131bf3ac8e2a66458"
+    },
+    {
+      "path": "Surge/module/split/partT/PConlineTech.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ca5bf3d1a1d6eaab8d9853c9eb9fa41c886a370"
+    },
+    {
+      "path": "Surge/module/split/partT/TTVoice.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1e60a81132aa05e4907fc22bb3c27ef9ac9ae67"
+    },
+    {
+      "path": "Surge/module/split/partT/TaiLingIntelligent.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85628883a14be913d2f5eb588a7537c569e0c565"
+    },
+    {
+      "path": "Surge/module/split/partT/Talkatone.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e48cf9e09143a1b03db1455031e77e42fe5939db"
+    },
+    {
+      "path": "Surge/module/split/partT/Tanwan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34d681e7d5e8901a65202679864b235312592e97"
+    },
+    {
+      "path": "Surge/module/split/partT/TaoTaoReading.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dc8616f74dd08d2d85660bccb1ec05be50ebc0b"
+    },
+    {
+      "path": "Surge/module/split/partT/TaoTaoSou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7955e54eeaa63f05b4f45694f5589dc413ac2dd6"
+    },
+    {
+      "path": "Surge/module/split/partT/Taobao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9d37d1a8e8760b26fb7a92ea6336ed994bccd21"
+    },
+    {
+      "path": "Surge/module/split/partT/Taopiaopiao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2587115320a8d619a73b019e809a14d795aa2165"
+    },
+    {
+      "path": "Surge/module/split/partT/TapTap.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d0185ec0e68ef2c2ea78a57d0e80450d195d6f8"
+    },
+    {
+      "path": "Surge/module/split/partT/Tencent.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd2cf20ccee590c53975c16dc65304ec3bfdcfcd"
+    },
+    {
+      "path": "Surge/module/split/partT/TencentAds.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b85f50adcd4c0f71c95d536474b216cdb153948f"
+    },
+    {
+      "path": "Surge/module/split/partT/TencentGames.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfacf6e68f3bb62e3e80a7677a0bfe17e99e635a"
+    },
+    {
+      "path": "Surge/module/split/partT/TencentGamesCommunity.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd36ad439502e0571f22239b419bc9da8e0c1a5a"
+    },
+    {
+      "path": "Surge/module/split/partT/TencentMaps.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b412dfb33cfc6663aa1cdca231382043dc57c68c"
+    },
+    {
+      "path": "Surge/module/split/partT/TencentMobileManager.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6a9c5dbb9b1732bad05d817b72681ecb7ccefcd"
+    },
+    {
+      "path": "Surge/module/split/partT/TencentNews.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23ff37ba43dca19523687dea47474553f1e2f0ba"
+    },
+    {
+      "path": "Surge/module/split/partT/TencentRideCode.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "411a2ec03f60f594f22269a085b7b7808d85c4d0"
+    },
+    {
+      "path": "Surge/module/split/partT/TencentSports.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1df84597d8d9fe53771ab989be41a581b635124"
+    },
+    {
+      "path": "Surge/module/split/partT/TencentVideo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ad5590ca14038b8627be244c0fd3009ad8cb413"
+    },
+    {
+      "path": "Surge/module/split/partT/TencentWisdom.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e68f20986b379ad6892863da7815b044ff922579"
+    },
+    {
+      "path": "Surge/module/split/partT/Thunder.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c29189af2a2767308fbabb3f99ed0a72e4eaa047"
+    },
+    {
+      "path": "Surge/module/split/partT/TianFuBankMiniProgram.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ec574a9dc752e6093eb96537002159b74f5ef7f"
+    },
+    {
+      "path": "Surge/module/split/partT/TianFuMobileBank.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b94da4c27ab8cdd8637857676ee9b886fbd080d"
+    },
+    {
+      "path": "Surge/module/split/partT/TianFuShiMinYun.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcb0926847f4c1e302199a962deca44ad3b4a78e"
+    },
+    {
+      "path": "Surge/module/split/partT/TianFuTong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ec6f07d66d5eee2e3279d87e5f40c47a8c1b131"
+    },
+    {
+      "path": "Surge/module/split/partT/TianShanYunTV.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "769712b10601bdc2bce54869f6e5799455284d0b"
+    },
+    {
+      "path": "Surge/module/split/partT/TianShen.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26b577c5d5fa1a9567e188099e126f88a5d69ccc"
+    },
+    {
+      "path": "Surge/module/split/partT/TianTianFund.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efe99605dc320733afd8119cbf4098d77ab8bc8f"
+    },
+    {
+      "path": "Surge/module/split/partT/TianTianKanKan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f82719064c5e910db4ff1b9e512f7f49ded84113"
+    },
+    {
+      "path": "Surge/module/split/partT/TianXingFinance.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ce2eb79f6207b17f7bd24f55b5dbaf3df34312f"
+    },
+    {
+      "path": "Surge/module/split/partT/TianYiCloudDrive.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c6a9cb1b2b97d65827d67db05c05a4a24de6f89"
+    },
+    {
+      "path": "Surge/module/split/partT/TmallAutoCare.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41ffaea331d2772cdc86b595f8bd9641d8ab77a4"
+    },
+    {
+      "path": "Surge/module/split/partT/TmallGenie.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a29c94b5e16300ccc2657f1a7531c0118f5aacb1"
+    },
+    {
+      "path": "Surge/module/split/partT/TongChengTravel.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0246d675aeed02520d5d5c53be286089909c009"
+    },
+    {
+      "path": "Surge/module/split/partT/Tongdun.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8065bbdd0af3c5b6b0a57430349bbab0336b114b"
+    },
+    {
+      "path": "Surge/module/split/partT/TruthSocial.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dc111dcc608e7f561203842caa43e344f27ad49"
+    },
+    {
+      "path": "Surge/module/split/partT/TuanYou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1685b287af537532d1c44467c3302927db08b5ac"
+    },
+    {
+      "path": "Surge/module/split/partT/TubeMax.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2727caa7a73f00b1b87ce8f1411bc12b67c86d91"
+    },
+    {
+      "path": "Surge/module/split/partT/TuhuAutoCare.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51f6fe4889b3125cc6d1b2f625751e532a9b787b"
+    },
+    {
+      "path": "Surge/module/split/partT/TuiLan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf6639ed855818c734f2181b5e798cb18507b6ae"
+    },
+    {
+      "path": "Surge/module/split/partT/TujiaHomestay.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fd3f4a7226b07deb1b8bc973d94f96d9d94c270"
+    },
+    {
+      "path": "Surge/module/split/partT/Tumblr.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37ab8e2f38e50b3293e8a4e5e25b58417a9c6b88"
+    },
+    {
+      "path": "Surge/module/split/partT/Tuniu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "850077136b02039a27172989f4564440b653c3fb"
+    },
+    {
+      "path": "Surge/module/split/partT/Turn.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7331ba3793eed63368d16d9b8ad4bf50df2ef510"
+    },
+    {
+      "path": "Surge/module/split/partT/Twitch.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2089ca57aa12c0ea905389021965f4d1a21ae5dd"
+    },
+    {
+      "path": "Surge/module/split/partT/Twitter.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea2cc787c8a3301584c910b12e4864e6ee9992ea"
+    },
+    {
+      "path": "Surge/module/split/partT/iFinD.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0da793176a1e9d3735669c2df7e1ef91b3db7aa"
+    },
+    {
+      "path": "Surge/module/split/partT/top-widget.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "924cdea208ff02046fc69ea0df722b9e21d51232"
+    },
+    {
+      "path": "Surge/module/split/partU/UCBrowser.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba4809649dd9f8d5352fc72770c53685a79a8426"
+    },
+    {
+      "path": "Surge/module/split/partU/UJing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d957cc848430a014e45e2b1c514776bdba5a4f57"
+    },
+    {
+      "path": "Surge/module/split/partU/UnityAds.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0726828dcdc06f2dd772d1be04e09c083ee4fd5"
+    },
+    {
+      "path": "Surge/module/split/partU/UrbanAirship.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9425275e384eac01ff08e2709966dc092b411e6c"
+    },
+    {
+      "path": "Surge/module/split/partU/udnNews.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c191987834ae2f7c1aaf14da463a028b8903d62"
+    },
+    {
+      "path": "Surge/module/split/partV/VIVO.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58666304bd3e9ada01f84f9ff1e860916d001943"
+    },
+    {
+      "path": "Surge/module/split/partV/VIVOMall.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df391a55a54671033944b2db3dc413ae61c1daa2"
+    },
+    {
+      "path": "Surge/module/split/partV/VistaKanTianXia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2623cb1317b22a89b1b7f386f8497d47bf0b186b"
+    },
+    {
+      "path": "Surge/module/split/partV/vgTime.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "743fc1fd14566a7b29b9acef2051a55f3d26afd5"
+    },
+    {
+      "path": "Surge/module/split/partW/BenLaiShengHuo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fe2d4b82fb5cf1aeab16983ef9d17a58ace460f"
+    },
+    {
+      "path": "Surge/module/split/partW/GaoDingDesign.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5320444735796c3178ed0849f747fbd9add49736"
+    },
+    {
+      "path": "Surge/module/split/partW/NetEase.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dcc391132f06ee96d8dd80fdb2ad7bdec752fd3"
+    },
+    {
+      "path": "Surge/module/split/partW/NetEaseCloudMusic.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "763a2f3fa5b5959f0d865ac99c23651de2fc8393"
+    },
+    {
+      "path": "Surge/module/split/partW/NetEaseDashen.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dc369178c337ff967654c102ed61b3cb4f2d852"
+    },
+    {
+      "path": "Surge/module/split/partW/NetEaseKaola.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dc4bf4a101f76183e502389b3ff7564eab2d7cf"
+    },
+    {
+      "path": "Surge/module/split/partW/NetEaseMail.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adbbbc2248d1c58bc80703fc487fee10a3ba0047"
+    },
+    {
+      "path": "Surge/module/split/partW/NetEaseMoney.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecd33a11f9ef2955fd6a5293885aedb0dca5973d"
+    },
+    {
+      "path": "Surge/module/split/partW/NetEaseNews.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4df430925e58ed34075b901741658efedb99bc0"
+    },
+    {
+      "path": "Surge/module/split/partW/NetEaseSnailReading.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2d806a6558f430c0069b456eba6d8edb48ffee2"
+    },
+    {
+      "path": "Surge/module/split/partW/NetEaseYanxuan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce28eb0ef8557112f9f1621987f5652e18f72aa"
+    },
+    {
+      "path": "Surge/module/split/partW/NetEaseYoudaoDictionary.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2edcf5f2a621cccd7ac6d3232882173ed703e694"
+    },
+    {
+      "path": "Surge/module/split/partW/PerfectWorldEsports.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97e50cd725b2f37e52e65968181989192b2fc385"
+    },
+    {
+      "path": "Surge/module/split/partW/SnailSleep.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67bb0ff4763de4f12aec2218a9bcf075f370d80f"
+    },
+    {
+      "path": "Surge/module/split/partW/Vipshop.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc8109baa00571b76a29a3b2684e0b7059c02a45"
+    },
+    {
+      "path": "Surge/module/split/partW/WIFIwannengyuechi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ad051d699027407b9dfc0921ec077ea621b3aa7"
+    },
+    {
+      "path": "Surge/module/split/partW/WPS.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e76888aae1bdc67c9945229158316cb3c67f4550"
+    },
+    {
+      "path": "Surge/module/split/partW/WaiMaiBaWangCan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "788423d14bc5434a6579e98171061484030c4b2d"
+    },
+    {
+      "path": "Surge/module/split/partW/WanCiWang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fea64f13b06e566a4f933801737607a781f664ab"
+    },
+    {
+      "path": "Surge/module/split/partW/WandaCinema.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31a595d88b338186a86870e5d50ff776e6466b24"
+    },
+    {
+      "path": "Surge/module/split/partW/Wandoujia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c6118d304188edf6bd792b98466182a6deac7d2"
+    },
+    {
+      "path": "Surge/module/split/partW/WangShangGuoWang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ee0ca17a917983e07fce7d0d2a6f68aa57afb02"
+    },
+    {
+      "path": "Surge/module/split/partW/Waps.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f782672ae8e37ac9996727a4c3c2f7f554b3468d"
+    },
+    {
+      "path": "Surge/module/split/partW/WeChatOfficialAccount.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df7bfbe8528438576c20c203ad3485ca800a7a20"
+    },
+    {
+      "path": "Surge/module/split/partW/WeChatUnlockLinkRestrict.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6cee071d56db83221336e42fd5da41765e3a18c"
+    },
+    {
+      "path": "Surge/module/split/partW/WeiPhone.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acbddf2ada66178c641af96a343e103f40eab260"
+    },
+    {
+      "path": "Surge/module/split/partW/Weico.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67b8f766a1ed055267f6b6dc71eb4ac61c07f438"
+    },
+    {
+      "path": "Surge/module/split/partW/Weidian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a631b29a89e581e42c85632805cd1e7f0f7042b"
+    },
+    {
+      "path": "Surge/module/split/partW/WhaleCloud.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63433433c08a73f586b280161972bcc1717e06dd"
+    },
+    {
+      "path": "Surge/module/split/partW/WiFiMasterKey.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65e259b616a0be320f688a05bf2a10cdc9146f8f"
+    },
+    {
+      "path": "Surge/module/split/partW/WinnipegStation.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1544c237bb65c95275f9a430ea0535f38609d3bc"
+    },
+    {
+      "path": "Surge/module/split/partW/WoAiKaCommunityManager.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "978d1e4852c4f52a5f430c6379266e4c8d68fe92"
+    },
+    {
+      "path": "Surge/module/split/partW/Wostore.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "444a5248334930c79b2771f69976bad7b80b2933"
+    },
+    {
+      "path": "Surge/module/split/partW/WuKongRemoteControl.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c403a71a49ac167b0b64ca581bd138ca589e9b6e"
+    },
+    {
+      "path": "Surge/module/split/partW/WuTaCamera.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bea1864b697e833ab47266a0e381c9b4dd2ed54"
+    },
+    {
+      "path": "Surge/module/split/partX/BananaIsAFruit.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3971b22993712a8822a7b5ec581ebd4b26437b6a"
+    },
+    {
+      "path": "Surge/module/split/partX/Ctrip.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cdcffea01da8bddc93af9e8d99020ef20ba5e2e"
+    },
+    {
+      "path": "Surge/module/split/partX/Hilton.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9571aa92f6ecffd49dcf4544aa232df7e3908b00"
+    },
+    {
+      "path": "Surge/module/split/partX/IndustrialBank.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46f936829c530182aa2f84e7389b46ac11add8e0"
+    },
+    {
+      "path": "Surge/module/split/partX/MiDu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5052e4fef853f702e370bc790141280d73118cf4"
+    },
+    {
+      "path": "Surge/module/split/partX/MiYouShe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "746c5bfc02d100d90a117c763f86b0f2d208aab2"
+    },
+    {
+      "path": "Surge/module/split/partX/SeewoWhiteboard5.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ad85a6284d1b823b5fc08fe772c3d928e741092"
+    },
+    {
+      "path": "Surge/module/split/partX/Sina.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d62afee58776ff85a3644b6ae8219798425307ca"
+    },
+    {
+      "path": "Surge/module/split/partX/SinaNews.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be9475247b860abba50e475b05c103d0ca8f27c4"
+    },
+    {
+      "path": "Surge/module/split/partX/Starway.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa7a20255ac104323dfe0baf7d6cd0977e0553c1"
+    },
+    {
+      "path": "Surge/module/split/partX/Sunflower.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa39db4bf68980654ad8face8f5bef86b05ffda3"
+    },
+    {
+      "path": "Surge/module/split/partX/XiChuangZhu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddd797a66b1c82bf6cca3718bb6fedd83bbfc02f"
+    },
+    {
+      "path": "Surge/module/split/partX/XiFanAnime.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c26e731788e64cc80ecc8a4afa3415dabd41ec3"
+    },
+    {
+      "path": "Surge/module/split/partX/XiShiYan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "392a6014111bba6467942cf3f99371f4e043146b"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaChuFang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e2793fa28936ec8293ef481f0efc6d41bd24b98"
+    },
+    {
+      "path": "Surge/module/split/partX/XiamenAirlines.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef9daf8119ae9ae9c942c5693364acd388e9aab1"
+    },
+    {
+      "path": "Surge/module/split/partX/XiamiMusic.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73341ce0c42452e2e36601ec227e6bca79863896"
+    },
+    {
+      "path": "Surge/module/split/partX/XianYu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "923938110d4fafd650cea365a8c4f43355522014"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoAiSpeaker.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5d08c1420af5a944a204fc279199c6e6482299d"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoBaiStudyPrinter.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b60a6f98c8a7dd0dc5abe2417d12494498ef1f9b"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoBiuSmartHome.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfcaf14a059f351ce550597d7b764804c4a939be"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoCanBaWangCan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69e1e8d68028dc0fbcb2372e1f1c1a9fa3486071"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoDianChongDian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d20386e9ac0f41dd2ac778d577ae2ee53ea3b28"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoHeTuoZhan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cd05f84197818c08e58db69da57bffe5f8fcb00"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoJuTechnology.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "596da0b5f02fab5ef468a26d46215a8ba75cc0c5"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoLiShengHuo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5d681b39ebde20b87a04ebc71fbb365b6515b35"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoMang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "936ae18215f81993ce6ab1292760bf4135ecc7c9"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoNiu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd4ee80badaf1d7ba87e8082d108a28de14bb7f8"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoPeiPet.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cfd240d1149280257791faf7ab891cbaa90958f"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoRongJia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd9b4f80436cc4a9524126f718e92e345e1edf2e"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoShuiMian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aee4b290a8643f22cfef5c8b557c389e180c00e7"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoTe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce10facc32797b813a02f5f1c5dee908590974c6"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoTuChongChong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e97d314337d5a34fb16c2e9ceeb8bc893149132"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoXiangSupermarket.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10061f138d8ab8bc7d626af7484b491a23ace323"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoXiaoYingShi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "223ccae279b251122144857fb9357e18167cdadf"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoXiaoYouXuan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b61e5b45bef417b4e0c3df85d16a9fefd51a0e6d"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoXiongArt.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "257324fa9bf88b0af0997cf449278126ac699744"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoXiongIntercept.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8e6e9093f11b69004311ff1fcf1fad22f01b726"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoYi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41ae05ce031d99807cef6ad80d1fd10cc5eb3cf1"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaoYuZhou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40653fc927a95f5e9483a42c62b0ecb6c0312a94"
+    },
+    {
+      "path": "Surge/module/split/partX/Xiaohongshu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00b54aaeeb3db6c7a94c8f04d4944bd256f69476"
+    },
+    {
+      "path": "Surge/module/split/partX/Xiaomi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0d080f48ae3b1b169459e2c95c7e7e406d61cb2"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaomiFinance.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7011baa58b89e69412e32c6d00e3d47a308dd779"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaomiMall.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ec061b9953a2f0df4a24f211a536a92606faf1c"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaomiPrint.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30c7a69bb536b0e47bdba40513685d1ea58261eb"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaomiSports.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccabfa5ae80a0fc35736542668f41fa50104873e"
+    },
+    {
+      "path": "Surge/module/split/partX/XiaomiYoupin.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccc897e777c17d5fa27626ef79fc9e8a04709e89"
+    },
+    {
+      "path": "Surge/module/split/partX/Ximalaya.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91cbbf8e6036fae6c5959fefd13113315dfce4ec"
+    },
+    {
+      "path": "Surge/module/split/partX/XinPianChang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "391e95a7803a2201ee6d5a0a3628e31474fc4d66"
+    },
+    {
+      "path": "Surge/module/split/partX/XinYueClub.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81129d4fa3b8877356f9145ea6308309a463ced3"
+    },
+    {
+      "path": "Surge/module/split/partX/XingCaiFu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a19c0bacbf9ec9d1b6be9a4bd8148faaf785015b"
+    },
+    {
+      "path": "Surge/module/split/partX/XingHuoEnglish.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63ae1f964d42fdb0ffbce9cf7ab122f52a64c365"
+    },
+    {
+      "path": "Surge/module/split/partX/XingYeSecurities.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "355523ae7443af2a8c106fa2350e7dfc1457bf36"
+    },
+    {
+      "path": "Surge/module/split/partX/Xinhuanet.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "000fe624f5f4bce7b2fd17f2074f207dad9f052f"
+    },
+    {
+      "path": "Surge/module/split/partX/Xinmin.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a19b91e85d65ef187821134916f31b931868bc37"
+    },
+    {
+      "path": "Surge/module/split/partX/XiongMaoLive.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4a31e96833b2507f674a3bebbbced9b4c30df89"
+    },
+    {
+      "path": "Surge/module/split/partX/XueQiu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ea2b5e154cff178e67a178892847752afdc4dbb"
+    },
+    {
+      "path": "Surge/module/split/partX/XunYiWenYao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0616e69896049656eacf0d706b734ed944790c1a"
+    },
+    {
+      "path": "Surge/module/split/partX/XunYouAccelerator.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79489fb72f27102e592e7fdcce8938306f6a6dfb"
+    },
+    {
+      "path": "Surge/module/split/partX/iFlytek.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "856758d6a5d44be564d57ebcff0c0a0b0066cada"
+    },
+    {
+      "path": "Surge/module/split/partX/iFlytekInputMethod.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bea438ba29a493a5503221f78017f98f448c4c8"
+    },
+    {
+      "path": "Surge/module/split/partY/AIA.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "458184fe2f7087d94a295439d4388e9517bf4c80"
+    },
+    {
+      "path": "Surge/module/split/partY/AsiaInfoTechnology.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6aebc052b0dd93e92832c937145dc31c113d46c"
+    },
+    {
+      "path": "Surge/module/split/partY/AtourSplash.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bce6f6746f7fdb57c9c95d61ad18211909d9cce"
+    },
+    {
+      "path": "Surge/module/split/partY/CBox.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16ac2429e93ea68e0bb1c5d0a90d7896f408c77a"
+    },
+    {
+      "path": "Surge/module/split/partY/CCTV.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ba40cdd6c2d04864e5a09f87788eea4afdad19c"
+    },
+    {
+      "path": "Surge/module/split/partY/CCTVVideo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ab69829e9a62e5145c886b57aa102caca363263"
+    },
+    {
+      "path": "Surge/module/split/partY/Elong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f7440ae3109bbc7a52623dc4b4f6d24e72abdb3"
+    },
+    {
+      "path": "Surge/module/split/partY/ElongTravel.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23a6a4eb40dc18189a49eb7003729fca6256678c"
+    },
+    {
+      "path": "Surge/module/split/partY/Evernote.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d484dee2955698cbdabd64ec1a83bb2862377fb"
+    },
+    {
+      "path": "Surge/module/split/partY/Ezviz.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d55afbbd71b7cabd9fc0327072dc9a25981f725e"
+    },
+    {
+      "path": "Surge/module/split/partY/FAWVW.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d6b72e5b5f866336530f37424b0214516a4b5a9"
+    },
+    {
+      "path": "Surge/module/split/partY/GameTime.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e6951b19031d52357837fb0f97a91387163abeb"
+    },
+    {
+      "path": "Surge/module/split/partY/Gamersky.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "733b999dd6498f30115085e9fe284f1f986f712f"
+    },
+    {
+      "path": "Surge/module/split/partY/InkeLive.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "557ab1f0a11bc8c0516ab7c200a183eb837c5f2e"
+    },
+    {
+      "path": "Surge/module/split/partY/PSBC.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e75ed9c796e85135d9ef83c418d17d4eb7b89bdf"
+    },
+    {
+      "path": "Surge/module/split/partY/U9Game.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c5fb821aa84e46d7b1edb04c5138876c9c994c3"
+    },
+    {
+      "path": "Surge/module/split/partY/UUSee.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebef4235e4c50aa9b1e14ee22933c2061cc7fca0"
+    },
+    {
+      "path": "Surge/module/split/partY/UnionPayCloudPay.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2416c596e862c13b3cac8584ba0b1c8aa8682df6"
+    },
+    {
+      "path": "Surge/module/split/partY/YYLivePlatform.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ab973ba46877c47ed93b2fba15f6e8a9f5542cf"
+    },
+    {
+      "path": "Surge/module/split/partY/YaNaiFei.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7774fedb15b51e4ed8734b35aae09aa9473b121"
+    },
+    {
+      "path": "Surge/module/split/partY/Yahoo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0451a00fabb1a5d5415936f7f50d0725674589c0"
+    },
+    {
+      "path": "Surge/module/split/partY/YaoyingMedical.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a564cc7317950f0406549ffc481ceb715ff67f9c"
+    },
+    {
+      "path": "Surge/module/split/partY/YiHaoDian.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53e28e0dd358fce1bc16dd9fdece5b3f6d707112"
+    },
+    {
+      "path": "Surge/module/split/partY/YiJieJiaYou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fb6d50666dc1b0f2cb6fd2c7ba86a90d367596d"
+    },
+    {
+      "path": "Surge/module/split/partY/YiKaoBang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec10149fe52dae9b4cdd4b6ddc9c14e714256e7f"
+    },
+    {
+      "path": "Surge/module/split/partY/YiKeAlbum.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c542f6683750cc1302ef6804f31cdfc52f97e55"
+    },
+    {
+      "path": "Surge/module/split/partY/YiQiKaoJiaoShi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2693f9d21e05da9b942207b7d59aa782b444bcbd"
+    },
+    {
+      "path": "Surge/module/split/partY/YiTao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5877788a68cb6effb24be88b15ddb09ca09a568"
+    },
+    {
+      "path": "Surge/module/split/partY/YiXiaoYuan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2a130c2f5529b6147529ffc46bca52df6866d6a"
+    },
+    {
+      "path": "Surge/module/split/partY/YiZhiFu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1434c948a3f4954eacd92e2a1bc9052b651581dc"
+    },
+    {
+      "path": "Surge/module/split/partY/Yicha.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20e0f039c1c7a28776582c15180ccfc4b49bffa0"
+    },
+    {
+      "path": "Surge/module/split/partY/Yiche.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8cd259e9b6876aa688a3493c4affc445a543d8a"
+    },
+    {
+      "path": "Surge/module/split/partY/YidianNews.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16fb6c5aa4f81b9db0a916efd4c29c9caa64b7a4"
+    },
+    {
+      "path": "Surge/module/split/partY/YinShengTong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c59215da0b38d3e82ec531b14a4bbc2227d5a06b"
+    },
+    {
+      "path": "Surge/module/split/partY/YinShengXiaoYManager.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3218e236a3c69922a46eb510b1a9a7ea639202f"
+    },
+    {
+      "path": "Surge/module/split/partY/YingBaoSecurities.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a8c949965a77751e48f10558b3b2fbc86ab4c9f"
+    },
+    {
+      "path": "Surge/module/split/partY/YingLiZhiTou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab0c000a38bd4597fb73122f164de1dc6eec6986"
+    },
+    {
+      "path": "Surge/module/split/partY/YinyueTai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4abbc2c52efeadf8175e5b09e142cec499e800a7"
+    },
+    {
+      "path": "Surge/module/split/partY/YongAnXing.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af0f23eebfbc329729f784ca0e3e52ade43cab3b"
+    },
+    {
+      "path": "Surge/module/split/partY/YongHui.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81ef6a774e699cf6032e4b2c57efab08d565f8e6"
+    },
+    {
+      "path": "Surge/module/split/partY/YouLinYouKe.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dde027d1cafbd75c85645a230310ba255c34dd8"
+    },
+    {
+      "path": "Surge/module/split/partY/YouShu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04f0217d4f050d6d2ae346f9eb4af860f9613b13"
+    },
+    {
+      "path": "Surge/module/split/partY/YouTuReading.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4ea2b9457f85f0856c35943ef28fa090d4a00eb"
+    },
+    {
+      "path": "Surge/module/split/partY/YouTube.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3c6a3a01fa3ff29d0faa8df315231240bcdd0e2"
+    },
+    {
+      "path": "Surge/module/split/partY/YouXiAPP.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e23b9f7d64f1f19d7df6e87a90e44b94d7cddcdb"
+    },
+    {
+      "path": "Surge/module/split/partY/Youku.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26d686d88fb6af6888e3a6889aad6cbccdff757f"
+    },
+    {
+      "path": "Surge/module/split/partY/Youmi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87341a9f7bb4434586209958208427381e081808"
+    },
+    {
+      "path": "Surge/module/split/partY/Youxun.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "878f86d3e5ae6d18ebabb835141506ae4f1c7bd8"
+    },
+    {
+      "path": "Surge/module/split/partY/YoyiInteractive.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f452636cb04af28d30489b9363a0b4d91e01d29"
+    },
+    {
+      "path": "Surge/module/split/partY/YuXueYuan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "980caf40ec4de45a68e05e0a1c78e1f0dacb713a"
+    },
+    {
+      "path": "Surge/module/split/partY/YuanFuDao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d557689397e45e912380bd141ba7dd14517611f"
+    },
+    {
+      "path": "Surge/module/split/partY/YuanjuNetwork.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79b400641526f4a956cd28ab907aa1df5a88dc4b"
+    },
+    {
+      "path": "Surge/module/split/partY/YunBaoBaoBigData.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "300ac8d8228e49224a9fdfc52eeccddf12d0d976"
+    },
+    {
+      "path": "Surge/module/split/partY/YunKuaiChong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffcd7f6b959d4fadd9cc3f048ba61cdb5b323cf7"
+    },
+    {
+      "path": "Surge/module/split/partY/YunMai.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9975d6cfb7a7ed10533e01505edea95b6b10dbac"
+    },
+    {
+      "path": "Surge/module/split/partY/YunZhiJia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76fd2bcb66c1ab25a09bf7fb43e51ee040656c29"
+    },
+    {
+      "path": "Surge/module/split/partZ/AirChina.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8240f3e08ebd01075e29e231fdeb2cea8285a625"
+    },
+    {
+      "path": "Surge/module/split/partZ/BOC-BinFenShengHuo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b756755ae3b0c6194f2ab8ae6b956e4494dabe28"
+    },
+    {
+      "path": "Surge/module/split/partZ/BOC-CrossBorderGO.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1d0e087f4fc94fa3ba788d2d4185fe4f9c3f7ac"
+    },
+    {
+      "path": "Surge/module/split/partZ/BankOfChina.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbffbd0aa52c240f91c5005989d64873bd4b1991"
+    },
+    {
+      "path": "Surge/module/split/partZ/ByteDance.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf4e42885a7e269b13fa9f9451e823cd7dd560d2"
+    },
+    {
+      "path": "Surge/module/split/partZ/CIBN.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "355c0ca1625e17596a83dbb50affde5b2c4f01b4"
+    },
+    {
+      "path": "Surge/module/split/partZ/CNKI.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9395ec1e4f6bf3521d008c380b5a9124d3f3a89d"
+    },
+    {
+      "path": "Surge/module/split/partZ/ChinaBroadcastingNetwork.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d6963e4fbc5184131faff61ac832ce2abca55b7"
+    },
+    {
+      "path": "Surge/module/split/partZ/ChinaCITICBank.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52bcd0b93a7a47d1ea1fd646819618dd380468a8"
+    },
+    {
+      "path": "Surge/module/split/partZ/ChinaCom.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ca0fc3026b20d867aae48a3e906a40fb77a82fa"
+    },
+    {
+      "path": "Surge/module/split/partZ/ChinaDaily.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c10c170361a31918f67a09e2bd55235de5018ee8"
+    },
+    {
+      "path": "Surge/module/split/partZ/ChinaLifeInsurance.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ba90f07f70391a8ea570fd869504278c0a926c1"
+    },
+    {
+      "path": "Surge/module/split/partZ/ChinaMerchantsBank.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e03476fe614920f50412a5544d7ff7809421c977"
+    },
+    {
+      "path": "Surge/module/split/partZ/ChinaMerchantsSecurities.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56bdab1782a3abf7e40342fd4eac6b159e48864a"
+    },
+    {
+      "path": "Surge/module/split/partZ/ChinaMobile.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10e9cd064522f243ace8c90eab3053c3266b7211"
+    },
+    {
+      "path": "Surge/module/split/partZ/ChinaMobileCloudDrive.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc5ddd65d49ad8bea0735c27bcffc825672daa1a"
+    },
+    {
+      "path": "Surge/module/split/partZ/ChinaTelecom.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9169a1f57b8d1d98c9d7647ed3aa56878c6efdca"
+    },
+    {
+      "path": "Surge/module/split/partZ/ChinaUnicom.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd701f3b01b3c1950a915145adc30610a9864827"
+    },
+    {
+      "path": "Surge/module/split/partZ/ChinaWeatherNetwork.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6904be38e2ecfa2c31ffbb0f723b12b6d080cd6b"
+    },
+    {
+      "path": "Surge/module/split/partZ/PICC.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a063f9ca5ef392efb96fee1cbb3a73f3f2d0636a"
+    },
+    {
+      "path": "Surge/module/split/partZ/PingAnChina.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c0389f478774ecfb664448dde318c576ac6ed96"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZAKERNews.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a210490c7f8fc0f60ac276af0335b346c3b2e8d1"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZOL.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f55b633cac9c1da8b763ab5dba1b78e3d6f9b31c"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhangLeCaiFuTong.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c6e6048d93ce34244ee46d086efeb756234297b"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhangShangDaoJuCheng.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c42cf9a6b38855e3d71930b5c9bf89d8a3ba917"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhangShangGongJiao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff18563970155dda3b717c80d00c3665e039f239"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhangShangLOL.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4a6f99c78b676193d5b55838c223cd7622814f8"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhangShangLuCheng.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29226930b471b05ce74cc10dd4c67796becd7f7b"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhangShangShengHuo.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b24bed7ed2fb284064a2d690494115948670b6d"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhaoCaiMaoZhiPin.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77e1591b48c6d893f49917da7be72b4cb48618b2"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhaoQianJinBao.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "735fe620af933f337c5727b5c1245a23ed82ee13"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZheLiBan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bb8a46e85d73333407d4bb896c030423300e719"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhenBuKa.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9425134e7d3abfeab1e688372287e62193c60a7"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhengHaoBan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c23ab6c6663064ea5f4bf5e27097c39e24eac69"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhengQiZhuShou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7944bf2c189cd3cc552d586dfcb9c4a4e4f73348"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhiDianTianXia.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "564440c07e067c37dc6f5b1d43f31dc3f2be851a"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhiGongPuHui.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "895037a20a6975575ad6e604799e475f24060c68"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhiXingAPP.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c785cfbbc785144a081e3f816f6df9bff5e30035"
+    },
+    {
+      "path": "Surge/module/split/partZ/Zhihu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0215657d5a0f25746f287a3ebd3040197e99b29"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhongBangBank.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e7f033890a4ca23ab6524c1a16b75112a6e28de"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhongHuaWanNianLi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06a0e1ced2027b4c6cd5d9d44d380315615ad1cf"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhongTongExpress.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab80a8587eeafe380763f5fdbccf57e8a23cab8b"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhongYouHaoKeEStation.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f311205915924d599bcb8b8636729d0ed6babfb7"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhongYouYouTu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5bc7ee2ca1cd9d00be18bbf03275472c6183436"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhongYuOnline.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bb40c2fa451996b2feb4d3a3021ecfdfede4774"
+    },
+    {
+      "path": "Surge/module/split/partZ/Zhongguancun.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c30919e5de69e512ae5738cd8e99c5cde4da0390"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhuBaJie.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9f61eb173d085fedc2e0da5161ba894ef7a5e81"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhuZheEr.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1674b100c6b6c4410c6879ba15c3598c86714c1"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhuanZhuan.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b27cd83bc08313b52be7a521b107c11fdf5c5390"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhuiJuDaRen.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b8e4e415238d75950b60ef3f05bba7ae6ee9847"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZhuiShuShenQi.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4466152de8c8a2867d76af2e26317de38fe8fee"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZiRu.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f18114bd35f07708bf229bd0dc068f9c1fb56247"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZuiYou.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c402724182e4b0f3370dd697c4e8ac8f0e9412f"
+    },
+    {
+      "path": "Surge/module/split/partZ/ZuoYeBang.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31d5950c14dcde71cb15be650ce8e8d95d41a534"
+    },
+    {
+      "path": "Surge/module/split/partZ/iReader.sgmodule",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d47d8fc95c1746854dc99a989cc126c3d0cb1ba"
+    },
+    {
+      "path": "Surge/module/weibo.module",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f0c76a1bbe3f7db81542eab55730ab9d9550729"
+    },
+    {
+      "path": "Surge/readme.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21f200f4fad2e259930273f8b53ce29d775b6047"
+    }
+  ]
+}
