@@ -14,15 +14,23 @@
 
 已知限制：哈啰原版唯一脚本 HTTP 404，独立配置保留 URL 并标注，合集将其触发器注释。茶颜悦色脚本引用的 cyys1.jpg 也为 HTTP 404。夸克扫描王已按真实请求补齐 MITM。直播吧合并时移除 fmz 抢先拒绝整个配置接口的旧规则，保留可莉逐字段净化。
 
-## Pinterest 兼容修正（2026-10-11）
+## Pinterest 按原版重写（2026-10-11）
 
-**复测失败，已暂时停用。** 用户删除这份适配后恢复访问。独立模块和总合集均停止执行 Pinterest 脚本，并移除所添加的 API 解密主机；Pinterest 去广告当前不可用。下面的适配代码保留用于复核，不会执行。实际故障层次仍待客户端错误记录确认，不能仅凭服务器样例重新启用。详情见 [待复核记录](Kelee-review/pinterest-pending-review.json)。
+用户确认停用此前适配后恢复访问，并明确要求保留去广告功能、按原版重新转换。
+已逐条阅读实际 LPX 及用户提供的两条规则，手写为 Surge 的两条原生
+http-response-jq，独立模块与总合集采用相同规则，MITM 只补 api.pinterest.com。
+原版表达式完整保留：只保留 is_promoted 为布尔 false 或字符串 "false" 的项目，
+保留其他顶层字段与所保留项目的顺序。两种 false 之外的项目按原版删除。
 
-Pinterest 独立模块与总模块现使用手写的原生 Surge 响应脚本，两个原 JQ 行已移除。
-仅清除顶层 data 数组中明确 is_promoted=true 或字符串 true 的项目；没有标记、未知标记、
-非数组及非 JSON／HTTP 错误响应保留原样，保留分页与正常项目顺序。触发范围及 MITM 与原 LPX 相同。
-这是针对转换版无法访问报告的防御性修正，未取得用户实际响应或验证客户端访问。
-语义样例及接线检查见 [test_pinterest.js](maintenance/test_pinterest.js)，精确哈希和复核记录见 manifest、native-ledger。
+上一版 JavaScript 的 true 黑名单与原版 false 白名单并不等价；已删除该适配脚本及引用。
+历史记录仍保留在 Git。没有增加原版之外的 HTTP 状态/数据形状过滤或传输参数覆盖。
+需要 Surge iOS 5.14+ / Mac 5.9+，并使用客户端已信任的 MITM 证书。
+
+这次验证证明转换语义和匹配范围与原版一致，不能证明客户端访问故障已修复。
+具体故障层次仍未确证，等待用户设备复测；未自动操作用户代理客户端。
+见 [当前复核记录](Kelee-review/pinterest-reconversion-20261011.json)、
+[客户端待确认记录](Kelee-review/pinterest-pending-review.json) 与
+[实际原版对照样例](maintenance/test_pinterest.js)。
 
 ## 补充配置
 

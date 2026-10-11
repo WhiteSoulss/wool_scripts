@@ -1,19 +1,26 @@
 {
   "module": "Pinterest_remove_ads.sgmodule",
   "date": "2026-10-11",
-  "status": "pending-client-compatibility-review",
+  "status": "native-rewrite-awaiting-client-confirmation",
   "source_sha256": "905ce81e2a26cb5421219b8f9009502d7c014291b3b3a5532e13dd6ad3a01d95",
-  "last_active_commit": "8380929ef9556338b10a7ed78b880528ed885da1",
+  "previous_active_commit": "8380929ef9556338b10a7ed78b880528ed885da1",
+  "previous_pause_commit": "1143579e36bb86c3aaaa7c500d0d273c20a56e51",
   "user_evidence": [
-    "Native rewrite still failed on user device",
-    "User removed all our installed rules and access recovered"
+    "The earlier revised module still failed.",
+    "Removing our installed rules restored access.",
+    "The temporary pause works; user now explicitly requests the ad-removal feature with an original-faithful manual rewrite."
   ],
-  "specific_failing_component": "Not established: all rules were removed together.",
-  "temporary_mitigation": "Both standalone and combined module stop executing Pinterest rewriting and stop adding api.pinterest.com to MITM.",
+  "reenable_authorization": "用户明确要求保留此功能并重写，随后提供两条 Loon 原版 JQ 规则和 Hostname api.pinterest.com；据此发布新的原版语义 Surge 规则，取代此前临时停用。",
+  "manual_source_review_complete": true,
+  "client_success_confirmed": false,
+  "specific_failing_component": "Still not established; all prior rules were removed together.",
+  "do_not_auto_reenable": false,
+  "do_not_automatically_restore_superseded_adapter": true,
+  "new_implementation": "Two native http-response-jq rows with the exact original expression; api.pinterest.com appended to MITM. No Pinterest JavaScript adapter.",
+  "remaining_review": [
+    "Whether this source-faithful native version preserves Pinterest access and removes ads on the user device.",
+    "If access fails again, actual request error and standalone-versus-bundle evidence are still needed."
+  ],
   "server_checks_do_not_prove_client_success": true,
-  "required_for_next_adaptation": [
-    "Exact failed-request error (TLS, HTTP, script or connection)",
-    "Whether the total bundle or only Pinterest standalone module caused the failure"
-  ],
-  "do_not_auto_reenable": true
+  "review_record": "Surge/Kelee-review/pinterest-reconversion-20261011.json"
 }

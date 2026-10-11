@@ -8,7 +8,7 @@
   "script_hub_used": false,
   "automatic_conversion_used": false,
   "client_runtime_tested": false,
-  "bundle_sha256": "e29e14d5c2d390d4673ecf636615d27cd1816ab69ed0f16e218d086b6a636eaf",
+  "bundle_sha256": "8415b3141504c3ff4ca3058b85c4df59c82f6432aa0f7c38237972fea761c857",
   "merge_decisions": [
     {
       "section": "URL Rewrite",
@@ -20,14 +20,25 @@
       "module": "Pinterest_remove_ads.sgmodule",
       "reason": "Replace both direct Pinterest jq rules with one manually reviewed, guarded response script in standalone and total modules. Preserve unknown records and response shapes; no other Pinterest trigger matched the original endpoints.",
       "date": "2026-10-11",
-      "client_runtime_tested": false
+      "client_runtime_tested": false,
+      "historical_superseded": true
     },
     {
       "date": "2026-10-11",
       "module": "Pinterest_remove_ads.sgmodule",
       "section": "Script / MITM",
       "reason": "Temporarily disable Pinterest rewrite and its API MITM entry after failed user retest. Preserve other approved module behavior; no alternative compatibility fix is asserted.",
-      "deployment_enabled": false
+      "deployment_enabled": false,
+      "historical_superseded": true
+    },
+    {
+      "date": "2026-10-11",
+      "module": "Pinterest_remove_ads.sgmodule",
+      "section": "Body Rewrite / MITM",
+      "reason": "User explicitly supplied and requested the original Loon actions. Manually restore the exact false/\"false\" jq selection in two native Surge rows, remove the semantically different JavaScript adapter, append only the original API MITM hostname.",
+      "deployment_enabled": true,
+      "client_runtime_tested": false,
+      "automatic_conversion_used": false
     }
   ],
   "modules": [
@@ -335,30 +346,30 @@
       "path": "Surge/module/Kelee/Pinterest_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx",
       "source_sha256": "905ce81e2a26cb5421219b8f9009502d7c014291b3b3a5532e13dd6ad3a01d95",
-      "sha256": "508cf9a26209d5657c10bc976d2cb479a7c7363a9332126885edca32eea00923",
+      "sha256": "ea3aa9ce3efdf047128870cba51bea610cbf33c0b33fa5684718b5e22e6f38da",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
-        "Script": 2
+        "Body Rewrite": 2
       },
       "bundle_script_enabled": false,
       "missing_dependencies": {},
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
-        "2026-10-11 实际 Loon 原版 SHA256 未变；逐行阅读两个原生 JQ 动作和此前 Surge 直接套用配置。",
-        "手写 Surge http-response 脚本，保持原版两个匹配端点、顶层 data 过滤范围、MITM、名称及作者；仅明确 is_promoted=true/\"true\" 项删除。",
-        "防御性修正：没有标记、标记类型未知、非数组 data、异常/非 JSON/错误状态响应均透传，正常项目顺序及分页字段保留；无删除时保持原始字节。",
-        "原有原生 JQ 两行从独立模块与总模块移除，避免先于脚本误改响应；脚本 requires-body=true，1 MiB 上限、5 秒超时，超限由 Surge 透传。",
-        "106 模块基线及新增语义/匹配/合集接线样例在 VPS 检查；没有访问用户客户端，用户设备故障根因未确证。",
-        "额外保护：应用错误状态及包含超出 JS 安全整数范围的数值 ID 的响应保持原始字节，避免 JSON 重序列化损伤内容。",
-        "用户复测仍无法访问，删除整份适配后恢复；客户端兼容性未解决。独立模块和合集均停止部署 Pinterest 响应脚本及 api.pinterest.com MITM，待取得实际错误后再适配。服务器样例通过不作为客户端成功证据。"
+        "按用户重新提供的两条实际 Loon response.json.jq 动作手写 Surge http-response-jq；逐条保留大小写不敏感、HTTPS、单数字版本、查询问号和两个端点范围。",
+        "完全保留原版 .data |= map(select(.is_promoted == false or .is_promoted == \"false\"))，只保留 false/字符串 false；不再使用上一版 true 黑名单或自定义形状/状态保护。",
+        "保留作者、原去广告描述和 api.pinterest.com MITM；只使用原生 Body Rewrite，不新增其他域名、请求改写、远程脚本或 HTTP/2 配置覆盖。",
+        "用户确认停用后访问恢复，并明确要求重新按原版转换和保留功能；这次手动复核与新发布取代临时停用安排。访问故障的具体客户端层次仍未确认。",
+        "VPS 运行实际原版 JQ 对照、独立预期结果、异常输入和 URL 范围/合集接线检查。未操作用户设备，不宣称客户端访问或去广告已验证。"
       ],
       "deployment": {
-        "enabled": false,
-        "status": "pending-client-compatibility-review",
-        "reason": "User reports failure persisted after the native response rewrite; removing our installed rules restores access.",
+        "enabled": true,
+        "status": "native-rewrite-awaiting-client-confirmation",
         "date": "2026-10-11",
+        "reason": "Explicit user request to retain the feature and manually rewrite the supplied original Loon actions.",
         "script_enabled": false,
-        "mitm_enabled": false
+        "body_rewrite_enabled": true,
+        "mitm_enabled": true,
+        "client_runtime_tested": false
       }
     },
     {
@@ -2206,14 +2217,6 @@
       "sha256": "3562b1cc7cdb67f225e1d73e032741a41ace4559b3dc5738a205af5b5d4bf5c2",
       "source_url": "https://kelee.one/Resource/Zip/DREAME/d6996fee95380affdf740ee44a85fbe9___UNI__EDB922E.zip",
       "provenance": "upstream"
-    },
-    {
-      "path": "Surge/Script/Kelee/Pinterest/remove-ads.js",
-      "sha256": "a8fecbbfd91e00356c5ea209d1b666554920ce03450700ac8a2c1196d2122243",
-      "source_url": null,
-      "derived_from": "https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx",
-      "provenance": "authored-native",
-      "review_fixture": "Surge/maintenance/test_pinterest.js"
     }
   ],
   "historical_drafts_include_helper_generated_configuration": true,

@@ -1,172 +1,142 @@
 #!/usr/bin/env node
-// Requirement fixtures for our own adapter. No upstream script is executed.
-// Synthetic responses demonstrate behavior; these are not live account captures.
-const assert = require("node:assert/strict");
-const fs = require("node:fs");
-const path = require("node:path");
-const vm = require("node:vm");
-const cp = require("node:child_process");
-const root = path.resolve(process.argv[2] || path.join(__dirname, "../.."));
-const scriptPath = "Surge/Script/Kelee/Pinterest/remove-ads.js";
-const source = fs.readFileSync(path.join(root, scriptPath), "utf8");
-const home = "https://api.pinterest.com/v3/feeds/home/?bookmark=abc";
-const related = "https://api.pinterest.com/v3/pins/123/related/modules/?source=pin";
-let semanticCases = 0;
-function invoke(body, request = {}, response = {}) {
-  const calls = [];
-  const req = {url: home, method: "GET", headers: {"X-Preserve": "request"}, ...request};
-  const resp = {status: 200, headers: {"Content-Type": "application/json", "X-Preserve": "response"}, body, ...response};
-  const before = JSON.stringify({req, resp});
-  vm.runInNewContext(source, {$request: req, $response: resp, $done: value => calls.push(value)}, {timeout: 1000});
-  assert.equal(calls.length, 1, "each invocation must finish exactly once");
-  assert.equal(JSON.stringify({req, resp}), before, "the input request/response must remain unmodified");
-  const result = JSON.parse(JSON.stringify(calls[0]));
-  assert.ok(Object.keys(result).every(key => key === "body"), "do not change status/headers or abort");
-  return result;
-}
-function unchanged(body, request = {}, response = {}) {
-  assert.deepEqual(invoke(body, request, response), {}, "unchanged responses must retain their exact bytes");
-  semanticCases++;
-}
-function rewritten(input, expected, request = {}) {
-  const result = invoke(JSON.stringify(input), request);
-  assert.ok(typeof result.body === "string", "an ad-containing array must be rewritten");
-  assert.deepEqual(JSON.parse(result.body), expected);
-  semanticCases++;
-}
-const organic = [
-  {id: "organic-bool", is_promoted: false, images: {original: {url: "keep"}}},
-  {id: "organic-string", is_promoted: "false"},
-  {id: "missing-marker", title: "keep normal content"},
-  {id: "null-marker", is_promoted: null},
-  {id: "unknown-marker", is_promoted: "unknown"},
-  {id: "numeric-marker", is_promoted: 0},
-  {id: "numeric-one", is_promoted: 1},
-  {id: "nested-marker", metadata: {is_promoted: true}},
-  null, "keep-string", 7, ["keep-array"]
-];
-for (const url of [home, related]) {
-  rewritten(
-    {status: "success", data: [{id: "ad-bool", is_promoted: true}, ...organic, {id: "ad-string", is_promoted: "true"}],
-     bookmark: "next-page", has_more: true, metadata: {request_id: "keep"}},
-    {status: "success", data: organic, bookmark: "next-page", has_more: true, metadata: {request_id: "keep"}},
-    {url}
-  );
-}
-rewritten({data: [{is_promoted: true}, {is_promoted: "true"}], bookmark: "-end-"},
-          {data: [], bookmark: "-end-"});
-unchanged(' { "data" : [{"id":"regular","is_promoted":false},{"id":"unknown"}], "bookmark" : "exact" } ');
-unchanged('{"data":[]}');
-unchanged('{"data":{"pins":[{"id":"normal"}],"bookmark":"nested"}}');
-unchanged('{"data":null,"status":"failure","message":"keep error"}');
-unchanged('{"status":"failure","message":"reauth required"}');
-unchanged('{"data":"unexpected string"}');
-unchanged('[{"is_promoted":true}]');
-unchanged('null');
-unchanged('"json primitive"');
-unchanged('invalid json');
-unchanged('<html>upstream error</html>');
-unchanged('');
-unchanged(undefined);
-unchanged(new Uint8Array([0, 1, 2]));
-for (const status of [204, 301, 401, 403, 429, 500]) {
-  unchanged('{"data":[{"is_promoted":true}],"message":"preserve non-success response"}', {}, {status, body: status === 204 ? "" : '{"data":[{"is_promoted":true}],"message":"preserve non-success response"}'});
-}
-unchanged('{"data":[{"is_promoted":true}]}', {method: "POST"});
-for (const url of [
-  "https://api.pinterest.com/v3/search/pins/?q=test",
-  "https://api.pinterest.com/v3/users/me/?test=1",
-  "https://api.pinterest.com/v3/oauth/token/?test=1",
-  "https://api.pinterest.com/v3/pins/123/?test=1",
-  "https://api.pinterest.com/v3/pins/not-a-number/related/modules/?test=1",
-  "https://api.pinterest.com/v3/feeds/home/other/?test=1",
-  "https://api.pinterest.com/v3/feeds/home/",
-  "https://api.pinterest.com/v12/feeds/home/?test=1",
-  "https://www.pinterest.com/",
-  "https://i.pinimg.com/originals/image.jpg",
-  "http://api.pinterest.com/v3/feeds/home/?test=1",
-  "https://api.pinterest.com.evil.example/v3/feeds/home/?test=1"
-]) unchanged('{"data":[{"is_promoted":true}]}', {url});
-rewritten({data:[{is_promoted:true},{id:"keep",is_promoted:false}]},
-          {data:[{id:"keep",is_promoted:false}]},
-          {url:"HTTPS://API.PINTEREST.COM/v3/feeds/home/?test=1"});
-
-// Equivalence with actual Loon jq on the shapes it explicitly handles.
-const oldJq = '.data |= map(select(.is_promoted == false or .is_promoted == "false"))';
-let originalCases = 0;
-for (const data of [
-  [{id:"a",is_promoted:false},{id:"b",is_promoted:true}],
-  [{id:"a",is_promoted:"true"},{id:"b",is_promoted:"false"}],
-  [{is_promoted:true},{is_promoted:"true"}]
-]) {
-  const payload = {status:"success",data,bookmark:"keep"};
-  const expected = JSON.parse(cp.execFileSync("jq", ["-c", oldJq], {input:JSON.stringify(payload),encoding:"utf8"}));
-  assert.deepEqual(JSON.parse(invoke(JSON.stringify(payload)).body), expected);
-  originalCases++;
-}
-// Regression evidence: the old jq drops unidentified items and changes object data into an array.
-const unknown = {data:[{id:"normal-no-marker"}],bookmark:"keep"};
-assert.deepEqual(JSON.parse(cp.execFileSync("jq",["-c",oldJq],{input:JSON.stringify(unknown),encoding:"utf8"})),{data:[],bookmark:"keep"});
-unchanged(JSON.stringify(unknown));
-const objectData = {data:{first:{id:"normal",is_promoted:false},second:{id:"also-normal",is_promoted:false}}};
-assert.ok(Array.isArray(JSON.parse(cp.execFileSync("jq",["-c",oldJq],{input:JSON.stringify(objectData),encoding:"utf8"})).data));
-unchanged(JSON.stringify(objectData));
-const unexpectedShape = {data:{pins:[{id:"normal"}],bookmark:"keep"}};
-const legacyError = cp.spawnSync("jq",["-c",oldJq],{input:JSON.stringify(unexpectedShape),encoding:"utf8"});
-assert.notEqual(legacyError.status,0,"the old unguarded jq cannot handle this response shape");
-unchanged(JSON.stringify(unexpectedShape));
-unchanged('{"status":"failure","data":[{"is_promoted":true}],"message":"preserve application error"}');
-unchanged('{"data":[{"is_promoted":true},{"id":1234567890123456789,"is_promoted":false}],"bookmark":"keep"}');
-
-// Installation and combined-module wiring; removing the old jq is part of the fix.
-const moduleText = fs.readFileSync(path.join(root,"Surge/module/Kelee/Pinterest_remove_ads.sgmodule"),"utf8");
-const bundleText = fs.readFileSync(path.join(root,"Surge/module/blockAds.module"),"utf8");
-const scriptUrl = "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/" + scriptPath;
-const parse = text => {
-  const out = {}; let section = "";
-  for (const raw of text.split(/\r?\n/)) {
-    const row = raw.trim();
-    if (/^\[[^\]]+\]$/.test(row)) { section=row.slice(1,-1); continue; }
-    if (row && !/^[#;]/.test(row) && !row.startsWith("//")) (out[section] ||= []).push(row);
+// Tests for our handwritten native mapping, using the actual archived LPX.
+// jq fixtures are synthetic and do not run Surge or authenticate to Pinterest.
+const assert=require("node:assert/strict");
+const fs=require("node:fs"),path=require("node:path"),cp=require("node:child_process");
+const root=path.resolve(process.argv[2]||path.join(__dirname,"../.."));
+const read=p=>fs.readFileSync(path.join(root,p),"utf8");
+const source=read("Surge/Kelee-review/loon-original/Pinterest_remove_ads.lpx");
+const original=source.split(/\r?\n/).filter(x=>x.startsWith("response if ")).map(row=>{
+  const m=row.match(/^response if \$\{url\} ~= \/(.*)\/i then response\.json\.jq\((.*)\)$/);
+  assert.ok(m,"read the actual inline Loon action");
+  return {pattern:m[1],regex:new RegExp(m[1],"i"),expression:JSON.parse(m[2])};
+});
+assert.equal(original.length,2);
+const expression='.data |= map(select(.is_promoted == false or .is_promoted == "false"))';
+for(const o of original)assert.equal(o.expression,expression);
+function parse(text){
+  const out={};let key="";
+  for(const raw of text.split(/\r?\n/)){
+    const row=raw.trim();
+    if(/^\[[^\]]+\]$/.test(row)){key=row.slice(1,-1);continue;}
+    if(row&&!/^(?:#|;|\/\/)/.test(row))(out[key]||=[]).push(row);
   }
   return out;
-};
-const manifest = JSON.parse(fs.readFileSync(path.join(root,"Surge/Kelee-review/manifest.json"),"utf8"));
-const pinterestEntry = manifest.modules.find(entry => entry.filename === "Pinterest_remove_ads.sgmodule");
-assert.ok(pinterestEntry);
-const deploymentEnabled = !pinterestEntry.deployment || pinterestEntry.deployment.enabled !== false;
-const pendingPath = path.join(root,"Surge/Kelee-review/pinterest-pending-review.json");
-assert.ok(fs.existsSync(pendingPath),"the compatibility review state must be preserved");
-const pending = JSON.parse(fs.readFileSync(pendingPath,"utf8"));
-if (pending.do_not_auto_reenable && pending.status === "pending-client-compatibility-review") {
-  assert.equal(deploymentEnabled,false,"unresolved user failure must not be silently re-enabled");
 }
-let urlCases = 0;
-let disabledChecks = 0;
-for (const text of [moduleText,bundleText]) {
-  const sections = parse(text);
-  if (!deploymentEnabled) {
-    assert.equal((sections.Script || []).filter(row => row.includes(scriptUrl)).length,0,"disabled adapter must have no active script");
-    assert.equal((sections["Body Rewrite"] || []).filter(row => row.includes("pinterest")).length,0,"disabled adapter must have no active jq");
-    const hosts = (sections.MITM || []).join(",").replace(/^hostname\s*=\s*%APPEND%\s*/,"").split(",").map(host => host.trim());
-    assert.ok(!hosts.includes("api.pinterest.com"),"disabled adapter must not add API MITM");
-    disabledChecks++;
-    continue;
-  }
-  assert.ok((sections.MITM || []).some(row => row.includes("api.pinterest.com")));
-  assert.equal((sections["Body Rewrite"] || []).filter(row => row.includes("pinterest")).length,0);
-  const row = (sections.Script || []).filter(row => row.includes(scriptUrl));
-  assert.equal(row.length,1);
-  assert.ok(row[0].includes("requires-body=true") && row[0].includes("max-size=1048576"));
-  const nativePattern = row[0].match(/(?:^|,)\s*pattern=([^,]+)/)[1];
-  assert.ok(nativePattern.startsWith("(?i)"));
-  const regex = new RegExp(nativePattern.slice(4),"i");
-  for (const [url,shouldMatch] of [[home,true],[related,true],["HTTPS://API.PINTEREST.COM/v3/feeds/home/?q=1",true],
-    ["https://api.pinterest.com/v3/users/me/?q=1",false],["https://i.pinimg.com/image.jpg",false],
-    ["https://api.pinterest.com/v3/feeds/home/other/?q=1",false],
-    ["https://api.pinterest.com/v3/feeds/home/",false]]) {
-    assert.equal(regex.test(url),shouldMatch,url);
+const nativeFiles=["Surge/module/Kelee/Pinterest_remove_ads.sgmodule","Surge/module/blockAds.module"];
+const configurations=nativeFiles.map(file=>{
+  const text=read(file),sections=parse(text);
+  assert.ok(!text.includes("Surge/Script/Kelee/Pinterest/remove-ads.js"),"remove obsolete adapter references");
+  assert.ok(!(sections.Script||[]).some(x=>/pinterest/i.test(x)),"no Pinterest response script");
+  const rows=(sections["Body Rewrite"]||[]).filter(x=>/pinterest/i.test(x)).map(row=>{
+    const m=row.match(/^http-response-jq\s+(\S+)\s+'(.*)'$/);
+    assert.ok(m,"native Surge JQ row syntax"); assert.ok(m[1].startsWith("(?i)"));
+    return {pattern:m[1],regex:new RegExp(m[1].slice(4),"i"),expression:m[2]};
+  });
+  assert.equal(rows.length,2,"exactly the two original actions");
+  rows.forEach((x,i)=>assert.equal(x.expression,original[i].expression,"the original jq expression must be unchanged"));
+  const hostRow=(sections.MITM||[]).find(x=>/^hostname\s*=/.test(x));
+  assert.ok(hostRow&&hostRow.includes("%APPEND%"));
+  const hosts=hostRow.replace(/^hostname\s*=\s*%APPEND%\s*/,"").split(",").map(x=>x.trim());
+  assert.equal(hosts.filter(x=>x==="api.pinterest.com").length,1);
+  if(file.includes("/Kelee/"))assert.deepEqual(hosts,["api.pinterest.com"]);
+  return {file,rows};
+});
+assert.ok(!fs.existsSync(path.join(root,"Surge/Script/Kelee/Pinterest/remove-ads.js")),"delete the superseded adapter");
+const fixtures=[
+  ["https://api.pinterest.com/v3/feeds/home/?bookmark=abc",[true,false]],
+  ["https://api.pinterest.com/v3/pins/123/related/modules/?source=pin",[false,true]],
+  ["HTTPS://API.PINTEREST.COM/V3/FEEDS/HOME/?q=1",[true,false]],
+  ["HTTPS://API.PINTEREST.COM/V3/PINS/001/RELATED/MODULES/?q=1",[false,true]],
+  ["https://api.pinterest.com/v0/feeds/home/?",[true,false]],
+  ["https://api.pinterest.com/v9/pins/0/related/modules/?",[false,true]],
+  ["https://api.pinterest.com/v3/feeds/home/",[false,false]],
+  ["https://api.pinterest.com/v3/pins/123/related/modules/",[false,false]],
+  ["https://api.pinterest.com/v12/feeds/home/?q=1",[false,false]],
+  ["https://api.pinterest.com/v12/pins/123/related/modules/?q=1",[false,false]],
+  ["http://api.pinterest.com/v3/feeds/home/?q=1",[false,false]],
+  ["https://api.pinterest.com/v3/feeds/home/other/?q=1",[false,false]],
+  ["https://api.pinterest.com/v3/pins/not-a-number/related/modules/?q=1",[false,false]],
+  ["https://api.pinterest.com/v3/pins/123/?q=1",[false,false]],
+  ["https://api.pinterest.com/v3/search/pins/?q=test",[false,false]],
+  ["https://api.pinterest.com/v3/users/me/?q=1",[false,false]],
+  ["https://api.pinterest.com/v3/oauth/token/?q=1",[false,false]],
+  ["https://www.pinterest.com/",[false,false]],
+  ["https://i.pinimg.com/image.jpg",[false,false]],
+  ["https://api.pinterest.com.evil.example/v3/feeds/home/?q=1",[false,false]],
+  ["https://api.pinterest.com:443/v3/feeds/home/?q=1",[false,false]]
+];
+let urlCases=0;
+for(const [url,want]of fixtures){
+  assert.deepEqual(original.map(x=>x.regex.test(url)),want,"source scope independently expected: "+url);
+  for(const cfg of configurations){
+    assert.deepEqual(cfg.rows.map(x=>x.regex.test(url)),want,cfg.file+": "+url);
     urlCases++;
   }
 }
-console.log(JSON.stringify({pinterest_semantic_cases:semanticCases,pinterest_original_semantics_cases:originalCases,pinterest_module_url_cases:urlCases,pinterest_deployment_disabled_checks:disabledChecks}));
+const ordinary=[
+ {id:"boolean-false",is_promoted:false,nested:{is_promoted:true,keep:1}},
+ {id:"string-false",is_promoted:"false"}
+];
+const dropped=[
+ {id:"ad",is_promoted:true},{id:"ad-string",is_promoted:"true"},
+ {id:"missing"},{id:"null",is_promoted:null},{id:"zero",is_promoted:0},
+ {id:"one",is_promoted:1},{id:"unknown",is_promoted:"unknown"},
+ {id:"case-different",is_promoted:"False"},{id:"empty",is_promoted:""},
+ {id:"object",is_promoted:{}},{id:"array",is_promoted:[]},null
+];
+const cases=[
+ {input:{data:[...dropped,...ordinary],bookmark:"next",status:"success",has_more:true},expected:{data:ordinary,bookmark:"next",status:"success",has_more:true}},
+ {input:{data:ordinary,bookmark:"same"},expected:{data:ordinary,bookmark:"same"}},
+ {input:{data:dropped,bookmark:"next"},expected:{data:[],bookmark:"next"}},
+ {input:{data:[],bookmark:"end"},expected:{data:[],bookmark:"end"}},
+ {input:{data:[ordinary[1],dropped[0],ordinary[0]],extra:{keep:true}},expected:{data:[ordinary[1],ordinary[0]],extra:{keep:true}}},
+ {input:{data:[{id:"12345678901234567890",is_promoted:false},{id:"ads",is_promoted:true}]},expected:{data:[{id:"12345678901234567890",is_promoted:false}]}},
+ {input:{status:"failure",data:[ordinary[0],dropped[0]],message:"retain"},expected:{status:"failure",data:[ordinary[0]],message:"retain"}},
+ // Native jq's behavior on object-shaped data is preserved, not replaced by custom JS guards.
+ {input:{data:{first:ordinary[0],ad:dropped[0],second:ordinary[1]},bookmark:"keep"},expected:{data:ordinary,bookmark:"keep"}}
+];
+function execute(expr,input){
+ return cp.spawnSync("jq",["-c",expr],{input:typeof input==="string"?input:JSON.stringify(input),encoding:"utf8",timeout:2000});
+}
+let semanticCases=0,originalCases=0;
+for(const item of cases){
+ for(const o of original){
+   const result=execute(o.expression,item.input);assert.equal(result.status,0,result.stderr);
+   assert.deepEqual(JSON.parse(result.stdout),item.expected);originalCases++;
+ }
+ for(const cfg of configurations)for(const row of cfg.rows){
+   const result=execute(row.expression,item.input);assert.equal(result.status,0,result.stderr);
+   assert.deepEqual(JSON.parse(result.stdout),item.expected);semanticCases++;
+ }
+}
+const invalidInputs=[
+ '{"status":"failure","message":"no data"}','{"data":null}','{"data":"unexpected"}',
+ '{"data":{"pins":[{"id":"normal"}],"bookmark":"keep"}}','<html>error</html>','invalid JSON'
+];
+let errorCases=0;
+for(const input of invalidInputs){
+ const expected=execute(original[0].expression,input);
+ assert.notEqual(expected.status,0,"source jq rejects this shape");
+ for(const cfg of configurations)for(const row of cfg.rows){
+   const result=execute(row.expression,input);
+   assert.equal(result.status,expected.status,"preserve jq error behavior");errorCases++;
+ }
+}
+// Authorization explicitly supersedes the temporary deployment pause, not client evidence.
+const manifest=JSON.parse(read("Surge/Kelee-review/manifest.json"));
+const entry=manifest.modules.find(x=>x.filename==="Pinterest_remove_ads.sgmodule");
+assert.equal(entry.deployment.enabled,true);
+assert.equal(entry.deployment.client_runtime_tested,false);
+const pending=JSON.parse(read("Surge/Kelee-review/pinterest-pending-review.json"));
+assert.equal(pending.status,"native-rewrite-awaiting-client-confirmation");
+assert.equal(pending.manual_source_review_complete,true);
+assert.ok(pending.reenable_authorization.includes("原版"));
+assert.equal(pending.client_success_confirmed,false);
+assert.deepEqual(entry.actions,{"Body Rewrite":2});
+assert.ok(!manifest.resources.some(x=>x.path==="Surge/Script/Kelee/Pinterest/remove-ads.js"));
+console.log(JSON.stringify({
+ pinterest_semantic_cases:semanticCases,pinterest_original_semantics_cases:originalCases,
+ pinterest_module_url_cases:urlCases,pinterest_jq_error_equivalence_cases:errorCases,
+ pinterest_native_modules_checked:configurations.length
+}));
