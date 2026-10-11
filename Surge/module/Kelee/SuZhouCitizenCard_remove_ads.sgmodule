@@ -1,0 +1,22 @@
+#!name=智慧苏州去广告
+#!desc=移除开屏广告、横幅，移除信息流推广。
+#!openUrl=https://apps.apple.com/app/id897076369
+#!author=xream[https://github.com/xream]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SuZhouCitizenCard.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/SuZhouCitizenCard_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: 53a4a699f289d523e4011888de199ca6e7b40357b386045d7b25d5cf16fcbe5c
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https?:\/\/newapp2\.szsmk\.com\/app\/config\/queryMainAd data-type=text data="{\"message\":\"操作成功\",\"main_ad_list\":[],\"code\":\"000000\"}" status-code=200 header="Content-Type:application/json"
+(?i)^https?:\/\/newapp2\.szsmk\.com\/app\/config\/(queryCarousel|queryRecommendation)\/ data-type=text data="{\"code\":\"000000\",\"message\":\"操作成功\",\"list\":[]}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% newapp2.szsmk.com

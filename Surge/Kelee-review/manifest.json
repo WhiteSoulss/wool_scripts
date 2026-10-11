@@ -1,0 +1,2183 @@
+{
+  "upstream_commit": "5d5f63fcf98bc69d5f8f1b1bae6f86a01ee4bb97",
+  "upstream_surge_directory_exact_before_merge": true,
+  "source_catalog": "https://hub.kelee.one/list.json",
+  "wool_app_table_rows": 733,
+  "supplement_modules": 106,
+  "supplement_unique_titles": 105,
+  "script_hub_used": false,
+  "automatic_conversion_used": false,
+  "client_runtime_tested": false,
+  "bundle_sha256": "01117b91b59fdc48ce01bd3acc4947dfd891ab38e857ef77f8137cbb362f974a",
+  "merge_decisions": [
+    {
+      "section": "URL Rewrite",
+      "original": "^https?:\\/\\/a\\.qiumibao\\.com\\/ios\\/config\\/\\?version_code= - reject",
+      "reason": "直播吧配置接口改为可莉逐字段净化，移除会抢先拒绝整个配置响应的 fmz 旧重写。"
+    }
+  ],
+  "modules": [
+    {
+      "name": "5EPlay去广告",
+      "filename": "5EPlay_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/5EPlay_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/5EPlay_remove_ads.lpx",
+      "source_sha256": "23c5ac5b2f4f210e6d01dd5d0773c0032fef9f1e27938aae200252bea50212e2",
+      "sha256": "aaeae12ec312a9afbf574a51f4b988fa7be8893dd49e93471cebe08c33fc6afa",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 3,
+        "Map Local": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "36氪去广告",
+      "filename": "36Kr_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/36Kr_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/36Kr_remove_ads.lpx",
+      "source_sha256": "104c5ba2353613997edd96632adc53cdeaa80918f5fa84a5123593117b3575e7",
+      "sha256": "f8cf68edb3ff95f6d778412cefaf5f5ccada0b2c01c6c2210ce7d831c8b70230",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 2,
+        "Body Rewrite.jq": 5,
+        "Map Local": 7
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "123云盘去广告",
+      "filename": "123NetWorkDisk_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/123NetWorkDisk_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/123NetWorkDisk_remove_ads.lpx",
+      "source_sha256": "00b590586433e20a117c18384593f4bc351c8bd785ed783211fec9056af115f4",
+      "sha256": "f55dd6675d1d07cf97bd3f1dc5ee25de1648474936d7ade1f3dfe4a90acdb62e",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "360摄像机去广告",
+      "filename": "360SmartCamera_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/360SmartCamera_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/360SmartCamera_remove_ads.lpx",
+      "source_sha256": "a02a7acfd9b6db38b77943a13b30e1ed3a68587b04aec901b8de475bbca497ea",
+      "sha256": "43a67e612b73956342287193256a9df20e863886ad3d598cbc800478e575f742",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 2,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "360智慧生活去广告",
+      "filename": "SafetyHome_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/SafetyHome_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/SafetyHome_remove_ads.lpx",
+      "source_sha256": "13d8ae0450c9b3289f454933a44f256ca05e77a87552d71e8506820171a77e89",
+      "sha256": "0f665b719dfae9a24dcaa53f102a4ccff5263b9b3c67aa7cda6b0135570efac6",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 1,
+        "Map Local": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "B612咔叽去广告",
+      "filename": "SnowCamera_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/SnowCamera_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/SnowCamera_remove_ads.lpx",
+      "source_sha256": "be8558db154fd89397d12247fae2611d8a4d8dd359480563415ec83fdb0b7030",
+      "sha256": "2a8c1c7518ae4972e4bf996cc48649c0fa42f8cd6a2ce3f93ccbb1f9332ba824",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "CC直播去广告",
+      "filename": "CCLive_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/CCLive_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/CCLive_remove_ads.lpx",
+      "source_sha256": "a631ca36f8bd28733f59bbf68dea204c6d6f768676ac8a015de928f183464cc3",
+      "sha256": "cbc940fde263ad80a4ebda5435ca716d683ba7810bf4a537022d5cc9bc274887",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 3,
+        "Map Local": 4
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "DJ多多去广告",
+      "filename": "DjDuoDuo_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/DjDuoDuo_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/DjDuoDuo_remove_ads.lpx",
+      "source_sha256": "468133036ca0f1f2b542af43bcd76ede78bf7abeebc7637328dfe3be9ffb46b8",
+      "sha256": "7cb89d491b2b8602b7939891cffee0855f837ea4c2ed0ea5aa17a665cd923b89",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "http-response": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "DREAME去广告",
+      "filename": "DREAME_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/DREAME_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/DREAME_remove_ads.lpx",
+      "source_sha256": "7cb2856bf932874ab3cb4aa92720cf80ea0fd6bbc82dafeae39ad3707146570b",
+      "sha256": "8954e7f9ecdd14d54461bec46cdeee480f94e60d12ea45754dfd5c34f808bcba",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "ECOVACS HOME去广告",
+      "filename": "EcovacsHome_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/EcovacsHome_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/EcovacsHome_remove_ads.lpx",
+      "source_sha256": "bb58d5a7b69a8709d7550cd96d889c8494596f86170a1055ba1c5cb2ee20785d",
+      "sha256": "fcf6cf678c9a081ee4345b6898385d8d9ff8f156efbc3300c3e6f8f6136221be",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 1,
+        "Map Local": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "Foodie去广告",
+      "filename": "Foodie_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Foodie_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Foodie_remove_ads.lpx",
+      "source_sha256": "54f3ee22b80fb1812091a6ab2fd271b3febd3d6c3fcd0df2031b3983606a962c",
+      "sha256": "5a257f5381a267d3c5d3dc0b2ec511142729020987ad2772fbfbcbc4ade67d3c",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "Hong Kong Toolbar去广告",
+      "filename": "HongKongToolbar_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/HongKongToolbar_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/HongKongToolbar_remove_ads.lpx",
+      "source_sha256": "ef3e0db9a043aa595fa158e15db553929c76d3b4883d5a2720248a7c97f59dd7",
+      "sha256": "da16992444649ccc3bfc19b737fdb17ad6117e10dd9738b346f0d62018e9bbcb",
+      "authors": "C.Hiang",
+      "actions": {
+        "Rule": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "Jump去广告",
+      "filename": "Jump_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Jump_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Jump_remove_ads.lpx",
+      "source_sha256": "5a8556996725a9371e0d1da65648e9008c6bcb372371277cf0e620c7364fca27",
+      "sha256": "7822b6b1ec32b4b670432d04657b13fb9b7cfc51d26e90761caf499d331c445c",
+      "authors": "MoonYuki[https://github.com/MoonYuki]",
+      "actions": {
+        "Rule": 7,
+        "Body Rewrite.jq": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "KOOK去广告",
+      "filename": "KOOK_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/KOOK_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/KOOK_remove_ads.lpx",
+      "source_sha256": "470341eb77a8f73fc53172576e22fcf814fd10a6b0d1a3ad35738828f444cc1d",
+      "sha256": "ce1988ee8153e530fbcbe9978b53e1512a4eaf091f89753fbd9fefee1f1fc806",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 2,
+        "Body Rewrite.jq": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "OKOK去广告",
+      "filename": "OKOK_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/OKOK_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/OKOK_remove_ads.lpx",
+      "source_sha256": "e49a879e38e36c7cf4d32f8669d5f60beced65c8f5b13f82a65cc636cf130720",
+      "sha256": "3e463b41aea27ad62beb6f5307f91bd7c71dd32e8ed61ba4c3168c5381f2946e",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "PICOOC去广告",
+      "filename": "PICOOC_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/PICOOC_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/PICOOC_remove_ads.lpx",
+      "source_sha256": "1c8859730dbcea0ca1065e8bc8d6984262b3bdd5d177e6178e6c4dd686507459",
+      "sha256": "518bd41881bebd3808140c852012e03f54a392619e4dfddffe88f7f50f74eb2c",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 5
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "Pinterest去广告",
+      "filename": "Pinterest_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Pinterest_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx",
+      "source_sha256": "905ce81e2a26cb5421219b8f9009502d7c014291b3b3a5532e13dd6ad3a01d95",
+      "sha256": "aa21c9f1fca181c231e68dc1cf176b8446395a79e20a0b3c1fdfb66a27bea3e8",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "ReelShort去广告",
+      "filename": "ReelShort_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/ReelShort_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/ReelShort_remove_ads.lpx",
+      "source_sha256": "eecd41fd7cce58b1bb5be9d6fac310f256d2759f9138a5681dc42982097514f7",
+      "sha256": "c958b195acc67641a465d1cd349642158e8954af0ca26ab127485bfefdc923c7",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 3,
+        "Body Rewrite.jq": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "Roborock去广告",
+      "filename": "Roborock_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Roborock_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Roborock_remove_ads.lpx",
+      "source_sha256": "8761e9409a3c0257b91e61ed561d4fb3f1077485b64ab827562924edecf03cdb",
+      "sha256": "605250fe6f9ab2344b2d2595de3913757d3d4d5a018923f16f6ea550c6c38ed7",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 3,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "RQrun去广告",
+      "filename": "RQrun_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/RQrun_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/RQrun_remove_ads.lpx",
+      "source_sha256": "85fa9a9876dd2b6664ed1e30e0f58b797c6d09df3153334de74091f32fbbfbab",
+      "sha256": "f45b723c99fb376badad5038405993e5c41a388db3a7767a914ccb57f8d73c04",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "Sofascore去广告",
+      "filename": "Sofascore_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Sofascore_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Sofascore_remove_ads.lpx",
+      "source_sha256": "248322ccf8db498f6bb9a0651d6ce97d39e2a0def0dbfea797422bddc372267d",
+      "sha256": "345b947d259ac359fbfb238e03111fd285f464d5d28ba36a2c7d74b0407846bb",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "TeraBox去广告",
+      "filename": "TeraBox_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/TeraBox_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/TeraBox_remove_ads.lpx",
+      "source_sha256": "178b71c193daa2d7acceab2e2cd0c273dcad88074ef10d7db1e311eec3ce03aa",
+      "sha256": "73889246302ec4020557a7f8745dc0e881fb30dc5f6318e1cdf7abfbcef75591",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 1,
+        "Map Local": 4
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "Uki去广告",
+      "filename": "Uki_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Uki_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Uki_remove_ads.lpx",
+      "source_sha256": "b229b01725adee1ee844416d9a8ba0f10f086185c79dac130a37c6e1fd3fa0dc",
+      "sha256": "c15dd6620b1cf440a3490a1ddba47d5ace2b5bdb5e00e2dd963b8e45800d528a",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 6,
+        "http-response": 4
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "WakeUp课程表去广告",
+      "filename": "WakeupSchedule_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/WakeupSchedule_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/WakeupSchedule_remove_ads.lpx",
+      "source_sha256": "2e1038260331e833b9a98bc803eb2184a4ebc7f18496a62c63ecfa65e8c94356",
+      "sha256": "637862b34e6a71623e6fcaa994acdbe895faebea0c38c32ead120a14181eda78",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 1,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "YY语音去广告",
+      "filename": "YYVoiceTool_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/YYVoiceTool_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/YYVoiceTool_remove_ads.lpx",
+      "source_sha256": "da4c7bb3b7e129dcf508b569bd1b852eaa92db094aaba2970d67df074d183eae",
+      "sha256": "ca5fd9f390b2e01a1bb2a3236dd5061f0c24a0042db3a9b01bbd5fb468112f15",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "百度网页去广告",
+      "filename": "BaiduSearchWebpage_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/BaiduSearchWebpage_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx",
+      "source_sha256": "de15529e97e5c6804983f353b9441ff69b5ff42a23cfb4a9ae16aba183ad4aea",
+      "sha256": "5c09b59aeb1d8b6a3ff4aaba8f982a4a7e031febe8a5fc2fdf874bf65a73e99d",
+      "authors": "Keywos[https://github.com/Keywos]",
+      "actions": {
+        "http-response": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "比心去广告",
+      "filename": "Bixin_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Bixin_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Bixin_remove_ads.lpx",
+      "source_sha256": "3fc203cb01bab2b5e960ef2ddee636cd9c53fae416002a5fa4b0427726114437",
+      "sha256": "a2bf6e6e3ec4d5e077bacc80da189ff919315d6b20eb2cb612cbd20485428221",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 14,
+        "Body Rewrite.jq": 2,
+        "http-response": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "测测去广告",
+      "filename": "Cece_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Cece_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Cece_remove_ads.lpx",
+      "source_sha256": "851dff430dca5b644a274ce696c886f21f1ec1f679fc7fdce8b11d7d5edc9eef",
+      "sha256": "7f08675d9b053717c2647e70c15d9c21ff54e14b7f4d65afc5be432f1e8b1631",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 6,
+        "Map Local": 13
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "成分喵去广告",
+      "filename": "ChengFenMiao_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/ChengFenMiao_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/ChengFenMiao_remove_ads.lpx",
+      "source_sha256": "f62b080ef7dfec1ae75b3129adb09c96edae8a820b018e7e0f42af7e6379a462",
+      "sha256": "111d420f93ce460c5983c0d096b66ca5131df5bedb4d3eea061f3e7a82bff9ec",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "创维智慧云去广告",
+      "filename": "SkyworthDigitalPicamera_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/SkyworthDigitalPicamera_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/SkyworthDigitalPicamera_remove_ads.lpx",
+      "source_sha256": "397729e3930ed6b825b2ba57bfc72c69f4f3669bc7d1c104896359913cb67bec",
+      "sha256": "30d51e4c1e6037c6988079f5551f686d6775234047921e3bb0eb657b19c12534",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "触站去广告",
+      "filename": "Chuzhan_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Chuzhan_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Chuzhan_remove_ads.lpx",
+      "source_sha256": "010e40276fe4ef8a23cecf315b1c92fc0d156dce4f494eeeb157e4658579fa3e",
+      "sha256": "9d14127c04b47c96668c3c9e419ad2dd081fe83d50cb616e14a9729e351aa9ea",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4,
+        "Body Rewrite.jq": 4
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "磁力宅播放器去广告",
+      "filename": "XFuse_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/XFuse_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/XFuse_remove_ads.lpx",
+      "source_sha256": "eba548bab12c6ccd7dfdc34c951cc9a96a3bdd52fcea295038f694cf20a67a34",
+      "sha256": "938dc638e1db5c96ab520cb6e4a9e1f223b2074de58f9f307b912543b8b894b5",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "大姨妈月经期助手去广告",
+      "filename": "Dayima_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Dayima_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Dayima_remove_ads.lpx",
+      "source_sha256": "1deaedbed2801a8a7cd32243bad7e40bd6d8594f4098394ff460fdbdba59621e",
+      "sha256": "a860d1736badf773964279b1c5242a73adea78e38fc792c870af74c83d173bd7",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 3,
+        "Map Local": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "得间小说去广告",
+      "filename": "iReaderDejian_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/iReaderDejian_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/iReaderDejian_remove_ads.lpx",
+      "source_sha256": "d8963f19af6e3fd3eeea80b93ac93db658e614639d74f0e11db81e61d74f6630",
+      "sha256": "54ab6a998d79df2a8d67f274a28e8ca278783fc57cfc37439baea4636e6d209a",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 2,
+        "Body Rewrite.jq": 2,
+        "Map Local": 4
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "豆瓣阅读去广告",
+      "filename": "DoubanRead_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/DoubanRead_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/DoubanRead_remove_ads.lpx",
+      "source_sha256": "ab2cf862e33f21be82e35b554c36826923ff7bdf4851893c0255735fb51766e1",
+      "sha256": "7408de58009fc751896c9c805a617307de48da91f6dadaade9e8095d12d04c3f",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 5
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "堆糖去广告",
+      "filename": "DuiTang_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/DuiTang_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/DuiTang_remove_ads.lpx",
+      "source_sha256": "a67e65c548b3b3f0ebd1de205b56f677f6e7e03be4e2d682a7b8ddafa91d8748",
+      "sha256": "6c387e0eca71904377e1157cb93269051b5cc091bc206da35d1fb75970d489c0",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 3,
+        "Body Rewrite.jq": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "多屏互动去广告",
+      "filename": "TCLnScreen_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/TCLnScreen_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/TCLnScreen_remove_ads.lpx",
+      "source_sha256": "691c8405aa8c03e602c48975f294320dbf094580b04f443f2845d7d8cfbd1b58",
+      "sha256": "5e78037d9428f5ea3b007024de292dbe1cd331209fba4821b2fd7ca823307039",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 5,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "风鸟去广告",
+      "filename": "RiskBird_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/RiskBird_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/RiskBird_remove_ads.lpx",
+      "source_sha256": "ed4944c91b2d5168fffeeb9c38428ce455fb7491fa5736076f9621f660981fa3",
+      "sha256": "c4807e432e7b908b103ba7b1c5a97286b8a56ac0b047bb3d64231d92f9d6af1d",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 2,
+        "http-response": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "纷玩岛去广告",
+      "filename": "LiveLab_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/LiveLab_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/LiveLab_remove_ads.lpx",
+      "source_sha256": "7c855a8694d7187a72cf67344d3632bb7dc302fe6281a6e56a697c0eeed25ba7",
+      "sha256": "896eb1b9421e3498e237d675bbd1f97a3eec2f8470e6874ef0a5ce49340ad1ab",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "海雀去广告",
+      "filename": "AlcidaeVideo_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/AlcidaeVideo_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/AlcidaeVideo_remove_ads.lpx",
+      "source_sha256": "35c081fdb67a26e549facf59638c93f65ad0785284c2bc461861d1c254e018fb",
+      "sha256": "a77fb535885f5394a7078d255628f894fc29d6dad0f1738adc275729a5d4a41d",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 5
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "哈罗去广告",
+      "filename": "EasyBike_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/EasyBike_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/EasyBike_remove_ads.lpx",
+      "source_sha256": "be91c7e3c5e99586fb76b63b1cfe924f7c83e98af730fe65a6c521f8f901fddf",
+      "sha256": "2228ff86ad26e7a582d1c4345ad1d25ad62906c2142b2b9a31dacac19381c038",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "http-response": 1
+      },
+      "bundle_script_enabled": false,
+      "missing_dependencies": {
+        "https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js": "按原版 Loon 转换并保留脚本引用；源脚本目前缺失，对应去广告功能暂无法运行。"
+      },
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。",
+        "原版唯一脚本 HTTP 404；保留独立配置，合集内注释该脚本，不伪造实现。"
+      ]
+    },
+    {
+      "name": "慧生活798去广告",
+      "filename": "SmartLife_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/SmartLife_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/SmartLife_remove_ads.lpx",
+      "source_sha256": "469067d56989c72b4790584cab5857bf45bde28002326b5de7f74e16049a58d0",
+      "sha256": "375cb63e55e759964cd9952317a0949bd29cfd9131e47f19f5a6e852c0c9c389",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 1,
+        "Map Local": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "健康160去广告",
+      "filename": "91160_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/91160_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/91160_remove_ads.lpx",
+      "source_sha256": "81aa72a5890bd751b2e1231f97f6e13df3554533635be8f29c27e2ab29cfb917",
+      "sha256": "faffa2d9537a45a0fee41d52d006ef7c3113f2b954acf8b13f09b1185bb3fa55",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 8,
+        "Body Rewrite.jq": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "剑网三无界去广告",
+      "filename": "SeasunJX3_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/SeasunJX3_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/SeasunJX3_remove_ads.lpx",
+      "source_sha256": "efff78d17644ad770f6bc9f7c1e115cccad44c10471934743911bf6189d05cf3",
+      "sha256": "da4da3cf84d713f89c8d12b4139deae8502ea0f136c19f59082b434e53404173",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "General.always-real-ip": 1,
+        "Map Local": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "京东外卖去广告",
+      "filename": "JDWaimai_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/JDWaimai_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/JDWaimai_remove_ads.lpx",
+      "source_sha256": "b26fab00df363e86fcc5e36475ece3e16421bea703bfc5a6510da2f34c87e1f2",
+      "sha256": "6aca98107d17e05093f5e5540c33b32b91f350bad6e6f1582f52296dce0edc26",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 4,
+        "Map Local": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "金山文档去广告",
+      "filename": "WPS_Documents_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/WPS_Documents_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/WPS_Documents_remove_ads.lpx",
+      "source_sha256": "366de70737d3960468be00f7024a3b50be6f8f30fad3b8665c3c6a85a2f16eec",
+      "sha256": "bfb9dd9ff2ab18166858ed27b977c40539d9a1ac7a7735bda57ce62cfaf22470",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "看家王去广告",
+      "filename": "ChatCam_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/ChatCam_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/ChatCam_remove_ads.lpx",
+      "source_sha256": "b0ec0721b713caf96bf6a30fb3956653cbb22c7540d9b87b0b5a593c0601562d",
+      "sha256": "0981141ba6549b58dc66e18ed6d1d132900f261ce1de65dff3df5c40ca619047",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "口袋壁纸去广告",
+      "filename": "ShoujiDesk_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/ShoujiDesk_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/ShoujiDesk_remove_ads.lpx",
+      "source_sha256": "f270c31ac7d3f5e3406804d55daa1f4f53dc6656e518e95d93d1aa5e65b84783",
+      "sha256": "5f7b849849f24c5477711078512f8a5b43f6006c65a0f860bac55bcf963c156d",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 2,
+        "http-response": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "快对去广告",
+      "filename": "KuaiDuiZuoYe_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/KuaiDuiZuoYe_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/KuaiDuiZuoYe_remove_ads.lpx",
+      "source_sha256": "a7f19bebedf966e1a6189f09d46e813b7aac00ab8d77ccba0501b4b3f2790472",
+      "sha256": "ff528aecebc8cdd11f0381c43f54cc98d6f60f4b5872947b866fde6e6938641b",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 1,
+        "Map Local": 5,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "快影去广告",
+      "filename": "KwaiVideoeditor_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/KwaiVideoeditor_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/KwaiVideoeditor_remove_ads.lpx",
+      "source_sha256": "1e27d04fd483b53627e969af7a14d31235f00c178baa25656ba4f35ff97565d9",
+      "sha256": "0157c5353669d9e8f48b5d0edc748b035c617d3b6e74736517943fa63152c0a2",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4,
+        "Body Rewrite.jq": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "夸克扫描王去广告",
+      "filename": "QuarkScanking_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/QuarkScanking_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/QuarkScanking_remove_ads.lpx",
+      "source_sha256": "aff243378c9b4a98f8ee6dbc43b78f21d4550bb8a2bfb06c01f8e2ce9c57d86f",
+      "sha256": "2b90c51bf2fb07bed0d9ad8a7be7e02d5a978faf4b721fd9a1d10124aceb4cde",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 1,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。",
+        "按实际请求补充 open-cms-api.uc.cn 和 scan-order.quark.cn 的 MITM，保留原版主机名。"
+      ]
+    },
+    {
+      "name": "酷狗概念版去广告",
+      "filename": "KuGouYouth_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/KuGouYouth_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/KuGouYouth_remove_ads.lpx",
+      "source_sha256": "14c49fe53ed93fba2f33b0cce02a84f4d5c09141e93c8b83e7a66d7b33a8607a",
+      "sha256": "f761ba9473b3a1a18bb9e087ad6c727d8722d33e2596eaa0518cd0032f78d9da",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 9,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "酷狗铃声去广告",
+      "filename": "KGRing_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/KGRing_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/KGRing_remove_ads.lpx",
+      "source_sha256": "16a360a40a1aa32592cf0d4ee3b41d381d2c35029e45618b4016bb7cdaffc00e",
+      "sha256": "be218d24ed490d2f34c922825ccef84308017250851f91ee70c58ec90353f202",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "库街区去广告",
+      "filename": "KuroBBS_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/KuroBBS_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/KuroBBS_remove_ads.lpx",
+      "source_sha256": "80147db3d0fca33e1b44de42f0a2271ccd8ba65834b6d5fcb33a55d1104d453d",
+      "sha256": "08c8da39b5bf5d461b78554b5db72b2825fdf7bb858caf94deaa90d12d74d128",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "联掌门户去广告",
+      "filename": "LZMH_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/LZMH_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/LZMH_remove_ads.lpx",
+      "source_sha256": "649136a7938ed8b1c261b3e7682e09b3d44d15b33d001818567569ac70b1d149",
+      "sha256": "50ff4e8456f79c7ab5e7203a0f4b13e7e359b10be7d2285112e2da5173a4c3e4",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 10,
+        "native response script": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "萝卜快跑去广告",
+      "filename": "RoboTaxi_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/RoboTaxi_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/RoboTaxi_remove_ads.lpx",
+      "source_sha256": "0e403cf9b67548e47d4b90395d88628735eca1162743957d7c9d6fa96a28bf7f",
+      "sha256": "9dd52f9f6681302d648f8d572a30c94a4c2f044a190c82a7202c66e08b6837e4",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "马克水印相机去广告",
+      "filename": "marki_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/marki_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/marki_remove_ads.lpx",
+      "source_sha256": "26976f396fc71493206bd17ca2411fb794269d1a167489558e936c03853481d6",
+      "sha256": "e36fd3b429c77f45d1ef4a9397317829325ec8b4f108a6bc4b717d52bd580a9a",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "漫客栈去广告",
+      "filename": "MKZ_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/MKZ_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/MKZ_remove_ads.lpx",
+      "source_sha256": "0ff3a79e41c84d2a0f2556adfe2f418ce63c56b9260fe18a7adb19a77e5a9343",
+      "sha256": "f52082f537f4697eff429905fe666f5072f8d83eb202f08edbacd772e1a7d7d7",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 5,
+        "http-response": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "每日赛车去广告",
+      "filename": "MeiRiSaiChe_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/MeiRiSaiChe_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/MeiRiSaiChe_remove_ads.lpx",
+      "source_sha256": "712c7adec68d9d749622f1ea98e79b2b8e5a61efc0cd1303525a2481365f0a31",
+      "sha256": "459529b3d4db0eb89fa201e92843beb3ea5916faef1da5043e00bb84bfeedc3c",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "美食杰去广告",
+      "filename": "MeiShiJie_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/MeiShiJie_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/MeiShiJie_remove_ads.lpx",
+      "source_sha256": "107899f01c39ceeff2576971e67fc4da188035c1ec95d65bfd675e0e0b4d106c",
+      "sha256": "505cc516d1198f51d8c93fb9a67dfb49ad4e9e834d330b9531bbab0a496c21af",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "萌娘百科去广告",
+      "filename": "MoeGirlWiki_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/MoeGirlWiki_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/MoeGirlWiki_remove_ads.lpx",
+      "source_sha256": "bdf5468c753283db21befded7deafa8833c548999a95d8d076f65e213a4663a4",
+      "sha256": "b4388262cadb63bef627092c9b348ebfa5e68e268ea6727dd0828c147639ad80",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "摩天轮去广告",
+      "filename": "FerrisWheel_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/FerrisWheel_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/FerrisWheel_remove_ads.lpx",
+      "source_sha256": "930ce3cc6ced714e8f8272ad5e29584a657cb7782d36f9c333c8b1bc537e7e79",
+      "sha256": "673c4f977eb1d3068878a0e3d1e9c514fa9fb27c4f9359f45b42dbf4cfd4c42c",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 5
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "摩托范去广告",
+      "filename": "MotorFans_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/MotorFans_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/MotorFans_remove_ads.lpx",
+      "source_sha256": "28a8ac76c486fe4ce4ee9491efe4a7278307736f1af39feeb6c6ef00cd0dcc85",
+      "sha256": "a84e1f676dadfd89b7838e91f40974a8993db5961bb45a7b8dffa5c641b2a1f5",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 7,
+        "Body Rewrite.jq": 1,
+        "http-response": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "南网在线去广告",
+      "filename": "CSG_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/CSG_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/CSG_remove_ads.lpx",
+      "source_sha256": "5a550c686c8f099e877f882925a79d94eb3d4cca1e20d7ecfd85d67fa09f93b4",
+      "sha256": "8718f1c8e0800c2dc35bd227361260e2f509cfd07d1ce3ace88bfeb14ee81f38",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 1,
+        "Map Local": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "排班日历去广告",
+      "filename": "AxWorkSchedule_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/AxWorkSchedule_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/AxWorkSchedule_remove_ads.lpx",
+      "source_sha256": "7bb25b101003b82b5355748a9de38820a9d9025115c06db0106402c5d0322bc8",
+      "sha256": "2b62c7d2d2a5e44853874a61f1880f15fa3450a77437c55f6fa91379db69116b",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "胖乖生活去广告",
+      "filename": "PangguaiLife_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/PangguaiLife_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/PangguaiLife_remove_ads.lpx",
+      "source_sha256": "3a9ccc82e301155d9add5e0e46ae19cc50f464d473a7e1bf7d3ce677988da2af",
+      "sha256": "85d8e5b62ba59a434673a6478fd1357e5e724d82d86971ab2eaaeb7927464cd4",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 6,
+        "Body Rewrite.jq": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "配音秀去广告",
+      "filename": "DubbingShow_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/DubbingShow_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/DubbingShow_remove_ads.lpx",
+      "source_sha256": "1ab7c72165b830314be614e7493e171afac36d6dd9f1b99dcfebdd1a00de468a",
+      "sha256": "bc6fa014bbd1d7d498c1ac9c53df69b186f09cef8ca7e9c5b6bdf6ad5bc2949c",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 4,
+        "http-response": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "启信宝去广告",
+      "filename": "QiXinBao_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/QiXinBao_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/QiXinBao_remove_ads.lpx",
+      "source_sha256": "b656e3cea059916dcae628a1054a9ddf99755504bcd3434495c0242767e587e1",
+      "sha256": "73e94b2097ecbd309b871159beb0f622de6a285231638b5f93297e7c89f768e3",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 10
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "省钱快报去广告",
+      "filename": "YueDanBa_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/YueDanBa_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/YueDanBa_remove_ads.lpx",
+      "source_sha256": "973f112a629f30c90c6d8976ddd1613d3dbb79abceea843b1f83ba43f9e5c583",
+      "sha256": "6f97e81775b9d2d7097f73acb8320f70ef72505ed1aa2a98be4e9923f7bc7c5b",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "收银通商户端去广告",
+      "filename": "ShouYinTongMerchant_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/ShouYinTongMerchant_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/ShouYinTongMerchant_remove_ads.lpx",
+      "source_sha256": "b39e3f8da46bc49e52a211ffda9614e9fd7735f0be1c51c30bf3ccc255336bdb",
+      "sha256": "3a006c83f9198e602d96baacb06605ae70285ea26bef435e2561f591e1c01366",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 5
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "数字心动去广告",
+      "filename": "DigitalHeartbeat_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/DigitalHeartbeat_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/DigitalHeartbeat_remove_ads.lpx",
+      "source_sha256": "802fd6e67f3aae15b144ef4da4b4cd502959a26a4fe47e422ade1072ed1f8fe0",
+      "sha256": "b888458eb163a96ab74e94f71a40a8350021a977c267a474b749f58eca095b28",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 4,
+        "Map Local": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "随手记去广告",
+      "filename": "KingdeeMyMoney_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/KingdeeMyMoney_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/KingdeeMyMoney_remove_ads.lpx",
+      "source_sha256": "e0b823836ddb4262b491e4dc28cca5e74f520ca83bc1ac48c390f581ac77357f",
+      "sha256": "929b947167f3076cc7e6d9d272c4282aa52eca7e4d2ce83022d302be83ef4985",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 6
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "他趣去广告",
+      "filename": "Taqu_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Taqu_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Taqu_remove_ads.lpx",
+      "source_sha256": "b8fc86a3cabd9c4ddde1073f5a0ad1235c98bc7000a871dcf74a193d909c83bf",
+      "sha256": "3672dd8b57c56b20364eb61bc7391ccfc22b0b3f42c1b0383de9b5c5749fa23a",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 3,
+        "Map Local": 9
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "腾讯文档去广告",
+      "filename": "TXDocs_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/TXDocs_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/TXDocs_remove_ads.lpx",
+      "source_sha256": "f3cda83f0112273998e884044f1915926947fc129a581260f7f02d34b34a9a69",
+      "sha256": "96c53b22cddc9e8ad67a61e35d26972f1052a7db0bbad08e3b294eb8bf7d08a2",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "天猫校园去广告",
+      "filename": "TmallCampus_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/TmallCampus_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/TmallCampus_remove_ads.lpx",
+      "source_sha256": "eee4c3f5bb919f36485ec77b75c20b880b2df75c87880cb12ef8af6f7906969e",
+      "sha256": "547dcf36fa303d8265b0d1705085de8131d8dfd52cdfef065efae2e427d49281",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4,
+        "Body Rewrite.jq": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "天气通去广告",
+      "filename": "TianQiTong_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/TianQiTong_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/TianQiTong_remove_ads.lpx",
+      "source_sha256": "297eae03517e86b6c901dfe1f8fb08483e74d3c173cffac078c92960b8414055",
+      "sha256": "9048e5c45a16fc416cac2a611af12c753da7efc6940c08367ff0f8085aa2464f",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 5,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "天气预报去广告",
+      "filename": "iReaderCityWeather_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/iReaderCityWeather_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/iReaderCityWeather_remove_ads.lpx",
+      "source_sha256": "89246ddfdfec6a5a1c86688239977c76404384f179335a78ea5bb04a8bd50b02",
+      "sha256": "3151733241eba8c2d1c976d0c8954e619700cd62bb3d00379ab542685024dabe",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 2,
+        "Map Local": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "天天跳绳去广告",
+      "filename": "CrazyRope_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/CrazyRope_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/CrazyRope_remove_ads.lpx",
+      "source_sha256": "07864975046f4657ef76221b4c28f783ca577c5a1b56aaf4b77128bb66edce36",
+      "sha256": "5a4e89d8ee1964bb39c565e67387a45795e89eb8039d5233c9bae44099354c08",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 10
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "图怪兽去广告",
+      "filename": "TuGuaiShou_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/TuGuaiShou_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/TuGuaiShou_remove_ads.lpx",
+      "source_sha256": "ca62d427bed9d50407401e5e8388b7cf0cfa3b2cd35d45b36aac2878c223fad2",
+      "sha256": "272822e7f58e3a2ebc1f45eb92c94cc904b487c864a6b7f9993db7b6c71287c2",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "挖财记账去广告",
+      "filename": "WaCaiJiZhang_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/WaCaiJiZhang_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/WaCaiJiZhang_remove_ads.lpx",
+      "source_sha256": "903016f7c99a34ad3ae3b9f0acf1ed1e0c485abf3a522b75c91da2185692aa98",
+      "sha256": "f1cbe226a3c7119d31706b6b9f1f6f1f20e795581ddb91b55542f8f7dbead3ba",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "挖财记账去广告",
+      "filename": "Wacai_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Wacai_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Wacai_remove_ads.lpx",
+      "source_sha256": "99b8087c4e424e09b40e67189eb640f48e6d49ef2b4f15bf4263a0c22e0462a1",
+      "sha256": "b465c69d75f7a78c54f7d7cdf150363d5917fd6d07b46f3b820919dbb568eb75",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "微博轻享版去广告",
+      "filename": "Weibo_intl_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Weibo_intl_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Weibo_intl_remove_ads.lpx",
+      "source_sha256": "78f41ea7e4c1798031c60a48f268d2e85e5e969bdc561a9d2b9736e714e3f16e",
+      "sha256": "6de4e28e259506251295e8d955f0cc061b599fd3b27a0d887fa45c0298cde2b0",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4,
+        "Body Rewrite.jq": 10
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "微脉圈去广告",
+      "filename": "Weimai_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Weimai_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Weimai_remove_ads.lpx",
+      "source_sha256": "9884eff95f618871e69e9609bcaa1d17cd8db0aec06a8e7e5356dd6bc93b4f72",
+      "sha256": "3e39c9171a80b4b4c347e215af61be77a9f91f04436b04977b8a4a435cf192e5",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "微信小程序去广告",
+      "filename": "WexinMiniPrograms_Remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx",
+      "source_sha256": "a3e17aa9fa533f226fab0d178a3f1a7061f9833348af757dc14c03ef17469f20",
+      "sha256": "01959ad633fa9040580a09f97ffbf454049a3cc21d78b3f3d8ea1437a9652535",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 6,
+        "Map Local": 112,
+        "Body Rewrite.jq": 6,
+        "http-response": 12
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。",
+        "原版茶颜悦色脚本引用的 cyys1.jpg HTTP 404，保留该已知限制。"
+      ]
+    },
+    {
+      "name": "沃尔玛去广告",
+      "filename": "Walmart_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Walmart_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Walmart_remove_ads.lpx",
+      "source_sha256": "2eb276cce759d19dc43eb159a635f101ad1243e6cea7a885128918dfeb7d6ae9",
+      "sha256": "a27a19459722468d0d69ce74c54089c8cf45986b2af27003b43134d329a1d5ea",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 3,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "香港抖音去广告",
+      "filename": "HKDouYin_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/HKDouYin_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/HKDouYin_remove_ads.lpx",
+      "source_sha256": "a65adf9303017ac10bcfb70decb25598372e55b67bb2509b8863d2c3a51699d1",
+      "sha256": "fca48da0c25ccd719238298f7b68b1e75e2f62f4319f8e4578e1130eb75e2ed9",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 6,
+        "Map Local": 3,
+        "Body Rewrite.jq": 4
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "小白智慧打印去广告",
+      "filename": "XiaobaiPrint_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/XiaobaiPrint_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/XiaobaiPrint_remove_ads.lpx",
+      "source_sha256": "0afc709cb4eaf4fda8691a80ff48caf8a7b48af7b728f953506e78af5b60ff72",
+      "sha256": "b64465bf8f401b1ccbef0ed3ea173bb96f535a4a8b34993739ab127de28a2406",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 2,
+        "Body Rewrite.jq": 3,
+        "Map Local": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "小店掌柜去广告",
+      "filename": "ShopKeeperAdmin_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/ShopKeeperAdmin_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/ShopKeeperAdmin_remove_ads.lpx",
+      "source_sha256": "ff54a8ceba5827061b9b9bccf7639da20219e97a7b8ab6de31a21eb91d54a892",
+      "sha256": "88d2f14e8fddc8ba15c87c0a83eca3ba8317fb3a88fe91d3a01fd5383af72888",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "小黑盒去广告",
+      "filename": "XiaoHeiHe_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/XiaoHeiHe_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/XiaoHeiHe_remove_ads.lpx",
+      "source_sha256": "8ce70df1c1d23c93d458c49f664aec096edd0e2fdd362ebba6e76beabfc21885",
+      "sha256": "8b86ff47887955366efb2fed290fd51e647e3c9ff33757393e03ba4536f5e405",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 1,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "小桔充电去广告",
+      "filename": "XiaojukejiCharge_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/XiaojukejiCharge_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/XiaojukejiCharge_remove_ads.lpx",
+      "source_sha256": "b23b72332ba1705b1149ba725185a8e2f4f3ef0f922dc34b184e76cad08601d1",
+      "sha256": "5c200ea5654e5fe54d8eb36a6ea22d41848409ba2b8fc68d2107bc43b12c0550",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 4,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "小喵看书去广告",
+      "filename": "MiaoRead_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/MiaoRead_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/MiaoRead_remove_ads.lpx",
+      "source_sha256": "2bc7bbb59b5dc126fcc4a2cd7a5eb6c22e51046527021b44d423577f9cda094c",
+      "sha256": "60c3ef9fcbb74c1a97ab4907e4c9e80d9bd50a75f209a4a62f6abe552373dc99",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "行者户外去广告",
+      "filename": "OnTheWay_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/OnTheWay_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/OnTheWay_remove_ads.lpx",
+      "source_sha256": "1a0888cf708921ac4cacbc2dd90538506726ed2bebd6913c7cf85348f67c599e",
+      "sha256": "5e72d66da280b7a45e9a7cdf7efd574e1ea7d90c86df2db6fbae41b331230044",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 1,
+        "Body Rewrite.jq": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "新浪财经去广告",
+      "filename": "SinaStock_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/SinaStock_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/SinaStock_remove_ads.lpx",
+      "source_sha256": "8eeae9a190954b281dd106d75153d7e93c8fcaad21c2a87991f328b6553e4f3e",
+      "sha256": "9e92b83a00703d1bfd55f31ba0105239096493e017d9d3110c79307705f9e29a",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 6,
+        "Map Local": 5
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "一甜相机去广告",
+      "filename": "Yitian_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Yitian_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Yitian_remove_ads.lpx",
+      "source_sha256": "35d75fdb3fc7ca255c7125f9800adcdf3c0b6ce76bf4a97d11dfaeaf61d8d633",
+      "sha256": "92f98567fd78b432bc00cf26cc873d7a47b2e9812d2aa2a95b82d8763ba8af88",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 2,
+        "Body Rewrite.jq": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "有道翻译官去广告",
+      "filename": "YoudaoTrans_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/YoudaoTrans_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/YoudaoTrans_remove_ads.lpx",
+      "source_sha256": "7bf1db1f2236459faca36b3c56dfa2b04d998f635db0278306fdfd631290c298",
+      "sha256": "6429314515cda4f9a0839f107d6ba0c4d3179cd13c66e5794eaedfdae68ee70c",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 7
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "有道云笔记去广告",
+      "filename": "YoudaoNote_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/YoudaoNote_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/YoudaoNote_remove_ads.lpx",
+      "source_sha256": "4e6923eab904b1698cbb3f96c0fb206d89c81267f952a55eaf5a215d746c2e6c",
+      "sha256": "551037b37e49f495298faf0dbd3cd7a3550b2a3c786148b8e80f2f44c7e994e5",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "阅友去广告",
+      "filename": "Yueyou_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Yueyou_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Yueyou_remove_ads.lpx",
+      "source_sha256": "e4f19502e844825ecf4307fa141b29f7e475f15e1e63bd4674cb5a2680f90e7c",
+      "sha256": "e355bb6c74b7be80de0fe0687e230dba3844c0755a760552a60a2abd0e373891",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 1,
+        "Body Rewrite.jq": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "云鲸智能去广告",
+      "filename": "NarwelRobots_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/NarwelRobots_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/NarwelRobots_remove_ads.lpx",
+      "source_sha256": "ffd92f697966d200e921b0397a88a9b8215db16994668319b2455912783afaf2",
+      "sha256": "0d5ebc65986590b96937f0f6ce7fb8bf38959b35b93446e0a1541223225797c1",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "掌上无畏契约去广告",
+      "filename": "ValorantBible_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/ValorantBible_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/ValorantBible_remove_ads.lpx",
+      "source_sha256": "8af219d7bcd7f0994caa5daa0e962aba93b3830dd01536667a1b01064def34a3",
+      "sha256": "9822aafbec34de6174220c1338a1e9f99f5da838baf085fc048d56d59acc7c40",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "直播吧去广告",
+      "filename": "Zhibo8_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Zhibo8_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Zhibo8_remove_ads.lpx",
+      "source_sha256": "c684b14cc6c499dbeaa8bb40bfadc34b16004afee49351b601b803524a99aa02",
+      "sha256": "50fd673642194a32796385f85fb21952f8d6eeb4cc7aef24efaf9196ed634ffb",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Body Rewrite.jq": 8,
+        "Map Local": 6
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "智慧苏州去广告",
+      "filename": "SuZhouCitizenCard_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/SuZhouCitizenCard_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/SuZhouCitizenCard_remove_ads.lpx",
+      "source_sha256": "53a4a699f289d523e4011888de199ca6e7b40357b386045d7b25d5cf16fcbe5c",
+      "sha256": "0eaf0f1eae5b11de69d701d8894c698527badd45d670c7d245469624f451ea0b",
+      "authors": "xream[https://github.com/xream]",
+      "actions": {
+        "Map Local": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "智联招聘去广告",
+      "filename": "ZhiLianZhaoPin_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/ZhiLianZhaoPin_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/ZhiLianZhaoPin_remove_ads.lpx",
+      "source_sha256": "43bb103a95974b72feabae87e8906be7c6615975bedef61f2413a3367c7ddca5",
+      "sha256": "045bb6b1db97fac0a2a704ef4c78e3240be845b4f219e0e2bf0682dfaef5dfb3",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Rule": 1,
+        "Body Rewrite.jq": 1,
+        "Map Local": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "中国天气去广告",
+      "filename": "WeatherChina_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/WeatherChina_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/WeatherChina_remove_ads.lpx",
+      "source_sha256": "a0b7fdaf2ef0f297f62fb96a4420235279bca4fdd61101f26cf8b9836eac814b",
+      "sha256": "579ee78d856ab913b6f23df60845d522eb04d6b95ee3e0cfa5f2131abb0dc1a0",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "纵横小说去广告",
+      "filename": "ZongHeng_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/ZongHeng_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/ZongHeng_remove_ads.lpx",
+      "source_sha256": "ed7858c735c3de799cb0089f82634584e26edb5656504703af5c498f71c45b94",
+      "sha256": "089b038dc2d074431518ac58ed5d16c2b110d6543c18aaed560de04e78813c1a",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 2
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "最美壁纸去广告",
+      "filename": "iWallBiZhi_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/iWallBiZhi_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/iWallBiZhi_remove_ads.lpx",
+      "source_sha256": "6345a00cb31ab6c56e42c55f4063c5dbe51a9ade0e911ea8953bde600d64f364",
+      "sha256": "88fdb6823430f147bcf4392bf578464942fdb847520782d65353e5f6b2f018f7",
+      "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+      "actions": {
+        "Map Local": 2,
+        "http-response": 3
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。"
+      ]
+    },
+    {
+      "name": "腾讯视频去广告",
+      "filename": "Tencent_Video_remove_ads.sgmodule",
+      "path": "Surge/module/Kelee/Tencent_Video_remove_ads.sgmodule",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Tencent_Video_remove_ads.lpx",
+      "source_sha256": "f3fe4f3012d77c56241bf1a076deeeadfb32193d8b3818b0861675641384c60c",
+      "sha256": "3be7f85b3fedd4d0899d71d3d2c74f45f7f533d3ba5e4fbdf6271f519d599565",
+      "authors": "RuCu6[https://github.com/RuCu6]",
+      "actions": {
+        "Rule": 16,
+        "Map Local": 1,
+        "http-request": 1
+      },
+      "bundle_script_enabled": true,
+      "missing_dependencies": {},
+      "comparison_reason": "fmz 列表已列出，但对应 Surge 文件只有元数据/MITM，无实际动作",
+      "review_notes": [
+        "复用逐项手写且已复核的原生 Surge 配置；重新核对当前原版和依赖精确字节。",
+        "原版已停止维护，原描述提示客户端高于 8.9.40 可能失效；缺失 replace-body.js 使用此前手写复核的请求体替换实现。"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "path": "Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js",
+      "sha256": "a135cb358571270371159b1c1539e555f51c7e53d6531afc6b3687796df0b0d4",
+      "source_url": "https://kelee.one/Resource/JavaScript/BaiduSearch/BaiduSearchHomePage_remove_ads.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/Bixin/common_tab.js",
+      "sha256": "779cce9e7ca26323f8965b07412056e3f6d825b7a0e99e5d5707ebf24d6b898c",
+      "source_url": "https://kelee.one/Resource/JavaScript/Bixin/common_tab.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/Bixin/my_page.js",
+      "sha256": "06eb371ea79bae01f6f0bcced91af0cd534312e5266586f17aa94bd69958f7ee",
+      "source_url": "https://kelee.one/Resource/JavaScript/Bixin/my_page.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/DjDuoDuo/DjDuoDuo_remove_ads.js",
+      "sha256": "6357b9dd30b48b64e24d206763e8276ac28b4e2a88c0435116eda42fdecda9e6",
+      "source_url": "https://kelee.one/Resource/JavaScript/DjDuoDuo/DjDuoDuo_remove_ads.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/DubbingShow/DubbingShow_remove_ads.js",
+      "sha256": "00b312e3ed559cfcda15cb43e637c94d6293ad3cb34b2c5d23d9bd330668fe52",
+      "source_url": "https://kelee.one/Resource/JavaScript/DubbingShow/DubbingShow_remove_ads.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/MKZ/MKZ_remove_ads.js",
+      "sha256": "b3d570b03982fd706501218fdd9e6371f5bf0dd4d9e764e26a5accc4a7b6820b",
+      "source_url": "https://kelee.one/Resource/JavaScript/MKZ/MKZ_remove_ads.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js",
+      "sha256": "f464b6e3853433ae5fb5667c9b17b0333cffdc0c24014b7607fde6d39823f16d",
+      "source_url": "https://kelee.one/Resource/JavaScript/MotorFans/MotorFans_remove_ads.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/RiskBird/RiskBird_remove_ads.js",
+      "sha256": "56a1c10a6422423845a8486fbc5deff60f37e6aa9e40fc439317e7e2c57fc9e2",
+      "source_url": "https://kelee.one/Resource/JavaScript/RiskBird/RiskBird_remove_ads.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/ShoujiDesk/base_init.js",
+      "sha256": "d588c5dae21ce09cb39617aa7abbd01cf976ec148083b45fc261fccccd67d68d",
+      "source_url": "https://kelee.one/Resource/JavaScript/ShoujiDesk/base_init.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+      "sha256": "af15371ec2946805b9f3f2af8a13f807434a05166e4f76178a8e28fdf645b720",
+      "source_url": "https://kelee.one/Resource/JavaScript/Uki/Uki_remove_ads.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/FamilyMart/FamilyMart.js",
+      "sha256": "e25457f43eacfbf27ca8229445e69f60f7562ece723b5ebaf07969c0ebf75e1c",
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/FamilyMart/FamilyMart.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/M_Stand/M_Stand.js",
+      "sha256": "5d6f163842ce53eb034fa01c244f6482fedd2f5d56b7c206c25d6f11c21e805f",
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/M_Stand/M_Stand.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/T3/T3.js",
+      "sha256": "ab1ca9af4dd9b294f585335856de51d6df2b61c31d9a3d1982a5b091355da25a",
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/T3/T3.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/alittle-tea/alittle-tea.js",
+      "sha256": "c765215071712fa0c0c0ef3719263fff81d4a1ce0189f8bc0861aa721657a44c",
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/alittle-tea/alittle-tea.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js",
+      "sha256": "4b7f857caa810648f7be584e916ceffb9c12dd3b2ce7766ed5bd605646e2a4d1",
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/coco/coco.js",
+      "sha256": "dc9a1915eed8f6f760a8f3a03f5e2f5a0f346373693ae4ac2e0c5dbd90fd46b3",
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/ems/ems.js",
+      "sha256": "2208e4945d8781e5bc9d20a436fc141629a7e4dc9fd516f9fe917196010cf5bc",
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ems/ems.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/kff/kff.js",
+      "sha256": "8453c73e9412fd99396afbfea14e7d26c46936da1650603b6f2433cda18cbf2c",
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/kff/kff.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/lawson/lawson.js",
+      "sha256": "3d57d6ae9070934eef3513e2a4b640fad9dd5076fbbc6c471994bd3d790068f1",
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/lawson/lawson.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/ming/ming.js",
+      "sha256": "bd0f4e67ae73fdd083b10c1e802912d8c9ade1b2b14a0dead865d7af0b90d991",
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ming/ming.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/qingju/qingju.js",
+      "sha256": "8664e7a22b21aaa8546ec167e3a43fee7ebd2c00552a126212720b09a4819bf8",
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/qingju/qingju.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/WexinMiniPrograms/xiaotucc/xiaotucc.js",
+      "sha256": "a10131a49267ce2cdd17c7c4d783eb64c8aa943b83ee4dcadb846ccd2c4bbb1b",
+      "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/xiaotucc/xiaotucc.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/XiaojukejiCharge/XiaojukejiCharge_remove_ads.js",
+      "sha256": "807a08b4daff3797c09f17d1a844cdc75bf3f46aaea58e3f0b6e41ad57161f7a",
+      "source_url": "https://kelee.one/Resource/JavaScript/XiaojukejiCharge/XiaojukejiCharge_remove_ads.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/iWallBiZhi/core_initialize.js",
+      "sha256": "85bb24cccb37499fe8c4e334a61b3c8b5a6485bb167a33141879e46ee0a3f531",
+      "source_url": "https://kelee.one/Resource/JavaScript/iWallBiZhi/core_initialize.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/iWallBiZhi/landing.js",
+      "sha256": "66aec750fd71c6de8100e26789080efc736c3592f982cfb6703cdb13e96af1db",
+      "source_url": "https://kelee.one/Resource/JavaScript/iWallBiZhi/landing.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/iWallBiZhi/landing_initialize.js",
+      "sha256": "e799e430ef3f751c686a4cf3df5d8dc2ab7c7b81170f3feb08e6ee45452762e9",
+      "source_url": "https://kelee.one/Resource/JavaScript/iWallBiZhi/landing_initialize.js",
+      "provenance": "upstream"
+    },
+    {
+      "path": "Surge/Script/Kelee/LZMH/remove-config.js",
+      "sha256": "df7e71aec8d9f42d028bcd3ba043402f7414ca7d473d22684fec73a01da514d7",
+      "source_url": null,
+      "provenance": "authored-native"
+    },
+    {
+      "path": "Surge/Script/Kelee/CommonScript/replace-body.js",
+      "sha256": "9975da9806a82ec83bebf346072d0d721ba7bef290c809a8345a05e22b7a4cfa",
+      "source_url": "https://kelee.one/Resource/JavaScript/CommonScript/replace-body.js",
+      "provenance": "authored-compatibility"
+    },
+    {
+      "path": "Surge/Resource/Kelee/DREAME/d6996fee95380affdf740ee44a85fbe9___UNI__EDB922E.zip",
+      "sha256": "3562b1cc7cdb67f225e1d73e032741a41ace4559b3dc5738a205af5b5d4bf5c2",
+      "source_url": "https://kelee.one/Resource/Zip/DREAME/d6996fee95380affdf740ee44a85fbe9___UNI__EDB922E.zip",
+      "provenance": "upstream"
+    }
+  ]
+}

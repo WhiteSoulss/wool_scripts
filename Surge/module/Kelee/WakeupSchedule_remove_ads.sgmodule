@@ -1,0 +1,24 @@
+#!name=WakeUp课程表去广告
+#!desc=移除横幅广告、弹窗广告，精简我的页面。
+#!openUrl=https://apps.apple.com/app/id1553402284
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WakeupSchedule.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/WakeupSchedule_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: 2e1038260331e833b9a98bc803eb2184a4ebc7f18496a62c63ecfa65e8c94356
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/api\.wakeup\.fun\/wakeup\/app\/bannerconf$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/api\.wakeup\.fun\/wakeup\/user\/mine$ 'del(.["data"]["bannerItems"])'
+
+[MITM]
+hostname = %APPEND% api.wakeup.fun

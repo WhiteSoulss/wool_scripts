@@ -1,0 +1,24 @@
+#!name=库街区去广告
+#!desc=移除开屏广告、弹窗广告、搜索页面的热搜及话题热榜。
+#!openUrl=https://apps.apple.com/app/id1659339393
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuroBBS.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/KuroBBS_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: 80147db3d0fca33e1b44de42f0a2271ccd8ba65834b6d5fcb33a55d1104d453d
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/api\.kurobbs\.com\/config\/getOpenScreen$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.kurobbs\.com\/config\/index\/windows$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.kurobbs\.com\/config\/search\/getSearchConfig\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.kurobbs\.com\/forum\/app\/topic\/hotlist\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% api.kurobbs.com

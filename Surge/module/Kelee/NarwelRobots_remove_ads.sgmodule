@@ -1,0 +1,23 @@
+#!name=云鲸智能去广告
+#!desc=移除开屏广告、横幅推广，禁用商城。
+#!openUrl=https://apps.apple.com/app/id1462004352
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/NarwelRobots.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/NarwelRobots_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: ffd92f697966d200e921b0397a88a9b8215db16994668319b2455912783afaf2
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/cn-app\.narwaltech\.com\/operate\/appPosition\/listSplash\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/cn-app\.narwaltech\.com\/operate\/cactivity\/listByResourceIds\?resourceIds=(user_center_banner|index_banner) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/store\.narwal\.com\/mall\/customPage\/getByPageKeyword\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% cn-app.narwaltech.com, store.narwal.com

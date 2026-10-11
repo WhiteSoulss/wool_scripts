@@ -1,0 +1,22 @@
+#!name=Pinterest去广告
+#!desc=移除瀑布流、更多探索内容中的广告
+#!openUrl=https://apps.apple.com/app/id429047995
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Pinterest.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: 905ce81e2a26cb5421219b8f9009502d7c014291b3b3a5532e13dd6ad3a01d95
+
+# Authored native Surge configuration.
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/api\.pinterest\.com\/v\d\/feeds\/home\/\? '.data |= map(select(.is_promoted == false or .is_promoted == "false"))'
+http-response-jq (?i)^https:\/\/api\.pinterest\.com\/v\d\/pins\/\d+\/related\/modules\/\? '.data |= map(select(.is_promoted == false or .is_promoted == "false"))'
+
+[MITM]
+hostname = %APPEND% api.pinterest.com

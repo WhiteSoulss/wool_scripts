@@ -1,0 +1,21 @@
+#!name=美食杰去广告
+#!desc=移除开屏广告和信息流广告。
+#!openUrl=https://apps.apple.com/app/id399423833
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MeiShiJie.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/MeiShiJie_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: 107899f01c39ceeff2576971e67fc4da188035c1ec95d65bfd675e0e0b4d106c
+
+# Authored native Surge configuration.
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/newapi\.meishi\.cc\/indexnew\/home_feeds 'if .data.items then .data.items |= map(select(.type | . != "101" and . != "12")) else . end'
+
+[MITM]
+hostname = %APPEND% newapi.meishi.cc

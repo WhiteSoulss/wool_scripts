@@ -1,0 +1,27 @@
+#!name=ReelShort去广告
+#!desc=移除开屏广告、为你推荐及各类弹窗，移除搜索栏填充词。
+#!openUrl=https://apps.apple.com/app/id1636235979
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ReelShort.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/ReelShort_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: eecd41fd7cce58b1bb5be9d6fac310f256d2759f9138a5681dc42982097514f7
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/(v-api\.crazymaplestudios\.com|d1k8g7qaebqd28\.cloudfront\.net)\/api\/video\/app\/getSplashScreenConfig$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/(v-api\.crazymaplestudios\.com|d1k8g7qaebqd28\.cloudfront\.net)\/api\/video\/hall\/landingPage$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/(v-api\.crazymaplestudios\.com|d1k8g7qaebqd28\.cloudfront\.net)\/api\/video\/book\/getPayModeV2$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/(v-api\.crazymaplestudios\.com|d1k8g7qaebqd28\.cloudfront\.net)\/api\/video\/book\/getBookDetailV2$ 'del(.["data"]["ad_vip"])'
+http-response-jq (?i)^https:\/\/(v-api\.crazymaplestudios\.com|d1k8g7qaebqd28\.cloudfront\.net)\/api\/video\/hall\/infoV3$ 'del(.["data"]["search_keyword_list"])'
+
+[MITM]
+hostname = %APPEND% v-api.crazymaplestudios.com, d1k8g7qaebqd28.cloudfront.net

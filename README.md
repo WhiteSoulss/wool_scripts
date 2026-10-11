@@ -1,3 +1,11 @@
+# 自用 Surge 合集
+
+[安装总模块](https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/module/blockAds.module) · [可莉补充与独立模块说明](Surge/KELEE-SUPPLEMENT.md)
+
+总模块合入 fmz200 原生规则和逐项手写复核的可莉补充。原版作者署名、独立模块、资源与复核记录均保留。
+
+---
+
 # wool_scripts
 
 ## 致敬开源精神 净化网络环境

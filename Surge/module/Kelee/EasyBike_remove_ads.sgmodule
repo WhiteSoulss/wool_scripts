@@ -1,0 +1,25 @@
+#!name=哈罗去广告
+#!desc=移除开屏广告及歌单广告
+#!openUrl=https://apps.apple.com/app/id1039764887
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/EasyBike.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/EasyBike_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# WARNING: original script missing; original reference retained as requested. Script functionality is unavailable until the resource is restored.
+
+# Current Loon SHA256: be91c7e3c5e99586fb76b63b1cfe924f7c83e98af730fe65a6c521f8f901fddf
+
+# Authored native Surge configuration.
+
+# 原版配置已转换；源脚本缺失，保留原引用，不提供替代或占位脚本。
+
+[Script]
+EasyBike_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/mobileconfig-gateway\.hellobike\.com\/api$, script-path=https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js, requires-body=true, max-size=-1
+
+[MITM]
+hostname = %APPEND% mobileconfig-gateway.hellobike.com

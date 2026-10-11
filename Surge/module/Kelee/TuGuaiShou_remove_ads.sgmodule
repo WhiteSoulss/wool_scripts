@@ -1,0 +1,23 @@
+#!name=图怪兽去广告
+#!desc=移除开屏广告、弹窗广告、各页面横幅推广。
+#!openUrl=https://apps.apple.com/app/id1492397619
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TuGuaiShou.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/TuGuaiShou_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: ca62d427bed9d50407401e5e8388b7cf0cfa3b2cd35d45b36aac2878c223fad2
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/api\.818ps\.com\/v4\/advertisement\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.818ps\.com\/v4\/popup\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.818ps\.com\/v4\/festival\/newYear\/pop\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% api.818ps.com

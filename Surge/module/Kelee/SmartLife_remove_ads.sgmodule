@@ -1,0 +1,26 @@
+#!name=慧生活798去广告
+#!desc=移除开屏广告、横幅广告，精简底栏。
+#!openUrl=https://apps.apple.com/app/id1490809012
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SmartLife.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/SmartLife_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: 469067d56989c72b4790584cab5857bf45bde28002326b5de7f74e16049a58d0
+
+# Authored native Surge configuration.
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/i\.ilife798\.com\/api\/v\d\/acc\/login$ 'del(.["data"]["ar"],.["data"]["showAd"])'
+
+[Map Local]
+(?i)^https:\/\/i\.ilife798\.com\/api\/v\d\/acc\/score\/mission-lst$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/i\.ilife798\.com\/api\/v\d\/ep\/lst-simple\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/i\.ilife798\.com\/api\/v\d\/ui\/app\/master$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% i.ilife798.com

@@ -1,0 +1,32 @@
+#!name=Uki去广告
+#!desc=移除开屏广告、应用内悬浮窗，各类横幅、信息流广告、搜索填充词、我的页面广告。
+#!openUrl=https://apps.apple.com/app/id1298912284
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Uki.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/Uki_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: b229b01725adee1ee844416d9a8ba0f10f086185c79dac130a37c6e1fd3fa0dc
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/startInfo$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/indexBanner$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/getPopup data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/allPopUpConfig$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/advConf$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.chenlongtech\.cn\/v\d\/user\/checkQTSheInsurance$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+Uki_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/api\.chenlongtech\.cn\/v\d\/lover\/productList, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=-1
+Uki_remove_ads_2 = type=http-response, pattern=(?i)^https:\/\/api\.chenlongtech\.cn\/v\d\/friends\/closeFriend\/home, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=-1
+Uki_remove_ads_3 = type=http-response, pattern=(?i)^https:\/\/api\.chenlongtech\.cn\/v\d\/party\/config$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=-1
+Uki_remove_ads_4 = type=http-response, pattern=(?i)^https:\/\/api\.chenlongtech\.cn\/v1\/post\/fetchSearchRecommend$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=-1
+
+[MITM]
+hostname = %APPEND% api.chenlongtech.cn

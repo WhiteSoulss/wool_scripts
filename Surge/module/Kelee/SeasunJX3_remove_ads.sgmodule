@@ -1,0 +1,24 @@
+#!name=剑网三无界去广告
+#!desc=移除热门推送活动，并解决无法在Loon运行时更新和登录的问题。
+#!openUrl=https://apps.apple.com/app/id1002355194
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/SeasunJX3.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/SeasunJX3_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: efff78d17644ad770f6bc9f7c1e115cccad44c10471934743911bf6189d05cf3
+
+# Authored native Surge configuration.
+
+[General]
+always-real-ip = %APPEND% *-update.xoyocdn.com, xg-flow.xoyo.com
+
+[Map Local]
+(?i)^https:\/\/jx3comm\.xoyocdn\.com\/jx3gc\/zhcn\/login_ad\/WebCareer\/WebCareerTab\.txt data-type=text data="" status-code=404 header="Content-Type:text/plain"
+
+[MITM]
+hostname = %APPEND% jx3comm.xoyocdn.com

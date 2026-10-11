@@ -1,0 +1,22 @@
+#!name=每日赛车去广告
+#!desc=移除开屏广告、信息流广告。
+#!openUrl=https://apps.apple.com/app/id1590997618
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MeiRiSaiChe.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/MeiRiSaiChe_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: 712c7adec68d9d749622f1ea98e79b2b8e5a61efc0cd1303525a2481365f0a31
+
+# Authored native Surge configuration.
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/api\.romielf\.com\/index\/indexv\d\? '.["data"]["advertisement"] = "[]" | .["data"]["listadvertising"] = "[]"'
+http-response-jq (?i)^https:\/\/api\.romielf\.com\/index\/indexv\d\? '.data.list |= map(select(.type == 1))'
+
+[MITM]
+hostname = %APPEND% api.romielf.com

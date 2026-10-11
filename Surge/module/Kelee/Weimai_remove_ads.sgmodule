@@ -1,0 +1,22 @@
+#!name=微脉圈去广告
+#!desc=移除开屏广告、聊天页横幅提示及发现页面的横幅广告。
+#!openUrl=https://apps.apple.com/app/id1427096901
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weimai.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/Weimai_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: 9884eff95f618871e69e9609bcaa1d17cd8db0aec06a8e7e5356dd6bc93b4f72
+
+# Authored native Surge configuration.
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/confssl\d?\.iweimai\.cn\/wm_ios_update\.json\? '.["isShowCJAd"] = 0'
+http-response-jq (?i)^https:\/\/confssl\d?\.iweimai\.cn\/wm_ios_update\.json\? 'del(.["launchAd"],.["adBanners"],.["ad"])'
+
+[MITM]
+hostname = %APPEND% confssl*.iweimai.cn

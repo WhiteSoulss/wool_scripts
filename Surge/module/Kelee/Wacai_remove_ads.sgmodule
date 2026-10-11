@@ -1,0 +1,24 @@
+#!name=挖财记账去广告
+#!desc=移除开屏广告、横幅广告，顶部推广、活动配置。
+#!openUrl=https://apps.apple.com/app/id1544045905
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Wacai.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/Wacai_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: 99b8087c4e424e09b40e67189eb640f48e6d49ef2b4f15bf4263a0c22e0462a1
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/jz\.wacaijizhang\.com\/sensor\/config\/iOS\.conf\? data-type=text data="{\"v\":\"v2\",\"configs\":{\"disableSDK\":true,\"disableDebugMode\":true,\"supportTransportEncrypt\":false}}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/jz\.wacaijizhang\.com\/api\/banners\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/jz\.wacaijizhang\.com\/api\/resource\/universal\/fetch$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/jz\.wacaijizhang\.com\/activity\/ data-type=text data="" status-code=404 header="Content-Type:text/plain"
+
+[MITM]
+hostname = %APPEND% jz.wacaijizhang.com

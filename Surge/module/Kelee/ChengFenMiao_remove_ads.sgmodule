@@ -1,0 +1,27 @@
+#!name=成分喵去广告
+#!desc=移除首页推广活动、广告组件请求、移除被查商品购买链接、搜索发现。
+#!openUrl=https://apps.apple.com/app/id6444000785
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ChengFenMiao.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/ChengFenMiao_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: f62b080ef7dfec1ae75b3129adb09c96edae8a820b018e7e0f42af7e6379a462
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/app\.chengfenmiao\.com\/Listing\/LiveHots\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/app\.chengfenmiao\.com\/helper\/VersionCheck\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/app\.chengfenmiao\.com\/item\/closet\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/app\.chengfenmiao\.com\/Helper\/HotWords\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/app\.chengfenmiao\.com\/helper\/setting\? 'del(.["detail_buy_sites"],.["bottom_sites"])'
+
+[MITM]
+hostname = %APPEND% app.chengfenmiao.com

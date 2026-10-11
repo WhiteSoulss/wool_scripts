@@ -1,0 +1,21 @@
+#!name=磁力宅播放器去广告
+#!desc=移除开屏广告、弹窗和文件列表广告。
+#!openUrl=https://apps.apple.com/app/id6497060674
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XFuse.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/XFuse_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: eba548bab12c6ccd7dfdc34c951cc9a96a3bdd52fcea295038f694cf20a67a34
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/cili\.xfuse\.fun\/s\/ data-type=text data="" status-code=404 header="Content-Type:text/plain"
+
+[MITM]
+hostname = %APPEND% cili.xfuse.fun, i.micecube.com, img.mofyi.com

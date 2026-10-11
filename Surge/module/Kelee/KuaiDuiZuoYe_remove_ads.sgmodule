@@ -1,0 +1,31 @@
+#!name=快对去广告
+#!desc=移除开屏广告、横幅推广，精简我的页面。
+#!openUrl=https://apps.apple.com/app/id1330927814
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/KuaiDuiZuoYe.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/KuaiDuiZuoYe_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: a7f19bebedf966e1a6189f09d46e813b7aac00ab8d77ccba0501b4b3f2790472
+
+# Authored native Surge configuration.
+
+[Rule]
+DOMAIN,adx.zuoyebang.com,REJECT
+
+[Map Local]
+(?i)^https:\/\/www\.kuaiduizuoye\.com\/init\/ad\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/www\.kuaiduizuoye\.com\/activity\/init\/checkappconfig$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/www\.kuaiduizuoye\.com\/kdapi\/conf\/appbannersv3$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/www\.kuaiduizuoye\.com\/kdapi\/conf\/initbanner$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/apivip\.kuaiduizuoye\.com\/viponline\/scancode\/mycard$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/www\.kuaiduizuoye\.com\/codesearch\/aid\/home$ 'del(.["data"]["homeBannerList"])'
+
+[MITM]
+hostname = %APPEND% www.kuaiduizuoye.com, apivip.kuaiduizuoye.com

@@ -1,0 +1,27 @@
+#!name=小桔充电去广告
+#!desc=移除横幅广告、弹窗广告，精简我的页面。
+#!openUrl=https://apps.apple.com/app/id1670782986
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XiaojukejiCharge.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/XiaojukejiCharge_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: b23b72332ba1705b1149ba725185a8e2f4f3ef0f922dc34b184e76cad08601d1
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/energy\.xiaojukeji\.com\/energy\/hummer\/api\/resource\/display($|\?) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/energy\.xiaojukeji\.com\/lego\/api\/orderSprint\/stair\/info($|\?) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/energy\.xiaojukeji\.com\/station-api\/search\/preWords$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/am\.didistatic\.com\/static\/am\/cf-terminal\/epower\/epower-thanos-app\/\d+\.\d+\.\d+\/pages\/people\/index\.js$ data-type=file data="https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/XiaojukejiCharge/XiaojukejiCharge_remove_ads.js" status-code=200 header="Content-Type:text/plain"
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/energy\.xiaojukeji\.com\/am\/marketing\/api\/member\/facade\/charge\/personal\/center\? 'del(.["data"])'
+
+[MITM]
+hostname = %APPEND% energy.xiaojukeji.com, am.didistatic.com

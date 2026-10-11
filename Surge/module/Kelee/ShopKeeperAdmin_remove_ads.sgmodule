@@ -1,0 +1,21 @@
+#!name=小店掌柜去广告
+#!desc=移除开屏广告、活动推广和页面跳转。
+#!openUrl=https://apps.apple.com/app/id1579610611
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/ShopKeeperAdmin.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/ShopKeeperAdmin_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: ff54a8ceba5827061b9b9bccf7639da20219e97a7b8ab6de31a21eb91d54a892
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/mch\.juhesaas\.com\/api\/advertisement\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% mch.juhesaas.com

@@ -1,0 +1,33 @@
+#!name=摩托范去广告
+#!desc=移除开屏广告、弹窗广告、横幅广告、文末广告及相关文章推荐、广告下发，移除我的页面商品推荐，精简搜索页面。
+#!openUrl=https://apps.apple.com/app/id1234889389
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/MotorFans.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/MotorFans_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: 28a8ac76c486fe4ce4ee9491efe4a7278307736f1af39feeb6c6ef00cd0dcc85
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/api\.58moto\.com\/advert\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.58moto\.com\/mall\/goods\/self\/list\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.58moto\.com\/mall\/goods\/self\/homeList\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.58moto\.com\/forum\/public\/businessEssayController\.do$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.58moto\.com\/forum\/public\/businessEssayController\.do\?action=22025 data-type=text data="{\"code\":0,\"msg\":\"success\"}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.58moto\.com\/forum\/public\/businessEssayController\.do\?action=22038 data-type=text data="{\"code\":0,\"msg\":\"success\"}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.58moto\.com\/forum\/public\/labelController\.do\?action=20112 data-type=text data="{\"code\":0,\"msg\":\"success\"}" status-code=200 header="Content-Type:application/json"
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/api\.58moto\.com\/forum\/public\/businessEssayController\.do\?action=22004 'del(.["data"]["link"])'
+
+[Script]
+MotorFans_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/api\.58moto\.com\/expands\/config\/appWholeConfig\?key=app_whole_config$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js, requires-body=true, max-size=-1
+
+[MITM]
+hostname = %APPEND% api.58moto.com

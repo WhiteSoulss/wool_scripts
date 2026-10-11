@@ -1,0 +1,27 @@
+#!name=配音秀去广告
+#!desc=移除开屏广告、弹窗、横幅、各类关注推荐。
+#!openUrl=https://apps.apple.com/app/id746925035
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DubbingShow.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/DubbingShow_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: 1ab7c72165b830314be614e7493e171afac36d6dd9f1b99dcfebdd1a00de468a
+
+# Authored native Surge configuration.
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/iosapi\.peiyinxiu\.com\/Api\/live\/LiveList 'del(.["data"]["banners"])'
+http-response-jq (?i)^https:\/\/iosapi\.peiyinxiu\.com\/api\/live\/FollowList 'del(.["obj"]["data"])'
+http-response-jq (?i)^https:\/\/iosapi\.peiyinxiu\.com\/Api\/Friend\/GetRecommendUsers 'del(.["obj"]["data"])'
+http-response-jq (?i)^https:\/\/iosapi\.peiyinxiu\.com\/api\/Union\/HomeData 'del(.["obj"]["data"])'
+
+[Script]
+DubbingShow_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/iosapi\.peiyinxiu\.com\/Api\/Film\/GetConfigValue, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DubbingShow/DubbingShow_remove_ads.js, requires-body=true, max-size=-1
+
+[MITM]
+hostname = %APPEND% iosapi.peiyinxiu.com

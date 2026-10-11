@@ -1,0 +1,26 @@
+#!name=沃尔玛去广告
+#!desc=移除操作引导、商品详情页用户调研、搜索填充词和搜索发现，精简我的页面。
+#!openUrl=https://apps.apple.com/app/id6737541723
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Walmart.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/Walmart_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: 2eb276cce759d19dc43eb159a635f101ad1243e6cea7a885128918dfeb7d6ae9
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/api-hyper\.walmartmobile\.cn\/search\/ad\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api-hyper\.walmartmobile\.cn\/cms-web\/frontapi\/shadedWords\/list\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api-hyper\.walmartmobile\.cn\/search\/frontapi\/discovery-words\/list$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/api-hyper\.walmartmobile\.cn\/cms-web\/frontapi\/common\/page\/get\?.*&type=26$ '.data |= (.moduleList | map(select(.templateCode == "nav-bar-title" or .templateCode == "member-info" or .templateCode == "distribution-center" or .templateCode == "wallet" or .templateCode == "swiper" or .templateCode == "my-order")))'
+
+[MITM]
+hostname = %APPEND% api-hyper.walmartmobile.cn

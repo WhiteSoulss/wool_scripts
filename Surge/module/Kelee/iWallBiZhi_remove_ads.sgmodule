@@ -1,0 +1,27 @@
+#!name=最美壁纸去广告
+#!desc=移除悬浮广告、横幅广告、轮播图广告，精简我的页面。
+#!openUrl=https://apps.apple.com/app/id1003706884
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/iWallBiZhi.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/iWallBiZhi_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: 6345a00cb31ab6c56e42c55f4063c5dbe51a9ade0e911ea8953bde600d64f364
+
+# Authored native Surge configuration.
+
+[Map Local]
+(?i)^https:\/\/api\.fzxhmy\.com\/seek\/trendingword\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https:\/\/api\.fzxhmy\.com\/tone\/trending\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+iWallBiZhi_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/api\.fzxhmy\.com\/core\/initialize\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/core_initialize.js, requires-body=true, max-size=-1, engine=webview
+iWallBiZhi_remove_ads_2 = type=http-response, pattern=(?i)^https:\/\/api\.fzxhmy\.com\/landing\/initialize\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing_initialize.js, requires-body=true, max-size=-1, engine=webview
+iWallBiZhi_remove_ads_3 = type=http-response, pattern=(?i)^https:\/\/api\.fzxhmy\.com\/avatar\/landing\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing.js, requires-body=true, max-size=-1, engine=webview
+
+[MITM]
+hostname = %APPEND% api.fzxhmy.com

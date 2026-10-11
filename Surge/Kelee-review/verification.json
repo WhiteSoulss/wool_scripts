@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "checks": {
+    "native_patterns_compiled": 576,
+    "native_jq_actions_retained": 133,
+    "json_semantic_fixtures": 67,
+    "inline_mock_checks": 446,
+    "modules_verified": 106,
+    "merged_active_rows": 5359,
+    "merged_unique_jq_expressions_compiled": 189,
+    "own_runtime_urls_resolved": 30,
+    "scripts_compiled_without_execution": 28,
+    "native_adapter_cases": 4
+  },
+  "script_hub_used": false,
+  "surge_client_runtime_tested": false,
+  "scope": "VPS 静态编译、实际原版/依赖哈希、原生 JSON 行为样例与合并冲突门禁。"
+}

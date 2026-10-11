@@ -1,0 +1,22 @@
+#!name=Hong Kong Toolbar去广告
+#!desc=移除开屏互动广告、直播前贴片广告及视频广告
+#!openUrl=https://apps.apple.com/app/id735754930
+#!author=C.Hiang
+#!category=去广告
+#!homepage=https://hub.kelee.one
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/HongKongToolbar.png
+#!date=2026-10-02 13:57:49
+
+# Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/HongKongToolbar_remove_ads.lpx
+# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+
+# Current Loon SHA256: ef3e0db9a043aa595fa158e15db553929c76d3b4883d5a2720248a7c97f59dd7
+
+# Authored native Surge configuration.
+
+[Rule]
+URL-REGEX,"^https:\/\/a\.881903\.com\/live\/preroll\/.*\/.*",REJECT-DROP
+URL-REGEX,"^https:\/\/a\.881903\.com\/v\d\/app\/game\/.*",REJECT-DROP
+
+[MITM]
+hostname = %APPEND% a.881903.com
