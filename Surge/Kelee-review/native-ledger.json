@@ -849,8 +849,12 @@
           "arguments": [
             ".data |= map(select(.is_promoted == false or .is_promoted == \"false\"))"
           ],
-          "native": "Body Rewrite.jq",
-          "jq": ".data |= map(select(.is_promoted == false or .is_promoted == \"false\"))"
+          "native": "Script",
+          "jq": ".data |= map(select(.is_promoted == false or .is_promoted == \"false\"))",
+          "script_key": "Pinterest_remove_ads",
+          "script_path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Pinterest/remove-ads.js",
+          "semantic_fixture": "Surge/maintenance/test_pinterest.js",
+          "reviewed_behavior": "Preserve original matching scope and filtering of explicit boolean/string promoted flags; only remove true or \"true\". Preserve unidentified entries, error bodies and non-array data unchanged."
         },
         {
           "source": "response if ${url} ~= /^https:\\/\\/api\\.pinterest\\.com\\/v\\d\\/pins\\/\\d+\\/related\\/modules\\/\\?/i then response.json.jq(\".data |= map(select(.is_promoted == false or .is_promoted == \\\"false\\\"))\")",
@@ -859,21 +863,50 @@
           "arguments": [
             ".data |= map(select(.is_promoted == false or .is_promoted == \"false\"))"
           ],
-          "native": "Body Rewrite.jq",
-          "jq": ".data |= map(select(.is_promoted == false or .is_promoted == \"false\"))"
+          "native": "Script",
+          "jq": ".data |= map(select(.is_promoted == false or .is_promoted == \"false\"))",
+          "script_key": "Pinterest_remove_ads",
+          "script_path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Pinterest/remove-ads.js",
+          "semantic_fixture": "Surge/maintenance/test_pinterest.js",
+          "reviewed_behavior": "Preserve original matching scope and filtering of explicit boolean/string promoted flags; only remove true or \"true\". Preserve unidentified entries, error bodies and non-array data unchanged."
         }
       ],
       "upstream_dependencies": [],
       "parameters": {},
-      "generated_scripts": 0,
+      "generated_scripts": 1,
       "converter_kind": "authored-native",
       "source_filename": "Pinterest_remove_ads.lpx",
       "filename": "Pinterest_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx",
       "source_sha256": "905ce81e2a26cb5421219b8f9009502d7c014291b3b3a5532e13dd6ad3a01d95",
-      "template_sha256": "59defa95747d54e6a041a2893d1e13ecd8dcd9220b5edbf5e3862e443d26bbee",
+      "template_sha256": "5a4d79c1b3a493fb9763ea0b9bc86df15e4e0a96f989f1fffea6cf85370b8d97",
       "resource_dependencies": {},
-      "generated_resources": {}
+      "generated_resources": {
+        "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Pinterest/remove-ads.js": {
+          "filename": "remove-ads.js",
+          "path": "Surge/Script/Kelee/Pinterest/remove-ads.js",
+          "sha256": "a8fecbbfd91e00356c5ea209d1b666554920ce03450700ac8a2c1196d2122243"
+        }
+      },
+      "native_sha256": "5a4d79c1b3a493fb9763ea0b9bc86df15e4e0a96f989f1fffea6cf85370b8d97",
+      "manual_revision": {
+        "date": "2026-10-11",
+        "reason": "User reports Pinterest inaccessible with Surge adaptation; Loon original works.",
+        "source_changed": false,
+        "review_kind": "Manually authored, defensive native response adapter after reading both original LPX actions and old Surge rules.",
+        "confirmed_old_failure_modes": [
+          "jq removes data items without is_promoted=false/\"false\"",
+          "jq map changes object-shaped data into an array",
+          "jq fails for nested object-shaped data with arrays; fixture has no native rewrite"
+        ],
+        "root_cause_of_user_device_failure_confirmed": false,
+        "client_runtime_tested": false,
+        "semantic_fixture": "Surge/maintenance/test_pinterest.js",
+        "additional_guards": [
+          "Preserve string non-success application status",
+          "Preserve numeric identifiers outside safe JSON integer range"
+        ]
+      }
     },
     {
       "ledger": [

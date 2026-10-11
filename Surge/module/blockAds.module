@@ -6,7 +6,7 @@
 #!raw-url=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/module/blockAds.module
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/AdblockPlus.png
 #!arguments=12306_enable:true
-#!date=2026-10-10
+#!date=2026-10-11
 
 # fmz200 pinned commit: 5d5f63fcf98bc69d5f8f1b1bae6f86a01ee4bb97
 # Loon-derived additions use individually authored native Surge configurations; no ScriptHub.
@@ -5948,10 +5948,7 @@ http-response-jq (?i)^https:\/\/(m|www)\.kookapp\.cn\/api\/v\d\/user\/settings$ 
 http-response-jq (?i)^https:\/\/www\.kookapp\.cn\/api\/v3\/discover\/tab-list\? '.data.items |= map(select(.id == 472 or .id == 473 or .id == 475))'
 
 
-# > 可莉补充 · Pinterest去广告
-# Authors: 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-http-response-jq (?i)^https:\/\/api\.pinterest\.com\/v\d\/feeds\/home\/\? '.data |= map(select(.is_promoted == false or .is_promoted == "false"))'
-http-response-jq (?i)^https:\/\/api\.pinterest\.com\/v\d\/pins\/\d+\/related\/modules\/\? '.data |= map(select(.is_promoted == false or .is_promoted == "false"))'
+# Pinterest filtering is now handled by the guarded native response script in [Script].
 
 
 # > 可莉补充 · ReelShort去广告
@@ -9851,6 +9848,10 @@ https://.+\.gamersky.com/v1/statisticAd data-type=text data="{}" status-code=200
 
 
 [Script]
+
+# > 可莉补充 · Pinterest去广告（手写响应脚本，异常内容透传）
+# Authors: 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+kelee_pinterest_remove_ads = type=http-response, pattern=(?i)^https:\/\/api\.pinterest\.com\/v\d\/(?:feeds\/home|pins\/\d+\/related\/modules)\/\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Pinterest/remove-ads.js, requires-body=true, max-size=1048576, timeout=5
 
 # > fmz200 原总模块
 # Authors: 奶思[https://github.com/fmz200]

@@ -182,6 +182,10 @@ console.log(JSON.stringify({native_adapter_cases:4}));
     p = subprocess.run([NODE, '-e', behavior, str(OUT / 'Surge/Script/Kelee')], text=True, capture_output=True, timeout=10)
     assert p.returncode == 0, p.stderr
     stats.update(json.loads(p.stdout))
+    pinterest_test = OUT / 'Surge/maintenance/test_pinterest.js'
+    p = subprocess.run([NODE, str(pinterest_test), str(OUT)], text=True, capture_output=True, timeout=10)
+    assert p.returncode == 0, p.stderr
+    stats.update(json.loads(p.stdout))
     report = {'status': 'passed', 'checks': dict(stats), 'script_hub_used': False,
               'surge_client_runtime_tested': False, 'scope': 'VPS 静态编译、实际原版/依赖哈希、原生 JSON 行为样例与合并冲突门禁。'}
     report['scope'] = '可携带静态/语义基线检查；不转换、不自动批准原版更新，不代表客户端去广告验证。'

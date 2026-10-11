@@ -14,6 +14,14 @@
 
 已知限制：哈啰原版唯一脚本 HTTP 404，独立配置保留 URL 并标注，合集将其触发器注释。茶颜悦色脚本引用的 cyys1.jpg 也为 HTTP 404。夸克扫描王已按真实请求补齐 MITM。直播吧合并时移除 fmz 抢先拒绝整个配置接口的旧规则，保留可莉逐字段净化。
 
+## Pinterest 兼容修正（2026-10-11）
+
+Pinterest 独立模块与总模块现使用手写的原生 Surge 响应脚本，两个原 JQ 行已移除。
+仅清除顶层 data 数组中明确 is_promoted=true 或字符串 true 的项目；没有标记、未知标记、
+非数组及非 JSON／HTTP 错误响应保留原样，保留分页与正常项目顺序。触发范围及 MITM 与原 LPX 相同。
+这是针对转换版无法访问报告的防御性修正，未取得用户实际响应或验证客户端访问。
+语义样例及接线检查见 [test_pinterest.js](maintenance/test_pinterest.js)，精确哈希和复核记录见 manifest、native-ledger。
+
 ## 补充配置
 
 | 名称 | 独立模块 | 原作者 |

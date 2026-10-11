@@ -5,18 +5,19 @@
 #!category=去广告
 #!homepage=https://hub.kelee.one
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Pinterest.png
-#!date=2026-10-02 13:57:49
+#!date=2026-10-11
 
 # Original Loon plugin: https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx
-# Configuration: individually authored and reviewed for Surge; no ScriptHub conversion.
+# Configuration: manually rewritten native Surge response adapter, 2026-10-11; no ScriptHub.
 
 # Current Loon SHA256: 905ce81e2a26cb5421219b8f9009502d7c014291b3b3a5532e13dd6ad3a01d95
 
-# Authored native Surge configuration.
+# Original LPX date: 2026-10-02 13:57:49
+# Remove only is_promoted=true/"true"; preserve unknown markers and unexpected response shapes.
+# Limit the script to the original two endpoints and 1 MiB bodies; other responses pass through.
 
-[Body Rewrite]
-http-response-jq (?i)^https:\/\/api\.pinterest\.com\/v\d\/feeds\/home\/\? '.data |= map(select(.is_promoted == false or .is_promoted == "false"))'
-http-response-jq (?i)^https:\/\/api\.pinterest\.com\/v\d\/pins\/\d+\/related\/modules\/\? '.data |= map(select(.is_promoted == false or .is_promoted == "false"))'
+[Script]
+Pinterest_remove_ads = type=http-response, pattern=(?i)^https:\/\/api\.pinterest\.com\/v\d\/(?:feeds\/home|pins\/\d+\/related\/modules)\/\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Pinterest/remove-ads.js, requires-body=true, max-size=1048576, timeout=5
 
 [MITM]
 hostname = %APPEND% api.pinterest.com

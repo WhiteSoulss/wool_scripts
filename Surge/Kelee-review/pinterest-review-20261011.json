@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-11",
+  "checked_at_utc": "2026-10-11T07:30:04.900645+00:00",
+  "baseline_commit": "14058011a40c5baa945c72cc2141875b8404d77e",
+  "status": "manually-reviewed",
+  "reported_problem": "Pinterest cannot be accessed with the Surge adaptation; original Loon rules work.",
+  "original_url": "https://kelee.one/Tool/Loon/Lpx/Pinterest_remove_ads.lpx",
+  "original_sha256": "905ce81e2a26cb5421219b8f9009502d7c014291b3b3a5532e13dd6ad3a01d95",
+  "original_unchanged_after_live_download": true,
+  "catalog_sha256": "f919600022423356a8a72bfb2d3dc88c0c45751db336daff4f6ce16d34442f6c",
+  "read_actions": 2,
+  "previous_native_body_rewrite_rules_removed": 2,
+  "new_native_response_scripts": 1,
+  "manual_semantic_change": "On the original top-level data arrays, remove only explicit is_promoted=true or string true. Preserve unidentified records, malformed/unknown response shapes, errors and unsafe numeric IDs. Retain endpoint scope, MITM, attribution and pagination.",
+  "confirmed_previous_behavior_on_synthetic_fixtures": [
+    "Unknown marker record removed by old jq",
+    "Object data may be converted to an array or fail jq"
+  ],
+  "user_client_root_cause_confirmed": false,
+  "surge_client_runtime_tested": false,
+  "script_hub_used": false,
+  "automatic_conversion_used": false,
+  "files": {
+    "Surge/module/Kelee/Pinterest_remove_ads.sgmodule": "5a4d79c1b3a493fb9763ea0b9bc86df15e4e0a96f989f1fffea6cf85370b8d97",
+    "Surge/Script/Kelee/Pinterest/remove-ads.js": "a8fecbbfd91e00356c5ea209d1b666554920ce03450700ac8a2c1196d2122243",
+    "Surge/module/blockAds.module": "83ef905d64c25e390f1ed7a0f3991a9df8a05fe5148b0e75129d44000e9ce581",
+    "Surge/maintenance/test_pinterest.js": "c7d5b72d570097f41098ab1f7198f1607ebe86257d6b6b4e313d42a21c8c6924"
+  },
+  "checks": {
+    "pinterest_semantic_cases": 42,
+    "pinterest_original_semantics_cases": 3,
+    "pinterest_module_url_cases": 14,
+    "modules_verified": 106
+  },
+  "overlap_review": "Across total URL Rewrite, Map Local, Body Rewrite, Header Rewrite and Script rows, only the replaced two jq rules matched sample original Pinterest endpoints. New sole guarded script matches those endpoints; no Pinterest website/image/search/auth endpoint change.",
+  "official_surge_documentation": [
+    "https://manual.nssurge.com/http/body-rewrite.html",
+    "https://manual.nssurge.com/scripting/http-response.html"
+  ]
+}
