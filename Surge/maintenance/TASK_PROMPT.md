@@ -48,3 +48,5 @@ Quark Scanking MITM、联掌门户自定义端口/HTTP 引擎、直播吧配置�
 expected_sha 提交，不能覆盖并发修改。发布后验证总模块、独立模块和资源公开
 raw 链接及字节。无变化不生成空提交。无变化或无可操作事项保持安静，只在
 有意义更新、失败或需要用户处理时通知。
+
+保留 Kelee-review/config-syntax-review-20261011.json 的百度参数引号与 Crunchyroll 原生正文引号修正，后者为个人 fmz 上游覆盖。同步拆分模块及重建合集时先阅读新上游再保留修正；不改写固定 upstream 原版。verify.py 包含实际配置字段分割后的 ICU 正则检查，不只编译账本里的完整正则。双引号转义需遵守已记录的 Surge 版本要求。

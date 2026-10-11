@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-11",
+  "status": "semantically-reviewed-configuration-fix",
+  "base_user_commit": "b326f9da999c9584431708185609a8c8aace708e",
+  "fmz_upstream_commit": "5d5f63fcf98bc69d5f8f1b1bae6f86a01ee4bb97",
+  "client_runtime_tested": false,
+  "script_hub_used": false,
+  "automatic_conversion_used": false,
+  "reported_failures": {
+    "BaiduSearch": "Surge separates unquoted Script parameters at the quantifier comma and compiles only the truncated regex ending in {8.",
+    "Crunchyroll": "Unquoted embedded double quotes cause the whitespace-delimited regex/replacement fields to be grouped incorrectly; the line is unchanged from pinned fmz upstream, not a Loon conversion."
+  },
+  "source_comparison": {
+    "baidu_actual_lpx_sha256": "de15529e97e5c6804983f353b9441ff69b5ff42a23cfb4a9ae16aba183ad4aea",
+    "baidu_live_lpx_equals_archive": true,
+    "baidu_actual_script_sha256": "a135cb358571270371159b1c1539e555f51c7e53d6531afc6b3687796df0b0d4",
+    "baidu_live_script_equals_mirror": true,
+    "baidu_original_and_dependency_unchanged": true,
+    "crunchyroll_upstream_path": "Surge/module/split/partC/Crunchyroll.sgmodule",
+    "crunchyroll_upstream_sha256": "435a3178ec62e790dd26c438154c2c7b27308b4c4c6fd47b2d8ca0628c499ad4",
+    "crunchyroll_previous_split_bytes_equal_upstream": true,
+    "crunchyroll_pinned_upstream_bundle_unchanged": true
+  },
+  "behavior": [
+    "Baidu: retain exact decoded original regex and case-insensitive flag, two capture groups, response Script/body requirements, unlimited script max-size, mirrored original JS and two original MITM hosts.",
+    "Baidu: retain original prefix matching; a from value with more than nine word characters still matches the original expression prefix.",
+    "Crunchyroll: retain text regex offset_ms\":\\d+ and replacement offset_ms\":99999999999999; do not replace this original text action with JSON/JQ behavior.",
+    "Crunchyroll: retain original substring semantics, including unchanged negative/space-separated numbers and the original partial match on decimal values.",
+    "All other 105 supplement modules and Pinterest production bytes remain unchanged."
+  ],
+  "configuration_format_reference": "https://manual.nssurge.com/profile/format.html",
+  "quoted_escape_reference_versions": {
+    "Surge_iOS": "5.21.0+",
+    "Surge_Mac": "6.8.0+"
+  },
+  "validation_scope": "Documented delimiter/quote structural model plus Linux ICU regex compilation and source/text fixtures on VPS; not the proprietary Surge client parser or device ad removal.",
+  "previous_baidu_native_sha256": "5c09b59aeb1d8b6a3ff4aaba8f982a4a7e031febe8a5fc2fdf874bf65a73e99d",
+  "baidu_native_sha256": "a726262d04706eb72da957a4518f71cdd63f7b8d93dbc4066cad91ac01e0d4c6",
+  "crunchyroll_native_sha256": "25303381fb919b732853c960b77d08cbabc7e2a4db21dd234b2a5d783cfbc671",
+  "bundle_sha256": "ecf4072bc7e049449a48eb988daac7f1f5fbc362751e8673173714936df0fcd9",
+  "personal_upstream_overrides": [
+    {
+      "path": "Surge/module/split/partC/Crunchyroll.sgmodule",
+      "pinned_upstream_sha256": "435a3178ec62e790dd26c438154c2c7b27308b4c4c6fd47b2d8ca0628c499ad4",
+      "native_sha256": "25303381fb919b732853c960b77d08cbabc7e2a4db21dd234b2a5d783cfbc671",
+      "reapply_to_bundle": true,
+      "review_upstream_changes_before_reapplying": true
+    }
+  ],
+  "upstream_baseline_mutated": false,
+  "validation": {
+    "status": "passed",
+    "checks": {
+      "source_json_native_jq_gate": 134,
+      "native_patterns_compiled": 577,
+      "native_jq_actions_retained": 134,
+      "json_semantic_fixtures": 68,
+      "inline_mock_checks": 446,
+      "modules_verified": 106,
+      "merged_active_rows": 5359,
+      "config_script_patterns_compiled_icu": 331,
+      "config_script_rows_tokenized": 331,
+      "config_body_url_patterns_compiled_icu": 365,
+      "config_body_rows_tokenized": 365,
+      "config_body_patterns_compiled_icu": 24,
+      "baidu_original_script_wiring_cases": 2,
+      "baidu_source_url_equivalence_cases": 12,
+      "crunchyroll_original_text_rewrite_cases": 5,
+      "reported_invalid_script_reproduced": 1,
+      "reported_invalid_body_reproduced": 1,
+      "merged_unique_jq_expressions_compiled": 190,
+      "own_runtime_urls_resolved": 29,
+      "scripts_compiled_without_execution": 27,
+      "native_adapter_cases": 1,
+      "lzmh_native_json_cases": 8,
+      "lzmh_url_scope_cases": 9,
+      "pinterest_semantic_cases": 32,
+      "pinterest_original_semantics_cases": 16,
+      "pinterest_module_url_cases": 42,
+      "pinterest_jq_error_equivalence_cases": 24,
+      "pinterest_native_modules_checked": 2
+    },
+    "script_hub_used": false,
+    "surge_client_runtime_tested": false,
+    "scope": "可携带静态/语义基线检查；不转换、不自动批准原版更新，不代表客户端去广告验证。",
+    "approves_source_changes": false
+  }
+}

@@ -8,6 +8,7 @@ import json
 import re
 import subprocess
 from pathlib import Path
+from test_config_syntax import verify as verify_config_syntax
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT
@@ -146,6 +147,7 @@ def main():
     assert len(re.findall(r'^\[MITM\]$', bundle, re.M)) == 1
     assert native_json_rows.issubset(set(sections['Body Rewrite'])), 'Missing original JSON action in total module'
     assert not any('LZMH/remove-config.js' in l for l in sections['Script'])
+    stats.update(verify_config_syntax(OUT))
     script_names = [l.split('=', 1)[0].strip() for l in sections['Script']]
     assert len(script_names) == len(set(script_names))
     assert not any('EasyBike/mobileconfig-gateway.js' in l for l in sections['Script'])

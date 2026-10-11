@@ -8,7 +8,7 @@
   "script_hub_used": false,
   "automatic_conversion_used": false,
   "client_runtime_tested": false,
-  "bundle_sha256": "1db508dae4590aa44ef7825a7f6878ecec4d5310a7875f4075eba6981f5f6796",
+  "bundle_sha256": "ecf4072bc7e049449a48eb988daac7f1f5fbc362751e8673173714936df0fcd9",
   "merge_decisions": [
     {
       "section": "URL Rewrite",
@@ -48,6 +48,18 @@
       "source_changed": false,
       "client_runtime_tested": false,
       "automatic_conversion_used": false
+    },
+    {
+      "date": "2026-10-11",
+      "section": "Script / Body Rewrite",
+      "modules": [
+        "BaiduSearchWebpage_remove_ads.sgmodule",
+        "Crunchyroll.sgmodule"
+      ],
+      "reason": "Baidu original regex is valid but unquoted {8,9} was split into script parameters. Quote the complete pattern. Crunchyroll was copied byte-for-byte from the pinned fmz upstream; quote/escape its two text-body rewrite fields to prevent cross-field quote grouping. Preserve the original action semantics and untouched upstream baseline.",
+      "source_changed": false,
+      "client_runtime_tested": false,
+      "review_record": "Surge/Kelee-review/config-syntax-review-20261011.json"
     }
   ],
   "modules": [
@@ -537,7 +549,7 @@
       "path": "Surge/module/Kelee/BaiduSearchWebpage_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx",
       "source_sha256": "de15529e97e5c6804983f353b9441ff69b5ff42a23cfb4a9ae16aba183ad4aea",
-      "sha256": "5c09b59aeb1d8b6a3ff4aaba8f982a4a7e031febe8a5fc2fdf874bf65a73e99d",
+      "sha256": "a726262d04706eb72da957a4518f71cdd63f7b8d93dbc4066cad91ac01e0d4c6",
       "authors": "Keywos[https://github.com/Keywos]",
       "actions": {
         "http-response": 1
@@ -546,7 +558,8 @@
       "missing_dependencies": {},
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
-        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。"
+        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
+        "2026-10-11：依据未变的实际 Loon 原版修正 Script 参数序列化；完整 pattern 加双引号并转义，保留 {8,9}、(?i)、捕获组、原版前缀匹配、脚本路径、响应体要求与 MITM。"
       ]
     },
     {

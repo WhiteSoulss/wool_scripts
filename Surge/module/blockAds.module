@@ -5634,7 +5634,7 @@ http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? '.data.
 
 # > crunchyroll
 # hostname = beta-api.crunchyroll.com
-http-response ^https?:\/\/beta-api\.crunchyroll\.com\/cms offset_ms":\d+ offset_ms":99999999999999
+http-response ^https?:\/\/beta-api\.crunchyroll\.com\/cms "offset_ms\":\\d+" "offset_ms\":99999999999999"
 
 
 # >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
@@ -10763,7 +10763,7 @@ kelee_0277_Uki_remove_ads_4 = type=http-response, pattern=(?i)^https:\/\/api\.ch
 
 # > 可莉补充 · 百度网页去广告
 # Authors: Keywos[https://github.com/Keywos]
-kelee_0278_BaiduSearchWebpage_remove_ads_1 = type=http-response, pattern=(?i)^https?:\/\/(www|m)\.baidu\.com\/?($|\?from=\w{8,9}), script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js, requires-body=true, max-size=-1
+kelee_0278_BaiduSearchWebpage_remove_ads_1 = type=http-response, pattern="(?i)^https?:\\/\\/(www|m)\\.baidu\\.com\\/?($|\\?from=\\w{8,9})", script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js, requires-body=true, max-size=-1
 
 
 # > 可莉补充 · 比心去广告

@@ -1356,7 +1356,18 @@
       "resource_dependencies": {
         "https://kelee.one/Resource/JavaScript/BaiduSearch/BaiduSearchHomePage_remove_ads.js": "a135cb358571270371159b1c1539e555f51c7e53d6531afc6b3687796df0b0d4"
       },
-      "generated_resources": {}
+      "generated_resources": {},
+      "native_sha256": "a726262d04706eb72da957a4518f71cdd63f7b8d93dbc4066cad91ac01e0d4c6",
+      "configuration_serialization_review": {
+        "date": "2026-10-11",
+        "kind": "quoted-script-regex",
+        "source_changed": false,
+        "previous_native_sha256": "5c09b59aeb1d8b6a3ff4aaba8f982a4a7e031febe8a5fc2fdf874bf65a73e99d",
+        "reason": "The comma in the unchanged original {8,9} must be protected from Surge comma-delimited Script parameter parsing.",
+        "original_condition_regex_preserved": true,
+        "case_flag_preserved": true,
+        "review_record": "Surge/Kelee-review/config-syntax-review-20261011.json"
+      }
     },
     {
       "ledger": [
