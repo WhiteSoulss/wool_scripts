@@ -180,3 +180,20 @@ http-response-jq 的 del(.value.config)，同时更新独立模块和总模块�
 独立原版字节保留，今后随 fmz 同步仍单独保存，不再自动合入总模块。
 可莉微博轻享版补充及其具体域名仍保留；fmz 原总模块的自身规则保持原范围。
 见 [移出复核记录](Kelee-review/weibo-standalone-review-20261012.json)。
+
+
+## 用户响应体内存限制（2026-10-12）
+
+用户要求降低 Surge iOS 响应体处理的内存压力。可莉 12 个独立模块的 29 条响应脚本，
+及总合集中的对应 28 条有效脚本与 1 条已注释哈啰引用，将 max-size=-1 手动改为
+max-size=1048576（1 MiB）。脚本内容、URL 匹配、阶段、requires-body、作者、参数、
+MITM、原生 JQ 和其他动作保持原样。超限响应原样放行，该次脚本去广告不执行；
+该参数限制解压后响应缓冲，不是引擎总内存上限，也不是响应体截断。
+
+读取 Kelee-review/response-body-limit-review-20261012.json 与 manifest 的
+response_body_policy。每日同步和重建保留这项个人限制，不能从历史模板恢复 -1，
+也不能自动扩大上限。新上游动作或依赖变化仍需阅读并逐项复核；若大响应确实需要
+特殊预算，先记录待复核事项。test_response_limits.py 已接入 verify.py，
+检查有效响应脚本的 iOS 默认或显式上限不超过 1 MiB，并核对独立/合集相同字段。
+原生 JQ 沿用 Surge 自身的响应限制，不添加 max-size 到 Body Rewrite。
+fmz 原版脚本、独立微博、B 站和单独的 AllInOne 已使用 iOS 默认上限，本次未改。

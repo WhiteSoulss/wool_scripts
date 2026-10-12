@@ -35,8 +35,8 @@ http-response-jq (?i)^https:\/\/api\.hibixin\.com\/biggie\/home\/v\d\/query\/big
 http-response-jq (?i)^https:\/\/api\.hibixin\.com\/resource\/v\d\/common\/tab$ '.result |= map(select(.type != "activityCenter"))'
 
 [Script]
-Bixin_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/gateway\.hibixin\.com\/resource\/v\d\/common\/tab\/query$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/common_tab.js, requires-body=true, max-size=-1, engine=webview
-Bixin_remove_ads_2 = type=http-response, pattern=(?i)^https:\/\/gateway\.hibixin\.com\/resource\/v\d\/my\/page$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/my_page.js, requires-body=true, max-size=-1, engine=webview
+Bixin_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/gateway\.hibixin\.com\/resource\/v\d\/common\/tab\/query$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/common_tab.js, requires-body=true, max-size=1048576, engine=webview
+Bixin_remove_ads_2 = type=http-response, pattern=(?i)^https:\/\/gateway\.hibixin\.com\/resource\/v\d\/my\/page$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/my_page.js, requires-body=true, max-size=1048576, engine=webview
 
 [MITM]
 hostname = %APPEND% web.hibixin.com, api.hibixin.com, gateway.hibixin.com, gateway.xxqapp.cn, api.xxqapp.cn, web-bxyuer.bixin.cn, gateway.bxyuer.com

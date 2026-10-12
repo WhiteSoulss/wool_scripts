@@ -15,7 +15,7 @@
 # Authored native Surge configuration.
 
 [Script]
-DjDuoDuo_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/api\.dianyinduoduo\.com\/v4\/config\.php\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DjDuoDuo/DjDuoDuo_remove_ads.js, requires-body=true, max-size=-1, engine=webview
+DjDuoDuo_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/api\.dianyinduoduo\.com\/v4\/config\.php\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DjDuoDuo/DjDuoDuo_remove_ads.js, requires-body=true, max-size=1048576, engine=webview
 
 [MITM]
 hostname = %APPEND% api.dianyinduoduo.com

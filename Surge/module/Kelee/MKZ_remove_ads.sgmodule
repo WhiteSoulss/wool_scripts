@@ -22,7 +22,7 @@
 (?i)^https:\/\/base\.mkzcdn\.com\/advert\/app\/user\/slide\d\/v\d\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-MKZ_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/base\.mkzcdn\.com\/app\/config\/, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MKZ/MKZ_remove_ads.js, requires-body=true, max-size=-1
+MKZ_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/base\.mkzcdn\.com\/app\/config\/, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MKZ/MKZ_remove_ads.js, requires-body=true, max-size=1048576
 
 [MITM]
 hostname = %APPEND% base.mkzcdn.com

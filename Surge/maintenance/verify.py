@@ -11,6 +11,7 @@ from pathlib import Path
 from test_config_syntax import verify as verify_config_syntax, script_fields, tokens
 from audit_module_syntax import verify as audit_module_syntax
 from test_tinder import verify as verify_tinder
+from test_response_limits import verify as verify_response_limits
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT
@@ -150,6 +151,7 @@ def main():
     assert native_json_rows.issubset(set(sections['Body Rewrite'])), 'Missing original JSON action in total module'
     assert not any('LZMH/remove-config.js' in l for l in sections['Script'])
     stats.update(verify_config_syntax(OUT))
+    stats.update(verify_response_limits(OUT))
     syntax_audit = audit_module_syntax(OUT)
     assert syntax_audit['status'] == 'passed', syntax_audit['errors']
     stats.update({'full_syntax_' + key: value for key, value in syntax_audit['checks'].items()})

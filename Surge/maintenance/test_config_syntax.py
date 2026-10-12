@@ -123,7 +123,7 @@ def verify(repo):
     total = script_fields(next(row for row in bundle['Script'] if row.startswith('kelee_0278_BaiduSearchWebpage_remove_ads_1 =')))
     for fields in (standalone, total):
         assert fields['pattern'] == native_pattern
-        assert fields['requires-body'] == 'true' and fields['max-size'] == '-1'
+        assert fields['requires-body'] == 'true' and fields['max-size'] == '1048576'
         assert fields['script-path'].endswith('/Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js')
         stats['baidu_original_script_wiring_cases'] += 1
     # Retain the original prefix matching: from=10 characters still matches.

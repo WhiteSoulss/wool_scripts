@@ -1,0 +1,1794 @@
+{
+  "reviewed_at_utc": "2026-10-12T05:46:17.111801+00:00",
+  "user_request": "限制响应体处理大小 你幫我改",
+  "base_commit": "97af3299dd3947e957b32e67429011195c3311a2",
+  "status": "approved-server-review",
+  "policy": {
+    "client": "Surge iOS",
+    "max_bytes": 1048576,
+    "scope": "body-reading http-response scripts in the combined module and independent ad modules; defaults allowed at the iOS 1 MiB limit",
+    "oversize_behavior": "Surge bypasses the response script and forwards the original response",
+    "review_record": "Surge/Kelee-review/response-body-limit-review-20261012.json",
+    "applies_to_request_scripts": false,
+    "native_body_rewrite_unchanged": true
+  },
+  "documentation": [
+    "https://manual.nssurge.com/scripting/http-response.html",
+    "https://manual.nssurge.com/http/body-rewrite.html"
+  ],
+  "semantic_change": "For the affected HTTP response scripts, responses over 1048576 decompressed bytes are passed through without script execution. Script behavior for bodies within the cap is unchanged. This cap does not bound total Surge memory, native Body Rewrite processing or request bodies.",
+  "source_and_dependencies_unchanged": true,
+  "inline_json_and_jq_unchanged": true,
+  "script_content_unchanged": true,
+  "all_unrelated_script_fields_unchanged": true,
+  "script_hub_used": false,
+  "automatic_conversion_used": false,
+  "client_memory_measured": false,
+  "client_effectiveness_verified": false,
+  "counts": {
+    "independent_modules_changed": 12,
+    "independent_response_rows_changed": 29,
+    "bundle_active_response_rows_changed": 28,
+    "bundle_disabled_haro_reference_changed": 1
+  },
+  "module_reviews": [
+    {
+      "name": "DJ多多去广告",
+      "path": "Surge/module/Kelee/DjDuoDuo_remove_ads.sgmodule",
+      "before_sha256": "7cb89d491b2b8602b7939891cffee0855f837ea4c2ed0ea5aa17a665cd923b89",
+      "after_sha256": "117f969832b8a4cca4fb8f9687f086d704ede3a6788e5b7ad93b89f5183bd12e",
+      "source_path": "Surge/Kelee-review/loon-original/DjDuoDuo_remove_ads.lpx",
+      "source_sha256": "468133036ca0f1f2b542af43bcd76ede78bf7abeebc7637328dfe3be9ffb46b8",
+      "source_unchanged": true,
+      "source_script_rows": [
+        "response if ${url} ~= /^https:\\/\\/api\\.dianyinduoduo\\.com\\/v4\\/config\\.php\\?/i then script(\"https://kelee.one/Resource/JavaScript/DjDuoDuo/DjDuoDuo_remove_ads.js\") with tag=\"去广告\", requires_body=true"
+      ],
+      "resources": [
+        {
+          "path": "Surge/Script/Kelee/DjDuoDuo/DjDuoDuo_remove_ads.js",
+          "sha256": "6357b9dd30b48b64e24d206763e8276ac28b4e2a88c0435116eda42fdecda9e6",
+          "source_url": "https://kelee.one/Resource/JavaScript/DjDuoDuo/DjDuoDuo_remove_ads.js",
+          "unchanged": true
+        }
+      ],
+      "changed_response_scripts": 1,
+      "source_has_explicit_size_limit": false,
+      "missing_dependencies": {}
+    },
+    {
+      "name": "Uki去广告",
+      "path": "Surge/module/Kelee/Uki_remove_ads.sgmodule",
+      "before_sha256": "c15dd6620b1cf440a3490a1ddba47d5ace2b5bdb5e00e2dd963b8e45800d528a",
+      "after_sha256": "9783df04f6e0e1f24bd2cb241129661c46e52472f021d7aa35706926a6030f6f",
+      "source_path": "Surge/Kelee-review/loon-original/Uki_remove_ads.lpx",
+      "source_sha256": "b229b01725adee1ee844416d9a8ba0f10f086185c79dac130a37c6e1fd3fa0dc",
+      "source_unchanged": true,
+      "source_script_rows": [
+        "response if ${url} ~= /^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/lover\\/productList/i then script(\"https://kelee.one/Resource/JavaScript/Uki/Uki_remove_ads.js\") with tag=\"移除匹配卡横幅\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/friends\\/closeFriend\\/home/i then script(\"https://kelee.one/Resource/JavaScript/Uki/Uki_remove_ads.js\") with tag=\"移除密友横幅\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/party\\/config$/i then script(\"https://kelee.one/Resource/JavaScript/Uki/Uki_remove_ads.js\") with tag=\"移除娱乐页面横幅和悬浮窗配置\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/api\\.chenlongtech\\.cn\\/v1\\/post\\/fetchSearchRecommend$/i then script(\"https://kelee.one/Resource/JavaScript/Uki/Uki_remove_ads.js\") with tag=\"移除广场搜索填充词\", requires_body=true"
+      ],
+      "resources": [
+        {
+          "path": "Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+          "sha256": "af15371ec2946805b9f3f2af8a13f807434a05166e4f76178a8e28fdf645b720",
+          "source_url": "https://kelee.one/Resource/JavaScript/Uki/Uki_remove_ads.js",
+          "unchanged": true
+        }
+      ],
+      "changed_response_scripts": 4,
+      "source_has_explicit_size_limit": false,
+      "missing_dependencies": {}
+    },
+    {
+      "name": "百度网页去广告",
+      "path": "Surge/module/Kelee/BaiduSearchWebpage_remove_ads.sgmodule",
+      "before_sha256": "a726262d04706eb72da957a4518f71cdd63f7b8d93dbc4066cad91ac01e0d4c6",
+      "after_sha256": "d1d78a8fdf68e31a663277b6bf3c4d9bbe7b6748ee04392a16573c883ee1352b",
+      "source_path": "Surge/Kelee-review/loon-original/BaiduSearchWebpage_remove_ads.lpx",
+      "source_sha256": "de15529e97e5c6804983f353b9441ff69b5ff42a23cfb4a9ae16aba183ad4aea",
+      "source_unchanged": true,
+      "source_script_rows": [
+        "response if ${url} ~= /^https?:\\/\\/(www|m)\\.baidu\\.com\\/?($|\\?from=\\w{8,9})/i then script(\"https://kelee.one/Resource/JavaScript/BaiduSearch/BaiduSearchHomePage_remove_ads.js\") with tag=\"移除百度搜索首页信息流广告\", requires_body=true"
+      ],
+      "resources": [
+        {
+          "path": "Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js",
+          "sha256": "a135cb358571270371159b1c1539e555f51c7e53d6531afc6b3687796df0b0d4",
+          "source_url": "https://kelee.one/Resource/JavaScript/BaiduSearch/BaiduSearchHomePage_remove_ads.js",
+          "unchanged": true
+        }
+      ],
+      "changed_response_scripts": 1,
+      "source_has_explicit_size_limit": false,
+      "missing_dependencies": {}
+    },
+    {
+      "name": "比心去广告",
+      "path": "Surge/module/Kelee/Bixin_remove_ads.sgmodule",
+      "before_sha256": "a2bf6e6e3ec4d5e077bacc80da189ff919315d6b20eb2cb612cbd20485428221",
+      "after_sha256": "96004e4c47be7e7a970364c1bb22f1a58dc14ae86831da37d5430f2146dbb59b",
+      "source_path": "Surge/Kelee-review/loon-original/Bixin_remove_ads.lpx",
+      "source_sha256": "3fc203cb01bab2b5e960ef2ddee636cd9c53fae416002a5fa4b0427726114437",
+      "source_unchanged": true,
+      "source_script_rows": [
+        "response if ${url} ~= /^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/common\\/tab\\/query$/i then script(\"https://kelee.one/Resource/JavaScript/Bixin/common_tab.js\") with tag=\"精简首页标签\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/my\\/page$/i then script(\"https://kelee.one/Resource/JavaScript/Bixin/my_page.js\") with tag=\"精简我的页面\", requires_body=true"
+      ],
+      "resources": [
+        {
+          "path": "Surge/Script/Kelee/Bixin/common_tab.js",
+          "sha256": "779cce9e7ca26323f8965b07412056e3f6d825b7a0e99e5d5707ebf24d6b898c",
+          "source_url": "https://kelee.one/Resource/JavaScript/Bixin/common_tab.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/Bixin/my_page.js",
+          "sha256": "06eb371ea79bae01f6f0bcced91af0cd534312e5266586f17aa94bd69958f7ee",
+          "source_url": "https://kelee.one/Resource/JavaScript/Bixin/my_page.js",
+          "unchanged": true
+        }
+      ],
+      "changed_response_scripts": 2,
+      "source_has_explicit_size_limit": false,
+      "missing_dependencies": {}
+    },
+    {
+      "name": "风鸟去广告",
+      "path": "Surge/module/Kelee/RiskBird_remove_ads.sgmodule",
+      "before_sha256": "c4807e432e7b908b103ba7b1c5a97286b8a56ac0b047bb3d64231d92f9d6af1d",
+      "after_sha256": "84dd52953b38517ba552200822555f399fc37dd2769e855f067be243e5855794",
+      "source_path": "Surge/Kelee-review/loon-original/RiskBird_remove_ads.lpx",
+      "source_sha256": "ed4944c91b2d5168fffeeb9c38428ce455fb7491fa5736076f9621f660981fa3",
+      "source_unchanged": true,
+      "source_script_rows": [
+        "response if ${url} ~= /^https:\\/\\/m\\.riskbird\\.com\\/prod-qbb-api\\/query\\/person\\/personRecommend/i then script(\"https://kelee.one/Resource/JavaScript/RiskBird/RiskBird_remove_ads.js\") with tag=\"移除推荐老板\", requires_body=true"
+      ],
+      "resources": [
+        {
+          "path": "Surge/Script/Kelee/RiskBird/RiskBird_remove_ads.js",
+          "sha256": "56a1c10a6422423845a8486fbc5deff60f37e6aa9e40fc439317e7e2c57fc9e2",
+          "source_url": "https://kelee.one/Resource/JavaScript/RiskBird/RiskBird_remove_ads.js",
+          "unchanged": true
+        }
+      ],
+      "changed_response_scripts": 1,
+      "source_has_explicit_size_limit": false,
+      "missing_dependencies": {}
+    },
+    {
+      "name": "哈罗去广告",
+      "path": "Surge/module/Kelee/EasyBike_remove_ads.sgmodule",
+      "before_sha256": "2228ff86ad26e7a582d1c4345ad1d25ad62906c2142b2b9a31dacac19381c038",
+      "after_sha256": "59e432ebde26a39c81a5cbad1de4ed4671598c1c04ed8cacf4637706cf6bc63f",
+      "source_path": "Surge/Kelee-review/loon-original/EasyBike_remove_ads.lpx",
+      "source_sha256": "be91c7e3c5e99586fb76b63b1cfe924f7c83e98af730fe65a6c521f8f901fddf",
+      "source_unchanged": true,
+      "source_script_rows": [
+        "response if ${url} ~= /^https:\\/\\/mobileconfig-gateway\\.hellobike\\.com\\/api$/i then script(\"https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js\") with tag=\"去广告\", requires_body=true"
+      ],
+      "resources": [],
+      "changed_response_scripts": 1,
+      "source_has_explicit_size_limit": false,
+      "missing_dependencies": {
+        "https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js": "按原版 Loon 转换并保留脚本引用；源脚本目前缺失，对应去广告功能暂无法运行。"
+      }
+    },
+    {
+      "name": "口袋壁纸去广告",
+      "path": "Surge/module/Kelee/ShoujiDesk_remove_ads.sgmodule",
+      "before_sha256": "5f7b849849f24c5477711078512f8a5b43f6006c65a0f860bac55bcf963c156d",
+      "after_sha256": "dabe8b839da9c2ca797676f161b3e2116b8eb7de42b24585aaa9be613760bb2f",
+      "source_path": "Surge/Kelee-review/loon-original/ShoujiDesk_remove_ads.lpx",
+      "source_sha256": "f270c31ac7d3f5e3406804d55daa1f4f53dc6656e518e95d93d1aa5e65b84783",
+      "source_unchanged": true,
+      "source_script_rows": [
+        "response if ${url} ~= /^https:\\/\\/api\\.tdz5\\.com\\/base\\/init\\?/i then script(\"https://kelee.one/Resource/JavaScript/ShoujiDesk/base_init.js\") with tag=\"移除首页广告配置\", requires_body=true"
+      ],
+      "resources": [
+        {
+          "path": "Surge/Script/Kelee/ShoujiDesk/base_init.js",
+          "sha256": "d588c5dae21ce09cb39617aa7abbd01cf976ec148083b45fc261fccccd67d68d",
+          "source_url": "https://kelee.one/Resource/JavaScript/ShoujiDesk/base_init.js",
+          "unchanged": true
+        }
+      ],
+      "changed_response_scripts": 1,
+      "source_has_explicit_size_limit": false,
+      "missing_dependencies": {}
+    },
+    {
+      "name": "漫客栈去广告",
+      "path": "Surge/module/Kelee/MKZ_remove_ads.sgmodule",
+      "before_sha256": "f52082f537f4697eff429905fe666f5072f8d83eb202f08edbacd772e1a7d7d7",
+      "after_sha256": "ccbb1aac4545c2e6b8f2126a4e7eaec33089a20b812ecab952cd4512772e8d7f",
+      "source_path": "Surge/Kelee-review/loon-original/MKZ_remove_ads.lpx",
+      "source_sha256": "0ff3a79e41c84d2a0f2556adfe2f418ce63c56b9260fe18a7adb19a77e5a9343",
+      "source_unchanged": true,
+      "source_script_rows": [
+        "response if ${url} ~= /^https:\\/\\/base\\.mkzcdn\\.com\\/app\\/config\\//i then script(\"https://kelee.one/Resource/JavaScript/MKZ/MKZ_remove_ads.js\") with tag=\"配置修改\", requires_body=true"
+      ],
+      "resources": [
+        {
+          "path": "Surge/Script/Kelee/MKZ/MKZ_remove_ads.js",
+          "sha256": "b3d570b03982fd706501218fdd9e6371f5bf0dd4d9e764e26a5accc4a7b6820b",
+          "source_url": "https://kelee.one/Resource/JavaScript/MKZ/MKZ_remove_ads.js",
+          "unchanged": true
+        }
+      ],
+      "changed_response_scripts": 1,
+      "source_has_explicit_size_limit": false,
+      "missing_dependencies": {}
+    },
+    {
+      "name": "摩托范去广告",
+      "path": "Surge/module/Kelee/MotorFans_remove_ads.sgmodule",
+      "before_sha256": "a84e1f676dadfd89b7838e91f40974a8993db5961bb45a7b8dffa5c641b2a1f5",
+      "after_sha256": "ef654b9921a5474f9e84bcef0b0442979ec059e425feb037973002565f56c6c1",
+      "source_path": "Surge/Kelee-review/loon-original/MotorFans_remove_ads.lpx",
+      "source_sha256": "28a8ac76c486fe4ce4ee9491efe4a7278307736f1af39feeb6c6ef00cd0dcc85",
+      "source_unchanged": true,
+      "source_script_rows": [
+        "response if ${url} ~= /^https:\\/\\/api\\.58moto\\.com\\/expands\\/config\\/appWholeConfig\\?key=app_whole_config$/i then script(\"https://kelee.one/Resource/JavaScript/MotorFans/MotorFans_remove_ads.js\") with tag=\"修改配置\", requires_body=true"
+      ],
+      "resources": [
+        {
+          "path": "Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js",
+          "sha256": "f464b6e3853433ae5fb5667c9b17b0333cffdc0c24014b7607fde6d39823f16d",
+          "source_url": "https://kelee.one/Resource/JavaScript/MotorFans/MotorFans_remove_ads.js",
+          "unchanged": true
+        }
+      ],
+      "changed_response_scripts": 1,
+      "source_has_explicit_size_limit": false,
+      "missing_dependencies": {}
+    },
+    {
+      "name": "配音秀去广告",
+      "path": "Surge/module/Kelee/DubbingShow_remove_ads.sgmodule",
+      "before_sha256": "bc6fa014bbd1d7d498c1ac9c53df69b186f09cef8ca7e9c5b6bdf6ad5bc2949c",
+      "after_sha256": "6fccdc0fc283cd637bb436ed534e7cd97945569769c21fc5ec386ceb30c955ec",
+      "source_path": "Surge/Kelee-review/loon-original/DubbingShow_remove_ads.lpx",
+      "source_sha256": "1ab7c72165b830314be614e7493e171afac36d6dd9f1b99dcfebdd1a00de468a",
+      "source_unchanged": true,
+      "source_script_rows": [
+        "response if ${url} ~= /^https:\\/\\/iosapi\\.peiyinxiu\\.com\\/Api\\/Film\\/GetConfigValue/i then script(\"https://kelee.one/Resource/JavaScript/DubbingShow/DubbingShow_remove_ads.js\") with tag=\"移除首页底部弹窗\", requires_body=true"
+      ],
+      "resources": [
+        {
+          "path": "Surge/Script/Kelee/DubbingShow/DubbingShow_remove_ads.js",
+          "sha256": "00b312e3ed559cfcda15cb43e637c94d6293ad3cb34b2c5d23d9bd330668fe52",
+          "source_url": "https://kelee.one/Resource/JavaScript/DubbingShow/DubbingShow_remove_ads.js",
+          "unchanged": true
+        }
+      ],
+      "changed_response_scripts": 1,
+      "source_has_explicit_size_limit": false,
+      "missing_dependencies": {}
+    },
+    {
+      "name": "微信小程序去广告",
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "before_sha256": "01959ad633fa9040580a09f97ffbf454049a3cc21d78b3f3d8ea1437a9652535",
+      "after_sha256": "3afd443a414e010be2b8940e866fd2b9d709272212542369445990df2636bc30",
+      "source_path": "Surge/Kelee-review/loon-original/WexinMiniPrograms_Remove_ads.lpx",
+      "source_sha256": "a3e17aa9fa533f226fab0d178a3f1a7061f9833348af757dc14c03ef17469f20",
+      "source_unchanged": true,
+      "source_script_rows": [
+        "response if ${url} ~= /^https:\\/\\/webapi\\.qmai\\.cn\\/web\\/catering\\/design\\/homePage-Config/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/kff/kff.js\") with tag=\"企迈点单系统去广告\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/ump\\.ems\\.com\\.cn\\/new-generation-extend\\/redis\\/pageInfoByChannel/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ems/ems.js\") with tag=\"EMS中国邮政物流速递去广告\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/mapi\\.xiaotucc\\.com\\/(mall\\/main|main_page\\/index\\/getActivity)/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/xiaotucc/xiaotucc.js\") with tag=\"小兔充充去广告\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/minifm\\.maxxipoint\\.com\\/banner\\/list/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/FamilyMart/FamilyMart.js\") with tag=\"全家微会员去广告\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/lawsonapi\\.yorentown\\.com\\/area\\/sh-lawson\\/app\\/v1\\/home/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/lawson/lawson.js\") with tag=\"罗森点点去广告\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/miniapp\\.sexytea2013\\.com\\/cms\\/slot\\/queryByCodes\\?codes=INDEX_TOP_BANNER/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js\") with tag=\"茶颜悦色去广告\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/coco-com\\.e\\.verystar\\.net\\/v1\\/home\\/info/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js\") with tag=\"COCO点单去广告\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=hm\\.fa\\.homeConfig/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/qingju/qingju.js\") with tag=\"滴滴青桔去广告\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/cappapi\\.alittle-tea\\.com\\/open\\?method=catering\\.set\\.ad/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/alittle-tea/alittle-tea.js\") with tag=\"一点点+去广告\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/api\\.prod\\.dj\\.mstand\\.cn\\/scrm\\/mini\\/app\\/index\\/info/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/M_Stand/M_Stand.js\") with tag=\"M Stand去广告\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/passenger\\.t3go\\.cn\\/(solution\\-|common\\-)?(passenger\\-)?(activity\\-|app\\-)?api\\/notoken\\/(trip\\/)?api\\/(home\\/|common\\/)?(v[1-3]\\/)?(ad\\/getNegativescreen|solution\\/passenger\\/open\\/getHomeMenu|leftmenu|getHomeInfoGlobal)/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/T3/T3.js\") with tag=\"T3出行去广告\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/newton\\.gumingnc\\.com\\/newton-buyer\\/newton\\/buyer\\/(ump|touch|external\\/front)/i then script(\"https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ming/ming.js\") with tag=\"古茗去广告\", requires_body=true"
+      ],
+      "resources": [
+        {
+          "path": "Surge/Script/Kelee/WexinMiniPrograms/kff/kff.js",
+          "sha256": "8453c73e9412fd99396afbfea14e7d26c46936da1650603b6f2433cda18cbf2c",
+          "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/kff/kff.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/WexinMiniPrograms/ems/ems.js",
+          "sha256": "2208e4945d8781e5bc9d20a436fc141629a7e4dc9fd516f9fe917196010cf5bc",
+          "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ems/ems.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/WexinMiniPrograms/xiaotucc/xiaotucc.js",
+          "sha256": "a10131a49267ce2cdd17c7c4d783eb64c8aa943b83ee4dcadb846ccd2c4bbb1b",
+          "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/xiaotucc/xiaotucc.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/WexinMiniPrograms/FamilyMart/FamilyMart.js",
+          "sha256": "e25457f43eacfbf27ca8229445e69f60f7562ece723b5ebaf07969c0ebf75e1c",
+          "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/FamilyMart/FamilyMart.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/WexinMiniPrograms/lawson/lawson.js",
+          "sha256": "3d57d6ae9070934eef3513e2a4b640fad9dd5076fbbc6c471994bd3d790068f1",
+          "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/lawson/lawson.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js",
+          "sha256": "4b7f857caa810648f7be584e916ceffb9c12dd3b2ce7766ed5bd605646e2a4d1",
+          "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/WexinMiniPrograms/coco/coco.js",
+          "sha256": "dc9a1915eed8f6f760a8f3a03f5e2f5a0f346373693ae4ac2e0c5dbd90fd46b3",
+          "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/WexinMiniPrograms/qingju/qingju.js",
+          "sha256": "8664e7a22b21aaa8546ec167e3a43fee7ebd2c00552a126212720b09a4819bf8",
+          "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/qingju/qingju.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/WexinMiniPrograms/alittle-tea/alittle-tea.js",
+          "sha256": "c765215071712fa0c0c0ef3719263fff81d4a1ce0189f8bc0861aa721657a44c",
+          "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/alittle-tea/alittle-tea.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/WexinMiniPrograms/M_Stand/M_Stand.js",
+          "sha256": "5d6f163842ce53eb034fa01c244f6482fedd2f5d56b7c206c25d6f11c21e805f",
+          "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/M_Stand/M_Stand.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/WexinMiniPrograms/T3/T3.js",
+          "sha256": "ab1ca9af4dd9b294f585335856de51d6df2b61c31d9a3d1982a5b091355da25a",
+          "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/T3/T3.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/WexinMiniPrograms/ming/ming.js",
+          "sha256": "bd0f4e67ae73fdd083b10c1e802912d8c9ade1b2b14a0dead865d7af0b90d991",
+          "source_url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ming/ming.js",
+          "unchanged": true
+        }
+      ],
+      "changed_response_scripts": 12,
+      "source_has_explicit_size_limit": false,
+      "missing_dependencies": {}
+    },
+    {
+      "name": "最美壁纸去广告",
+      "path": "Surge/module/Kelee/iWallBiZhi_remove_ads.sgmodule",
+      "before_sha256": "88fdb6823430f147bcf4392bf578464942fdb847520782d65353e5f6b2f018f7",
+      "after_sha256": "cf2ab5bb2c1bc77c44c7b7b2d4c1c0c4d219a7704cc391317a8a4f39d34b151a",
+      "source_path": "Surge/Kelee-review/loon-original/iWallBiZhi_remove_ads.lpx",
+      "source_sha256": "6345a00cb31ab6c56e42c55f4063c5dbe51a9ade0e911ea8953bde600d64f364",
+      "source_unchanged": true,
+      "source_script_rows": [
+        "response if ${url} ~= /^https:\\/\\/api\\.fzxhmy\\.com\\/core\\/initialize\\?/i then script(\"https://kelee.one/Resource/JavaScript/iWallBiZhi/core_initialize.js\") with tag=\"移除首页广告配置\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/api\\.fzxhmy\\.com\\/landing\\/initialize\\?/i then script(\"https://kelee.one/Resource/JavaScript/iWallBiZhi/landing_initialize.js\") with tag=\"移除首页轮播图广告\", requires_body=true",
+        "response if ${url} ~= /^https:\\/\\/api\\.fzxhmy\\.com\\/avatar\\/landing\\?/i then script(\"https://kelee.one/Resource/JavaScript/iWallBiZhi/landing.js\") with tag=\"移除头像页横幅跳转\", requires_body=true"
+      ],
+      "resources": [
+        {
+          "path": "Surge/Script/Kelee/iWallBiZhi/core_initialize.js",
+          "sha256": "85bb24cccb37499fe8c4e334a61b3c8b5a6485bb167a33141879e46ee0a3f531",
+          "source_url": "https://kelee.one/Resource/JavaScript/iWallBiZhi/core_initialize.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/iWallBiZhi/landing_initialize.js",
+          "sha256": "e799e430ef3f751c686a4cf3df5d8dc2ab7c7b81170f3feb08e6ee45452762e9",
+          "source_url": "https://kelee.one/Resource/JavaScript/iWallBiZhi/landing_initialize.js",
+          "unchanged": true
+        },
+        {
+          "path": "Surge/Script/Kelee/iWallBiZhi/landing.js",
+          "sha256": "66aec750fd71c6de8100e26789080efc736c3592f982cfb6703cdb13e96af1db",
+          "source_url": "https://kelee.one/Resource/JavaScript/iWallBiZhi/landing.js",
+          "unchanged": true
+        }
+      ],
+      "changed_response_scripts": 3,
+      "source_has_explicit_size_limit": false,
+      "missing_dependencies": {}
+    }
+  ],
+  "changed_rows": [
+    {
+      "path": "Surge/module/Kelee/BaiduSearchWebpage_remove_ads.sgmodule",
+      "line": 18,
+      "active": true,
+      "script_key": "BaiduSearchWebpage_remove_ads_1",
+      "before": "BaiduSearchWebpage_remove_ads_1 = type=http-response, pattern=\"(?i)^https?:\\\\/\\\\/(www|m)\\\\.baidu\\\\.com\\\\/?($|\\\\?from=\\\\w{8,9})\", script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "BaiduSearchWebpage_remove_ads_1 = type=http-response, pattern=\"(?i)^https?:\\\\/\\\\/(www|m)\\\\.baidu\\\\.com\\\\/?($|\\\\?from=\\\\w{8,9})\", script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https?:\\/\\/(www|m)\\.baidu\\.com\\/?($|\\?from=\\w{8,9})",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https?:\\/\\/(www|m)\\.baidu\\.com\\/?($|\\?from=\\w{8,9})",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Bixin_remove_ads.sgmodule",
+      "line": 38,
+      "active": true,
+      "script_key": "Bixin_remove_ads_1",
+      "before": "Bixin_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/common\\/tab\\/query$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/common_tab.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "Bixin_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/common\\/tab\\/query$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/common_tab.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/common\\/tab\\/query$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/common_tab.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/common\\/tab\\/query$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/common_tab.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Bixin_remove_ads.sgmodule",
+      "line": 39,
+      "active": true,
+      "script_key": "Bixin_remove_ads_2",
+      "before": "Bixin_remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/my\\/page$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/my_page.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "Bixin_remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/my\\/page$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/my_page.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/my\\/page$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/my_page.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/my\\/page$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/my_page.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/DjDuoDuo_remove_ads.sgmodule",
+      "line": 18,
+      "active": true,
+      "script_key": "DjDuoDuo_remove_ads_1",
+      "before": "DjDuoDuo_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.dianyinduoduo\\.com\\/v4\\/config\\.php\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DjDuoDuo/DjDuoDuo_remove_ads.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "DjDuoDuo_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.dianyinduoduo\\.com\\/v4\\/config\\.php\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DjDuoDuo/DjDuoDuo_remove_ads.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.dianyinduoduo\\.com\\/v4\\/config\\.php\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DjDuoDuo/DjDuoDuo_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.dianyinduoduo\\.com\\/v4\\/config\\.php\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DjDuoDuo/DjDuoDuo_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/DubbingShow_remove_ads.sgmodule",
+      "line": 24,
+      "active": true,
+      "script_key": "DubbingShow_remove_ads_1",
+      "before": "DubbingShow_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/iosapi\\.peiyinxiu\\.com\\/Api\\/Film\\/GetConfigValue, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DubbingShow/DubbingShow_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "DubbingShow_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/iosapi\\.peiyinxiu\\.com\\/Api\\/Film\\/GetConfigValue, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DubbingShow/DubbingShow_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/iosapi\\.peiyinxiu\\.com\\/Api\\/Film\\/GetConfigValue",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DubbingShow/DubbingShow_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/iosapi\\.peiyinxiu\\.com\\/Api\\/Film\\/GetConfigValue",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DubbingShow/DubbingShow_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/EasyBike_remove_ads.sgmodule",
+      "line": 22,
+      "active": true,
+      "script_key": "EasyBike_remove_ads_1",
+      "before": "EasyBike_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/mobileconfig-gateway\\.hellobike\\.com\\/api$, script-path=https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js, requires-body=true, max-size=-1",
+      "after": "EasyBike_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/mobileconfig-gateway\\.hellobike\\.com\\/api$, script-path=https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/mobileconfig-gateway\\.hellobike\\.com\\/api$",
+        "script-path": "https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/mobileconfig-gateway\\.hellobike\\.com\\/api$",
+        "script-path": "https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/MKZ_remove_ads.sgmodule",
+      "line": 25,
+      "active": true,
+      "script_key": "MKZ_remove_ads_1",
+      "before": "MKZ_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/base\\.mkzcdn\\.com\\/app\\/config\\/, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MKZ/MKZ_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "MKZ_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/base\\.mkzcdn\\.com\\/app\\/config\\/, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MKZ/MKZ_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/base\\.mkzcdn\\.com\\/app\\/config\\/",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MKZ/MKZ_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/base\\.mkzcdn\\.com\\/app\\/config\\/",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MKZ/MKZ_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/MotorFans_remove_ads.sgmodule",
+      "line": 30,
+      "active": true,
+      "script_key": "MotorFans_remove_ads_1",
+      "before": "MotorFans_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.58moto\\.com\\/expands\\/config\\/appWholeConfig\\?key=app_whole_config$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "MotorFans_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.58moto\\.com\\/expands\\/config\\/appWholeConfig\\?key=app_whole_config$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.58moto\\.com\\/expands\\/config\\/appWholeConfig\\?key=app_whole_config$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.58moto\\.com\\/expands\\/config\\/appWholeConfig\\?key=app_whole_config$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/RiskBird_remove_ads.sgmodule",
+      "line": 22,
+      "active": true,
+      "script_key": "RiskBird_remove_ads_1",
+      "before": "RiskBird_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/m\\.riskbird\\.com\\/prod-qbb-api\\/query\\/person\\/personRecommend, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/RiskBird/RiskBird_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "RiskBird_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/m\\.riskbird\\.com\\/prod-qbb-api\\/query\\/person\\/personRecommend, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/RiskBird/RiskBird_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/m\\.riskbird\\.com\\/prod-qbb-api\\/query\\/person\\/personRecommend",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/RiskBird/RiskBird_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/m\\.riskbird\\.com\\/prod-qbb-api\\/query\\/person\\/personRecommend",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/RiskBird/RiskBird_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/ShoujiDesk_remove_ads.sgmodule",
+      "line": 22,
+      "active": true,
+      "script_key": "ShoujiDesk_remove_ads_1",
+      "before": "ShoujiDesk_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.tdz5\\.com\\/base\\/init\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/ShoujiDesk/base_init.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "ShoujiDesk_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.tdz5\\.com\\/base\\/init\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/ShoujiDesk/base_init.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.tdz5\\.com\\/base\\/init\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/ShoujiDesk/base_init.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.tdz5\\.com\\/base\\/init\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/ShoujiDesk/base_init.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Uki_remove_ads.sgmodule",
+      "line": 26,
+      "active": true,
+      "script_key": "Uki_remove_ads_1",
+      "before": "Uki_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/lover\\/productList, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "Uki_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/lover\\/productList, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/lover\\/productList",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/lover\\/productList",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Uki_remove_ads.sgmodule",
+      "line": 27,
+      "active": true,
+      "script_key": "Uki_remove_ads_2",
+      "before": "Uki_remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/friends\\/closeFriend\\/home, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "Uki_remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/friends\\/closeFriend\\/home, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/friends\\/closeFriend\\/home",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/friends\\/closeFriend\\/home",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Uki_remove_ads.sgmodule",
+      "line": 28,
+      "active": true,
+      "script_key": "Uki_remove_ads_3",
+      "before": "Uki_remove_ads_3 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/party\\/config$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "Uki_remove_ads_3 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/party\\/config$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/party\\/config$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/party\\/config$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/Uki_remove_ads.sgmodule",
+      "line": 29,
+      "active": true,
+      "script_key": "Uki_remove_ads_4",
+      "before": "Uki_remove_ads_4 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v1\\/post\\/fetchSearchRecommend$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "Uki_remove_ads_4 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v1\\/post\\/fetchSearchRecommend$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v1\\/post\\/fetchSearchRecommend$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v1\\/post\\/fetchSearchRecommend$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "line": 148,
+      "active": true,
+      "script_key": "WexinMiniPrograms_Remove_ads_1",
+      "before": "WexinMiniPrograms_Remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/webapi\\.qmai\\.cn\\/web\\/catering\\/design\\/homePage-Config, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/kff/kff.js, requires-body=true, max-size=-1",
+      "after": "WexinMiniPrograms_Remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/webapi\\.qmai\\.cn\\/web\\/catering\\/design\\/homePage-Config, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/kff/kff.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/webapi\\.qmai\\.cn\\/web\\/catering\\/design\\/homePage-Config",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/kff/kff.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/webapi\\.qmai\\.cn\\/web\\/catering\\/design\\/homePage-Config",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/kff/kff.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "line": 149,
+      "active": true,
+      "script_key": "WexinMiniPrograms_Remove_ads_2",
+      "before": "WexinMiniPrograms_Remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/ump\\.ems\\.com\\.cn\\/new-generation-extend\\/redis\\/pageInfoByChannel, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ems/ems.js, requires-body=true, max-size=-1",
+      "after": "WexinMiniPrograms_Remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/ump\\.ems\\.com\\.cn\\/new-generation-extend\\/redis\\/pageInfoByChannel, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ems/ems.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/ump\\.ems\\.com\\.cn\\/new-generation-extend\\/redis\\/pageInfoByChannel",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ems/ems.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/ump\\.ems\\.com\\.cn\\/new-generation-extend\\/redis\\/pageInfoByChannel",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ems/ems.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "line": 150,
+      "active": true,
+      "script_key": "WexinMiniPrograms_Remove_ads_3",
+      "before": "WexinMiniPrograms_Remove_ads_3 = type=http-response, pattern=(?i)^https:\\/\\/mapi\\.xiaotucc\\.com\\/(mall\\/main|main_page\\/index\\/getActivity), script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/xiaotucc/xiaotucc.js, requires-body=true, max-size=-1",
+      "after": "WexinMiniPrograms_Remove_ads_3 = type=http-response, pattern=(?i)^https:\\/\\/mapi\\.xiaotucc\\.com\\/(mall\\/main|main_page\\/index\\/getActivity), script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/xiaotucc/xiaotucc.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/mapi\\.xiaotucc\\.com\\/(mall\\/main|main_page\\/index\\/getActivity)",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/xiaotucc/xiaotucc.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/mapi\\.xiaotucc\\.com\\/(mall\\/main|main_page\\/index\\/getActivity)",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/xiaotucc/xiaotucc.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "line": 151,
+      "active": true,
+      "script_key": "WexinMiniPrograms_Remove_ads_4",
+      "before": "WexinMiniPrograms_Remove_ads_4 = type=http-response, pattern=(?i)^https:\\/\\/minifm\\.maxxipoint\\.com\\/banner\\/list, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/FamilyMart/FamilyMart.js, requires-body=true, max-size=-1",
+      "after": "WexinMiniPrograms_Remove_ads_4 = type=http-response, pattern=(?i)^https:\\/\\/minifm\\.maxxipoint\\.com\\/banner\\/list, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/FamilyMart/FamilyMart.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/minifm\\.maxxipoint\\.com\\/banner\\/list",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/FamilyMart/FamilyMart.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/minifm\\.maxxipoint\\.com\\/banner\\/list",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/FamilyMart/FamilyMart.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "line": 152,
+      "active": true,
+      "script_key": "WexinMiniPrograms_Remove_ads_5",
+      "before": "WexinMiniPrograms_Remove_ads_5 = type=http-response, pattern=(?i)^https:\\/\\/lawsonapi\\.yorentown\\.com\\/area\\/sh-lawson\\/app\\/v1\\/home, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/lawson/lawson.js, requires-body=true, max-size=-1",
+      "after": "WexinMiniPrograms_Remove_ads_5 = type=http-response, pattern=(?i)^https:\\/\\/lawsonapi\\.yorentown\\.com\\/area\\/sh-lawson\\/app\\/v1\\/home, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/lawson/lawson.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/lawsonapi\\.yorentown\\.com\\/area\\/sh-lawson\\/app\\/v1\\/home",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/lawson/lawson.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/lawsonapi\\.yorentown\\.com\\/area\\/sh-lawson\\/app\\/v1\\/home",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/lawson/lawson.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "line": 153,
+      "active": true,
+      "script_key": "WexinMiniPrograms_Remove_ads_6",
+      "before": "WexinMiniPrograms_Remove_ads_6 = type=http-response, pattern=(?i)^https:\\/\\/miniapp\\.sexytea2013\\.com\\/cms\\/slot\\/queryByCodes\\?codes=INDEX_TOP_BANNER, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "WexinMiniPrograms_Remove_ads_6 = type=http-response, pattern=(?i)^https:\\/\\/miniapp\\.sexytea2013\\.com\\/cms\\/slot\\/queryByCodes\\?codes=INDEX_TOP_BANNER, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/miniapp\\.sexytea2013\\.com\\/cms\\/slot\\/queryByCodes\\?codes=INDEX_TOP_BANNER",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/miniapp\\.sexytea2013\\.com\\/cms\\/slot\\/queryByCodes\\?codes=INDEX_TOP_BANNER",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "line": 154,
+      "active": true,
+      "script_key": "WexinMiniPrograms_Remove_ads_7",
+      "before": "WexinMiniPrograms_Remove_ads_7 = type=http-response, pattern=(?i)^https:\\/\\/coco-com\\.e\\.verystar\\.net\\/v1\\/home\\/info, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/coco/coco.js, requires-body=true, max-size=-1",
+      "after": "WexinMiniPrograms_Remove_ads_7 = type=http-response, pattern=(?i)^https:\\/\\/coco-com\\.e\\.verystar\\.net\\/v1\\/home\\/info, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/coco/coco.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/coco-com\\.e\\.verystar\\.net\\/v1\\/home\\/info",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/coco/coco.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/coco-com\\.e\\.verystar\\.net\\/v1\\/home\\/info",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/coco/coco.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "line": 155,
+      "active": true,
+      "script_key": "WexinMiniPrograms_Remove_ads_8",
+      "before": "WexinMiniPrograms_Remove_ads_8 = type=http-response, pattern=(?i)^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=hm\\.fa\\.homeConfig, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/qingju/qingju.js, requires-body=true, max-size=-1",
+      "after": "WexinMiniPrograms_Remove_ads_8 = type=http-response, pattern=(?i)^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=hm\\.fa\\.homeConfig, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/qingju/qingju.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=hm\\.fa\\.homeConfig",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/qingju/qingju.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=hm\\.fa\\.homeConfig",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/qingju/qingju.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "line": 156,
+      "active": true,
+      "script_key": "WexinMiniPrograms_Remove_ads_9",
+      "before": "WexinMiniPrograms_Remove_ads_9 = type=http-response, pattern=(?i)^https:\\/\\/cappapi\\.alittle-tea\\.com\\/open\\?method=catering\\.set\\.ad, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/alittle-tea/alittle-tea.js, requires-body=true, max-size=-1",
+      "after": "WexinMiniPrograms_Remove_ads_9 = type=http-response, pattern=(?i)^https:\\/\\/cappapi\\.alittle-tea\\.com\\/open\\?method=catering\\.set\\.ad, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/alittle-tea/alittle-tea.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/cappapi\\.alittle-tea\\.com\\/open\\?method=catering\\.set\\.ad",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/alittle-tea/alittle-tea.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/cappapi\\.alittle-tea\\.com\\/open\\?method=catering\\.set\\.ad",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/alittle-tea/alittle-tea.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "line": 157,
+      "active": true,
+      "script_key": "WexinMiniPrograms_Remove_ads_10",
+      "before": "WexinMiniPrograms_Remove_ads_10 = type=http-response, pattern=(?i)^https:\\/\\/api\\.prod\\.dj\\.mstand\\.cn\\/scrm\\/mini\\/app\\/index\\/info, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/M_Stand/M_Stand.js, requires-body=true, max-size=-1",
+      "after": "WexinMiniPrograms_Remove_ads_10 = type=http-response, pattern=(?i)^https:\\/\\/api\\.prod\\.dj\\.mstand\\.cn\\/scrm\\/mini\\/app\\/index\\/info, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/M_Stand/M_Stand.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.prod\\.dj\\.mstand\\.cn\\/scrm\\/mini\\/app\\/index\\/info",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/M_Stand/M_Stand.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.prod\\.dj\\.mstand\\.cn\\/scrm\\/mini\\/app\\/index\\/info",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/M_Stand/M_Stand.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "line": 158,
+      "active": true,
+      "script_key": "WexinMiniPrograms_Remove_ads_11",
+      "before": "WexinMiniPrograms_Remove_ads_11 = type=http-response, pattern=(?i)^https:\\/\\/passenger\\.t3go\\.cn\\/(solution\\-|common\\-)?(passenger\\-)?(activity\\-|app\\-)?api\\/notoken\\/(trip\\/)?api\\/(home\\/|common\\/)?(v[1-3]\\/)?(ad\\/getNegativescreen|solution\\/passenger\\/open\\/getHomeMenu|leftmenu|getHomeInfoGlobal), script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/T3/T3.js, requires-body=true, max-size=-1",
+      "after": "WexinMiniPrograms_Remove_ads_11 = type=http-response, pattern=(?i)^https:\\/\\/passenger\\.t3go\\.cn\\/(solution\\-|common\\-)?(passenger\\-)?(activity\\-|app\\-)?api\\/notoken\\/(trip\\/)?api\\/(home\\/|common\\/)?(v[1-3]\\/)?(ad\\/getNegativescreen|solution\\/passenger\\/open\\/getHomeMenu|leftmenu|getHomeInfoGlobal), script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/T3/T3.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/passenger\\.t3go\\.cn\\/(solution\\-|common\\-)?(passenger\\-)?(activity\\-|app\\-)?api\\/notoken\\/(trip\\/)?api\\/(home\\/|common\\/)?(v[1-3]\\/)?(ad\\/getNegativescreen|solution\\/passenger\\/open\\/getHomeMenu|leftmenu|getHomeInfoGlobal)",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/T3/T3.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/passenger\\.t3go\\.cn\\/(solution\\-|common\\-)?(passenger\\-)?(activity\\-|app\\-)?api\\/notoken\\/(trip\\/)?api\\/(home\\/|common\\/)?(v[1-3]\\/)?(ad\\/getNegativescreen|solution\\/passenger\\/open\\/getHomeMenu|leftmenu|getHomeInfoGlobal)",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/T3/T3.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
+      "line": 159,
+      "active": true,
+      "script_key": "WexinMiniPrograms_Remove_ads_12",
+      "before": "WexinMiniPrograms_Remove_ads_12 = type=http-response, pattern=(?i)^https:\\/\\/newton\\.gumingnc\\.com\\/newton-buyer\\/newton\\/buyer\\/(ump|touch|external\\/front), script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ming/ming.js, requires-body=true, max-size=-1",
+      "after": "WexinMiniPrograms_Remove_ads_12 = type=http-response, pattern=(?i)^https:\\/\\/newton\\.gumingnc\\.com\\/newton-buyer\\/newton\\/buyer\\/(ump|touch|external\\/front), script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ming/ming.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/newton\\.gumingnc\\.com\\/newton-buyer\\/newton\\/buyer\\/(ump|touch|external\\/front)",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ming/ming.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/newton\\.gumingnc\\.com\\/newton-buyer\\/newton\\/buyer\\/(ump|touch|external\\/front)",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ming/ming.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/iWallBiZhi_remove_ads.sgmodule",
+      "line": 22,
+      "active": true,
+      "script_key": "iWallBiZhi_remove_ads_1",
+      "before": "iWallBiZhi_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/core\\/initialize\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/core_initialize.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "iWallBiZhi_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/core\\/initialize\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/core_initialize.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/core\\/initialize\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/core_initialize.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/core\\/initialize\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/core_initialize.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/iWallBiZhi_remove_ads.sgmodule",
+      "line": 23,
+      "active": true,
+      "script_key": "iWallBiZhi_remove_ads_2",
+      "before": "iWallBiZhi_remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/landing\\/initialize\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing_initialize.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "iWallBiZhi_remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/landing\\/initialize\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing_initialize.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/landing\\/initialize\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing_initialize.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/landing\\/initialize\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing_initialize.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    },
+    {
+      "path": "Surge/module/Kelee/iWallBiZhi_remove_ads.sgmodule",
+      "line": 24,
+      "active": true,
+      "script_key": "iWallBiZhi_remove_ads_3",
+      "before": "iWallBiZhi_remove_ads_3 = type=http-response, pattern=(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/avatar\\/landing\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "iWallBiZhi_remove_ads_3 = type=http-response, pattern=(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/avatar\\/landing\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/avatar\\/landing\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/avatar\\/landing\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10652,
+      "active": true,
+      "script_key": "kelee_0273_DjDuoDuo_remove_ads_1",
+      "before": "kelee_0273_DjDuoDuo_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.dianyinduoduo\\.com\\/v4\\/config\\.php\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DjDuoDuo/DjDuoDuo_remove_ads.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "kelee_0273_DjDuoDuo_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.dianyinduoduo\\.com\\/v4\\/config\\.php\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DjDuoDuo/DjDuoDuo_remove_ads.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.dianyinduoduo\\.com\\/v4\\/config\\.php\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DjDuoDuo/DjDuoDuo_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.dianyinduoduo\\.com\\/v4\\/config\\.php\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DjDuoDuo/DjDuoDuo_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10657,
+      "active": true,
+      "script_key": "kelee_0274_Uki_remove_ads_1",
+      "before": "kelee_0274_Uki_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/lover\\/productList, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "kelee_0274_Uki_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/lover\\/productList, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/lover\\/productList",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/lover\\/productList",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10658,
+      "active": true,
+      "script_key": "kelee_0275_Uki_remove_ads_2",
+      "before": "kelee_0275_Uki_remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/friends\\/closeFriend\\/home, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "kelee_0275_Uki_remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/friends\\/closeFriend\\/home, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/friends\\/closeFriend\\/home",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/friends\\/closeFriend\\/home",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10659,
+      "active": true,
+      "script_key": "kelee_0276_Uki_remove_ads_3",
+      "before": "kelee_0276_Uki_remove_ads_3 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/party\\/config$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "kelee_0276_Uki_remove_ads_3 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/party\\/config$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/party\\/config$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v\\d\\/party\\/config$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10660,
+      "active": true,
+      "script_key": "kelee_0277_Uki_remove_ads_4",
+      "before": "kelee_0277_Uki_remove_ads_4 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v1\\/post\\/fetchSearchRecommend$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "kelee_0277_Uki_remove_ads_4 = type=http-response, pattern=(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v1\\/post\\/fetchSearchRecommend$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v1\\/post\\/fetchSearchRecommend$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.chenlongtech\\.cn\\/v1\\/post\\/fetchSearchRecommend$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Uki/Uki_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10665,
+      "active": true,
+      "script_key": "kelee_0278_BaiduSearchWebpage_remove_ads_1",
+      "before": "kelee_0278_BaiduSearchWebpage_remove_ads_1 = type=http-response, pattern=\"(?i)^https?:\\\\/\\\\/(www|m)\\\\.baidu\\\\.com\\\\/?($|\\\\?from=\\\\w{8,9})\", script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "kelee_0278_BaiduSearchWebpage_remove_ads_1 = type=http-response, pattern=\"(?i)^https?:\\\\/\\\\/(www|m)\\\\.baidu\\\\.com\\\\/?($|\\\\?from=\\\\w{8,9})\", script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https?:\\/\\/(www|m)\\.baidu\\.com\\/?($|\\?from=\\w{8,9})",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https?:\\/\\/(www|m)\\.baidu\\.com\\/?($|\\?from=\\w{8,9})",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/BaiduSearch/BaiduSearchHomePage_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10670,
+      "active": true,
+      "script_key": "kelee_0279_Bixin_remove_ads_1",
+      "before": "kelee_0279_Bixin_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/common\\/tab\\/query$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/common_tab.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "kelee_0279_Bixin_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/common\\/tab\\/query$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/common_tab.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/common\\/tab\\/query$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/common_tab.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/common\\/tab\\/query$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/common_tab.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10671,
+      "active": true,
+      "script_key": "kelee_0280_Bixin_remove_ads_2",
+      "before": "kelee_0280_Bixin_remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/my\\/page$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/my_page.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "kelee_0280_Bixin_remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/my\\/page$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/my_page.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/my\\/page$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/my_page.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/gateway\\.hibixin\\.com\\/resource\\/v\\d\\/my\\/page$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/Bixin/my_page.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10676,
+      "active": true,
+      "script_key": "kelee_0281_RiskBird_remove_ads_1",
+      "before": "kelee_0281_RiskBird_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/m\\.riskbird\\.com\\/prod-qbb-api\\/query\\/person\\/personRecommend, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/RiskBird/RiskBird_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "kelee_0281_RiskBird_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/m\\.riskbird\\.com\\/prod-qbb-api\\/query\\/person\\/personRecommend, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/RiskBird/RiskBird_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/m\\.riskbird\\.com\\/prod-qbb-api\\/query\\/person\\/personRecommend",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/RiskBird/RiskBird_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/m\\.riskbird\\.com\\/prod-qbb-api\\/query\\/person\\/personRecommend",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/RiskBird/RiskBird_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10682,
+      "active": false,
+      "script_key": "kelee_0282_EasyBike_remove_ads_1",
+      "before": "# kelee_0282_EasyBike_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/mobileconfig-gateway\\.hellobike\\.com\\/api$, script-path=https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js, requires-body=true, max-size=-1",
+      "after": "# kelee_0282_EasyBike_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/mobileconfig-gateway\\.hellobike\\.com\\/api$, script-path=https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/mobileconfig-gateway\\.hellobike\\.com\\/api$",
+        "script-path": "https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/mobileconfig-gateway\\.hellobike\\.com\\/api$",
+        "script-path": "https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10687,
+      "active": true,
+      "script_key": "kelee_0283_ShoujiDesk_remove_ads_1",
+      "before": "kelee_0283_ShoujiDesk_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.tdz5\\.com\\/base\\/init\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/ShoujiDesk/base_init.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "kelee_0283_ShoujiDesk_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.tdz5\\.com\\/base\\/init\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/ShoujiDesk/base_init.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.tdz5\\.com\\/base\\/init\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/ShoujiDesk/base_init.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.tdz5\\.com\\/base\\/init\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/ShoujiDesk/base_init.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10694,
+      "active": true,
+      "script_key": "kelee_0285_MKZ_remove_ads_1",
+      "before": "kelee_0285_MKZ_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/base\\.mkzcdn\\.com\\/app\\/config\\/, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MKZ/MKZ_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "kelee_0285_MKZ_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/base\\.mkzcdn\\.com\\/app\\/config\\/, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MKZ/MKZ_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/base\\.mkzcdn\\.com\\/app\\/config\\/",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MKZ/MKZ_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/base\\.mkzcdn\\.com\\/app\\/config\\/",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MKZ/MKZ_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10699,
+      "active": true,
+      "script_key": "kelee_0286_MotorFans_remove_ads_1",
+      "before": "kelee_0286_MotorFans_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.58moto\\.com\\/expands\\/config\\/appWholeConfig\\?key=app_whole_config$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "kelee_0286_MotorFans_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.58moto\\.com\\/expands\\/config\\/appWholeConfig\\?key=app_whole_config$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.58moto\\.com\\/expands\\/config\\/appWholeConfig\\?key=app_whole_config$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.58moto\\.com\\/expands\\/config\\/appWholeConfig\\?key=app_whole_config$",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10704,
+      "active": true,
+      "script_key": "kelee_0287_DubbingShow_remove_ads_1",
+      "before": "kelee_0287_DubbingShow_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/iosapi\\.peiyinxiu\\.com\\/Api\\/Film\\/GetConfigValue, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DubbingShow/DubbingShow_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "kelee_0287_DubbingShow_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/iosapi\\.peiyinxiu\\.com\\/Api\\/Film\\/GetConfigValue, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DubbingShow/DubbingShow_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/iosapi\\.peiyinxiu\\.com\\/Api\\/Film\\/GetConfigValue",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DubbingShow/DubbingShow_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/iosapi\\.peiyinxiu\\.com\\/Api\\/Film\\/GetConfigValue",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/DubbingShow/DubbingShow_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10709,
+      "active": true,
+      "script_key": "kelee_0288_WexinMiniPrograms_Remove_ads_1",
+      "before": "kelee_0288_WexinMiniPrograms_Remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/webapi\\.qmai\\.cn\\/web\\/catering\\/design\\/homePage-Config, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/kff/kff.js, requires-body=true, max-size=-1",
+      "after": "kelee_0288_WexinMiniPrograms_Remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/webapi\\.qmai\\.cn\\/web\\/catering\\/design\\/homePage-Config, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/kff/kff.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/webapi\\.qmai\\.cn\\/web\\/catering\\/design\\/homePage-Config",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/kff/kff.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/webapi\\.qmai\\.cn\\/web\\/catering\\/design\\/homePage-Config",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/kff/kff.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10710,
+      "active": true,
+      "script_key": "kelee_0289_WexinMiniPrograms_Remove_ads_2",
+      "before": "kelee_0289_WexinMiniPrograms_Remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/ump\\.ems\\.com\\.cn\\/new-generation-extend\\/redis\\/pageInfoByChannel, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ems/ems.js, requires-body=true, max-size=-1",
+      "after": "kelee_0289_WexinMiniPrograms_Remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/ump\\.ems\\.com\\.cn\\/new-generation-extend\\/redis\\/pageInfoByChannel, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ems/ems.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/ump\\.ems\\.com\\.cn\\/new-generation-extend\\/redis\\/pageInfoByChannel",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ems/ems.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/ump\\.ems\\.com\\.cn\\/new-generation-extend\\/redis\\/pageInfoByChannel",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ems/ems.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10711,
+      "active": true,
+      "script_key": "kelee_0290_WexinMiniPrograms_Remove_ads_3",
+      "before": "kelee_0290_WexinMiniPrograms_Remove_ads_3 = type=http-response, pattern=(?i)^https:\\/\\/mapi\\.xiaotucc\\.com\\/(mall\\/main|main_page\\/index\\/getActivity), script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/xiaotucc/xiaotucc.js, requires-body=true, max-size=-1",
+      "after": "kelee_0290_WexinMiniPrograms_Remove_ads_3 = type=http-response, pattern=(?i)^https:\\/\\/mapi\\.xiaotucc\\.com\\/(mall\\/main|main_page\\/index\\/getActivity), script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/xiaotucc/xiaotucc.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/mapi\\.xiaotucc\\.com\\/(mall\\/main|main_page\\/index\\/getActivity)",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/xiaotucc/xiaotucc.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/mapi\\.xiaotucc\\.com\\/(mall\\/main|main_page\\/index\\/getActivity)",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/xiaotucc/xiaotucc.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10712,
+      "active": true,
+      "script_key": "kelee_0291_WexinMiniPrograms_Remove_ads_4",
+      "before": "kelee_0291_WexinMiniPrograms_Remove_ads_4 = type=http-response, pattern=(?i)^https:\\/\\/minifm\\.maxxipoint\\.com\\/banner\\/list, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/FamilyMart/FamilyMart.js, requires-body=true, max-size=-1",
+      "after": "kelee_0291_WexinMiniPrograms_Remove_ads_4 = type=http-response, pattern=(?i)^https:\\/\\/minifm\\.maxxipoint\\.com\\/banner\\/list, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/FamilyMart/FamilyMart.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/minifm\\.maxxipoint\\.com\\/banner\\/list",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/FamilyMart/FamilyMart.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/minifm\\.maxxipoint\\.com\\/banner\\/list",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/FamilyMart/FamilyMart.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10713,
+      "active": true,
+      "script_key": "kelee_0292_WexinMiniPrograms_Remove_ads_5",
+      "before": "kelee_0292_WexinMiniPrograms_Remove_ads_5 = type=http-response, pattern=(?i)^https:\\/\\/lawsonapi\\.yorentown\\.com\\/area\\/sh-lawson\\/app\\/v1\\/home, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/lawson/lawson.js, requires-body=true, max-size=-1",
+      "after": "kelee_0292_WexinMiniPrograms_Remove_ads_5 = type=http-response, pattern=(?i)^https:\\/\\/lawsonapi\\.yorentown\\.com\\/area\\/sh-lawson\\/app\\/v1\\/home, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/lawson/lawson.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/lawsonapi\\.yorentown\\.com\\/area\\/sh-lawson\\/app\\/v1\\/home",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/lawson/lawson.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/lawsonapi\\.yorentown\\.com\\/area\\/sh-lawson\\/app\\/v1\\/home",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/lawson/lawson.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10714,
+      "active": true,
+      "script_key": "kelee_0293_WexinMiniPrograms_Remove_ads_6",
+      "before": "kelee_0293_WexinMiniPrograms_Remove_ads_6 = type=http-response, pattern=(?i)^https:\\/\\/miniapp\\.sexytea2013\\.com\\/cms\\/slot\\/queryByCodes\\?codes=INDEX_TOP_BANNER, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js, requires-body=true, max-size=-1",
+      "after": "kelee_0293_WexinMiniPrograms_Remove_ads_6 = type=http-response, pattern=(?i)^https:\\/\\/miniapp\\.sexytea2013\\.com\\/cms\\/slot\\/queryByCodes\\?codes=INDEX_TOP_BANNER, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/miniapp\\.sexytea2013\\.com\\/cms\\/slot\\/queryByCodes\\?codes=INDEX_TOP_BANNER",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/miniapp\\.sexytea2013\\.com\\/cms\\/slot\\/queryByCodes\\?codes=INDEX_TOP_BANNER",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10715,
+      "active": true,
+      "script_key": "kelee_0294_WexinMiniPrograms_Remove_ads_7",
+      "before": "kelee_0294_WexinMiniPrograms_Remove_ads_7 = type=http-response, pattern=(?i)^https:\\/\\/coco-com\\.e\\.verystar\\.net\\/v1\\/home\\/info, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/coco/coco.js, requires-body=true, max-size=-1",
+      "after": "kelee_0294_WexinMiniPrograms_Remove_ads_7 = type=http-response, pattern=(?i)^https:\\/\\/coco-com\\.e\\.verystar\\.net\\/v1\\/home\\/info, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/coco/coco.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/coco-com\\.e\\.verystar\\.net\\/v1\\/home\\/info",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/coco/coco.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/coco-com\\.e\\.verystar\\.net\\/v1\\/home\\/info",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/coco/coco.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10716,
+      "active": true,
+      "script_key": "kelee_0295_WexinMiniPrograms_Remove_ads_8",
+      "before": "kelee_0295_WexinMiniPrograms_Remove_ads_8 = type=http-response, pattern=(?i)^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=hm\\.fa\\.homeConfig, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/qingju/qingju.js, requires-body=true, max-size=-1",
+      "after": "kelee_0295_WexinMiniPrograms_Remove_ads_8 = type=http-response, pattern=(?i)^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=hm\\.fa\\.homeConfig, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/qingju/qingju.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=hm\\.fa\\.homeConfig",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/qingju/qingju.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=hm\\.fa\\.homeConfig",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/qingju/qingju.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10717,
+      "active": true,
+      "script_key": "kelee_0296_WexinMiniPrograms_Remove_ads_9",
+      "before": "kelee_0296_WexinMiniPrograms_Remove_ads_9 = type=http-response, pattern=(?i)^https:\\/\\/cappapi\\.alittle-tea\\.com\\/open\\?method=catering\\.set\\.ad, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/alittle-tea/alittle-tea.js, requires-body=true, max-size=-1",
+      "after": "kelee_0296_WexinMiniPrograms_Remove_ads_9 = type=http-response, pattern=(?i)^https:\\/\\/cappapi\\.alittle-tea\\.com\\/open\\?method=catering\\.set\\.ad, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/alittle-tea/alittle-tea.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/cappapi\\.alittle-tea\\.com\\/open\\?method=catering\\.set\\.ad",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/alittle-tea/alittle-tea.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/cappapi\\.alittle-tea\\.com\\/open\\?method=catering\\.set\\.ad",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/alittle-tea/alittle-tea.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10718,
+      "active": true,
+      "script_key": "kelee_0297_WexinMiniPrograms_Remove_ads_10",
+      "before": "kelee_0297_WexinMiniPrograms_Remove_ads_10 = type=http-response, pattern=(?i)^https:\\/\\/api\\.prod\\.dj\\.mstand\\.cn\\/scrm\\/mini\\/app\\/index\\/info, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/M_Stand/M_Stand.js, requires-body=true, max-size=-1",
+      "after": "kelee_0297_WexinMiniPrograms_Remove_ads_10 = type=http-response, pattern=(?i)^https:\\/\\/api\\.prod\\.dj\\.mstand\\.cn\\/scrm\\/mini\\/app\\/index\\/info, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/M_Stand/M_Stand.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.prod\\.dj\\.mstand\\.cn\\/scrm\\/mini\\/app\\/index\\/info",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/M_Stand/M_Stand.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.prod\\.dj\\.mstand\\.cn\\/scrm\\/mini\\/app\\/index\\/info",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/M_Stand/M_Stand.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10719,
+      "active": true,
+      "script_key": "kelee_0298_WexinMiniPrograms_Remove_ads_11",
+      "before": "kelee_0298_WexinMiniPrograms_Remove_ads_11 = type=http-response, pattern=(?i)^https:\\/\\/passenger\\.t3go\\.cn\\/(solution\\-|common\\-)?(passenger\\-)?(activity\\-|app\\-)?api\\/notoken\\/(trip\\/)?api\\/(home\\/|common\\/)?(v[1-3]\\/)?(ad\\/getNegativescreen|solution\\/passenger\\/open\\/getHomeMenu|leftmenu|getHomeInfoGlobal), script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/T3/T3.js, requires-body=true, max-size=-1",
+      "after": "kelee_0298_WexinMiniPrograms_Remove_ads_11 = type=http-response, pattern=(?i)^https:\\/\\/passenger\\.t3go\\.cn\\/(solution\\-|common\\-)?(passenger\\-)?(activity\\-|app\\-)?api\\/notoken\\/(trip\\/)?api\\/(home\\/|common\\/)?(v[1-3]\\/)?(ad\\/getNegativescreen|solution\\/passenger\\/open\\/getHomeMenu|leftmenu|getHomeInfoGlobal), script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/T3/T3.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/passenger\\.t3go\\.cn\\/(solution\\-|common\\-)?(passenger\\-)?(activity\\-|app\\-)?api\\/notoken\\/(trip\\/)?api\\/(home\\/|common\\/)?(v[1-3]\\/)?(ad\\/getNegativescreen|solution\\/passenger\\/open\\/getHomeMenu|leftmenu|getHomeInfoGlobal)",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/T3/T3.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/passenger\\.t3go\\.cn\\/(solution\\-|common\\-)?(passenger\\-)?(activity\\-|app\\-)?api\\/notoken\\/(trip\\/)?api\\/(home\\/|common\\/)?(v[1-3]\\/)?(ad\\/getNegativescreen|solution\\/passenger\\/open\\/getHomeMenu|leftmenu|getHomeInfoGlobal)",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/T3/T3.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10720,
+      "active": true,
+      "script_key": "kelee_0299_WexinMiniPrograms_Remove_ads_12",
+      "before": "kelee_0299_WexinMiniPrograms_Remove_ads_12 = type=http-response, pattern=(?i)^https:\\/\\/newton\\.gumingnc\\.com\\/newton-buyer\\/newton\\/buyer\\/(ump|touch|external\\/front), script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ming/ming.js, requires-body=true, max-size=-1",
+      "after": "kelee_0299_WexinMiniPrograms_Remove_ads_12 = type=http-response, pattern=(?i)^https:\\/\\/newton\\.gumingnc\\.com\\/newton-buyer\\/newton\\/buyer\\/(ump|touch|external\\/front), script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ming/ming.js, requires-body=true, max-size=1048576",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/newton\\.gumingnc\\.com\\/newton-buyer\\/newton\\/buyer\\/(ump|touch|external\\/front)",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ming/ming.js",
+        "requires-body": "true",
+        "max-size": "-1"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/newton\\.gumingnc\\.com\\/newton-buyer\\/newton\\/buyer\\/(ump|touch|external\\/front)",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/WexinMiniPrograms/ming/ming.js",
+        "requires-body": "true",
+        "max-size": "1048576"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10725,
+      "active": true,
+      "script_key": "kelee_0300_iWallBiZhi_remove_ads_1",
+      "before": "kelee_0300_iWallBiZhi_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/core\\/initialize\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/core_initialize.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "kelee_0300_iWallBiZhi_remove_ads_1 = type=http-response, pattern=(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/core\\/initialize\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/core_initialize.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/core\\/initialize\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/core_initialize.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/core\\/initialize\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/core_initialize.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10726,
+      "active": true,
+      "script_key": "kelee_0301_iWallBiZhi_remove_ads_2",
+      "before": "kelee_0301_iWallBiZhi_remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/landing\\/initialize\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing_initialize.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "kelee_0301_iWallBiZhi_remove_ads_2 = type=http-response, pattern=(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/landing\\/initialize\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing_initialize.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/landing\\/initialize\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing_initialize.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/landing\\/initialize\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing_initialize.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    },
+    {
+      "path": "Surge/module/blockAds.module",
+      "line": 10727,
+      "active": true,
+      "script_key": "kelee_0302_iWallBiZhi_remove_ads_3",
+      "before": "kelee_0302_iWallBiZhi_remove_ads_3 = type=http-response, pattern=(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/avatar\\/landing\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing.js, requires-body=true, max-size=-1, engine=webview",
+      "after": "kelee_0302_iWallBiZhi_remove_ads_3 = type=http-response, pattern=(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/avatar\\/landing\\?, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing.js, requires-body=true, max-size=1048576, engine=webview",
+      "before_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/avatar\\/landing\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing.js",
+        "requires-body": "true",
+        "max-size": "-1",
+        "engine": "webview"
+      },
+      "after_fields": {
+        "type": "http-response",
+        "pattern": "(?i)^https:\\/\\/api\\.fzxhmy\\.com\\/avatar\\/landing\\?",
+        "script-path": "https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/iWallBiZhi/landing.js",
+        "requires-body": "true",
+        "max-size": "1048576",
+        "engine": "webview"
+      }
+    }
+  ],
+  "unchanged_ios_default_modules": [
+    "Surge/module/weibo.module",
+    "Surge/module/split/partB/bilibili.sgmodule"
+  ],
+  "unchanged_separate_fork": {
+    "repository": "WhiteSoulss/ios_rule_script",
+    "commit": "90d2a493f185b4f3f3b26ec61ef06f78083c0a53",
+    "module": "rewrite/Surge/AllInOne/AllInOne.sgmodule",
+    "reason": "Its response scripts use the existing iOS default 1 MiB; no unlimited or raised cap to change."
+  },
+  "verification": {
+    "status": "passed",
+    "report": "Surge/Kelee-review/verification.json",
+    "checks": {
+      "source_json_native_jq_gate": 134,
+      "native_patterns_compiled": 577,
+      "native_jq_actions_retained": 134,
+      "json_semantic_fixtures": 68,
+      "inline_mock_checks": 446,
+      "modules_verified": 106,
+      "merged_active_rows": 5295,
+      "config_script_patterns_compiled_icu": 314,
+      "config_script_rows_tokenized": 314,
+      "config_body_url_patterns_compiled_icu": 369,
+      "config_body_rows_tokenized": 369,
+      "config_body_patterns_compiled_icu": 24,
+      "baidu_original_script_wiring_cases": 2,
+      "baidu_source_url_equivalence_cases": 12,
+      "crunchyroll_original_text_rewrite_cases": 5,
+      "reported_invalid_script_reproduced": 1,
+      "reported_invalid_body_reproduced": 1,
+      "response_body_budget_script_rows_checked": 321,
+      "response_body_budget_explicit_caps_checked": 57,
+      "response_body_budget_ios_defaults_retained": 264,
+      "response_body_budget_disabled_haro_checked": 1,
+      "response_body_budget_reviewed_independent_rows": 29,
+      "response_body_budget_independent_bundle_wiring": 28,
+      "full_syntax_module_argument_references_checked": 13,
+      "full_syntax_host_items_checked": 1450,
+      "full_syntax_General_rows_checked": 4,
+      "full_syntax_Rule_rows_checked": 3055,
+      "full_syntax_Header Rewrite_rows_checked": 1,
+      "full_syntax_URL Rewrite_rows_checked": 525,
+      "full_syntax_Body Rewrite_rows_checked": 369,
+      "full_syntax_json_mock_payloads_parsed": 1264,
+      "full_syntax_Map Local_rows_checked": 1706,
+      "full_syntax_Script_rows_checked": 314,
+      "full_syntax_MITM_rows_checked": 105,
+      "full_syntax_decoded_jq_expressions_compiled": 190,
+      "full_syntax_original_invalid_mock_serializations_reproduced": 3,
+      "full_syntax_source_mock_payload_equivalence_cases": 3,
+      "full_syntax_original_argument_default_equivalence_cases": 11,
+      "full_syntax_namespaced_argument_wiring_cases": 2,
+      "standalone_bundle_exclusion_gates": 1,
+      "merged_unique_jq_expressions_compiled": 190,
+      "own_runtime_urls_resolved": 29,
+      "scripts_compiled_without_execution": 27,
+      "native_adapter_cases": 1,
+      "lzmh_native_json_cases": 8,
+      "lzmh_url_scope_cases": 9,
+      "pinterest_semantic_cases": 32,
+      "pinterest_original_semantics_cases": 16,
+      "pinterest_module_url_cases": 42,
+      "pinterest_jq_error_equivalence_cases": 24,
+      "pinterest_native_modules_checked": 2,
+      "tinder_hash_checks": 3,
+      "tinder_combined_wiring_cases": 3,
+      "tinder_original_url_dispatch_cases": 25,
+      "tinder_original_js_jq_equivalence_cases": 84,
+      "tinder_sdk_and_entitlement_preservation_cases": 5,
+      "tinder_combined_endpoint_overlap_cases": 3
+    },
+    "size_only_row_preservation_checks": 58,
+    "unaffected_baseline_files_byte_identical": 993,
+    "all_original_scripts_and_resources_byte_identical": true,
+    "original_source_and_dependency_hashes_verified": true,
+    "router_sha256": "db11659ace4e487b4fd1c10ec7aa3e218fb42ffe2e84bcb84e99e0c3b4eab2ab",
+    "client_runtime_tested": false,
+    "client_memory_measured": false
+  }
+}

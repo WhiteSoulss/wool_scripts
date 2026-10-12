@@ -19,7 +19,7 @@
 # 原版配置已转换；源脚本缺失，保留原引用，不提供替代或占位脚本。
 
 [Script]
-EasyBike_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/mobileconfig-gateway\.hellobike\.com\/api$, script-path=https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js, requires-body=true, max-size=-1
+EasyBike_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/mobileconfig-gateway\.hellobike\.com\/api$, script-path=https://kelee.one/Resource/JavaScript/EasyBike/mobileconfig-gateway.js, requires-body=true, max-size=1048576
 
 [MITM]
 hostname = %APPEND% mobileconfig-gateway.hellobike.com

@@ -27,7 +27,7 @@
 http-response-jq (?i)^https:\/\/api\.58moto\.com\/forum\/public\/businessEssayController\.do\?action=22004 'del(.["data"]["link"])'
 
 [Script]
-MotorFans_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/api\.58moto\.com\/expands\/config\/appWholeConfig\?key=app_whole_config$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js, requires-body=true, max-size=-1
+MotorFans_remove_ads_1 = type=http-response, pattern=(?i)^https:\/\/api\.58moto\.com\/expands\/config\/appWholeConfig\?key=app_whole_config$, script-path=https://raw.githubusercontent.com/WhiteSoulss/wool_scripts/main/Surge/Script/Kelee/MotorFans/MotorFans_remove_ads.js, requires-body=true, max-size=1048576
 
 [MITM]
 hostname = %APPEND% api.58moto.com

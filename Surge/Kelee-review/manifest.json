@@ -8,7 +8,7 @@
   "script_hub_used": false,
   "automatic_conversion_used": false,
   "client_runtime_tested": false,
-  "bundle_sha256": "8861c5af32174a48ce5928f305f3d3d53607e22e0b06428b86fb68200ef60690",
+  "bundle_sha256": "05308e55140689b9d02f5eea7cdf2d46be0f6e0a2e495e511e9ce908f7e40ec5",
   "merge_decisions": [
     {
       "section": "URL Rewrite",
@@ -82,6 +82,13 @@
       "section": "Rule / URL Rewrite / Body Rewrite / Map Local / Script / MITM",
       "reason": "User requests fmz Weibo as a separate import. Remove 67 independent-module actions and three unshared wildcard/root MITM hosts, retain unchanged standalone original and existing Kelee Intl supplementation. Do not reappend the independent module during future bundle builds.",
       "review_record": "Surge/Kelee-review/weibo-standalone-review-20261012.json",
+      "client_runtime_tested": false
+    },
+    {
+      "date": "2026-10-12",
+      "section": "Script",
+      "reason": "User requested reducing response-body memory use. Replace unlimited max-size=-1 in 29 independent Kelee response scripts and corresponding 28 active bundle scripts plus one disabled Haro reference with 1048576 bytes. Original script bytes and all other runtime fields unchanged; oversize responses now bypass those scripts.",
+      "review_record": "Surge/Kelee-review/response-body-limit-review-20261012.json",
       "client_runtime_tested": false
     }
   ],
@@ -224,7 +231,7 @@
       "path": "Surge/module/Kelee/DjDuoDuo_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/DjDuoDuo_remove_ads.lpx",
       "source_sha256": "468133036ca0f1f2b542af43bcd76ede78bf7abeebc7637328dfe3be9ffb46b8",
-      "sha256": "7cb89d491b2b8602b7939891cffee0855f837ea4c2ed0ea5aa17a665cd923b89",
+      "sha256": "117f969832b8a4cca4fb8f9687f086d704ede3a6788e5b7ad93b89f5183bd12e",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
         "http-response": 1
@@ -233,8 +240,10 @@
       "missing_dependencies": {},
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
-        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。"
-      ]
+        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
+        "用户要求降低 Surge iOS 响应体内存压力：仅将响应脚本 max-size=-1 改为 1048576（1 MiB）；超限原样放行并跳过该次脚本。脚本、URL、请求/响应阶段、requires-body、作者、MITM 和原生 JQ 保持。复核记录：Surge/Kelee-review/response-body-limit-review-20261012.json"
+      ],
+      "response_body_limit_review": "Surge/Kelee-review/response-body-limit-review-20261012.json"
     },
     {
       "name": "DREAME去广告",
@@ -515,7 +524,7 @@
       "path": "Surge/module/Kelee/Uki_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/Uki_remove_ads.lpx",
       "source_sha256": "b229b01725adee1ee844416d9a8ba0f10f086185c79dac130a37c6e1fd3fa0dc",
-      "sha256": "c15dd6620b1cf440a3490a1ddba47d5ace2b5bdb5e00e2dd963b8e45800d528a",
+      "sha256": "9783df04f6e0e1f24bd2cb241129661c46e52472f021d7aa35706926a6030f6f",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
         "Map Local": 6,
@@ -525,8 +534,10 @@
       "missing_dependencies": {},
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
-        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。"
-      ]
+        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
+        "用户要求降低 Surge iOS 响应体内存压力：仅将响应脚本 max-size=-1 改为 1048576（1 MiB）；超限原样放行并跳过该次脚本。脚本、URL、请求/响应阶段、requires-body、作者、MITM 和原生 JQ 保持。复核记录：Surge/Kelee-review/response-body-limit-review-20261012.json"
+      ],
+      "response_body_limit_review": "Surge/Kelee-review/response-body-limit-review-20261012.json"
     },
     {
       "name": "WakeUp课程表去广告",
@@ -572,7 +583,7 @@
       "path": "Surge/module/Kelee/BaiduSearchWebpage_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx",
       "source_sha256": "de15529e97e5c6804983f353b9441ff69b5ff42a23cfb4a9ae16aba183ad4aea",
-      "sha256": "a726262d04706eb72da957a4518f71cdd63f7b8d93dbc4066cad91ac01e0d4c6",
+      "sha256": "d1d78a8fdf68e31a663277b6bf3c4d9bbe7b6748ee04392a16573c883ee1352b",
       "authors": "Keywos[https://github.com/Keywos]",
       "actions": {
         "http-response": 1
@@ -582,8 +593,10 @@
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
         "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
-        "2026-10-11：依据未变的实际 Loon 原版修正 Script 参数序列化；完整 pattern 加双引号并转义，保留 {8,9}、(?i)、捕获组、原版前缀匹配、脚本路径、响应体要求与 MITM。"
-      ]
+        "2026-10-11：依据未变的实际 Loon 原版修正 Script 参数序列化；完整 pattern 加双引号并转义，保留 {8,9}、(?i)、捕获组、原版前缀匹配、脚本路径、响应体要求与 MITM。",
+        "用户要求降低 Surge iOS 响应体内存压力：仅将响应脚本 max-size=-1 改为 1048576（1 MiB）；超限原样放行并跳过该次脚本。脚本、URL、请求/响应阶段、requires-body、作者、MITM 和原生 JQ 保持。复核记录：Surge/Kelee-review/response-body-limit-review-20261012.json"
+      ],
+      "response_body_limit_review": "Surge/Kelee-review/response-body-limit-review-20261012.json"
     },
     {
       "name": "比心去广告",
@@ -591,7 +604,7 @@
       "path": "Surge/module/Kelee/Bixin_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/Bixin_remove_ads.lpx",
       "source_sha256": "3fc203cb01bab2b5e960ef2ddee636cd9c53fae416002a5fa4b0427726114437",
-      "sha256": "a2bf6e6e3ec4d5e077bacc80da189ff919315d6b20eb2cb612cbd20485428221",
+      "sha256": "96004e4c47be7e7a970364c1bb22f1a58dc14ae86831da37d5430f2146dbb59b",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
         "Map Local": 14,
@@ -602,8 +615,10 @@
       "missing_dependencies": {},
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
-        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。"
-      ]
+        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
+        "用户要求降低 Surge iOS 响应体内存压力：仅将响应脚本 max-size=-1 改为 1048576（1 MiB）；超限原样放行并跳过该次脚本。脚本、URL、请求/响应阶段、requires-body、作者、MITM 和原生 JQ 保持。复核记录：Surge/Kelee-review/response-body-limit-review-20261012.json"
+      ],
+      "response_body_limit_review": "Surge/Kelee-review/response-body-limit-review-20261012.json"
     },
     {
       "name": "测测去广告",
@@ -799,7 +814,7 @@
       "path": "Surge/module/Kelee/RiskBird_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/RiskBird_remove_ads.lpx",
       "source_sha256": "ed4944c91b2d5168fffeeb9c38428ce455fb7491fa5736076f9621f660981fa3",
-      "sha256": "c4807e432e7b908b103ba7b1c5a97286b8a56ac0b047bb3d64231d92f9d6af1d",
+      "sha256": "84dd52953b38517ba552200822555f399fc37dd2769e855f067be243e5855794",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
         "Map Local": 2,
@@ -809,8 +824,10 @@
       "missing_dependencies": {},
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
-        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。"
-      ]
+        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
+        "用户要求降低 Surge iOS 响应体内存压力：仅将响应脚本 max-size=-1 改为 1048576（1 MiB）；超限原样放行并跳过该次脚本。脚本、URL、请求/响应阶段、requires-body、作者、MITM 和原生 JQ 保持。复核记录：Surge/Kelee-review/response-body-limit-review-20261012.json"
+      ],
+      "response_body_limit_review": "Surge/Kelee-review/response-body-limit-review-20261012.json"
     },
     {
       "name": "纷玩岛去广告",
@@ -855,7 +872,7 @@
       "path": "Surge/module/Kelee/EasyBike_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/EasyBike_remove_ads.lpx",
       "source_sha256": "be91c7e3c5e99586fb76b63b1cfe924f7c83e98af730fe65a6c521f8f901fddf",
-      "sha256": "2228ff86ad26e7a582d1c4345ad1d25ad62906c2142b2b9a31dacac19381c038",
+      "sha256": "59e432ebde26a39c81a5cbad1de4ed4671598c1c04ed8cacf4637706cf6bc63f",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
         "http-response": 1
@@ -867,8 +884,10 @@
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
         "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
-        "原版唯一脚本 HTTP 404；保留独立配置，合集内注释该脚本，不伪造实现。"
-      ]
+        "原版唯一脚本 HTTP 404；保留独立配置，合集内注释该脚本，不伪造实现。",
+        "用户要求降低 Surge iOS 响应体内存压力：仅将响应脚本 max-size=-1 改为 1048576（1 MiB）；超限原样放行并跳过该次脚本。脚本、URL、请求/响应阶段、requires-body、作者、MITM 和原生 JQ 保持。复核记录：Surge/Kelee-review/response-body-limit-review-20261012.json"
+      ],
+      "response_body_limit_review": "Surge/Kelee-review/response-body-limit-review-20261012.json"
     },
     {
       "name": "慧生活798去广告",
@@ -988,7 +1007,7 @@
       "path": "Surge/module/Kelee/ShoujiDesk_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/ShoujiDesk_remove_ads.lpx",
       "source_sha256": "f270c31ac7d3f5e3406804d55daa1f4f53dc6656e518e95d93d1aa5e65b84783",
-      "sha256": "5f7b849849f24c5477711078512f8a5b43f6006c65a0f860bac55bcf963c156d",
+      "sha256": "dabe8b839da9c2ca797676f161b3e2116b8eb7de42b24585aaa9be613760bb2f",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
         "Map Local": 2,
@@ -998,8 +1017,10 @@
       "missing_dependencies": {},
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
-        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。"
-      ]
+        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
+        "用户要求降低 Surge iOS 响应体内存压力：仅将响应脚本 max-size=-1 改为 1048576（1 MiB）；超限原样放行并跳过该次脚本。脚本、URL、请求/响应阶段、requires-body、作者、MITM 和原生 JQ 保持。复核记录：Surge/Kelee-review/response-body-limit-review-20261012.json"
+      ],
+      "response_body_limit_review": "Surge/Kelee-review/response-body-limit-review-20261012.json"
     },
     {
       "name": "快对去广告",
@@ -1177,7 +1198,7 @@
       "path": "Surge/module/Kelee/MKZ_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/MKZ_remove_ads.lpx",
       "source_sha256": "0ff3a79e41c84d2a0f2556adfe2f418ce63c56b9260fe18a7adb19a77e5a9343",
-      "sha256": "f52082f537f4697eff429905fe666f5072f8d83eb202f08edbacd772e1a7d7d7",
+      "sha256": "ccbb1aac4545c2e6b8f2126a4e7eaec33089a20b812ecab952cd4512772e8d7f",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
         "Map Local": 5,
@@ -1187,8 +1208,10 @@
       "missing_dependencies": {},
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
-        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。"
-      ]
+        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
+        "用户要求降低 Surge iOS 响应体内存压力：仅将响应脚本 max-size=-1 改为 1048576（1 MiB）；超限原样放行并跳过该次脚本。脚本、URL、请求/响应阶段、requires-body、作者、MITM 和原生 JQ 保持。复核记录：Surge/Kelee-review/response-body-limit-review-20261012.json"
+      ],
+      "response_body_limit_review": "Surge/Kelee-review/response-body-limit-review-20261012.json"
     },
     {
       "name": "每日赛车去广告",
@@ -1268,7 +1291,7 @@
       "path": "Surge/module/Kelee/MotorFans_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/MotorFans_remove_ads.lpx",
       "source_sha256": "28a8ac76c486fe4ce4ee9491efe4a7278307736f1af39feeb6c6ef00cd0dcc85",
-      "sha256": "a84e1f676dadfd89b7838e91f40974a8993db5961bb45a7b8dffa5c641b2a1f5",
+      "sha256": "ef654b9921a5474f9e84bcef0b0442979ec059e425feb037973002565f56c6c1",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
         "Map Local": 7,
@@ -1279,8 +1302,10 @@
       "missing_dependencies": {},
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
-        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。"
-      ]
+        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
+        "用户要求降低 Surge iOS 响应体内存压力：仅将响应脚本 max-size=-1 改为 1048576（1 MiB）；超限原样放行并跳过该次脚本。脚本、URL、请求/响应阶段、requires-body、作者、MITM 和原生 JQ 保持。复核记录：Surge/Kelee-review/response-body-limit-review-20261012.json"
+      ],
+      "response_body_limit_review": "Surge/Kelee-review/response-body-limit-review-20261012.json"
     },
     {
       "name": "南网在线去广告",
@@ -1344,7 +1369,7 @@
       "path": "Surge/module/Kelee/DubbingShow_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/DubbingShow_remove_ads.lpx",
       "source_sha256": "1ab7c72165b830314be614e7493e171afac36d6dd9f1b99dcfebdd1a00de468a",
-      "sha256": "bc6fa014bbd1d7d498c1ac9c53df69b186f09cef8ca7e9c5b6bdf6ad5bc2949c",
+      "sha256": "6fccdc0fc283cd637bb436ed534e7cd97945569769c21fc5ec386ceb30c955ec",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
         "Body Rewrite.jq": 4,
@@ -1354,8 +1379,10 @@
       "missing_dependencies": {},
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
-        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。"
-      ]
+        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
+        "用户要求降低 Surge iOS 响应体内存压力：仅将响应脚本 max-size=-1 改为 1048576（1 MiB）；超限原样放行并跳过该次脚本。脚本、URL、请求/响应阶段、requires-body、作者、MITM 和原生 JQ 保持。复核记录：Surge/Kelee-review/response-body-limit-review-20261012.json"
+      ],
+      "response_body_limit_review": "Surge/Kelee-review/response-body-limit-review-20261012.json"
     },
     {
       "name": "启信宝去广告",
@@ -1658,7 +1685,7 @@
       "path": "Surge/module/Kelee/WexinMiniPrograms_Remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx",
       "source_sha256": "a3e17aa9fa533f226fab0d178a3f1a7061f9833348af757dc14c03ef17469f20",
-      "sha256": "01959ad633fa9040580a09f97ffbf454049a3cc21d78b3f3d8ea1437a9652535",
+      "sha256": "3afd443a414e010be2b8940e866fd2b9d709272212542369445990df2636bc30",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
         "Rule": 6,
@@ -1671,8 +1698,10 @@
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
         "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
-        "原版茶颜悦色脚本引用的 cyys1.jpg HTTP 404，保留该已知限制。"
-      ]
+        "原版茶颜悦色脚本引用的 cyys1.jpg HTTP 404，保留该已知限制。",
+        "用户要求降低 Surge iOS 响应体内存压力：仅将响应脚本 max-size=-1 改为 1048576（1 MiB）；超限原样放行并跳过该次脚本。脚本、URL、请求/响应阶段、requires-body、作者、MITM 和原生 JQ 保持。复核记录：Surge/Kelee-review/response-body-limit-review-20261012.json"
+      ],
+      "response_body_limit_review": "Surge/Kelee-review/response-body-limit-review-20261012.json"
     },
     {
       "name": "沃尔玛去广告",
@@ -2054,7 +2083,7 @@
       "path": "Surge/module/Kelee/iWallBiZhi_remove_ads.sgmodule",
       "source_url": "https://kelee.one/Tool/Loon/Lpx/iWallBiZhi_remove_ads.lpx",
       "source_sha256": "6345a00cb31ab6c56e42c55f4063c5dbe51a9ade0e911ea8953bde600d64f364",
-      "sha256": "88fdb6823430f147bcf4392bf578464942fdb847520782d65353e5f6b2f018f7",
+      "sha256": "cf2ab5bb2c1bc77c44c7b7b2d4c1c0c4d219a7704cc391317a8a4f39d34b151a",
       "authors": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
       "actions": {
         "Map Local": 2,
@@ -2064,8 +2093,10 @@
       "missing_dependencies": {},
       "comparison_reason": "wool 支持列表未列出此独立对象/版本，或只有其他端点的部分覆盖",
       "review_notes": [
-        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。"
-      ]
+        "复用此前已复核的原生 Surge 适配稿（历史基础稿含辅助工具生成配置）；重新核对当前原版和依赖精确字节。",
+        "用户要求降低 Surge iOS 响应体内存压力：仅将响应脚本 max-size=-1 改为 1048576（1 MiB）；超限原样放行并跳过该次脚本。脚本、URL、请求/响应阶段、requires-body、作者、MITM 和原生 JQ 保持。复核记录：Surge/Kelee-review/response-body-limit-review-20261012.json"
+      ],
+      "response_body_limit_review": "Surge/Kelee-review/response-body-limit-review-20261012.json"
     },
     {
       "name": "腾讯视频去广告",
@@ -2271,5 +2302,14 @@
       "user_requested_standalone_only": true,
       "review_record": "Surge/Kelee-review/weibo-standalone-review-20261012.json"
     }
-  ]
+  ],
+  "response_body_policy": {
+    "client": "Surge iOS",
+    "max_bytes": 1048576,
+    "scope": "body-reading http-response scripts in the combined module and independent ad modules; defaults allowed at the iOS 1 MiB limit",
+    "oversize_behavior": "Surge bypasses the response script and forwards the original response",
+    "review_record": "Surge/Kelee-review/response-body-limit-review-20261012.json",
+    "applies_to_request_scripts": false,
+    "native_body_rewrite_unchanged": true
+  }
 }
