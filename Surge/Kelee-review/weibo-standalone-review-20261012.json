@@ -1,0 +1,41 @@
+{
+  "status": "user-requested-and-manually-reviewed",
+  "date": "2026-10-12",
+  "user_instruction": "不要包含，我要单独引入（fmz 独立微博去广告模块）",
+  "source_file": "Surge/module/weibo.module",
+  "source_sha256": "cbb427d9bbf7fbe1c3b7a383693f2291eeb97cdf3107e13f9e902f7ca5a266fd",
+  "source_upstream_commit": "5d5f63fcf98bc69d5f8f1b1bae6f86a01ee4bb97",
+  "upstream_source_unchanged": true,
+  "standalone_module_preserved": true,
+  "bundle": "Surge/module/blockAds.module",
+  "before_bundle_sha256": "e99d171114ee729eba4ae9560689ca738e6b574f182f1803e6456ff035e24789",
+  "after_bundle_sha256": "8861c5af32174a48ce5928f305f3d3d53607e22e0b06428b86fb68200ef60690",
+  "removed_active_rows": {
+    "Rule": 32,
+    "URL Rewrite": 2,
+    "Body Rewrite": 2,
+    "Map Local": 14,
+    "Script": 17
+  },
+  "removed_active_total": 67,
+  "removed_mitm_hosts": [
+    "*.weibo.cn",
+    "*.weibo.com",
+    "weibo.com"
+  ],
+  "shared_exact_actions": [],
+  "shared_exact_mitm_hosts": [],
+  "preserved": "All 106 Kelee and one Tinder independent module bytes, fmz native baseline, HTTPDNS, all other active bundle rows and source resources. Kelee Weibo Intl native JQ and its specific MITM hosts remain.",
+  "bundle_policy": "Never append the independent fmz weibo.module or its scripts to the combined module during daily sync. Continue syncing standalone original separately. Native fmz original bundle and Kelee Intl rules retain their own scope.",
+  "script_hub_used": false,
+  "automatic_conversion_used": false,
+  "client_runtime_tested": false,
+  "verification": {
+    "status": "passed",
+    "new_exclusion_gate": 1,
+    "modules_verified": 107,
+    "native_json_actions_retained": 134,
+    "report": "Surge/Kelee-review/verification.json",
+    "client_runtime_tested": false
+  }
+}

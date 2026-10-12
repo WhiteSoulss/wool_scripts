@@ -8,7 +8,7 @@
   "script_hub_used": false,
   "automatic_conversion_used": false,
   "client_runtime_tested": false,
-  "bundle_sha256": "e99d171114ee729eba4ae9560689ca738e6b574f182f1803e6456ff035e24789",
+  "bundle_sha256": "8861c5af32174a48ce5928f305f3d3d53607e22e0b06428b86fb68200ef60690",
   "merge_decisions": [
     {
       "section": "URL Rewrite",
@@ -74,6 +74,14 @@
       "section": "Body Rewrite / MITM",
       "reason": "User explicitly requested devchristian1337 Tinder ad removal. Handwrite native JQ from the full reviewed LPX/JS; preserve type guards and URL-dependent meta dispatch. Add the sole original MITM host, retain separate provenance from Kelee.",
       "review_record": "Surge/Extra-review/tinder-review-20261011.json",
+      "client_runtime_tested": false
+    },
+    {
+      "date": "2026-10-12",
+      "module": "weibo.module",
+      "section": "Rule / URL Rewrite / Body Rewrite / Map Local / Script / MITM",
+      "reason": "User requests fmz Weibo as a separate import. Remove 67 independent-module actions and three unshared wildcard/root MITM hosts, retain unchanged standalone original and existing Kelee Intl supplementation. Do not reappend the independent module during future bundle builds.",
+      "review_record": "Surge/Kelee-review/weibo-standalone-review-20261012.json",
       "client_runtime_tested": false
     }
   ],
@@ -2254,5 +2262,14 @@
   "historical_drafts_include_helper_generated_configuration": true,
   "provenance_statement": "复用此前已复核的原生适配稿，历史基础稿含辅助工具生成配置，不是全部从零手写；新变化必须逐项读实际原版/依赖并手动改写复核。",
   "extra_supplement_manifest": "Surge/Extra-review/manifest.json",
-  "extra_supplement_modules": 1
+  "extra_supplement_modules": 1,
+  "independent_bundle_exclusions": [
+    {
+      "path": "Surge/module/weibo.module",
+      "module": "fmz 独立微博去广告",
+      "bundle_inclusion": false,
+      "user_requested_standalone_only": true,
+      "review_record": "Surge/Kelee-review/weibo-standalone-review-20261012.json"
+    }
+  ]
 }

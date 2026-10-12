@@ -83,3 +83,16 @@ verify.py 调用 test_tinder.py，核对实际配置、URL 分派、类型边界
 JSON 语义、奖励视频/权限字段保留及合集端点重叠；完整语法门禁也包含独立 Tinder。
 语义参照 JS 已全文审阅，无 I/O，仅在隔离 Node vm 里使用模拟数据比较，不暴露网络、
 文件、进程或定时器。服务器验证仍不代表客户端实测。
+
+
+## 用户最新要求：fmz 独立微博单独安装（2026-10-12）
+
+Surge/module/weibo.module 继续按 fmz 原版独立同步和保留；不得再把它作为附加组件
+合入 Surge/module/blockAds.module。用户选择另行导入。读取 manifest.json 的
+independent_bundle_exclusions 和 weibo-standalone-review-20261012.json。
+已移出全部独立来源动作及其不共用的 MITM 项；不得恢复 fmzweibo_ 脚本块、
+独立 weibo.module 的脚本/规则、*.weibo.cn、*.weibo.com 或 weibo.com 三项来源。
+现有可莉微博轻享版及其具体域名照常保留；fmz 原总模块自身范围照常同步。
+未来若原版或其他组件新增共享动作，必须阅读真实来源并复核优先级，不能通过
+移除这条排除门禁或只更新哈希强行接受。verify.py 会检查独立微博未重新合入。
+这项用户要求取代历史文档/包装器中“额外合入 fmz 独立微博”的安排。

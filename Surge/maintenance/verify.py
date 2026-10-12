@@ -8,7 +8,7 @@ import json
 import re
 import subprocess
 from pathlib import Path
-from test_config_syntax import verify as verify_config_syntax
+from test_config_syntax import verify as verify_config_syntax, script_fields, tokens
 from audit_module_syntax import verify as audit_module_syntax
 from test_tinder import verify as verify_tinder
 
@@ -153,6 +153,23 @@ def main():
     syntax_audit = audit_module_syntax(OUT)
     assert syntax_audit['status'] == 'passed', syntax_audit['errors']
     stats.update({'full_syntax_' + key: value for key, value in syntax_audit['checks'].items()})
+    for exclusion in manifest.get('independent_bundle_exclusions', []):
+        assert exclusion['bundle_inclusion'] is False and exclusion['user_requested_standalone_only']
+        standalone = sec((OUT / exclusion['path']).read_text())
+        review = json.loads((OUT / exclusion['review_record']).read_text())
+        assert hashlib.sha256((OUT / exclusion['path']).read_bytes()).hexdigest() == review['source_sha256']
+        for section, source_rows in standalone.items():
+            if section in {'Script', 'MITM'}:
+                continue
+            assert not set(source_rows).intersection(sections.get(section, [])), ('Excluded independent action restored', exclusion['path'], section)
+        source_scripts = [script_fields(row) for row in standalone.get('Script', [])]
+        total_scripts = [script_fields(row) for row in sections['Script']]
+        assert not any(fields in total_scripts for fields in source_scripts), 'Excluded Weibo script restored'
+        assert not any(row.startswith('fmzweibo_') for row in sections['Script'])
+        total_hosts = set(tokens(sections['MITM'][0].split('%APPEND%', 1)[1], ','))
+        assert not set(review['removed_mitm_hosts']).intersection(total_hosts)
+        assert {'bootpreload.uve.weibo.com', 'weibointl.api.weibo.cn', 'api.weibo.cn'}.issubset(total_hosts)
+        stats['standalone_bundle_exclusion_gates'] += 1
     script_names = [l.split('=', 1)[0].strip() for l in sections['Script']]
     assert len(script_names) == len(set(script_names))
     assert not any('EasyBike/mobileconfig-gateway.js' in l for l in sections['Script'])
